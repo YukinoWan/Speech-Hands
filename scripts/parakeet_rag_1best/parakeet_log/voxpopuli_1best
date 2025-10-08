@@ -1,0 +1,1727 @@
+[2025-10-05 23:50:05,082] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[INFO|2025-10-05 23:50:14] llamafactory.cli:143 >> Initializing 8 distributed tasks at: 127.0.0.1:60359
+W1005 23:50:16.619000 3652892 site-packages/torch/distributed/run.py:774] 
+W1005 23:50:16.619000 3652892 site-packages/torch/distributed/run.py:774] *****************************************
+W1005 23:50:16.619000 3652892 site-packages/torch/distributed/run.py:774] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1005 23:50:16.619000 3652892 site-packages/torch/distributed/run.py:774] *****************************************
+[W1005 23:50:16.384775046 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [localhost]:60359 (errno: 97 - Address family not supported by protocol).
+[2025-10-05 23:50:36,248] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-10-05 23:50:37,107] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-10-05 23:50:37,441] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-10-05 23:50:38,430] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-10-05 23:50:38,517] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-10-05 23:50:38,596] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-10-05 23:50:38,741] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-10-05 23:50:38,742] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-10-05 23:50:43,279] [INFO] [comm.py:669:init_distributed] cdb=None
+[2025-10-05 23:50:43,280] [INFO] [comm.py:700:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[W1005 23:50:43.040608725 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [localhost]:60359 (errno: 97 - Address family not supported by protocol).
+[W1005 23:50:43.041764114 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[2025-10-05 23:50:44,024] [INFO] [comm.py:669:init_distributed] cdb=None
+[W1005 23:50:44.784603635 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [localhost]:60359 (errno: 97 - Address family not supported by protocol).
+[W1005 23:50:44.785395362 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[2025-10-05 23:50:44,151] [INFO] [comm.py:669:init_distributed] cdb=None
+[W1005 23:50:44.911812687 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [localhost]:60359 (errno: 97 - Address family not supported by protocol).
+[W1005 23:50:44.912906201 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[INFO|2025-10-05 23:50:44] llamafactory.hparams.parser:414 >> Process rank: 0, world size: 8, device: cuda:0, distributed training: True, compute dtype: torch.float16
+[2025-10-05 23:50:45,073] [INFO] [comm.py:669:init_distributed] cdb=None
+[W1005 23:50:45.834032427 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [localhost]:60359 (errno: 97 - Address family not supported by protocol).
+[W1005 23:50:45.834814340 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[2025-10-05 23:50:45,199] [INFO] [comm.py:669:init_distributed] cdb=None
+[W1005 23:50:45.959191981 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [localhost]:60359 (errno: 97 - Address family not supported by protocol).
+[W1005 23:50:45.959692695 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[2025-10-05 23:50:45,293] [INFO] [comm.py:669:init_distributed] cdb=None
+[W1005 23:50:45.053799077 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [localhost]:60359 (errno: 97 - Address family not supported by protocol).
+[W1005 23:50:45.054272290 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[INFO|tokenization_utils_base.py:2067] 2025-10-05 23:50:45,306 >> loading file vocab.json from cache at /mnt/home/zhenwan.nlp/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/vocab.json
+[INFO|tokenization_utils_base.py:2067] 2025-10-05 23:50:45,306 >> loading file merges.txt from cache at /mnt/home/zhenwan.nlp/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/merges.txt
+[INFO|tokenization_utils_base.py:2067] 2025-10-05 23:50:45,306 >> loading file tokenizer.json from cache at /mnt/home/zhenwan.nlp/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/tokenizer.json
+[INFO|tokenization_utils_base.py:2067] 2025-10-05 23:50:45,306 >> loading file added_tokens.json from cache at /mnt/home/zhenwan.nlp/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/added_tokens.json
+[INFO|tokenization_utils_base.py:2067] 2025-10-05 23:50:45,306 >> loading file special_tokens_map.json from cache at /mnt/home/zhenwan.nlp/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/special_tokens_map.json
+[INFO|tokenization_utils_base.py:2067] 2025-10-05 23:50:45,306 >> loading file tokenizer_config.json from cache at /mnt/home/zhenwan.nlp/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2067] 2025-10-05 23:50:45,306 >> loading file chat_template.jinja from cache at None
+[2025-10-05 23:50:45,428] [INFO] [comm.py:669:init_distributed] cdb=None
+[W1005 23:50:45.187893429 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [localhost]:60359 (errno: 97 - Address family not supported by protocol).
+[W1005 23:50:45.188907310 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[INFO|tokenization_utils_base.py:2336] 2025-10-05 23:50:45,607 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|2025-10-05 23:50:45] llamafactory.model.patcher:143 >> Add special tokens <internal>,<external>,<rewrite> to tokenizer's vocabulary.
+[WARNING|2025-10-05 23:50:45] llamafactory.model.patcher:148 >> New special tokens have been added, changed `resize_vocab` to True.
+[2025-10-05 23:50:45,612] [INFO] [comm.py:669:init_distributed] cdb=None
+[W1005 23:50:45.372307836 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [localhost]:60359 (errno: 97 - Address family not supported by protocol).
+[W1005 23:50:45.373204757 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[INFO|image_processing_base.py:378] 2025-10-05 23:50:46,359 >> loading configuration file preprocessor_config.json from cache at /mnt/home/zhenwan.nlp/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/preprocessor_config.json
+[INFO|image_processing_base.py:378] 2025-10-05 23:50:46,640 >> loading configuration file preprocessor_config.json from cache at /mnt/home/zhenwan.nlp/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/preprocessor_config.json
+[INFO|image_processing_base.py:423] 2025-10-05 23:50:46,668 >> Image processor Qwen2VLImageProcessorFast {
+  "chunk_length": 300,
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "disable_grouping": null,
+  "dither": 0.0,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "feature_size": 128,
+  "hop_length": 160,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "n_fft": 400,
+  "n_samples": 4800000,
+  "nb_max_frames": 30000,
+  "padding_side": "right",
+  "padding_value": 0.0,
+  "patch_size": 14,
+  "processor_class": "Qwen2_5OmniProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_attention_mask": true,
+  "return_tensors": null,
+  "sampling_rate": 16000,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+[INFO|2025-10-05 23:50:46] llamafactory.hparams.parser:414 >> Process rank: 2, world size: 8, device: cuda:2, distributed training: True, compute dtype: torch.float16
+[INFO|2025-10-05 23:50:47] llamafactory.hparams.parser:414 >> Process rank: 5, world size: 8, device: cuda:5, distributed training: True, compute dtype: torch.float16
+[WARNING|logging.py:328] 2025-10-05 23:50:47,151 >> You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+[INFO|video_processing_utils.py:720] 2025-10-05 23:50:47,152 >> loading configuration file preprocessor_config.json from cache at /mnt/home/zhenwan.nlp/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/preprocessor_config.json
+[INFO|video_processing_utils.py:764] 2025-10-05 23:50:47,155 >> Video processor Qwen2VLVideoProcessor {
+  "chunk_length": 300,
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "dither": 0.0,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "do_sample_frames": false,
+  "feature_extractor_type": "WhisperFeatureExtractor",
+  "feature_size": 128,
+  "fps": null,
+  "hop_length": 160,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_frames": 768,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_frames": 4,
+  "min_pixels": 3136,
+  "n_fft": 400,
+  "n_samples": 4800000,
+  "nb_max_frames": 30000,
+  "num_frames": null,
+  "padding_side": "right",
+  "padding_value": 0.0,
+  "patch_size": 14,
+  "processor_class": "Qwen2_5OmniProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_attention_mask": true,
+  "sampling_rate": 16000,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "size_divisor": null,
+  "temporal_patch_size": 2,
+  "video_metadata": null,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+[INFO|feature_extraction_utils.py:548] 2025-10-05 23:50:47,420 >> loading configuration file preprocessor_config.json from cache at /mnt/home/zhenwan.nlp/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/preprocessor_config.json
+[INFO|feature_extraction_utils.py:585] 2025-10-05 23:50:47,421 >> Feature extractor WhisperFeatureExtractor {
+  "chunk_length": 300,
+  "dither": 0.0,
+  "feature_extractor_type": "WhisperFeatureExtractor",
+  "feature_size": 128,
+  "hop_length": 160,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "n_fft": 400,
+  "n_samples": 4800000,
+  "nb_max_frames": 30000,
+  "padding_side": "right",
+  "padding_value": 0.0,
+  "patch_size": 14,
+  "processor_class": "Qwen2_5OmniProcessor",
+  "return_attention_mask": true,
+  "sampling_rate": 16000,
+  "temporal_patch_size": 2
+}
+
+[INFO|tokenization_utils_base.py:2067] 2025-10-05 23:50:47,900 >> loading file vocab.json from cache at /mnt/home/zhenwan.nlp/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/vocab.json
+[INFO|tokenization_utils_base.py:2067] 2025-10-05 23:50:47,900 >> loading file merges.txt from cache at /mnt/home/zhenwan.nlp/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/merges.txt
+[INFO|tokenization_utils_base.py:2067] 2025-10-05 23:50:47,900 >> loading file tokenizer.json from cache at /mnt/home/zhenwan.nlp/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/tokenizer.json
+[INFO|tokenization_utils_base.py:2067] 2025-10-05 23:50:47,900 >> loading file added_tokens.json from cache at /mnt/home/zhenwan.nlp/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/added_tokens.json
+[INFO|tokenization_utils_base.py:2067] 2025-10-05 23:50:47,900 >> loading file special_tokens_map.json from cache at /mnt/home/zhenwan.nlp/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/special_tokens_map.json
+[INFO|tokenization_utils_base.py:2067] 2025-10-05 23:50:47,900 >> loading file tokenizer_config.json from cache at /mnt/home/zhenwan.nlp/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2067] 2025-10-05 23:50:47,900 >> loading file chat_template.jinja from cache at None
+[INFO|2025-10-05 23:50:48] llamafactory.hparams.parser:414 >> Process rank: 1, world size: 8, device: cuda:1, distributed training: True, compute dtype: torch.float16
+[INFO|tokenization_utils_base.py:2336] 2025-10-05 23:50:48,186 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|2025-10-05 23:50:48] llamafactory.hparams.parser:414 >> Process rank: 6, world size: 8, device: cuda:6, distributed training: True, compute dtype: torch.float16
+[INFO|2025-10-05 23:50:48] llamafactory.hparams.parser:414 >> Process rank: 7, world size: 8, device: cuda:7, distributed training: True, compute dtype: torch.float16
+[INFO|2025-10-05 23:50:48] llamafactory.hparams.parser:414 >> Process rank: 4, world size: 8, device: cuda:4, distributed training: True, compute dtype: torch.float16
+[INFO|2025-10-05 23:50:48] llamafactory.hparams.parser:414 >> Process rank: 3, world size: 8, device: cuda:3, distributed training: True, compute dtype: torch.float16
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+[INFO|processing_utils.py:1117] 2025-10-05 23:50:49,713 >> Processor Qwen2_5OmniProcessor:
+- image_processor: Qwen2VLImageProcessorFast {
+  "chunk_length": 300,
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "disable_grouping": null,
+  "dither": 0.0,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "feature_size": 128,
+  "hop_length": 160,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "n_fft": 400,
+  "n_samples": 4800000,
+  "nb_max_frames": 30000,
+  "padding_side": "right",
+  "padding_value": 0.0,
+  "patch_size": 14,
+  "processor_class": "Qwen2_5OmniProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_attention_mask": true,
+  "return_tensors": null,
+  "sampling_rate": 16000,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+- video_processor: Qwen2VLVideoProcessor {
+  "chunk_length": 300,
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "dither": 0.0,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "do_sample_frames": false,
+  "feature_extractor_type": "WhisperFeatureExtractor",
+  "feature_size": 128,
+  "fps": null,
+  "hop_length": 160,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_frames": 768,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_frames": 4,
+  "min_pixels": 3136,
+  "n_fft": 400,
+  "n_samples": 4800000,
+  "nb_max_frames": 30000,
+  "num_frames": null,
+  "padding_side": "right",
+  "padding_value": 0.0,
+  "patch_size": 14,
+  "processor_class": "Qwen2_5OmniProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_attention_mask": true,
+  "sampling_rate": 16000,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "size_divisor": null,
+  "temporal_patch_size": 2,
+  "video_metadata": null,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+- feature_extractor: WhisperFeatureExtractor {
+  "chunk_length": 300,
+  "dither": 0.0,
+  "feature_extractor_type": "WhisperFeatureExtractor",
+  "feature_size": 128,
+  "hop_length": 160,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "n_fft": 400,
+  "n_samples": 4800000,
+  "nb_max_frames": 30000,
+  "padding_side": "right",
+  "padding_value": 0.0,
+  "patch_size": 14,
+  "processor_class": "Qwen2_5OmniProcessor",
+  "return_attention_mask": true,
+  "sampling_rate": 16000,
+  "temporal_patch_size": 2
+}
+
+- tokenizer: Qwen2TokenizerFast(name_or_path='Qwen/Qwen2.5-Omni-7B', vocab_size=151643, model_max_length=32768, is_fast=True, padding_side='right', truncation_side='right', special_tokens={'eos_token': '<|im_end|>', 'pad_token': '<|endoftext|>', 'additional_special_tokens': ['<|im_start|>', '<|im_end|>', '<|AUDIO|>', '<|audio_bos|>', '<|audio_eos|>', '<|box_end|>', '<|quad_start|>', '<|quad_end|>', '<|vision_bos|>', '<|vision_eos|>', '<|vision_pad|>', '<|IMAGE|>', '<|VIDEO|>'], 'image_token': '<|IMAGE|>', 'audio_token': '<|AUDIO|>', 'video_token': '<|VIDEO|>', 'vision_bos_token': '<|vision_bos|>', 'vision_eos_token': '<|vision_eos|>', 'audio_bos_token': '<|audio_bos|>', 'audio_eos_token': '<|audio_eos|>'}, clean_up_tokenization_spaces=False, added_tokens_decoder={
+	151643: AddedToken("<|endoftext|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151644: AddedToken("<|im_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151645: AddedToken("<|im_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151646: AddedToken("<|AUDIO|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151647: AddedToken("<|audio_bos|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151648: AddedToken("<|audio_eos|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151649: AddedToken("<|box_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151650: AddedToken("<|quad_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151651: AddedToken("<|quad_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151652: AddedToken("<|vision_bos|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151653: AddedToken("<|vision_eos|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151654: AddedToken("<|vision_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151655: AddedToken("<|IMAGE|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151656: AddedToken("<|VIDEO|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151657: AddedToken("<tool_call>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151658: AddedToken("</tool_call>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151659: AddedToken("<|fim_prefix|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151660: AddedToken("<|fim_middle|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151661: AddedToken("<|fim_suffix|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151662: AddedToken("<|fim_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151663: AddedToken("<|repo_name|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151664: AddedToken("<|file_sep|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+}
+)
+
+{
+  "processor_class": "Qwen2_5OmniProcessor"
+}
+
+[INFO|2025-10-05 23:50:49] llamafactory.data.loader:143 >> Loading dataset sharegpt_data_parakeet_1best/voxpopuli_train_parakeet_1_best_with_audio.json...
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Generating train split: 0 examples [00:00, ? examples/s]You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Generating train split: 20000 examples [00:00, 97967.31 examples/s]Generating train split: 20000 examples [00:00, 93217.84 examples/s]
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Converting format of dataset:   0%|          | 0/20000 [00:00<?, ? examples/s]You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Converting format of dataset:  14%|█▎        | 2746/20000 [00:00<00:00, 27320.70 examples/s]Converting format of dataset:  28%|██▊       | 5521/20000 [00:00<00:00, 27561.95 examples/s]You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Converting format of dataset:  43%|████▎     | 8544/20000 [00:00<00:00, 28084.25 examples/s]Converting format of dataset:  58%|█████▊    | 11523/20000 [00:00<00:00, 28291.34 examples/s]Converting format of dataset:  73%|███████▎  | 14577/20000 [00:00<00:00, 28692.53 examples/s]Converting format of dataset:  88%|████████▊ | 17555/20000 [00:00<00:00, 28816.97 examples/s]Converting format of dataset: 100%|██████████| 20000/20000 [00:00<00:00, 27933.26 examples/s]
+/mnt/home/zhenwan.nlp/miniconda3/envs/factory/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank0]:[W1005 23:50:51.162278815 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+/mnt/home/zhenwan.nlp/miniconda3/envs/factory/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank2]:[W1005 23:50:51.682899294 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+/mnt/home/zhenwan.nlp/miniconda3/envs/factory/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank5]:[W1005 23:50:52.846187687 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 5]  using GPU 5 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+/mnt/home/zhenwan.nlp/miniconda3/envs/factory/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank1]:[W1005 23:50:53.925889907 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+/mnt/home/zhenwan.nlp/miniconda3/envs/factory/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank6]:[W1005 23:50:53.955292040 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 6]  using GPU 6 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+/mnt/home/zhenwan.nlp/miniconda3/envs/factory/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank4]:[W1005 23:50:53.295532797 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 4]  using GPU 4 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+/mnt/home/zhenwan.nlp/miniconda3/envs/factory/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank7]:[W1005 23:50:53.424827973 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 7]  using GPU 7 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+/mnt/home/zhenwan.nlp/miniconda3/envs/factory/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank3]:[W1005 23:50:53.630102210 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 3]  using GPU 3 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+Running tokenizer on dataset:   0%|          | 0/20000 [00:00<?, ? examples/s]Running tokenizer on dataset:   5%|▌         | 1000/20000 [00:00<00:10, 1805.13 examples/s]Running tokenizer on dataset:  10%|█         | 2000/20000 [00:01<00:09, 1890.30 examples/s]Running tokenizer on dataset:  15%|█▌        | 3000/20000 [00:01<00:08, 1947.95 examples/s]Running tokenizer on dataset:  20%|██        | 4000/20000 [00:02<00:08, 1957.01 examples/s]Running tokenizer on dataset:  25%|██▌       | 5000/20000 [00:02<00:07, 1974.15 examples/s]Running tokenizer on dataset:  30%|███       | 6000/20000 [00:03<00:07, 1996.66 examples/s]Running tokenizer on dataset:  35%|███▌      | 7000/20000 [00:03<00:06, 1992.96 examples/s]Running tokenizer on dataset:  40%|████      | 8000/20000 [00:04<00:05, 2006.83 examples/s]Running tokenizer on dataset:  45%|████▌     | 9000/20000 [00:04<00:05, 2006.39 examples/s]Running tokenizer on dataset:  50%|█████     | 10000/20000 [00:05<00:04, 2010.96 examples/s]Running tokenizer on dataset:  55%|█████▌    | 11000/20000 [00:05<00:04, 2009.94 examples/s]Running tokenizer on dataset:  60%|██████    | 12000/20000 [00:06<00:03, 2011.06 examples/s]Running tokenizer on dataset:  65%|██████▌   | 13000/20000 [00:06<00:03, 2011.50 examples/s]Running tokenizer on dataset:  70%|███████   | 14000/20000 [00:07<00:02, 2012.66 examples/s]Running tokenizer on dataset:  75%|███████▌  | 15000/20000 [00:07<00:02, 2018.45 examples/s]Running tokenizer on dataset:  80%|████████  | 16000/20000 [00:08<00:01, 2019.25 examples/s]Running tokenizer on dataset:  85%|████████▌ | 17000/20000 [00:08<00:01, 2011.11 examples/s]Running tokenizer on dataset:  90%|█████████ | 18000/20000 [00:09<00:00, 2015.38 examples/s]Running tokenizer on dataset:  95%|█████████▌| 19000/20000 [00:09<00:00, 2002.97 examples/s]Running tokenizer on dataset: 100%|██████████| 20000/20000 [00:10<00:00, 2007.15 examples/s]Running tokenizer on dataset: 100%|██████████| 20000/20000 [00:10<00:00, 1994.52 examples/s]
+training example:
+input_ids:
+[151644, 8948, 198, 2610, 525, 264, 10950, 17847, 13, 151645, 198, 151644, 872, 198, 2610, 525, 458, 5752, 49, 26262, 1614, 448, 2615, 311, 1447, 7, 16, 8, 576, 4024, 7699, 280, 7, 17, 8, 576, 45840, 30078, 504, 2441, 5752, 49, 1849, 320, 20921, 317, 7, 18, 8, 4615, 1828, 1156, 46967, 45840, 320, 10481, 3593, 7771, 3383, 374, 311, 510, 12, 23768, 279, 4271, 315, 697, 5306, 35715, 448, 279, 9250, 30078, 624, 12, 1416, 697, 5306, 2550, 374, 279, 1429, 13382, 11, 2550, 220, 151665, 8110, 553, 279, 45840, 624, 12, 1416, 279, 9250, 30078, 374, 9355, 2664, 11, 2550, 220, 151666, 8110, 553, 429, 45840, 624, 12, 1416, 2176, 525, 49404, 714, 498, 646, 64736, 264, 2664, 4226, 553, 12831, 7699, 488, 9250, 30078, 11, 2550, 220, 151667, 323, 279, 31728, 45840, 382, 39, 59300, 38322, 510, 2679, 582, 653, 537, 2621, 419, 3491, 11, 279, 4910, 374, 1052, 369, 68968, 11, 51894, 8437, 311, 728, 389, 7826, 678, 916, 4505, 382, 11569, 35715, 510, 333, 582, 653, 537, 2621, 419, 3491, 279, 4910, 374, 1052, 369, 68968, 51894, 8437, 311, 728, 389, 7826, 678, 916, 37534, 271, 151645, 198, 151644, 77091, 198, 151665, 333, 498, 653, 537, 2621, 419, 3491, 279, 4910, 374, 1052, 369, 68968, 51894, 8437, 311, 728, 389, 7826, 678, 916, 37534, 13, 151645, 198]
+inputs:
+<|im_start|>system
+You are a helpful assistant.<|im_end|>
+<|im_start|>user
+You are an ASR correction model with access to:
+
+(1) The original audio;
+(2) The transcription hypothesis from another ASR system (external);
+(3) Your own first-pass transcription (internal).
+
+Your task is to:
+- Compare the quality of your internal transcript with the external hypothesis.
+- If your internal output is the most accurate, output <internal> followed by the transcription.
+- If the external hypothesis is clearly better, output <external> followed by that transcription.
+- If both are inaccurate but you can revise a better answer by considering audio + external hypothesis, output <rewrite> and the revised transcription.
+
+Hypotheses:
+If we do not address this problem, the ground is there for populist, nationalist forces to go on growing all over Europe.
+
+Internal transcript:
+if we do not address this problem the ground is there for populist nationalist forces to go on growing all over europe
+
+<|im_end|>
+<|im_start|>assistant
+<internal>if you do not address this problem the ground is there for populist nationalist forces to go on growing all over europe.<|im_end|>
+
+label_ids:
+[-100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, 151665, 333, 498, 653, 537, 2621, 419, 3491, 279, 4910, 374, 1052, 369, 68968, 51894, 8437, 311, 728, 389, 7826, 678, 916, 37534, 13, 151645, 198]
+labels:
+<internal>if you do not address this problem the ground is there for populist nationalist forces to go on growing all over europe.<|im_end|>
+
+[INFO|configuration_utils.py:752] 2025-10-05 23:51:10,311 >> loading configuration file config.json from cache at /mnt/home/zhenwan.nlp/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/config.json
+[WARNING|modeling_rope_utils.py:424] 2025-10-05 23:51:10,314 >> Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+[INFO|configuration_qwen2_5_omni.py:1059] 2025-10-05 23:51:10,317 >> thinker_config is None. Initializing thinker model with default values
+[INFO|configuration_qwen2_5_omni.py:1063] 2025-10-05 23:51:10,317 >> talker_config is None. Initializing talker model with default values
+[INFO|configuration_qwen2_5_omni.py:1067] 2025-10-05 23:51:10,317 >> token2wav_config is None. Initializing token2wav model with default values
+[INFO|configuration_utils.py:817] 2025-10-05 23:51:10,320 >> Model config Qwen2_5OmniConfig {
+  "architectures": [
+    "Qwen2_5OmniModel"
+  ],
+  "enable_audio_output": true,
+  "enable_talker": true,
+  "model_type": "qwen2_5_omni",
+  "talker_config": {
+    "_attn_implementation_autoset": true,
+    "_name_or_path": "Qwen2.5-Omni-7B/talker",
+    "architectures": [
+      "Qwen2OmniTalkerForConditionalGeneration"
+    ],
+    "attention_dropout": 0.0,
+    "audio_end_token_id": 151648,
+    "audio_start_token_id": 151647,
+    "audio_token_index": 151646,
+    "embedding_size": 3584,
+    "head_dim": 128,
+    "hidden_act": "silu",
+    "hidden_size": 896,
+    "image_token_index": 151655,
+    "init_std": 0.02,
+    "initializer_range": 0.02,
+    "intermediate_size": 18944,
+    "layer_types": [
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention",
+      "full_attention"
+    ],
+    "max_position_embeddings": 32768,
+    "max_window_layers": 28,
+    "model_type": "qwen2_5_omni_talker",
+    "num_attention_heads": 12,
+    "num_hidden_layers": 24,
+    "num_key_value_heads": 4,
+    "position_id_per_seconds": 25,
+    "rms_norm_eps": 1e-06,
+    "rope_scaling": {
+      "mrope_section": [
+        16,
+        24,
+        24
+      ],
+      "rope_type": "default",
+      "type": "default"
+    },
+    "rope_theta": 1000000.0,
+    "seconds_per_chunk": 2,
+    "sliding_window": null,
+    "spatial_merge_size": 2,
+    "torch_dtype": "bfloat16",
+    "tts_codec_end_token_id": 8294,
+    "tts_codec_mask_token_id": 8296,
+    "tts_codec_pad_token_id": 8292,
+    "tts_codec_start_token_id": 8293,
+    "tts_text_end_token_id": 151861,
+    "tts_text_pad_token_id": 151859,
+    "tts_text_start_token_id": 151860,
+    "use_cache": true,
+    "use_sliding_window": false,
+    "video_token_index": 151656,
+    "vision_end_token_id": 151653,
+    "vision_start_token_id": 151652,
+    "vocab_size": 8448
+  },
+  "thinker_config": {
+    "_attn_implementation_autoset": true,
+    "_name_or_path": "Qwen2.5-Omni-7B/thinker",
+    "architectures": [
+      "Qwen2OmniNaViTThinkerForConditionalGeneration"
+    ],
+    "audio_config": {
+      "_attn_implementation_autoset": true,
+      "_name_or_path": "",
+      "activation_dropout": 0.0,
+      "activation_function": "gelu",
+      "add_cross_attention": false,
+      "architectures": null,
+      "attention_dropout": 0.0,
+      "bad_words_ids": null,
+      "begin_suppress_tokens": null,
+      "bos_token_id": null,
+      "chunk_size_feed_forward": 0,
+      "cross_attention_hidden_size": null,
+      "d_model": 1280,
+      "decoder_start_token_id": null,
+      "diversity_penalty": 0.0,
+      "do_sample": false,
+      "dropout": 0.0,
+      "early_stopping": false,
+      "encoder_attention_heads": 20,
+      "encoder_ffn_dim": 5120,
+      "encoder_layerdrop": 0.0,
+      "encoder_layers": 32,
+      "encoder_no_repeat_ngram_size": 0,
+      "eos_token_id": null,
+      "exponential_decay_length_penalty": null,
+      "finetuning_task": null,
+      "forced_bos_token_id": null,
+      "forced_eos_token_id": null,
+      "id2label": {
+        "0": "LABEL_0",
+        "1": "LABEL_1"
+      },
+      "init_std": 0.02,
+      "initializer_range": 0.02,
+      "is_decoder": false,
+      "is_encoder_decoder": false,
+      "label2id": {
+        "LABEL_0": 0,
+        "LABEL_1": 1
+      },
+      "length_penalty": 1.0,
+      "max_length": 20,
+      "max_source_positions": 1500,
+      "min_length": 0,
+      "model_type": "qwen2_5_omni_audio_encoder",
+      "n_window": 100,
+      "no_repeat_ngram_size": 0,
+      "num_beam_groups": 1,
+      "num_beams": 1,
+      "num_hidden_layers": 32,
+      "num_mel_bins": 128,
+      "num_return_sequences": 1,
+      "output_attentions": false,
+      "output_dim": 3584,
+      "output_hidden_states": false,
+      "output_scores": false,
+      "pad_token_id": null,
+      "prefix": null,
+      "problem_type": null,
+      "pruned_heads": {},
+      "remove_invalid_values": false,
+      "repetition_penalty": 1.0,
+      "return_dict": true,
+      "return_dict_in_generate": false,
+      "scale_embedding": false,
+      "sep_token_id": null,
+      "suppress_tokens": null,
+      "task_specific_params": null,
+      "temperature": 1.0,
+      "tf_legacy_loss": false,
+      "tie_encoder_decoder": false,
+      "tie_word_embeddings": true,
+      "tokenizer_class": null,
+      "top_k": 50,
+      "top_p": 1.0,
+      "torch_dtype": null,
+      "torchscript": false,
+      "typical_p": 1.0,
+      "use_bfloat16": false
+    },
+    "audio_end_token_id": 151648,
+    "audio_start_token_id": 151647,
+    "audio_token_index": 151646,
+    "bos_token_id": 151644,
+    "eos_token_id": 151645,
+    "ignore_index": -100,
+    "image_token_index": 151655,
+    "init_std": 0.02,
+    "initializer_range": 0.02,
+    "model_type": "qwen2_5_omni_thinker",
+    "pad_token_id": 151643,
+    "position_id_per_seconds": 25,
+    "seconds_per_chunk": 2,
+    "text_config": {
+      "_name_or_path": "",
+      "add_cross_attention": false,
+      "architectures": null,
+      "attention_dropout": 0.0,
+      "bad_words_ids": null,
+      "begin_suppress_tokens": null,
+      "bos_token_id": null,
+      "chunk_size_feed_forward": 0,
+      "cross_attention_hidden_size": null,
+      "decoder_start_token_id": null,
+      "diversity_penalty": 0.0,
+      "do_sample": false,
+      "early_stopping": false,
+      "encoder_no_repeat_ngram_size": 0,
+      "eos_token_id": null,
+      "exponential_decay_length_penalty": null,
+      "finetuning_task": null,
+      "forced_bos_token_id": null,
+      "forced_eos_token_id": null,
+      "hidden_act": "silu",
+      "hidden_size": 3584,
+      "id2label": {
+        "0": "LABEL_0",
+        "1": "LABEL_1"
+      },
+      "init_std": 0.02,
+      "initializer_range": 0.02,
+      "intermediate_size": 18944,
+      "is_decoder": false,
+      "is_encoder_decoder": false,
+      "label2id": {
+        "LABEL_0": 0,
+        "LABEL_1": 1
+      },
+      "layer_types": [
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention"
+      ],
+      "length_penalty": 1.0,
+      "max_length": 20,
+      "max_position_embeddings": 32768,
+      "max_window_layers": 28,
+      "min_length": 0,
+      "model_type": "qwen2_5_omni_text",
+      "no_repeat_ngram_size": 0,
+      "num_attention_heads": 28,
+      "num_beam_groups": 1,
+      "num_beams": 1,
+      "num_hidden_layers": 28,
+      "num_key_value_heads": 4,
+      "num_return_sequences": 1,
+      "output_attentions": false,
+      "output_hidden_states": false,
+      "output_scores": false,
+      "pad_token_id": null,
+      "prefix": null,
+      "problem_type": null,
+      "pruned_heads": {},
+      "remove_invalid_values": false,
+      "repetition_penalty": 1.0,
+      "return_dict": true,
+      "return_dict_in_generate": false,
+      "rms_norm_eps": 1e-06,
+      "rope_scaling": {
+        "mrope_section": [
+          16,
+          24,
+          24
+        ],
+        "rope_type": "default",
+        "type": "default"
+      },
+      "rope_theta": 1000000.0,
+      "sep_token_id": null,
+      "sliding_window": null,
+      "suppress_tokens": null,
+      "task_specific_params": null,
+      "temperature": 1.0,
+      "tf_legacy_loss": false,
+      "tie_encoder_decoder": false,
+      "tie_word_embeddings": false,
+      "tokenizer_class": null,
+      "top_k": 50,
+      "top_p": 1.0,
+      "torch_dtype": null,
+      "torchscript": false,
+      "typical_p": 1.0,
+      "use_bfloat16": false,
+      "use_cache": true,
+      "use_sliding_window": false,
+      "vocab_size": 152064
+    },
+    "torch_dtype": "bfloat16",
+    "user_token_id": 872,
+    "video_token_index": 151656,
+    "vision_config": {
+      "_attn_implementation_autoset": true,
+      "_name_or_path": "",
+      "add_cross_attention": false,
+      "architectures": null,
+      "bad_words_ids": null,
+      "begin_suppress_tokens": null,
+      "bos_token_id": null,
+      "chunk_size_feed_forward": 0,
+      "cross_attention_hidden_size": null,
+      "decoder_start_token_id": null,
+      "depth": 32,
+      "diversity_penalty": 0.0,
+      "do_sample": false,
+      "early_stopping": false,
+      "embed_dim": 1280,
+      "encoder_no_repeat_ngram_size": 0,
+      "eos_token_id": null,
+      "exponential_decay_length_penalty": null,
+      "finetuning_task": null,
+      "forced_bos_token_id": null,
+      "forced_eos_token_id": null,
+      "fullatt_block_indexes": [
+        7,
+        15,
+        23,
+        31
+      ],
+      "hidden_act": "silu",
+      "hidden_size": 1280,
+      "id2label": {
+        "0": "LABEL_0",
+        "1": "LABEL_1"
+      },
+      "in_channels": 3,
+      "in_chans": 3,
+      "init_std": 0.02,
+      "initializer_range": 0.02,
+      "intermediate_size": 3420,
+      "is_decoder": false,
+      "is_encoder_decoder": false,
+      "label2id": {
+        "LABEL_0": 0,
+        "LABEL_1": 1
+      },
+      "length_penalty": 1.0,
+      "max_length": 20,
+      "min_length": 0,
+      "model_type": "qwen2_5_omni_vision_encoder",
+      "no_repeat_ngram_size": 0,
+      "num_beam_groups": 1,
+      "num_beams": 1,
+      "num_heads": 16,
+      "num_return_sequences": 1,
+      "out_hidden_size": 3584,
+      "output_attentions": false,
+      "output_hidden_states": false,
+      "output_scores": false,
+      "pad_token_id": null,
+      "patch_size": 14,
+      "prefix": null,
+      "problem_type": null,
+      "pruned_heads": {},
+      "remove_invalid_values": false,
+      "repetition_penalty": 1.0,
+      "return_dict": true,
+      "return_dict_in_generate": false,
+      "sep_token_id": null,
+      "spatial_merge_size": 2,
+      "spatial_patch_size": 14,
+      "suppress_tokens": null,
+      "task_specific_params": null,
+      "temperature": 1.0,
+      "temporal_patch_size": 2,
+      "tf_legacy_loss": false,
+      "tie_encoder_decoder": false,
+      "tie_word_embeddings": true,
+      "tokenizer_class": null,
+      "tokens_per_second": 25,
+      "top_k": 50,
+      "top_p": 1.0,
+      "torch_dtype": null,
+      "torchscript": false,
+      "typical_p": 1.0,
+      "use_bfloat16": false,
+      "window_size": 112
+    },
+    "vision_end_token_id": 151653,
+    "vision_start_token_id": 151652,
+    "vision_token_id": 151654
+  },
+  "token2wav_config": {
+    "_attn_implementation_autoset": true,
+    "bigvgan_config": {
+      "_attn_implementation_autoset": true,
+      "_name_or_path": "",
+      "add_cross_attention": false,
+      "architectures": null,
+      "bad_words_ids": null,
+      "begin_suppress_tokens": null,
+      "bos_token_id": null,
+      "chunk_size_feed_forward": 0,
+      "cross_attention_hidden_size": null,
+      "decoder_start_token_id": null,
+      "diversity_penalty": 0.0,
+      "do_sample": false,
+      "early_stopping": false,
+      "encoder_no_repeat_ngram_size": 0,
+      "eos_token_id": null,
+      "exponential_decay_length_penalty": null,
+      "finetuning_task": null,
+      "forced_bos_token_id": null,
+      "forced_eos_token_id": null,
+      "id2label": {
+        "0": "LABEL_0",
+        "1": "LABEL_1"
+      },
+      "is_decoder": false,
+      "is_encoder_decoder": false,
+      "label2id": {
+        "LABEL_0": 0,
+        "LABEL_1": 1
+      },
+      "length_penalty": 1.0,
+      "max_length": 20,
+      "mel_dim": 80,
+      "min_length": 0,
+      "model_type": "qwen2_5_omni_bigvgan",
+      "no_repeat_ngram_size": 0,
+      "num_beam_groups": 1,
+      "num_beams": 1,
+      "num_return_sequences": 1,
+      "output_attentions": false,
+      "output_hidden_states": false,
+      "output_scores": false,
+      "pad_token_id": null,
+      "prefix": null,
+      "problem_type": null,
+      "pruned_heads": {},
+      "remove_invalid_values": false,
+      "repetition_penalty": 1.0,
+      "resblock_dilation_sizes": [
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          1,
+          3,
+          5
+        ]
+      ],
+      "resblock_kernel_sizes": [
+        3,
+        7,
+        11
+      ],
+      "return_dict": true,
+      "return_dict_in_generate": false,
+      "sep_token_id": null,
+      "suppress_tokens": null,
+      "task_specific_params": null,
+      "temperature": 1.0,
+      "tf_legacy_loss": false,
+      "tie_encoder_decoder": false,
+      "tie_word_embeddings": true,
+      "tokenizer_class": null,
+      "top_k": 50,
+      "top_p": 1.0,
+      "torch_dtype": null,
+      "torchscript": false,
+      "typical_p": 1.0,
+      "upsample_initial_channel": 1536,
+      "upsample_kernel_sizes": [
+        11,
+        7,
+        4,
+        4,
+        4,
+        4
+      ],
+      "upsample_rates": [
+        5,
+        3,
+        2,
+        2,
+        2,
+        2
+      ],
+      "use_bfloat16": false,
+      "use_bias_at_final": false
+    },
+    "dit_config": {
+      "_attn_implementation_autoset": true,
+      "_name_or_path": "",
+      "add_cross_attention": false,
+      "architectures": null,
+      "bad_words_ids": null,
+      "begin_suppress_tokens": null,
+      "block_size": 24,
+      "bos_token_id": null,
+      "chunk_size_feed_forward": 0,
+      "cross_attention_hidden_size": null,
+      "decoder_start_token_id": null,
+      "depth": 22,
+      "dim": 1024,
+      "diversity_penalty": 0.0,
+      "do_sample": false,
+      "dropout": 0.1,
+      "early_stopping": false,
+      "emb_dim": 512,
+      "enc_attention_channels": 64,
+      "enc_channels": [
+        256,
+        256,
+        256,
+        256,
+        768
+      ],
+      "enc_dilations": [
+        1,
+        2,
+        3,
+        4,
+        1
+      ],
+      "enc_dim": 128,
+      "enc_emb_dim": 192,
+      "enc_global_context": true,
+      "enc_kernel_sizes": [
+        5,
+        3,
+        3,
+        3,
+        1
+      ],
+      "enc_lin_neurons": 192,
+      "enc_res2net_scale": 2,
+      "enc_se_channels": 64,
+      "encoder_no_repeat_ngram_size": 0,
+      "eos_token_id": null,
+      "exponential_decay_length_penalty": null,
+      "ff_mult": 2,
+      "finetuning_task": null,
+      "forced_bos_token_id": null,
+      "forced_eos_token_id": null,
+      "head_dim": 64,
+      "heads": 16,
+      "hidden_size": 1024,
+      "id2label": {
+        "0": "LABEL_0",
+        "1": "LABEL_1"
+      },
+      "is_decoder": false,
+      "is_encoder_decoder": false,
+      "label2id": {
+        "LABEL_0": 0,
+        "LABEL_1": 1
+      },
+      "length_penalty": 1.0,
+      "look_ahead_layers": [
+        10
+      ],
+      "look_backward_layers": [
+        0,
+        20
+      ],
+      "max_length": 20,
+      "max_position_embeddings": 32768,
+      "mel_dim": 80,
+      "min_length": 0,
+      "model_type": "qwen2_5_omni_dit",
+      "no_repeat_ngram_size": 0,
+      "num_attention_heads": 16,
+      "num_beam_groups": 1,
+      "num_beams": 1,
+      "num_embeds": 8193,
+      "num_hidden_layers": 22,
+      "num_return_sequences": 1,
+      "output_attentions": false,
+      "output_hidden_states": false,
+      "output_scores": false,
+      "pad_token_id": null,
+      "prefix": null,
+      "problem_type": null,
+      "pruned_heads": {},
+      "remove_invalid_values": false,
+      "repeats": 2,
+      "repetition_penalty": 1.0,
+      "return_dict": true,
+      "return_dict_in_generate": false,
+      "rope_theta": 10000.0,
+      "sep_token_id": null,
+      "suppress_tokens": null,
+      "task_specific_params": null,
+      "temperature": 1.0,
+      "tf_legacy_loss": false,
+      "tie_encoder_decoder": false,
+      "tie_word_embeddings": true,
+      "tokenizer_class": null,
+      "top_k": 50,
+      "top_p": 1.0,
+      "torch_dtype": "float32",
+      "torchscript": false,
+      "typical_p": 1.0,
+      "use_bfloat16": false
+    },
+    "model_type": "qwen2_5_omni_token2wav"
+  },
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.55.0"
+}
+
+[INFO|2025-10-05 23:51:10] llamafactory.model.model_utils.kv_cache:143 >> KV cache is disabled during training.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+[INFO|modeling_utils.py:1308] 2025-10-05 23:51:11,050 >> loading weights file model.safetensors from cache at /mnt/home/zhenwan.nlp/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/model.safetensors.index.json
+[INFO|modeling_utils.py:4363] 2025-10-05 23:51:11,058 >> Detected DeepSpeed ZeRO-3: activating zero.init() for this model
+[2025-10-05 23:51:11,058] [INFO] [config.py:735:__init__] Config mesh_device None world_size = 8
+[INFO|configuration_utils.py:1098] 2025-10-05 23:51:11,068 >> Generate config GenerationConfig {
+  "use_cache": false
+}
+
+[INFO|configuration_utils.py:1098] 2025-10-05 23:51:11,068 >> Generate config GenerationConfig {
+  "bos_token_id": 151644,
+  "eos_token_id": 151645,
+  "pad_token_id": 151643
+}
+
+[2025-10-05 23:51:11,111] [INFO] [config.py:735:__init__] Config mesh_device None world_size = 8
+[2025-10-05 23:51:11,111] [INFO] [config.py:735:__init__] Config mesh_device None world_size = 8
+[2025-10-05 23:51:11,114] [INFO] [config.py:735:__init__] Config mesh_device None world_size = 8
+[2025-10-05 23:51:11,117] [INFO] [config.py:735:__init__] Config mesh_device None world_size = 8
+[2025-10-05 23:51:11,134] [INFO] [config.py:735:__init__] Config mesh_device None world_size = 8
+[2025-10-05 23:51:11,178] [INFO] [config.py:735:__init__] Config mesh_device None world_size = 8
+[2025-10-05 23:51:11,191] [INFO] [config.py:735:__init__] Config mesh_device None world_size = 8
+[INFO|configuration_utils.py:1098] 2025-10-05 23:51:12,050 >> Generate config GenerationConfig {}
+
+[INFO|modeling_utils.py:2411] 2025-10-05 23:51:12,207 >> Instantiating Qwen2_5OmniToken2WavDiTModel model under default dtype torch.float32.
+[2025-10-05 23:51:12,521] [INFO] [partition_parameters.py:348:__exit__] finished initializing model - num_params = 2447, num_elems = 10.73B
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:04<00:16,  4.11s/it]Loading checkpoint shards:  20%|██        | 1/5 [00:04<00:16,  4.11s/it]Loading checkpoint shards:  20%|██        | 1/5 [00:04<00:16,  4.11s/it]Loading checkpoint shards:  20%|██        | 1/5 [00:04<00:16,  4.11s/it]Loading checkpoint shards:  20%|██        | 1/5 [00:04<00:16,  4.11s/it]Loading checkpoint shards:  20%|██        | 1/5 [00:04<00:16,  4.11s/it]Loading checkpoint shards:  20%|██        | 1/5 [00:04<00:16,  4.11s/it]Loading checkpoint shards:  20%|██        | 1/5 [00:04<00:18,  4.54s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:08<00:13,  4.39s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:08<00:13,  4.39s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:08<00:13,  4.39s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:08<00:13,  4.39s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:08<00:13,  4.39s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:08<00:13,  4.39s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:08<00:13,  4.40s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:08<00:13,  4.49s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:13<00:08,  4.48s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:13<00:08,  4.48s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:13<00:08,  4.48s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:13<00:08,  4.48s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:13<00:08,  4.48s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:13<00:08,  4.48s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:13<00:08,  4.48s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:13<00:08,  4.48s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:17<00:04,  4.43s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:17<00:04,  4.43s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:17<00:04,  4.43s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:17<00:04,  4.43s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:17<00:04,  4.43s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:17<00:04,  4.43s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:17<00:04,  4.43s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:17<00:04,  4.42s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:19<00:00,  3.43s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:19<00:00,  3.43s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:19<00:00,  3.86s/it]
+Loading checkpoint shards: 100%|██████████| 5/5 [00:19<00:00,  3.86s/it]
+Loading checkpoint shards: 100%|██████████| 5/5 [00:19<00:00,  3.43s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:19<00:00,  3.43s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:19<00:00,  3.43s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:19<00:00,  3.43s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:19<00:00,  3.43s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:19<00:00,  3.86s/it]
+Loading checkpoint shards: 100%|██████████| 5/5 [00:19<00:00,  3.86s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:19<00:00,  3.86s/it]
+
+Loading checkpoint shards: 100%|██████████| 5/5 [00:19<00:00,  3.86s/it]
+Loading checkpoint shards: 100%|██████████| 5/5 [00:19<00:00,  3.86s/it]
+Loading checkpoint shards: 100%|██████████| 5/5 [00:19<00:00,  3.38s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:19<00:00,  3.86s/it]
+[INFO|modeling_utils.py:5606] 2025-10-05 23:51:31,927 >> All model checkpoint weights were used when initializing Qwen2_5OmniForConditionalGeneration.
+
+[INFO|modeling_utils.py:5614] 2025-10-05 23:51:31,927 >> All the weights of Qwen2_5OmniForConditionalGeneration were initialized from the model checkpoint at Qwen/Qwen2.5-Omni-7B.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use Qwen2_5OmniForConditionalGeneration for predictions without further training.
+[INFO|configuration_utils.py:1053] 2025-10-05 23:51:32,240 >> loading configuration file generation_config.json from cache at /mnt/home/zhenwan.nlp/.cache/huggingface/hub/models--Qwen--Qwen2.5-Omni-7B/snapshots/ae9e1690543ffd5c0221dc27f79834d0294cba00/generation_config.json
+[INFO|configuration_utils.py:1098] 2025-10-05 23:51:32,240 >> Generate config GenerationConfig {}
+
+[INFO|modeling_qwen2_5_omni.py:3740] 2025-10-05 23:51:32,676 >> Speaker ['Ethan', 'Chelsie'] loaded
+[INFO|2025-10-05 23:51:32] llamafactory.model.model_utils.checkpointing:143 >> Gradient checkpointing enabled.
+[INFO|2025-10-05 23:51:32] llamafactory.model.model_utils.attention:143 >> Using torch SDPA for faster training and inference.
+[INFO|2025-10-05 23:51:32] llamafactory.model.adapter:143 >> DeepSpeed ZeRO3 detected, remaining trainable params in float32.
+[INFO|2025-10-05 23:51:32] llamafactory.model.adapter:143 >> Fine-tuning method: Full
+[INFO|2025-10-05 23:51:32] llamafactory.model.model_utils.visual:143 >> Set vision model not trainable: ['visual.patch_embed', 'visual.blocks', 'audio_tower'].
+[INFO|2025-10-05 23:51:32] llamafactory.model.model_utils.visual:143 >> Set multi model projector not trainable: visual.merger.
+[INFO|2025-10-05 23:51:32] llamafactory.model.loader:143 >> trainable params: 7,615,616,512 || all params: 8,931,813,888 || trainable%: 85.2639
+[INFO|trainer.py:757] 2025-10-05 23:51:32,748 >> Using auto half precision backend
+[2025-10-05 23:51:33,123] [INFO] [logging.py:107:log_dist] [Rank 0] DeepSpeed info: version=0.16.9, git-hash=unknown, git-branch=unknown
+[2025-10-05 23:51:33,123] [INFO] [config.py:735:__init__] Config mesh_device None world_size = 8
+[2025-10-05 23:51:33,139] [INFO] [logging.py:107:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2025-10-05 23:51:33,141] [INFO] [logging.py:107:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2025-10-05 23:51:33,141] [INFO] [logging.py:107:log_dist] [Rank 0] Removing param_group that has no 'params' in the basic Optimizer
+[2025-10-05 23:51:33,161] [INFO] [logging.py:107:log_dist] [Rank 0] DeepSpeed Basic Optimizer = AdamW
+[2025-10-05 23:51:33,161] [INFO] [utils.py:59:is_zero_supported_optimizer] Checking ZeRO support for optimizer=AdamW type=<class 'torch.optim.adamw.AdamW'>
+[2025-10-05 23:51:33,161] [INFO] [logging.py:107:log_dist] [Rank 0] Creating fp16 ZeRO stage 3 optimizer, MiCS is enabled False, Hierarchical params gather False
+[2025-10-05 23:51:33,161] [INFO] [logging.py:107:log_dist] [Rank 0] Creating torch.float16 ZeRO stage 3 optimizer
+[2025-10-05 23:51:33,352] [INFO] [utils.py:781:see_memory_usage] Stage 3 initialize beginning
+[2025-10-05 23:51:33,352] [INFO] [utils.py:782:see_memory_usage] MA 2.08 GB         Max_MA 5.01 GB         CA 2.1 GB         Max_CA 5 GB 
+[2025-10-05 23:51:33,352] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 51.1 GB, percent = 2.6%
+[2025-10-05 23:51:33,355] [INFO] [stage3.py:170:__init__] Reduce bucket size 12845056
+[2025-10-05 23:51:33,355] [INFO] [stage3.py:171:__init__] Prefetch bucket size 11560550
+[2025-10-05 23:51:33,491] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2025-10-05 23:51:33,491] [INFO] [utils.py:782:see_memory_usage] MA 2.08 GB         Max_MA 2.08 GB         CA 2.1 GB         Max_CA 2 GB 
+[2025-10-05 23:51:33,492] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 51.09 GB, percent = 2.6%
+Parameter Offload: Total persistent parameters: 1356288 in 726 params
+[2025-10-05 23:51:33,728] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2025-10-05 23:51:33,729] [INFO] [utils.py:782:see_memory_usage] MA 2.08 GB         Max_MA 2.08 GB         CA 2.1 GB         Max_CA 2 GB 
+[2025-10-05 23:51:33,729] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 51.1 GB, percent = 2.6%
+[2025-10-05 23:51:33,885] [INFO] [utils.py:781:see_memory_usage] Before creating fp16 partitions
+[2025-10-05 23:51:33,885] [INFO] [utils.py:782:see_memory_usage] MA 2.08 GB         Max_MA 2.08 GB         CA 2.1 GB         Max_CA 2 GB 
+[2025-10-05 23:51:33,886] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 51.09 GB, percent = 2.6%
+[2025-10-05 23:51:36,054] [INFO] [utils.py:781:see_memory_usage] After creating fp16 partitions: 2
+[2025-10-05 23:51:36,055] [INFO] [utils.py:782:see_memory_usage] MA 2.08 GB         Max_MA 2.08 GB         CA 2.15 GB         Max_CA 2 GB 
+[2025-10-05 23:51:36,055] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 51.1 GB, percent = 2.6%
+[2025-10-05 23:51:36,219] [INFO] [utils.py:781:see_memory_usage] Before creating fp32 partitions
+[2025-10-05 23:51:36,219] [INFO] [utils.py:782:see_memory_usage] MA 2.08 GB         Max_MA 2.08 GB         CA 2.15 GB         Max_CA 2 GB 
+[2025-10-05 23:51:36,219] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 51.11 GB, percent = 2.6%
+[2025-10-05 23:51:36,435] [INFO] [utils.py:781:see_memory_usage] After creating fp32 partitions
+[2025-10-05 23:51:36,435] [INFO] [utils.py:782:see_memory_usage] MA 5.63 GB         Max_MA 7.4 GB         CA 7.47 GB         Max_CA 7 GB 
+[2025-10-05 23:51:36,435] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 51.12 GB, percent = 2.6%
+[2025-10-05 23:51:36,598] [INFO] [utils.py:781:see_memory_usage] Before initializing optimizer states
+[2025-10-05 23:51:36,598] [INFO] [utils.py:782:see_memory_usage] MA 5.63 GB         Max_MA 5.63 GB         CA 7.47 GB         Max_CA 7 GB 
+[2025-10-05 23:51:36,598] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 51.14 GB, percent = 2.6%
+[2025-10-05 23:51:36,805] [INFO] [utils.py:781:see_memory_usage] After initializing optimizer states
+[2025-10-05 23:51:36,806] [INFO] [utils.py:782:see_memory_usage] MA 5.63 GB         Max_MA 9.18 GB         CA 11.02 GB         Max_CA 11 GB 
+[2025-10-05 23:51:36,806] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 51.15 GB, percent = 2.6%
+[2025-10-05 23:51:36,806] [INFO] [stage3.py:534:_setup_for_real_optimizer] optimizer state initialized
+[2025-10-05 23:51:37,124] [INFO] [utils.py:781:see_memory_usage] After initializing ZeRO optimizer
+[2025-10-05 23:51:37,125] [INFO] [utils.py:782:see_memory_usage] MA 7.43 GB         Max_MA 9.46 GB         CA 11.02 GB         Max_CA 11 GB 
+[2025-10-05 23:51:37,125] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 52.29 GB, percent = 2.7%
+[2025-10-05 23:51:37,125] [INFO] [logging.py:107:log_dist] [Rank 0] DeepSpeed Final Optimizer = DeepSpeedZeroOptimizer_Stage3
+[2025-10-05 23:51:37,126] [INFO] [logging.py:107:log_dist] [Rank 0] DeepSpeed using configured LR scheduler = None
+[2025-10-05 23:51:37,126] [INFO] [logging.py:107:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2025-10-05 23:51:37,126] [INFO] [logging.py:107:log_dist] [Rank 0] step=0, skipped=0, lr=[0.0, 0.0], mom=[(0.9, 0.999), (0.9, 0.999)]
+[2025-10-05 23:51:37,131] [INFO] [config.py:1003:print] DeepSpeedEngine configuration:
+[2025-10-05 23:51:37,131] [INFO] [config.py:1007:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2025-10-05 23:51:37,131] [INFO] [config.py:1007:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'intra_op_parallelism': 1, 'single_submit': False, 'overlap_events': True, 'use_gds': False}
+[2025-10-05 23:51:37,131] [INFO] [config.py:1007:print]   amp_enabled .................. False
+[2025-10-05 23:51:37,131] [INFO] [config.py:1007:print]   amp_params ................... False
+[2025-10-05 23:51:37,131] [INFO] [config.py:1007:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2025-10-05 23:51:37,131] [INFO] [config.py:1007:print]   bfloat16_enabled ............. False
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   bfloat16_immediate_grad_update  True
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   checkpoint_parallel_write_pipeline  False
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   checkpoint_tag_validation_enabled  True
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   checkpoint_tag_validation_fail  False
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x1551ba383b50>
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   communication_data_type ...... None
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   compile_config ............... deepcompile=False free_activation=False offload_activation=False offload_opt_states=False double_buffer=True symmetric_memory=False debug_log=False offload_parameters=False sync_before_reduce=False sync_after_reduce=False sync_before_allgather=False sync_after_allgather=False
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   curriculum_enabled_legacy .... False
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   curriculum_params_legacy ..... False
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'pin_memory': False, 'curriculum_learning': {'enabled': False}, 'dynamic_batching': {'enabled': False, 'lr_scaling_method': 'linear', 'min_batch_size': 1, 'max_batch_size': None, 'sequence_picking_order': 'dataloader', 'verbose': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   data_efficiency_enabled ...... False
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   dataloader_drop_last ......... False
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   disable_allgather ............ False
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   dump_state ................... False
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   dynamic_loss_scale_args ...... {'init_scale': 65536, 'scale_window': 1000, 'delayed_shift': 2, 'consecutive_hysteresis': False, 'min_scale': 1}
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   eigenvalue_enabled ........... False
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   eigenvalue_gas_boundary_resolution  1
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   eigenvalue_layer_num ......... 0
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   eigenvalue_max_iter .......... 100
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   eigenvalue_stability ......... 1e-06
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   eigenvalue_tol ............... 0.01
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   eigenvalue_verbose ........... False
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   elasticity_enabled ........... False
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   fp16_auto_cast ............... False
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   fp16_enabled ................. True
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   fp16_master_weights_and_gradients  False
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   global_rank .................. 0
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   grad_accum_dtype ............. None
+[2025-10-05 23:51:37,132] [INFO] [config.py:1007:print]   gradient_accumulation_steps .. 4
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   gradient_clipping ............ 1.0
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   gradient_predivide_factor .... 1.0
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   graph_harvesting ............. False
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   initial_dynamic_scale ........ 65536
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   load_universal_checkpoint .... False
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   loss_scale ................... 0
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   memory_breakdown ............. False
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   mics_hierarchial_params_gather  False
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   mics_shard_size .............. -1
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') comet=CometConfig(enabled=False, samples_log_interval=100, project=None, workspace=None, api_key=None, experiment_name=None, experiment_key=None, online=None, mode=None) wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName')
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   optimizer_legacy_fusion ...... False
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   optimizer_name ............... None
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   optimizer_params ............. None
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   pld_enabled .................. False
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   pld_params ................... False
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   prescale_gradients ........... False
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   scheduler_name ............... None
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   scheduler_params ............. None
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   seq_parallel_communication_data_type  torch.float32
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   sparse_attention ............. None
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   sparse_gradients_enabled ..... False
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   steps_per_print .............. inf
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   tensor_parallel_config ....... dtype=torch.float16 autotp_size=0 tp_overlap_comm=False tensor_parallel=TPConfig(tp_size=1, tp_grain_size=1, mpu=None, tp_group=None) injection_policy_tuple=None keep_module_on_host=False replace_with_kernel_inject=False
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   timers_config ................ enabled=True synchronized=True
+[2025-10-05 23:51:37,133] [INFO] [config.py:1007:print]   train_batch_size ............. 384
+[2025-10-05 23:51:37,134] [INFO] [config.py:1007:print]   train_micro_batch_size_per_gpu  12
+[2025-10-05 23:51:37,134] [INFO] [config.py:1007:print]   use_data_before_expert_parallel_  False
+[2025-10-05 23:51:37,134] [INFO] [config.py:1007:print]   use_node_local_storage ....... False
+[2025-10-05 23:51:37,134] [INFO] [config.py:1007:print]   wall_clock_breakdown ......... False
+[2025-10-05 23:51:37,134] [INFO] [config.py:1007:print]   weight_quantization_config ... None
+[2025-10-05 23:51:37,134] [INFO] [config.py:1007:print]   world_size ................... 8
+[2025-10-05 23:51:37,134] [INFO] [config.py:1007:print]   zero_allow_untested_optimizer  True
+[2025-10-05 23:51:37,134] [INFO] [config.py:1007:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=12845056 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=False load_from_fp32_weights=True elastic_checkpoint=False offload_param=None offload_optimizer=None sub_group_size=1000000000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=11560550 param_persistence_threshold=35840 model_persistence_threshold=9223372036854775807 max_live_parameters=1000000000 max_reuse_distance=1000000000 gather_16bit_weights_on_model_save=True module_granularity_threshold=0 use_all_reduce_for_fetch_params=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False zeropp_loco_param=None mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True log_trace_cache_warnings=False
+[2025-10-05 23:51:37,134] [INFO] [config.py:1007:print]   zero_enabled ................. True
+[2025-10-05 23:51:37,134] [INFO] [config.py:1007:print]   zero_force_ds_cpu_optimizer .. True
+[2025-10-05 23:51:37,134] [INFO] [config.py:1007:print]   zero_optimization_stage ...... 3
+[2025-10-05 23:51:37,134] [INFO] [config.py:993:print_user_config]   json = {
+    "train_batch_size": 384, 
+    "train_micro_batch_size_per_gpu": 12, 
+    "gradient_accumulation_steps": 4, 
+    "gradient_clipping": 1.0, 
+    "zero_allow_untested_optimizer": true, 
+    "fp16": {
+        "enabled": true, 
+        "loss_scale": 0, 
+        "loss_scale_window": 1000, 
+        "initial_scale_power": 16, 
+        "hysteresis": 2, 
+        "min_loss_scale": 1
+    }, 
+    "bf16": {
+        "enabled": false
+    }, 
+    "zero_optimization": {
+        "stage": 3, 
+        "overlap_comm": false, 
+        "contiguous_gradients": true, 
+        "sub_group_size": 1.000000e+09, 
+        "reduce_bucket_size": 1.284506e+07, 
+        "stage3_prefetch_bucket_size": 1.156055e+07, 
+        "stage3_param_persistence_threshold": 3.584000e+04, 
+        "stage3_max_live_parameters": 1.000000e+09, 
+        "stage3_max_reuse_distance": 1.000000e+09, 
+        "stage3_gather_16bit_weights_on_model_save": true
+    }, 
+    "steps_per_print": inf
+}
+[INFO|trainer.py:2433] 2025-10-05 23:51:37,137 >> ***** Running training *****
+[INFO|trainer.py:2434] 2025-10-05 23:51:37,138 >>   Num examples = 20,000
+[INFO|trainer.py:2435] 2025-10-05 23:51:37,138 >>   Num Epochs = 5
+[INFO|trainer.py:2436] 2025-10-05 23:51:37,138 >>   Instantaneous batch size per device = 12
+[INFO|trainer.py:2439] 2025-10-05 23:51:37,138 >>   Total train batch size (w. parallel, distributed & accumulation) = 384
+[INFO|trainer.py:2440] 2025-10-05 23:51:37,138 >>   Gradient Accumulation steps = 4
+[INFO|trainer.py:2441] 2025-10-05 23:51:37,138 >>   Total optimization steps = 265
+[INFO|trainer.py:2442] 2025-10-05 23:51:37,143 >>   Number of trainable parameters = 7,615,616,512
+  0%|          | 0/265 [00:00<?, ?it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+[WARNING|logging.py:328] 2025-10-05 23:51:40,244 >> `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+[WARNING|logging.py:328] 2025-10-05 23:51:40,702 >> `loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+[2025-10-05 23:51:51,160] [INFO] [loss_scaler.py:190:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 65536, but hysteresis is 2. Reducing hysteresis to 1
+[2025-10-05 23:51:51,160] [INFO] [stage3.py:2026:_loco_err_buf_update] update loco-zero++ error buffer with overflow: True
+  0%|          | 1/265 [00:14<1:01:40, 14.02s/it]                                                 {'loss': 1.1982, 'grad_norm': 0.0, 'learning_rate': 0.0, 'epoch': 0.02}
+  0%|          | 1/265 [00:14<1:01:40, 14.02s/it][2025-10-05 23:51:55,675] [INFO] [loss_scaler.py:183:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 65536, reducing to 32768
+[2025-10-05 23:51:55,675] [INFO] [stage3.py:2026:_loco_err_buf_update] update loco-zero++ error buffer with overflow: True
+  1%|          | 2/265 [00:18<36:56,  8.43s/it]                                                 {'loss': 1.2201, 'grad_norm': 0.0, 'learning_rate': 0.0, 'epoch': 0.04}
+  1%|          | 2/265 [00:18<36:56,  8.43s/it][2025-10-05 23:52:01,056] [INFO] [loss_scaler.py:183:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 32768, reducing to 16384
+[2025-10-05 23:52:01,056] [INFO] [stage3.py:2026:_loco_err_buf_update] update loco-zero++ error buffer with overflow: True
+  1%|          | 3/265 [00:23<30:43,  7.04s/it]                                               {'loss': 1.1176, 'grad_norm': 0.0, 'learning_rate': 0.0, 'epoch': 0.06}
+  1%|          | 3/265 [00:23<30:43,  7.04s/it]  2%|▏         | 4/265 [00:28<26:44,  6.15s/it]                                               {'loss': 1.1702, 'grad_norm': 33.53521700291914, 'learning_rate': 0.0, 'epoch': 0.08}
+  2%|▏         | 4/265 [00:28<26:44,  6.15s/it]  2%|▏         | 5/265 [00:34<25:35,  5.91s/it]                                               {'loss': 1.1518, 'grad_norm': 31.8560067791023, 'learning_rate': 3.7037037037037037e-06, 'epoch': 0.1}
+  2%|▏         | 5/265 [00:34<25:35,  5.91s/it]  2%|▏         | 6/265 [00:38<23:43,  5.50s/it]                                               {'loss': 0.8656, 'grad_norm': 27.51131478529588, 'learning_rate': 7.4074074074074075e-06, 'epoch': 0.11}
+  2%|▏         | 6/265 [00:38<23:43,  5.50s/it]  3%|▎         | 7/265 [00:43<22:07,  5.15s/it]                                               {'loss': 0.8684, 'grad_norm': 57.768773663159074, 'learning_rate': 1.1111111111111112e-05, 'epoch': 0.13}
+  3%|▎         | 7/265 [00:43<22:07,  5.15s/it]  3%|▎         | 8/265 [00:48<22:02,  5.15s/it]                                               {'loss': 0.9254, 'grad_norm': 11.497234103049877, 'learning_rate': 1.4814814814814815e-05, 'epoch': 0.15}
+  3%|▎         | 8/265 [00:48<22:02,  5.15s/it][2025-10-05 23:52:30,345] [INFO] [loss_scaler.py:183:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 16384, reducing to 8192
+[2025-10-05 23:52:30,345] [INFO] [stage3.py:2026:_loco_err_buf_update] update loco-zero++ error buffer with overflow: True
+  3%|▎         | 9/265 [00:53<21:25,  5.02s/it]                                               {'loss': 0.75, 'grad_norm': 11.497234103049877, 'learning_rate': 1.8518518518518518e-05, 'epoch': 0.17}
+  3%|▎         | 9/265 [00:53<21:25,  5.02s/it]  4%|▍         | 10/265 [00:57<20:41,  4.87s/it]                                                {'loss': 0.7236, 'grad_norm': 12.52480230817729, 'learning_rate': 1.8518518518518518e-05, 'epoch': 0.19}
+  4%|▍         | 10/265 [00:57<20:41,  4.87s/it]  4%|▍         | 11/265 [01:02<19:52,  4.70s/it]                                                {'loss': 0.5926, 'grad_norm': 11.290611157320468, 'learning_rate': 2.2222222222222223e-05, 'epoch': 0.21}
+  4%|▍         | 11/265 [01:02<19:52,  4.70s/it]  5%|▍         | 12/265 [01:06<19:37,  4.65s/it]                                                {'loss': 0.4643, 'grad_norm': 8.9405750566829, 'learning_rate': 2.5925925925925925e-05, 'epoch': 0.23}
+  5%|▍         | 12/265 [01:06<19:37,  4.65s/it]  5%|▍         | 13/265 [01:11<19:29,  4.64s/it]                                                {'loss': 0.4496, 'grad_norm': 11.550843214258247, 'learning_rate': 2.962962962962963e-05, 'epoch': 0.25}
+  5%|▍         | 13/265 [01:11<19:29,  4.64s/it]  5%|▌         | 14/265 [01:15<19:06,  4.57s/it]                                                {'loss': 1.0033, 'grad_norm': 52.60219583100099, 'learning_rate': 3.3333333333333335e-05, 'epoch': 0.27}
+  5%|▌         | 14/265 [01:15<19:06,  4.57s/it]  6%|▌         | 15/265 [01:20<19:06,  4.59s/it]                                                {'loss': 0.6484, 'grad_norm': 19.524735023109105, 'learning_rate': 3.7037037037037037e-05, 'epoch': 0.29}
+  6%|▌         | 15/265 [01:20<19:06,  4.59s/it]  6%|▌         | 16/265 [01:24<19:07,  4.61s/it]                                                {'loss': 0.4335, 'grad_norm': 10.317239656831752, 'learning_rate': 4.074074074074074e-05, 'epoch': 0.31}
+  6%|▌         | 16/265 [01:24<19:07,  4.61s/it]  6%|▋         | 17/265 [01:29<19:13,  4.65s/it]                                                {'loss': 0.3829, 'grad_norm': 9.349124570274226, 'learning_rate': 4.4444444444444447e-05, 'epoch': 0.33}
+  6%|▋         | 17/265 [01:29<19:13,  4.65s/it]  7%|▋         | 18/265 [01:33<18:41,  4.54s/it]                                                {'loss': 0.3776, 'grad_norm': 8.537972421425787, 'learning_rate': 4.814814814814815e-05, 'epoch': 0.34}
+  7%|▋         | 18/265 [01:33<18:41,  4.54s/it]  7%|▋         | 19/265 [01:38<18:27,  4.50s/it]                                                {'loss': 0.3175, 'grad_norm': 8.552922566459683, 'learning_rate': 5.185185185185185e-05, 'epoch': 0.36}
+  7%|▋         | 19/265 [01:38<18:27,  4.50s/it]  8%|▊         | 20/265 [01:42<18:06,  4.43s/it]                                                {'loss': 0.2839, 'grad_norm': 7.608229855919208, 'learning_rate': 5.555555555555556e-05, 'epoch': 0.38}
+  8%|▊         | 20/265 [01:42<18:06,  4.43s/it]  8%|▊         | 21/265 [01:47<18:01,  4.43s/it]                                                {'loss': 0.2643, 'grad_norm': 6.593717909236805, 'learning_rate': 5.925925925925926e-05, 'epoch': 0.4}
+  8%|▊         | 21/265 [01:47<18:01,  4.43s/it]  8%|▊         | 22/265 [01:51<17:56,  4.43s/it]                                                {'loss': 0.2296, 'grad_norm': 5.281759309561104, 'learning_rate': 6.296296296296296e-05, 'epoch': 0.42}
+  8%|▊         | 22/265 [01:51<17:56,  4.43s/it]  9%|▊         | 23/265 [01:56<18:00,  4.47s/it]                                                {'loss': 0.1947, 'grad_norm': 3.2889269524175084, 'learning_rate': 6.666666666666667e-05, 'epoch': 0.44}
+  9%|▊         | 23/265 [01:56<18:00,  4.47s/it]  9%|▉         | 24/265 [02:00<17:55,  4.46s/it]                                                {'loss': 0.2134, 'grad_norm': 1.0522936507163714, 'learning_rate': 7.037037037037038e-05, 'epoch': 0.46}
+  9%|▉         | 24/265 [02:00<17:55,  4.46s/it]  9%|▉         | 25/265 [02:04<17:49,  4.46s/it]                                                {'loss': 0.2681, 'grad_norm': 3.8763186096463738, 'learning_rate': 7.407407407407407e-05, 'epoch': 0.48}
+  9%|▉         | 25/265 [02:04<17:49,  4.46s/it] 10%|▉         | 26/265 [02:09<17:31,  4.40s/it]                                                {'loss': 0.2303, 'grad_norm': 2.3883292048901827, 'learning_rate': 7.777777777777778e-05, 'epoch': 0.5}
+ 10%|▉         | 26/265 [02:09<17:31,  4.40s/it] 10%|█         | 27/265 [02:13<17:25,  4.39s/it]                                                {'loss': 0.2472, 'grad_norm': 2.687225231923059, 'learning_rate': 8.148148148148148e-05, 'epoch': 0.52}
+ 10%|█         | 27/265 [02:13<17:25,  4.39s/it] 11%|█         | 28/265 [02:17<17:13,  4.36s/it]                                                {'loss': 0.2501, 'grad_norm': 2.9745259348464597, 'learning_rate': 8.518518518518518e-05, 'epoch': 0.54}
+ 11%|█         | 28/265 [02:17<17:13,  4.36s/it] 11%|█         | 29/265 [02:22<17:14,  4.38s/it]                                                {'loss': 0.2564, 'grad_norm': 3.4052897627229717, 'learning_rate': 8.888888888888889e-05, 'epoch': 0.56}
+ 11%|█         | 29/265 [02:22<17:14,  4.38s/it] 11%|█▏        | 30/265 [02:27<18:43,  4.78s/it]                                                {'loss': 0.2472, 'grad_norm': 1.3362192451131198, 'learning_rate': 9.25925925925926e-05, 'epoch': 0.57}
+ 11%|█▏        | 30/265 [02:27<18:43,  4.78s/it] 12%|█▏        | 31/265 [02:32<18:18,  4.70s/it]                                                {'loss': 0.2299, 'grad_norm': 2.287631790494357, 'learning_rate': 9.62962962962963e-05, 'epoch': 0.59}
+ 12%|█▏        | 31/265 [02:32<18:18,  4.70s/it] 12%|█▏        | 32/265 [02:36<17:53,  4.61s/it]                                                {'loss': 0.2341, 'grad_norm': 1.5604749060458287, 'learning_rate': 0.0001, 'epoch': 0.61}
+ 12%|█▏        | 32/265 [02:36<17:53,  4.61s/it] 12%|█▏        | 33/265 [02:41<17:40,  4.57s/it]                                                {'loss': 0.2329, 'grad_norm': 0.8767022452674217, 'learning_rate': 9.999564408362054e-05, 'epoch': 0.63}
+ 12%|█▏        | 33/265 [02:41<17:40,  4.57s/it] 13%|█▎        | 34/265 [02:46<18:44,  4.87s/it]                                                {'loss': 0.2231, 'grad_norm': 1.3710809369599795, 'learning_rate': 9.998257709344246e-05, 'epoch': 0.65}
+ 13%|█▎        | 34/265 [02:46<18:44,  4.87s/it] 13%|█▎        | 35/265 [02:51<18:06,  4.72s/it]                                                {'loss': 0.2225, 'grad_norm': 1.2166904025945062, 'learning_rate': 9.996080130621439e-05, 'epoch': 0.67}
+ 13%|█▎        | 35/265 [02:51<18:06,  4.72s/it][2025-10-05 23:54:32,807] [INFO] [loss_scaler.py:183:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 8192, reducing to 4096
+[2025-10-05 23:54:32,808] [INFO] [stage3.py:2026:_loco_err_buf_update] update loco-zero++ error buffer with overflow: True
+ 14%|█▎        | 36/265 [02:55<17:36,  4.61s/it]                                                {'loss': 0.279, 'grad_norm': 1.2166904025945062, 'learning_rate': 9.993032051607669e-05, 'epoch': 0.69}
+ 14%|█▎        | 36/265 [02:55<17:36,  4.61s/it] 14%|█▍        | 37/265 [03:00<17:31,  4.61s/it]                                                {'loss': 0.2804, 'grad_norm': 72.61078952468199, 'learning_rate': 9.993032051607669e-05, 'epoch': 0.71}
+ 14%|█▍        | 37/265 [03:00<17:31,  4.61s/it] 14%|█▍        | 38/265 [03:04<17:30,  4.63s/it]                                                {'loss': 0.2568, 'grad_norm': 1.36006893254148, 'learning_rate': 9.989114003390027e-05, 'epoch': 0.73}
+ 14%|█▍        | 38/265 [03:04<17:30,  4.63s/it] 15%|█▍        | 39/265 [03:09<17:29,  4.65s/it]                                                {'loss': 0.2249, 'grad_norm': 1.01242672519752, 'learning_rate': 9.984326668636131e-05, 'epoch': 0.75}
+ 15%|█▍        | 39/265 [03:09<17:29,  4.65s/it] 15%|█▌        | 40/265 [03:14<17:10,  4.58s/it]                                                {'loss': 0.2391, 'grad_norm': 1.2006678964989126, 'learning_rate': 9.978670881475172e-05, 'epoch': 0.77}
+ 15%|█▌        | 40/265 [03:14<17:10,  4.58s/it] 15%|█▌        | 41/265 [03:21<20:27,  5.48s/it]                                                {'loss': 0.2397, 'grad_norm': 1.0481176378910608, 'learning_rate': 9.972147627352592e-05, 'epoch': 0.78}
+ 15%|█▌        | 41/265 [03:21<20:27,  5.48s/it] 16%|█▌        | 42/265 [03:26<19:09,  5.15s/it]                                                {'loss': 0.2395, 'grad_norm': 3.665765122174066, 'learning_rate': 9.964758042858367e-05, 'epoch': 0.8}
+ 16%|█▌        | 42/265 [03:26<19:09,  5.15s/it] 16%|█▌        | 43/265 [03:30<18:07,  4.90s/it]                                                {'loss': 0.2323, 'grad_norm': 3.013384010344264, 'learning_rate': 9.956503415528984e-05, 'epoch': 0.82}
+ 16%|█▌        | 43/265 [03:30<18:07,  4.90s/it] 17%|█▋        | 44/265 [03:35<17:55,  4.87s/it]                                                {'loss': 0.2702, 'grad_norm': 1.2189716968162434, 'learning_rate': 9.947385183623098e-05, 'epoch': 0.84}
+ 17%|█▋        | 44/265 [03:35<17:55,  4.87s/it] 17%|█▋        | 45/265 [03:39<17:27,  4.76s/it]                                                {'loss': 0.2492, 'grad_norm': 0.7947956510547779, 'learning_rate': 9.937404935870938e-05, 'epoch': 0.86}
+ 17%|█▋        | 45/265 [03:39<17:27,  4.76s/it] 17%|█▋        | 46/265 [03:44<17:20,  4.75s/it]                                                {'loss': 0.2425, 'grad_norm': 1.318022993032153, 'learning_rate': 9.926564411197488e-05, 'epoch': 0.88}
+ 17%|█▋        | 46/265 [03:44<17:20,  4.75s/it] 18%|█▊        | 47/265 [03:48<16:56,  4.66s/it]                                                {'loss': 0.215, 'grad_norm': 1.6917408717927258, 'learning_rate': 9.91486549841951e-05, 'epoch': 0.9}
+ 18%|█▊        | 47/265 [03:48<16:56,  4.66s/it] 18%|█▊        | 48/265 [03:53<16:28,  4.55s/it]                                                {'loss': 0.2307, 'grad_norm': 1.0520169961997405, 'learning_rate': 9.902310235916435e-05, 'epoch': 0.92}
+ 18%|█▊        | 48/265 [03:53<16:28,  4.55s/it] 18%|█▊        | 49/265 [03:57<16:17,  4.53s/it]                                                {'loss': 0.2416, 'grad_norm': 0.9561787249153139, 'learning_rate': 9.888900811275204e-05, 'epoch': 0.94}
+ 18%|█▊        | 49/265 [03:57<16:17,  4.53s/it] 19%|█▉        | 50/265 [04:01<16:04,  4.49s/it]                                                {'loss': 0.2912, 'grad_norm': 1.56234500709415, 'learning_rate': 9.874639560909117e-05, 'epoch': 0.96}
+ 19%|█▉        | 50/265 [04:01<16:04,  4.49s/it] 19%|█▉        | 51/265 [04:06<16:08,  4.53s/it]                                                {'loss': 0.2494, 'grad_norm': 1.445374529677422, 'learning_rate': 9.859528969650738e-05, 'epoch': 0.98}
+ 19%|█▉        | 51/265 [04:06<16:08,  4.53s/it] 20%|█▉        | 52/265 [04:10<15:49,  4.46s/it]                                                {'loss': 0.2297, 'grad_norm': 1.0552530748863345, 'learning_rate': 9.843571670318943e-05, 'epoch': 1.0}
+ 20%|█▉        | 52/265 [04:10<15:49,  4.46s/it] 20%|██        | 53/265 [04:12<12:21,  3.50s/it]                                                {'loss': 0.3762, 'grad_norm': 1.0552530748863345, 'learning_rate': 9.826770443260193e-05, 'epoch': 1.0}
+ 20%|██        | 53/265 [04:12<12:21,  3.50s/it]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+ 20%|██        | 54/265 [04:18<14:46,  4.20s/it]                                                {'loss': 0.1725, 'grad_norm': 1.8073556138155058, 'learning_rate': 9.809128215864097e-05, 'epoch': 1.02}
+ 20%|██        | 54/265 [04:18<14:46,  4.20s/it] 21%|██        | 55/265 [04:22<14:51,  4.24s/it]                                                {'loss': 0.1447, 'grad_norm': 1.35802447513926, 'learning_rate': 9.79064806205334e-05, 'epoch': 1.04}
+ 21%|██        | 55/265 [04:22<14:51,  4.24s/it] 21%|██        | 56/265 [04:26<15:10,  4.36s/it]                                                {'loss': 0.1578, 'grad_norm': 1.1597840054978843, 'learning_rate': 9.771333201748117e-05, 'epoch': 1.06}
+ 21%|██        | 56/265 [04:26<15:10,  4.36s/it] 22%|██▏       | 57/265 [04:31<15:17,  4.41s/it]                                                {'loss': 0.161, 'grad_norm': 0.7618641181939824, 'learning_rate': 9.751187000305076e-05, 'epoch': 1.08}
+ 22%|██▏       | 57/265 [04:31<15:17,  4.41s/it] 22%|██▏       | 58/265 [04:36<15:32,  4.50s/it]                                                {'loss': 0.1614, 'grad_norm': 1.0454415066363938, 'learning_rate': 9.730212967930974e-05, 'epoch': 1.1}
+ 22%|██▏       | 58/265 [04:36<15:32,  4.50s/it] 22%|██▏       | 59/265 [04:40<15:22,  4.48s/it]                                                {'loss': 0.1673, 'grad_norm': 0.8773842868202042, 'learning_rate': 9.708414759071059e-05, 'epoch': 1.11}
+ 22%|██▏       | 59/265 [04:40<15:22,  4.48s/it] 23%|██▎       | 60/265 [04:45<15:24,  4.51s/it]                                                {'loss': 0.1401, 'grad_norm': 0.6392565575846664, 'learning_rate': 9.685796171772328e-05, 'epoch': 1.13}
+ 23%|██▎       | 60/265 [04:45<15:24,  4.51s/it] 23%|██▎       | 61/265 [04:49<15:16,  4.49s/it]                                                {'loss': 0.1776, 'grad_norm': 0.7136954867907808, 'learning_rate': 9.662361147021779e-05, 'epoch': 1.15}
+ 23%|██▎       | 61/265 [04:49<15:16,  4.49s/it] 23%|██▎       | 62/265 [04:54<15:27,  4.57s/it]                                                {'loss': 0.1511, 'grad_norm': 0.5617275330836626, 'learning_rate': 9.63811376805974e-05, 'epoch': 1.17}
+ 23%|██▎       | 62/265 [04:54<15:27,  4.57s/it] 24%|██▍       | 63/265 [04:58<15:17,  4.54s/it]                                                {'loss': 0.1552, 'grad_norm': 1.9486462522067307, 'learning_rate': 9.613058259668416e-05, 'epoch': 1.19}
+ 24%|██▍       | 63/265 [04:58<15:17,  4.54s/it] 24%|██▍       | 64/265 [05:03<14:52,  4.44s/it]                                                {'loss': 0.1407, 'grad_norm': 0.6397699748336702, 'learning_rate': 9.587198987435782e-05, 'epoch': 1.21}
+ 24%|██▍       | 64/265 [05:03<14:52,  4.44s/it] 25%|██▍       | 65/265 [05:07<14:53,  4.47s/it]                                                {'loss': 0.1563, 'grad_norm': 0.6257505483464588, 'learning_rate': 9.56054045699494e-05, 'epoch': 1.23}
+ 25%|██▍       | 65/265 [05:07<14:53,  4.47s/it] 25%|██▍       | 66/265 [05:12<14:44,  4.45s/it]                                                {'loss': 0.1596, 'grad_norm': 0.6855793261020512, 'learning_rate': 9.533087313239064e-05, 'epoch': 1.25}
+ 25%|██▍       | 66/265 [05:12<14:44,  4.45s/it] 25%|██▌       | 67/265 [05:16<14:31,  4.40s/it]                                                {'loss': 0.1587, 'grad_norm': 0.7875453374939797, 'learning_rate': 9.504844339512095e-05, 'epoch': 1.27}
+ 25%|██▌       | 67/265 [05:16<14:31,  4.40s/it] 26%|██▌       | 68/265 [05:20<14:38,  4.46s/it]                                                {'loss': 0.1417, 'grad_norm': 0.6568505246856974, 'learning_rate': 9.475816456775313e-05, 'epoch': 1.29}
+ 26%|██▌       | 68/265 [05:20<14:38,  4.46s/it] 26%|██▌       | 69/265 [05:25<14:47,  4.53s/it]                                                {'loss': 0.17, 'grad_norm': 0.6198236404190315, 'learning_rate': 9.446008722749905e-05, 'epoch': 1.31}
+ 26%|██▌       | 69/265 [05:25<14:47,  4.53s/it] 26%|██▋       | 70/265 [05:30<14:47,  4.55s/it]                                                {'loss': 0.1458, 'grad_norm': 0.644087590707935, 'learning_rate': 9.415426331035753e-05, 'epoch': 1.33}
+ 26%|██▋       | 70/265 [05:30<14:47,  4.55s/it] 27%|██▋       | 71/265 [05:34<14:37,  4.52s/it]                                                {'loss': 0.1532, 'grad_norm': 0.9782682147743349, 'learning_rate': 9.384074610206495e-05, 'epoch': 1.34}
+ 27%|██▋       | 71/265 [05:34<14:37,  4.52s/it] 27%|██▋       | 72/265 [05:39<14:35,  4.54s/it]                                                {'loss': 0.1534, 'grad_norm': 0.6036674150102856, 'learning_rate': 9.351959022881099e-05, 'epoch': 1.36}
+ 27%|██▋       | 72/265 [05:39<14:35,  4.54s/it] 28%|██▊       | 73/265 [05:43<14:29,  4.53s/it]                                                {'loss': 0.1441, 'grad_norm': 0.6333800684959642, 'learning_rate': 9.319085164772082e-05, 'epoch': 1.38}
+ 28%|██▊       | 73/265 [05:43<14:29,  4.53s/it] 28%|██▊       | 74/265 [05:48<14:17,  4.49s/it]                                                {'loss': 0.1554, 'grad_norm': 0.6172800820734515, 'learning_rate': 9.285458763710524e-05, 'epoch': 1.4}
+ 28%|██▊       | 74/265 [05:48<14:17,  4.49s/it] 28%|██▊       | 75/265 [05:52<14:13,  4.49s/it]                                                {'loss': 0.1483, 'grad_norm': 0.7304108124076715, 'learning_rate': 9.251085678648072e-05, 'epoch': 1.42}
+ 28%|██▊       | 75/265 [05:52<14:13,  4.49s/it] 29%|██▊       | 76/265 [05:59<16:15,  5.16s/it]                                                {'loss': 0.1531, 'grad_norm': 0.6416691837909333, 'learning_rate': 9.215971898636094e-05, 'epoch': 1.44}
+ 29%|██▊       | 76/265 [05:59<16:15,  5.16s/it] 29%|██▉       | 77/265 [06:03<15:27,  4.93s/it]                                                {'loss': 0.1512, 'grad_norm': 0.5376861481135203, 'learning_rate': 9.180123541782171e-05, 'epoch': 1.46}
+ 29%|██▉       | 77/265 [06:03<15:27,  4.93s/it] 29%|██▉       | 78/265 [06:08<14:51,  4.77s/it]                                                {'loss': 0.157, 'grad_norm': 0.8520239815625289, 'learning_rate': 9.143546854184094e-05, 'epoch': 1.48}
+ 29%|██▉       | 78/265 [06:08<14:51,  4.77s/it] 30%|██▉       | 79/265 [06:13<14:54,  4.81s/it]                                                {'loss': 0.1345, 'grad_norm': 0.6730490247980232, 'learning_rate': 9.106248208841569e-05, 'epoch': 1.5}
+ 30%|██▉       | 79/265 [06:13<14:54,  4.81s/it] 30%|███       | 80/265 [06:17<14:31,  4.71s/it]                                                {'loss': 0.1779, 'grad_norm': 1.5277154921827152, 'learning_rate': 9.068234104545801e-05, 'epoch': 1.52}
+ 30%|███       | 80/265 [06:17<14:31,  4.71s/it] 31%|███       | 81/265 [06:22<14:15,  4.65s/it]                                                {'loss': 0.2227, 'grad_norm': 0.8210379378398256, 'learning_rate': 9.029511164747175e-05, 'epoch': 1.54}
+ 31%|███       | 81/265 [06:22<14:15,  4.65s/it][2025-10-05 23:58:02,946] [INFO] [loss_scaler.py:183:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 4096, reducing to 2048
+[2025-10-05 23:58:02,946] [INFO] [stage3.py:2026:_loco_err_buf_update] update loco-zero++ error buffer with overflow: True
+ 31%|███       | 82/265 [06:26<14:18,  4.69s/it]                                                {'loss': 0.4152, 'grad_norm': 0.8210379378398256, 'learning_rate': 8.9900861364012e-05, 'epoch': 1.56}
+ 31%|███       | 82/265 [06:26<14:18,  4.69s/it][2025-10-05 23:58:07,417] [INFO] [loss_scaler.py:183:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 2048, reducing to 1024
+[2025-10-05 23:58:07,417] [INFO] [stage3.py:2026:_loco_err_buf_update] update loco-zero++ error buffer with overflow: True
+ 31%|███▏      | 83/265 [06:31<13:54,  4.59s/it]                                                {'loss': 0.4726, 'grad_norm': 0.8210379378398256, 'learning_rate': 8.9900861364012e-05, 'epoch': 1.57}
+ 31%|███▏      | 83/265 [06:31<13:54,  4.59s/it][2025-10-05 23:58:11,787] [INFO] [loss_scaler.py:183:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 1024, reducing to 512
+[2025-10-05 23:58:11,787] [INFO] [stage3.py:2026:_loco_err_buf_update] update loco-zero++ error buffer with overflow: True
+ 32%|███▏      | 84/265 [06:35<13:39,  4.53s/it]                                                {'loss': 0.4198, 'grad_norm': 0.8210379378398256, 'learning_rate': 8.9900861364012e-05, 'epoch': 1.59}
+ 32%|███▏      | 84/265 [06:35<13:39,  4.53s/it] 32%|███▏      | 85/265 [06:40<13:31,  4.51s/it]                                                {'loss': 2.6767, 'grad_norm': 24.354588386949086, 'learning_rate': 8.9900861364012e-05, 'epoch': 1.61}
+ 32%|███▏      | 85/265 [06:40<13:31,  4.51s/it] 32%|███▏      | 86/265 [06:44<13:20,  4.47s/it]                                                {'loss': 9.4947, 'grad_norm': 75.52865568875077, 'learning_rate': 8.949965888792941e-05, 'epoch': 1.63}
+ 32%|███▏      | 86/265 [06:44<13:20,  4.47s/it] 33%|███▎      | 87/265 [06:48<13:14,  4.46s/it]                                                {'loss': 9.2368, 'grad_norm': 136.21647831059477, 'learning_rate': 8.90915741234015e-05, 'epoch': 1.65}
+ 33%|███▎      | 87/265 [06:48<13:14,  4.46s/it][2025-10-05 23:58:29,452] [INFO] [loss_scaler.py:183:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 512, reducing to 256
+[2025-10-05 23:58:29,453] [INFO] [stage3.py:2026:_loco_err_buf_update] update loco-zero++ error buffer with overflow: True
+ 33%|███▎      | 88/265 [06:53<13:04,  4.43s/it]                                                {'loss': 8.7675, 'grad_norm': 136.21647831059477, 'learning_rate': 8.867667817375266e-05, 'epoch': 1.67}
+ 33%|███▎      | 88/265 [06:53<13:04,  4.43s/it] 34%|███▎      | 89/265 [06:57<12:49,  4.37s/it]                                                {'loss': 8.8223, 'grad_norm': 53.31877085905749, 'learning_rate': 8.867667817375266e-05, 'epoch': 1.69}
+ 34%|███▎      | 89/265 [06:57<12:49,  4.37s/it] 34%|███▍      | 90/265 [07:02<13:07,  4.50s/it]                                                {'loss': 8.6582, 'grad_norm': 59.16547980681159, 'learning_rate': 8.825504332906541e-05, 'epoch': 1.71}
+ 34%|███▍      | 90/265 [07:02<13:07,  4.50s/it] 34%|███▍      | 91/265 [07:06<12:59,  4.48s/it]                                                {'loss': 7.4185, 'grad_norm': 62.22516137433476, 'learning_rate': 8.78267430535848e-05, 'epoch': 1.73}
+ 34%|███▍      | 91/265 [07:06<12:59,  4.48s/it] 35%|███▍      | 92/265 [07:11<12:48,  4.44s/it]                                                {'loss': 7.5359, 'grad_norm': 86.41360505727273, 'learning_rate': 8.739185197291823e-05, 'epoch': 1.75}
+ 35%|███▍      | 92/265 [07:11<12:48,  4.44s/it] 35%|███▌      | 93/265 [07:16<13:48,  4.82s/it]                                                {'loss': 7.3157, 'grad_norm': 16.902268623988405, 'learning_rate': 8.695044586103296e-05, 'epoch': 1.77}
+ 35%|███▌      | 93/265 [07:16<13:48,  4.82s/it] 35%|███▌      | 94/265 [07:21<13:23,  4.70s/it]                                                {'loss': 7.5173, 'grad_norm': 87.31565903917645, 'learning_rate': 8.650260162705351e-05, 'epoch': 1.78}
+ 35%|███▌      | 94/265 [07:21<13:23,  4.70s/it] 36%|███▌      | 95/265 [07:25<13:00,  4.59s/it]                                                {'loss': 7.2008, 'grad_norm': 40.286933121371, 'learning_rate': 8.604839730186125e-05, 'epoch': 1.8}
+ 36%|███▌      | 95/265 [07:25<13:00,  4.59s/it] 36%|███▌      | 96/265 [07:29<12:42,  4.51s/it]                                                {'loss': 7.138, 'grad_norm': 14.91770472798976, 'learning_rate': 8.558791202449856e-05, 'epoch': 1.82}
+ 36%|███▌      | 96/265 [07:29<12:42,  4.51s/it] 37%|███▋      | 97/265 [07:34<12:44,  4.55s/it]                                                {'loss': 6.9733, 'grad_norm': 10.572904394116236, 'learning_rate': 8.512122602837993e-05, 'epoch': 1.84}
+ 37%|███▋      | 97/265 [07:34<12:44,  4.55s/it] 37%|███▋      | 98/265 [07:38<12:31,  4.50s/it]                                                {'loss': 6.8781, 'grad_norm': 19.247532914587346, 'learning_rate': 8.464842062731235e-05, 'epoch': 1.86}
+ 37%|███▋      | 98/265 [07:38<12:31,  4.50s/it] 37%|███▋      | 99/265 [07:44<13:35,  4.91s/it]                                                {'loss': 6.7592, 'grad_norm': 11.159695119001025, 'learning_rate': 8.416957820132742e-05, 'epoch': 1.88}
+ 37%|███▋      | 99/265 [07:44<13:35,  4.91s/it] 38%|███▊      | 100/265 [07:49<13:26,  4.89s/it]                                                 {'loss': 6.7287, 'grad_norm': 16.129433152548923, 'learning_rate': 8.368478218232787e-05, 'epoch': 1.9}
+ 38%|███▊      | 100/265 [07:49<13:26,  4.89s/it] 38%|███▊      | 101/265 [07:54<13:04,  4.78s/it]                                                 {'loss': 6.4711, 'grad_norm': 8.001020937198065, 'learning_rate': 8.319411703955042e-05, 'epoch': 1.92}
+ 38%|███▊      | 101/265 [07:54<13:04,  4.78s/it] 38%|███▊      | 102/265 [07:58<12:52,  4.74s/it]                                                 {'loss': 6.3799, 'grad_norm': 9.3059539248111, 'learning_rate': 8.269766826484842e-05, 'epoch': 1.94}
+ 38%|███▊      | 102/265 [07:58<12:52,  4.74s/it] 39%|███▉      | 103/265 [08:03<12:35,  4.67s/it]                                                 {'loss': 6.3313, 'grad_norm': 17.105995138588362, 'learning_rate': 8.219552235779578e-05, 'epoch': 1.96}
+ 39%|███▉      | 103/265 [08:03<12:35,  4.67s/it] 39%|███▉      | 104/265 [08:07<12:20,  4.60s/it]                                                 {'loss': 6.2347, 'grad_norm': 7.307319126945617, 'learning_rate': 8.168776681061582e-05, 'epoch': 1.98}
+ 39%|███▉      | 104/265 [08:07<12:20,  4.60s/it] 40%|███▉      | 105/265 [08:12<12:13,  4.59s/it]                                                 {'loss': 6.2385, 'grad_norm': 18.531207573000064, 'learning_rate': 8.117449009293668e-05, 'epoch': 2.0}
+ 40%|███▉      | 105/265 [08:12<12:13,  4.59s/it] 40%|████      | 106/265 [08:13<09:21,  3.53s/it]                                                 {'loss': 6.0949, 'grad_norm': 18.531207573000064, 'learning_rate': 8.065578163637686e-05, 'epoch': 2.0}
+ 40%|████      | 106/265 [08:13<09:21,  3.53s/it]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+ 40%|████      | 107/265 [08:19<11:03,  4.20s/it]                                                 {'loss': 6.1515, 'grad_norm': 19.055182048712986, 'learning_rate': 8.013173181896283e-05, 'epoch': 2.02}
+ 40%|████      | 107/265 [08:19<11:03,  4.20s/it] 41%|████      | 108/265 [08:23<11:08,  4.26s/it]                                                 {'loss': 6.1606, 'grad_norm': 14.333970709037112, 'learning_rate': 7.960243194938192e-05, 'epoch': 2.04}
+ 41%|████      | 108/265 [08:23<11:08,  4.26s/it] 41%|████      | 109/265 [08:27<11:13,  4.32s/it]                                                 {'loss': 5.9962, 'grad_norm': 9.757727289148429, 'learning_rate': 7.9067974251073e-05, 'epoch': 2.06}
+ 41%|████      | 109/265 [08:27<11:13,  4.32s/it] 42%|████▏     | 110/265 [08:32<11:19,  4.38s/it]                                                 {'loss': 5.9559, 'grad_norm': 7.4477981967202815, 'learning_rate': 7.852845184615776e-05, 'epoch': 2.08}
+ 42%|████▏     | 110/265 [08:32<11:19,  4.38s/it] 42%|████▏     | 111/265 [08:36<11:19,  4.41s/it]                                                 {'loss': 5.9424, 'grad_norm': 11.162429087808801, 'learning_rate': 7.79839587392154e-05, 'epoch': 2.1}
+ 42%|████▏     | 111/265 [08:36<11:19,  4.41s/it] 42%|████▏     | 112/265 [08:41<11:14,  4.41s/it]                                                 {'loss': 5.8434, 'grad_norm': 4.633598705327719, 'learning_rate': 7.74345898009037e-05, 'epoch': 2.11}
+ 42%|████▏     | 112/265 [08:41<11:14,  4.41s/it] 43%|████▎     | 113/265 [08:45<11:20,  4.48s/it]                                                 {'loss': 5.8051, 'grad_norm': 9.082913521571921, 'learning_rate': 7.688044075142887e-05, 'epoch': 2.13}
+ 43%|████▎     | 113/265 [08:45<11:20,  4.48s/it] 43%|████▎     | 114/265 [08:50<11:10,  4.44s/it]                                                 {'loss': 5.8332, 'grad_norm': 5.198822144300243, 'learning_rate': 7.63216081438678e-05, 'epoch': 2.15}
+ 43%|████▎     | 114/265 [08:50<11:10,  4.44s/it] 43%|████▎     | 115/265 [08:55<11:27,  4.58s/it]                                                 {'loss': 5.8207, 'grad_norm': 16.064982409567698, 'learning_rate': 7.57581893473448e-05, 'epoch': 2.17}
+ 43%|████▎     | 115/265 [08:55<11:27,  4.58s/it] 44%|████▍     | 116/265 [08:59<11:14,  4.53s/it]                                                 {'loss': 5.7008, 'grad_norm': 3.751880812150963, 'learning_rate': 7.519028253006648e-05, 'epoch': 2.19}
+ 44%|████▍     | 116/265 [08:59<11:14,  4.53s/it] 44%|████▍     | 117/265 [09:03<10:58,  4.45s/it]                                                 {'loss': 5.6489, 'grad_norm': 3.902634718498185, 'learning_rate': 7.461798664221711e-05, 'epoch': 2.21}
+ 44%|████▍     | 117/265 [09:03<10:58,  4.45s/it] 45%|████▍     | 118/265 [09:08<11:04,  4.52s/it]                                                 {'loss': 5.7134, 'grad_norm': 10.428499142804737, 'learning_rate': 7.404140139871797e-05, 'epoch': 2.23}
+ 45%|████▍     | 118/265 [09:08<11:04,  4.52s/it] 45%|████▍     | 119/265 [09:12<10:51,  4.47s/it]                                                 {'loss': 5.5497, 'grad_norm': 8.145819742703704, 'learning_rate': 7.346062726185332e-05, 'epoch': 2.25}
+ 45%|████▍     | 119/265 [09:12<10:51,  4.47s/it] 45%|████▌     | 120/265 [09:17<10:45,  4.45s/it]                                                 {'loss': 5.4895, 'grad_norm': 7.039844515684284, 'learning_rate': 7.287576542376617e-05, 'epoch': 2.27}
+ 45%|████▌     | 120/265 [09:17<10:45,  4.45s/it] 46%|████▌     | 121/265 [09:22<11:30,  4.79s/it]                                                 {'loss': 5.2985, 'grad_norm': 4.20306634804456, 'learning_rate': 7.228691778882693e-05, 'epoch': 2.29}
+ 46%|████▌     | 121/265 [09:22<11:30,  4.79s/it] 46%|████▌     | 122/265 [09:27<11:07,  4.67s/it]                                                 {'loss': 5.2301, 'grad_norm': 6.067779146614475, 'learning_rate': 7.169418695587791e-05, 'epoch': 2.31}
+ 46%|████▌     | 122/265 [09:27<11:07,  4.67s/it] 46%|████▋     | 123/265 [09:32<11:14,  4.75s/it]                                                 {'loss': 4.4582, 'grad_norm': 19.09612250452412, 'learning_rate': 7.109767620035689e-05, 'epoch': 2.33}
+ 46%|████▋     | 123/265 [09:32<11:14,  4.75s/it] 47%|████▋     | 124/265 [09:36<11:05,  4.72s/it]                                                 {'loss': 2.4715, 'grad_norm': 33.89157391313882, 'learning_rate': 7.049748945630269e-05, 'epoch': 2.34}
+ 47%|████▋     | 124/265 [09:36<11:05,  4.72s/it] 47%|████▋     | 125/265 [09:42<11:19,  4.85s/it]                                                 {'loss': 0.6725, 'grad_norm': 29.849048993989218, 'learning_rate': 6.989373129824604e-05, 'epoch': 2.36}
+ 47%|████▋     | 125/265 [09:42<11:19,  4.85s/it] 48%|████▊     | 126/265 [09:46<11:12,  4.84s/it]                                                 {'loss': 0.2889, 'grad_norm': 3.8319722699108687, 'learning_rate': 6.928650692298898e-05, 'epoch': 2.38}
+ 48%|████▊     | 126/265 [09:46<11:12,  4.84s/it] 48%|████▊     | 127/265 [09:51<11:12,  4.87s/it]                                                 {'loss': 0.219, 'grad_norm': 8.851791170210229, 'learning_rate': 6.867592213127558e-05, 'epoch': 2.4}
+ 48%|████▊     | 127/265 [09:51<11:12,  4.87s/it] 48%|████▊     | 128/265 [09:57<11:21,  4.97s/it]                                                 {'loss': 0.1739, 'grad_norm': 2.177296432444393, 'learning_rate': 6.806208330935766e-05, 'epoch': 2.42}
+ 48%|████▊     | 128/265 [09:57<11:21,  4.97s/it] 49%|████▊     | 129/265 [10:01<10:50,  4.78s/it]                                                 {'loss': 0.1449, 'grad_norm': 1.4684659489359881, 'learning_rate': 6.744509741045835e-05, 'epoch': 2.44}
+ 49%|████▊     | 129/265 [10:01<10:50,  4.78s/it] 49%|████▉     | 130/265 [10:05<10:31,  4.68s/it]                                                 {'loss': 0.149, 'grad_norm': 0.8416757050845568, 'learning_rate': 6.682507193613696e-05, 'epoch': 2.46}
+ 49%|████▉     | 130/265 [10:05<10:31,  4.68s/it] 49%|████▉     | 131/265 [10:13<12:11,  5.46s/it]                                                 {'loss': 0.117, 'grad_norm': 2.2842509754406324, 'learning_rate': 6.62021149175583e-05, 'epoch': 2.48}
+ 49%|████▉     | 131/265 [10:13<12:11,  5.46s/it] 50%|████▉     | 132/265 [10:17<11:31,  5.20s/it]                                                 {'loss': 0.1323, 'grad_norm': 1.601261551075082, 'learning_rate': 6.557633489666958e-05, 'epoch': 2.5}
+ 50%|████▉     | 132/265 [10:17<11:31,  5.20s/it] 50%|█████     | 133/265 [10:22<11:17,  5.13s/it]                                                 {'loss': 0.1172, 'grad_norm': 1.417898360504314, 'learning_rate': 6.494784090728852e-05, 'epoch': 2.52}
+ 50%|█████     | 133/265 [10:22<11:17,  5.13s/it] 51%|█████     | 134/265 [10:27<10:46,  4.94s/it]                                                 {'loss': 0.1152, 'grad_norm': 0.9331195275321809, 'learning_rate': 6.431674245610564e-05, 'epoch': 2.54}
+ 51%|█████     | 134/265 [10:27<10:46,  4.94s/it] 51%|█████     | 135/265 [10:31<10:23,  4.80s/it]                                                 {'loss': 0.1173, 'grad_norm': 1.6847650129993974, 'learning_rate': 6.368314950360415e-05, 'epoch': 2.56}
+ 51%|█████     | 135/265 [10:31<10:23,  4.80s/it] 51%|█████▏    | 136/265 [10:35<10:01,  4.66s/it]                                                 {'loss': 0.1281, 'grad_norm': 2.1155849879294304, 'learning_rate': 6.304717244490084e-05, 'epoch': 2.57}
+ 51%|█████▏    | 136/265 [10:35<10:01,  4.66s/it] 52%|█████▏    | 137/265 [10:40<09:52,  4.63s/it]                                                 {'loss': 0.1327, 'grad_norm': 1.5738915684845796, 'learning_rate': 6.240892209051121e-05, 'epoch': 2.59}
+ 52%|█████▏    | 137/265 [10:40<09:52,  4.63s/it] 52%|█████▏    | 138/265 [10:45<09:45,  4.61s/it]                                                 {'loss': 0.1316, 'grad_norm': 1.008183026875953, 'learning_rate': 6.176850964704213e-05, 'epoch': 2.61}
+ 52%|█████▏    | 138/265 [10:45<09:45,  4.61s/it] 52%|█████▏    | 139/265 [10:49<09:39,  4.60s/it]                                                 {'loss': 0.127, 'grad_norm': 7.786242128127697, 'learning_rate': 6.112604669781572e-05, 'epoch': 2.63}
+ 52%|█████▏    | 139/265 [10:49<09:39,  4.60s/it] 53%|█████▎    | 140/265 [10:54<09:28,  4.55s/it]                                                 {'loss': 0.1263, 'grad_norm': 8.390813779684398, 'learning_rate': 6.048164518342734e-05, 'epoch': 2.65}
+ 53%|█████▎    | 140/265 [10:54<09:28,  4.55s/it] 53%|█████▎    | 141/265 [10:58<09:25,  4.56s/it]                                                 {'loss': 0.1137, 'grad_norm': 3.447577533583752, 'learning_rate': 5.983541738224141e-05, 'epoch': 2.67}
+ 53%|█████▎    | 141/265 [10:58<09:25,  4.56s/it] 54%|█████▎    | 142/265 [11:03<09:14,  4.50s/it]                                                 {'loss': 0.1187, 'grad_norm': 2.742891958117401, 'learning_rate': 5.918747589082853e-05, 'epoch': 2.69}
+ 54%|█████▎    | 142/265 [11:03<09:14,  4.50s/it] 54%|█████▍    | 143/265 [11:07<09:06,  4.48s/it]                                                 {'loss': 0.1302, 'grad_norm': 2.283868055307798, 'learning_rate': 5.853793360434687e-05, 'epoch': 2.71}
+ 54%|█████▍    | 143/265 [11:07<09:06,  4.48s/it] 54%|█████▍    | 144/265 [11:12<09:05,  4.51s/it]                                                 {'loss': 0.1226, 'grad_norm': 0.756110242347842, 'learning_rate': 5.788690369687187e-05, 'epoch': 2.73}
+ 54%|█████▍    | 144/265 [11:12<09:05,  4.51s/it] 55%|█████▍    | 145/265 [11:16<09:01,  4.51s/it]                                                 {'loss': 0.1056, 'grad_norm': 0.9560739650364225, 'learning_rate': 5.7234499601677026e-05, 'epoch': 2.75}
+ 55%|█████▍    | 145/265 [11:16<09:01,  4.51s/it] 55%|█████▌    | 146/265 [11:22<09:33,  4.82s/it]                                                 {'loss': 0.1137, 'grad_norm': 1.0883750806897998, 'learning_rate': 5.6580834991469675e-05, 'epoch': 2.77}
+ 55%|█████▌    | 146/265 [11:22<09:33,  4.82s/it] 55%|█████▌    | 147/265 [11:26<09:31,  4.84s/it]                                                 {'loss': 0.1207, 'grad_norm': 1.1754191298172159, 'learning_rate': 5.5926023758585146e-05, 'epoch': 2.78}
+ 55%|█████▌    | 147/265 [11:26<09:31,  4.84s/it] 56%|█████▌    | 148/265 [11:31<09:07,  4.68s/it]                                                 {'loss': 0.111, 'grad_norm': 0.9426679097003432, 'learning_rate': 5.527017999514239e-05, 'epoch': 2.8}
+ 56%|█████▌    | 148/265 [11:31<09:07,  4.68s/it] 56%|█████▌    | 149/265 [11:35<08:51,  4.58s/it]                                                 {'loss': 0.1306, 'grad_norm': 0.8386579866153883, 'learning_rate': 5.4613417973165106e-05, 'epoch': 2.82}
+ 56%|█████▌    | 149/265 [11:35<08:51,  4.58s/it] 57%|█████▋    | 150/265 [11:40<08:46,  4.58s/it]                                                 {'loss': 0.0978, 'grad_norm': 0.9513822935117764, 'learning_rate': 5.3955852124671234e-05, 'epoch': 2.84}
+ 57%|█████▋    | 150/265 [11:40<08:46,  4.58s/it] 57%|█████▋    | 151/265 [11:44<08:42,  4.58s/it]                                                 {'loss': 0.1036, 'grad_norm': 0.8500285372481822, 'learning_rate': 5.329759702173477e-05, 'epoch': 2.86}
+ 57%|█████▋    | 151/265 [11:44<08:42,  4.58s/it] 57%|█████▋    | 152/265 [11:49<08:37,  4.58s/it]                                                 {'loss': 0.0854, 'grad_norm': 0.6871363162626719, 'learning_rate': 5.2638767356523125e-05, 'epoch': 2.88}
+ 57%|█████▋    | 152/265 [11:49<08:37,  4.58s/it] 58%|█████▊    | 153/265 [11:53<08:29,  4.55s/it]                                                 {'loss': 0.1076, 'grad_norm': 0.4699051972333994, 'learning_rate': 5.197947792131348e-05, 'epoch': 2.9}
+ 58%|█████▊    | 153/265 [11:53<08:29,  4.55s/it] 58%|█████▊    | 154/265 [11:58<08:21,  4.52s/it]                                                 {'loss': 0.1033, 'grad_norm': 0.8935332260633935, 'learning_rate': 5.131984358849182e-05, 'epoch': 2.92}
+ 58%|█████▊    | 154/265 [11:58<08:21,  4.52s/it] 58%|█████▊    | 155/265 [12:02<08:16,  4.52s/it]                                                 {'loss': 0.1027, 'grad_norm': 0.6806600090177461, 'learning_rate': 5.0659979290537954e-05, 'epoch': 2.94}
+ 58%|█████▊    | 155/265 [12:02<08:16,  4.52s/it] 59%|█████▉    | 156/265 [12:07<08:13,  4.53s/it]                                                 {'loss': 0.1043, 'grad_norm': 0.568375750155954, 'learning_rate': 5e-05, 'epoch': 2.96}
+ 59%|█████▉    | 156/265 [12:07<08:13,  4.53s/it] 59%|█████▉    | 157/265 [12:11<08:08,  4.52s/it]                                                 {'loss': 0.0974, 'grad_norm': 0.766635877181641, 'learning_rate': 4.934002070946206e-05, 'epoch': 2.98}
+ 59%|█████▉    | 157/265 [12:11<08:08,  4.52s/it] 60%|█████▉    | 158/265 [12:16<07:59,  4.48s/it]                                                 {'loss': 0.0833, 'grad_norm': 0.5707767709808496, 'learning_rate': 4.86801564115082e-05, 'epoch': 3.0}
+ 60%|█████▉    | 158/265 [12:16<07:59,  4.48s/it] 60%|██████    | 159/265 [12:17<06:04,  3.44s/it]                                                 {'loss': 0.1089, 'grad_norm': 0.5707767709808496, 'learning_rate': 4.802052207868654e-05, 'epoch': 3.0}
+ 60%|██████    | 159/265 [12:17<06:04,  3.44s/it]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+ 60%|██████    | 160/265 [12:23<07:21,  4.21s/it]                                                 {'loss': 0.0674, 'grad_norm': 0.9303557833607236, 'learning_rate': 4.736123264347688e-05, 'epoch': 3.02}
+ 60%|██████    | 160/265 [12:23<07:21,  4.21s/it] 61%|██████    | 161/265 [12:27<07:26,  4.29s/it]                                                 {'loss': 0.0664, 'grad_norm': 0.7448412983092767, 'learning_rate': 4.670240297826523e-05, 'epoch': 3.04}
+ 61%|██████    | 161/265 [12:27<07:26,  4.29s/it] 61%|██████    | 162/265 [12:32<07:28,  4.35s/it]                                                 {'loss': 0.0623, 'grad_norm': 0.5294192851029291, 'learning_rate': 4.604414787532877e-05, 'epoch': 3.06}
+ 61%|██████    | 162/265 [12:32<07:28,  4.35s/it] 62%|██████▏   | 163/265 [12:36<07:24,  4.36s/it]                                                 {'loss': 0.0701, 'grad_norm': 0.7580304919437014, 'learning_rate': 4.5386582026834906e-05, 'epoch': 3.08}
+ 62%|██████▏   | 163/265 [12:36<07:24,  4.36s/it] 62%|██████▏   | 164/265 [12:41<07:27,  4.43s/it]                                                 {'loss': 0.0711, 'grad_norm': 0.6538338803485587, 'learning_rate': 4.472982000485762e-05, 'epoch': 3.1}
+ 62%|██████▏   | 164/265 [12:41<07:27,  4.43s/it] 62%|██████▏   | 165/265 [12:45<07:19,  4.40s/it]                                                 {'loss': 0.0611, 'grad_norm': 0.4303621787681187, 'learning_rate': 4.407397624141487e-05, 'epoch': 3.11}
+ 62%|██████▏   | 165/265 [12:45<07:19,  4.40s/it] 63%|██████▎   | 166/265 [12:50<07:26,  4.51s/it]                                                 {'loss': 0.0702, 'grad_norm': 0.6632281340306612, 'learning_rate': 4.341916500853034e-05, 'epoch': 3.13}
+ 63%|██████▎   | 166/265 [12:50<07:26,  4.51s/it] 63%|██████▎   | 167/265 [12:54<07:19,  4.49s/it]                                                 {'loss': 0.0644, 'grad_norm': 0.46244295347441294, 'learning_rate': 4.276550039832299e-05, 'epoch': 3.15}
+ 63%|██████▎   | 167/265 [12:54<07:19,  4.49s/it] 63%|██████▎   | 168/265 [12:59<07:10,  4.43s/it]                                                 {'loss': 0.0717, 'grad_norm': 0.7155754023090438, 'learning_rate': 4.2113096303128125e-05, 'epoch': 3.17}
+ 63%|██████▎   | 168/265 [12:59<07:10,  4.43s/it] 64%|██████▍   | 169/265 [13:03<07:06,  4.44s/it]                                                 {'loss': 0.0928, 'grad_norm': 0.5077793326333626, 'learning_rate': 4.146206639565312e-05, 'epoch': 3.19}
+ 64%|██████▍   | 169/265 [13:03<07:06,  4.44s/it] 64%|██████▍   | 170/265 [13:07<06:58,  4.40s/it]                                                 {'loss': 0.0727, 'grad_norm': 0.4296178658258634, 'learning_rate': 4.0812524109171476e-05, 'epoch': 3.21}
+ 64%|██████▍   | 170/265 [13:07<06:58,  4.40s/it] 65%|██████▍   | 171/265 [13:12<07:00,  4.48s/it]                                                 {'loss': 0.074, 'grad_norm': 0.4592878126719532, 'learning_rate': 4.01645826177586e-05, 'epoch': 3.23}
+ 65%|██████▍   | 171/265 [13:12<07:00,  4.48s/it] 65%|██████▍   | 172/265 [13:16<06:52,  4.44s/it]                                                 {'loss': 0.0591, 'grad_norm': 0.4786312580735186, 'learning_rate': 3.951835481657268e-05, 'epoch': 3.25}
+ 65%|██████▍   | 172/265 [13:16<06:52,  4.44s/it] 65%|██████▌   | 173/265 [13:20<06:40,  4.35s/it]                                                 {'loss': 0.0638, 'grad_norm': 0.5645272203759027, 'learning_rate': 3.887395330218429e-05, 'epoch': 3.27}
+ 65%|██████▌   | 173/265 [13:20<06:40,  4.35s/it] 66%|██████▌   | 174/265 [13:25<06:33,  4.32s/it]                                                 {'loss': 0.0655, 'grad_norm': 0.48752585533958426, 'learning_rate': 3.823149035295789e-05, 'epoch': 3.29}
+ 66%|██████▌   | 174/265 [13:25<06:33,  4.32s/it] 66%|██████▌   | 175/265 [13:29<06:32,  4.36s/it]                                                 {'loss': 0.0658, 'grad_norm': 0.8051888534088332, 'learning_rate': 3.759107790948882e-05, 'epoch': 3.31}
+ 66%|██████▌   | 175/265 [13:29<06:32,  4.36s/it] 66%|██████▋   | 176/265 [13:34<06:33,  4.42s/it]                                                 {'loss': 0.0657, 'grad_norm': 0.3359305683693311, 'learning_rate': 3.695282755509917e-05, 'epoch': 3.33}
+ 66%|██████▋   | 176/265 [13:34<06:33,  4.42s/it] 67%|██████▋   | 177/265 [13:38<06:25,  4.38s/it]                                                 {'loss': 0.0694, 'grad_norm': 0.7070745480449891, 'learning_rate': 3.631685049639586e-05, 'epoch': 3.34}
+ 67%|██████▋   | 177/265 [13:38<06:25,  4.38s/it] 67%|██████▋   | 178/265 [13:42<06:18,  4.36s/it]                                                 {'loss': 0.0641, 'grad_norm': 0.622983488169846, 'learning_rate': 3.568325754389438e-05, 'epoch': 3.36}
+ 67%|██████▋   | 178/265 [13:42<06:18,  4.36s/it] 68%|██████▊   | 179/265 [13:47<06:15,  4.36s/it]                                                 {'loss': 0.0682, 'grad_norm': 0.37172377326891504, 'learning_rate': 3.505215909271149e-05, 'epoch': 3.38}
+ 68%|██████▊   | 179/265 [13:47<06:15,  4.36s/it] 68%|██████▊   | 180/265 [13:51<06:07,  4.33s/it]                                                 {'loss': 0.0656, 'grad_norm': 0.8793448957385454, 'learning_rate': 3.442366510333043e-05, 'epoch': 3.4}
+ 68%|██████▊   | 180/265 [13:51<06:07,  4.33s/it] 68%|██████▊   | 181/265 [13:55<05:58,  4.27s/it]                                                 {'loss': 0.051, 'grad_norm': 0.7499693639841861, 'learning_rate': 3.379788508244171e-05, 'epoch': 3.42}
+ 68%|██████▊   | 181/265 [13:55<05:58,  4.27s/it] 69%|██████▊   | 182/265 [13:59<05:53,  4.26s/it]                                                 {'loss': 0.0585, 'grad_norm': 0.6442451436481587, 'learning_rate': 3.3174928063863055e-05, 'epoch': 3.44}
+ 69%|██████▊   | 182/265 [13:59<05:53,  4.26s/it] 69%|██████▉   | 183/265 [14:04<05:53,  4.31s/it]                                                 {'loss': 0.077, 'grad_norm': 0.45782618679787895, 'learning_rate': 3.255490258954167e-05, 'epoch': 3.46}
+ 69%|██████▉   | 183/265 [14:04<05:53,  4.31s/it] 69%|██████▉   | 184/265 [14:08<05:54,  4.37s/it]                                                 {'loss': 0.0824, 'grad_norm': 0.47784890245248457, 'learning_rate': 3.1937916690642356e-05, 'epoch': 3.48}
+ 69%|██████▉   | 184/265 [14:08<05:54,  4.37s/it] 70%|██████▉   | 185/265 [14:13<05:50,  4.38s/it]                                                 {'loss': 0.0606, 'grad_norm': 0.6820654134247, 'learning_rate': 3.132407786872442e-05, 'epoch': 3.5}
+ 70%|██████▉   | 185/265 [14:13<05:50,  4.38s/it] 70%|███████   | 186/265 [14:18<05:57,  4.52s/it]                                                 {'loss': 0.0562, 'grad_norm': 0.3921610159044088, 'learning_rate': 3.071349307701103e-05, 'epoch': 3.52}
+ 70%|███████   | 186/265 [14:18<05:57,  4.52s/it] 71%|███████   | 187/265 [14:22<05:44,  4.41s/it]                                                 {'loss': 0.0685, 'grad_norm': 0.681168184793511, 'learning_rate': 3.0106268701753965e-05, 'epoch': 3.54}
+ 71%|███████   | 187/265 [14:22<05:44,  4.41s/it] 71%|███████   | 188/265 [14:26<05:45,  4.48s/it]                                                 {'loss': 0.0579, 'grad_norm': 0.4401875152873049, 'learning_rate': 2.9502510543697325e-05, 'epoch': 3.56}
+ 71%|███████   | 188/265 [14:26<05:45,  4.48s/it] 71%|███████▏  | 189/265 [14:31<05:41,  4.50s/it]                                                 {'loss': 0.063, 'grad_norm': 0.8136431521697005, 'learning_rate': 2.8902323799643116e-05, 'epoch': 3.57}
+ 71%|███████▏  | 189/265 [14:31<05:41,  4.50s/it] 72%|███████▏  | 190/265 [14:35<05:35,  4.47s/it]                                                 {'loss': 0.0513, 'grad_norm': 0.5172033442183666, 'learning_rate': 2.8305813044122097e-05, 'epoch': 3.59}
+ 72%|███████▏  | 190/265 [14:35<05:35,  4.47s/it] 72%|███████▏  | 191/265 [14:40<05:28,  4.44s/it]                                                 {'loss': 0.0538, 'grad_norm': 0.48940956270621083, 'learning_rate': 2.771308221117309e-05, 'epoch': 3.61}
+ 72%|███████▏  | 191/265 [14:40<05:28,  4.44s/it] 72%|███████▏  | 192/265 [14:44<05:20,  4.39s/it]                                                 {'loss': 0.0564, 'grad_norm': 0.7037970521105661, 'learning_rate': 2.7124234576233847e-05, 'epoch': 3.63}
+ 72%|███████▏  | 192/265 [14:44<05:20,  4.39s/it] 73%|███████▎  | 193/265 [14:48<05:17,  4.41s/it]                                                 {'loss': 0.0565, 'grad_norm': 0.4827858600318694, 'learning_rate': 2.6539372738146695e-05, 'epoch': 3.65}
+ 73%|███████▎  | 193/265 [14:48<05:17,  4.41s/it] 73%|███████▎  | 194/265 [14:53<05:15,  4.44s/it]                                                 {'loss': 0.0757, 'grad_norm': 0.4500190952233494, 'learning_rate': 2.5958598601282035e-05, 'epoch': 3.67}
+ 73%|███████▎  | 194/265 [14:53<05:15,  4.44s/it] 74%|███████▎  | 195/265 [14:58<05:30,  4.73s/it]                                                 {'loss': 0.0588, 'grad_norm': 0.48183108185383894, 'learning_rate': 2.5382013357782893e-05, 'epoch': 3.69}
+ 74%|███████▎  | 195/265 [14:58<05:30,  4.73s/it] 74%|███████▍  | 196/265 [15:03<05:19,  4.63s/it]                                                 {'loss': 0.0589, 'grad_norm': 0.6762607830797777, 'learning_rate': 2.480971746993354e-05, 'epoch': 3.71}
+ 74%|███████▍  | 196/265 [15:03<05:19,  4.63s/it] 74%|███████▍  | 197/265 [15:07<05:06,  4.51s/it]                                                 {'loss': 0.0598, 'grad_norm': 1.0708073631963215, 'learning_rate': 2.4241810652655196e-05, 'epoch': 3.73}
+ 74%|███████▍  | 197/265 [15:07<05:06,  4.51s/it] 75%|███████▍  | 198/265 [15:14<05:52,  5.25s/it]                                                 {'loss': 0.054, 'grad_norm': 0.8075600711503679, 'learning_rate': 2.3678391856132204e-05, 'epoch': 3.75}
+ 75%|███████▍  | 198/265 [15:14<05:52,  5.25s/it] 75%|███████▌  | 199/265 [15:19<05:46,  5.25s/it]                                                 {'loss': 0.0658, 'grad_norm': 0.7477790918949087, 'learning_rate': 2.3119559248571128e-05, 'epoch': 3.77}
+ 75%|███████▌  | 199/265 [15:19<05:46,  5.25s/it] 75%|███████▌  | 200/265 [15:24<05:26,  5.02s/it]                                                 {'loss': 0.0529, 'grad_norm': 1.4927197949849274, 'learning_rate': 2.256541019909632e-05, 'epoch': 3.78}
+ 75%|███████▌  | 200/265 [15:24<05:26,  5.02s/it] 76%|███████▌  | 201/265 [15:28<05:14,  4.91s/it]                                                 {'loss': 0.058, 'grad_norm': 0.3901455150402373, 'learning_rate': 2.2016041260784605e-05, 'epoch': 3.8}
+ 76%|███████▌  | 201/265 [15:28<05:14,  4.91s/it] 76%|███████▌  | 202/265 [15:32<04:56,  4.70s/it]                                                 {'loss': 0.0623, 'grad_norm': 1.5317884297282498, 'learning_rate': 2.1471548153842258e-05, 'epoch': 3.82}
+ 76%|███████▌  | 202/265 [15:32<04:56,  4.70s/it] 77%|███████▋  | 203/265 [15:37<04:48,  4.66s/it]                                                 {'loss': 0.0588, 'grad_norm': 1.1957817470401304, 'learning_rate': 2.0932025748927013e-05, 'epoch': 3.84}
+ 77%|███████▋  | 203/265 [15:37<04:48,  4.66s/it] 77%|███████▋  | 204/265 [15:41<04:37,  4.55s/it]                                                 {'loss': 0.0548, 'grad_norm': 0.7354810029037084, 'learning_rate': 2.0397568050618094e-05, 'epoch': 3.86}
+ 77%|███████▋  | 204/265 [15:41<04:37,  4.55s/it] 77%|███████▋  | 205/265 [15:46<04:30,  4.51s/it]                                                 {'loss': 0.0624, 'grad_norm': 1.6280973765552291, 'learning_rate': 1.9868268181037185e-05, 'epoch': 3.88}
+ 77%|███████▋  | 205/265 [15:46<04:30,  4.51s/it] 78%|███████▊  | 206/265 [15:50<04:22,  4.45s/it]                                                 {'loss': 0.0474, 'grad_norm': 1.3346859104350466, 'learning_rate': 1.934421836362315e-05, 'epoch': 3.9}
+ 78%|███████▊  | 206/265 [15:50<04:22,  4.45s/it] 78%|███████▊  | 207/265 [15:54<04:14,  4.39s/it]                                                 {'loss': 0.0453, 'grad_norm': 0.7870084406601385, 'learning_rate': 1.8825509907063327e-05, 'epoch': 3.92}
+ 78%|███████▊  | 207/265 [15:54<04:14,  4.39s/it] 78%|███████▊  | 208/265 [15:58<04:06,  4.33s/it]                                                 {'loss': 0.0705, 'grad_norm': 0.671421404458551, 'learning_rate': 1.831223318938419e-05, 'epoch': 3.94}
+ 78%|███████▊  | 208/265 [15:58<04:06,  4.33s/it] 79%|███████▉  | 209/265 [16:03<04:03,  4.35s/it]                                                 {'loss': 0.0588, 'grad_norm': 0.8769664528412346, 'learning_rate': 1.7804477642204222e-05, 'epoch': 3.96}
+ 79%|███████▉  | 209/265 [16:03<04:03,  4.35s/it] 79%|███████▉  | 210/265 [16:07<03:57,  4.31s/it]                                                 {'loss': 0.0485, 'grad_norm': 0.8891415119042198, 'learning_rate': 1.7302331735151594e-05, 'epoch': 3.98}
+ 79%|███████▉  | 210/265 [16:07<03:57,  4.31s/it] 80%|███████▉  | 211/265 [16:11<03:53,  4.32s/it]                                                 {'loss': 0.0561, 'grad_norm': 0.8315906859606379, 'learning_rate': 1.6805882960449594e-05, 'epoch': 4.0}
+ 80%|███████▉  | 211/265 [16:11<03:53,  4.32s/it] 80%|████████  | 212/265 [16:13<02:57,  3.36s/it]                                                 {'loss': 0.0381, 'grad_norm': 1.1997691995364241, 'learning_rate': 1.631521781767214e-05, 'epoch': 4.0}
+ 80%|████████  | 212/265 [16:13<02:57,  3.36s/it]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+ 80%|████████  | 213/265 [16:18<03:24,  3.93s/it]                                                 {'loss': 0.024, 'grad_norm': 0.4169032900339225, 'learning_rate': 1.5830421798672568e-05, 'epoch': 4.02}
+ 80%|████████  | 213/265 [16:18<03:24,  3.93s/it] 81%|████████  | 214/265 [16:23<03:32,  4.17s/it]                                                 {'loss': 0.0214, 'grad_norm': 0.5956340653773239, 'learning_rate': 1.535157937268766e-05, 'epoch': 4.04}
+ 81%|████████  | 214/265 [16:23<03:32,  4.17s/it] 81%|████████  | 215/265 [16:27<03:32,  4.25s/it]                                                 {'loss': 0.0215, 'grad_norm': 0.23802383339956204, 'learning_rate': 1.4878773971620074e-05, 'epoch': 4.06}
+ 81%|████████  | 215/265 [16:27<03:32,  4.25s/it] 82%|████████▏ | 216/265 [16:32<03:32,  4.33s/it]                                                 {'loss': 0.0195, 'grad_norm': 0.5058241776779117, 'learning_rate': 1.4412087975501458e-05, 'epoch': 4.08}
+ 82%|████████▏ | 216/265 [16:32<03:32,  4.33s/it] 82%|████████▏ | 217/265 [16:36<03:25,  4.28s/it]                                                 {'loss': 0.0184, 'grad_norm': 0.21092745211059394, 'learning_rate': 1.3951602698138771e-05, 'epoch': 4.1}
+ 82%|████████▏ | 217/265 [16:36<03:25,  4.28s/it] 82%|████████▏ | 218/265 [16:40<03:21,  4.29s/it]                                                 {'loss': 0.0193, 'grad_norm': 0.5856126804877811, 'learning_rate': 1.3497398372946501e-05, 'epoch': 4.11}
+ 82%|████████▏ | 218/265 [16:40<03:21,  4.29s/it] 83%|████████▎ | 219/265 [16:44<03:17,  4.29s/it]                                                 {'loss': 0.0209, 'grad_norm': 0.430118909386646, 'learning_rate': 1.3049554138967051e-05, 'epoch': 4.13}
+ 83%|████████▎ | 219/265 [16:44<03:17,  4.29s/it] 83%|████████▎ | 220/265 [16:49<03:14,  4.32s/it]                                                 {'loss': 0.0169, 'grad_norm': 0.4061784321375718, 'learning_rate': 1.2608148027081773e-05, 'epoch': 4.15}
+ 83%|████████▎ | 220/265 [16:49<03:14,  4.32s/it] 83%|████████▎ | 221/265 [16:54<03:24,  4.65s/it]                                                 {'loss': 0.02, 'grad_norm': 0.3354222548954883, 'learning_rate': 1.2173256946415212e-05, 'epoch': 4.17}
+ 83%|████████▎ | 221/265 [16:54<03:24,  4.65s/it] 84%|████████▍ | 222/265 [16:59<03:25,  4.78s/it]                                                 {'loss': 0.0183, 'grad_norm': 0.27581049655626405, 'learning_rate': 1.1744956670934597e-05, 'epoch': 4.19}
+ 84%|████████▍ | 222/265 [16:59<03:25,  4.78s/it] 84%|████████▍ | 223/265 [17:03<03:14,  4.64s/it]                                                 {'loss': 0.02, 'grad_norm': 0.2551724906408375, 'learning_rate': 1.1323321826247346e-05, 'epoch': 4.21}
+ 84%|████████▍ | 223/265 [17:03<03:14,  4.64s/it] 85%|████████▍ | 224/265 [17:08<03:07,  4.58s/it]                                                 {'loss': 0.0185, 'grad_norm': 0.21080796037106983, 'learning_rate': 1.090842587659851e-05, 'epoch': 4.23}
+ 85%|████████▍ | 224/265 [17:08<03:07,  4.58s/it] 85%|████████▍ | 225/265 [17:12<03:02,  4.56s/it]                                                 {'loss': 0.0206, 'grad_norm': 0.40668161897179594, 'learning_rate': 1.0500341112070605e-05, 'epoch': 4.25}
+ 85%|████████▍ | 225/265 [17:12<03:02,  4.56s/it] 85%|████████▌ | 226/265 [17:17<02:56,  4.52s/it]                                                 {'loss': 0.0163, 'grad_norm': 0.7032844364089911, 'learning_rate': 1.0099138635988026e-05, 'epoch': 4.27}
+ 85%|████████▌ | 226/265 [17:17<02:56,  4.52s/it] 86%|████████▌ | 227/265 [17:22<02:54,  4.58s/it]                                                 {'loss': 0.0212, 'grad_norm': 0.2677291729745155, 'learning_rate': 9.704888352528258e-06, 'epoch': 4.29}
+ 86%|████████▌ | 227/265 [17:22<02:54,  4.58s/it] 86%|████████▌ | 228/265 [17:26<02:47,  4.54s/it]                                                 {'loss': 0.0164, 'grad_norm': 0.24155993064189268, 'learning_rate': 9.317658954541992e-06, 'epoch': 4.31}
+ 86%|████████▌ | 228/265 [17:26<02:47,  4.54s/it] 86%|████████▋ | 229/265 [17:30<02:40,  4.45s/it]                                                 {'loss': 0.0164, 'grad_norm': 0.2602121827551067, 'learning_rate': 8.93751791158432e-06, 'epoch': 4.33}
+ 86%|████████▋ | 229/265 [17:30<02:40,  4.45s/it] 87%|████████▋ | 230/265 [17:35<02:34,  4.41s/it]                                                 {'loss': 0.0141, 'grad_norm': 0.19989222134635748, 'learning_rate': 8.56453145815907e-06, 'epoch': 4.34}
+ 87%|████████▋ | 230/265 [17:35<02:34,  4.41s/it] 87%|████████▋ | 231/265 [17:39<02:29,  4.39s/it]                                                 {'loss': 0.0188, 'grad_norm': 0.46770419754126047, 'learning_rate': 8.198764582178303e-06, 'epoch': 4.36}
+ 87%|████████▋ | 231/265 [17:39<02:29,  4.39s/it] 88%|████████▊ | 232/265 [17:44<02:29,  4.54s/it]                                                 {'loss': 0.0175, 'grad_norm': 0.404851943103235, 'learning_rate': 7.840281013639078e-06, 'epoch': 4.38}
+ 88%|████████▊ | 232/265 [17:44<02:29,  4.54s/it] 88%|████████▊ | 233/265 [17:48<02:23,  4.49s/it]                                                 {'loss': 0.0166, 'grad_norm': 0.1920188245623899, 'learning_rate': 7.489143213519301e-06, 'epoch': 4.4}
+ 88%|████████▊ | 233/265 [17:48<02:23,  4.49s/it] 88%|████████▊ | 234/265 [17:53<02:18,  4.45s/it]                                                 {'loss': 0.0196, 'grad_norm': 0.5391022357944063, 'learning_rate': 7.145412362894771e-06, 'epoch': 4.42}
+ 88%|████████▊ | 234/265 [17:53<02:18,  4.45s/it] 89%|████████▊ | 235/265 [17:57<02:12,  4.41s/it]                                                 {'loss': 0.0149, 'grad_norm': 0.30766672049743654, 'learning_rate': 6.809148352279182e-06, 'epoch': 4.44}
+ 89%|████████▊ | 235/265 [17:57<02:12,  4.41s/it] 89%|████████▉ | 236/265 [18:01<02:09,  4.45s/it]                                                 {'loss': 0.0157, 'grad_norm': 0.1933842640932851, 'learning_rate': 6.480409771189028e-06, 'epoch': 4.46}
+ 89%|████████▉ | 236/265 [18:01<02:09,  4.45s/it] 89%|████████▉ | 237/265 [18:06<02:04,  4.45s/it]                                                 {'loss': 0.0177, 'grad_norm': 0.2672187047831791, 'learning_rate': 6.159253897935069e-06, 'epoch': 4.48}
+ 89%|████████▉ | 237/265 [18:06<02:04,  4.45s/it] 90%|████████▉ | 238/265 [18:10<01:59,  4.43s/it]                                                 {'loss': 0.0195, 'grad_norm': 0.35057661703656834, 'learning_rate': 5.845736689642472e-06, 'epoch': 4.5}
+ 90%|████████▉ | 238/265 [18:10<01:59,  4.43s/it] 90%|█████████ | 239/265 [18:15<01:56,  4.47s/it]                                                 {'loss': 0.018, 'grad_norm': 0.2210724665502214, 'learning_rate': 5.539912772500944e-06, 'epoch': 4.52}
+ 90%|█████████ | 239/265 [18:15<01:56,  4.47s/it] 91%|█████████ | 240/265 [18:19<01:51,  4.45s/it]                                                 {'loss': 0.017, 'grad_norm': 0.7924871610840408, 'learning_rate': 5.241835432246889e-06, 'epoch': 4.54}
+ 91%|█████████ | 240/265 [18:19<01:51,  4.45s/it] 91%|█████████ | 241/265 [18:24<01:46,  4.42s/it]                                                 {'loss': 0.0188, 'grad_norm': 0.4028758707922812, 'learning_rate': 4.951556604879048e-06, 'epoch': 4.56}
+ 91%|█████████ | 241/265 [18:24<01:46,  4.42s/it] 91%|█████████▏| 242/265 [18:28<01:41,  4.40s/it]                                                 {'loss': 0.0143, 'grad_norm': 0.24274893248294438, 'learning_rate': 4.669126867609375e-06, 'epoch': 4.57}
+ 91%|█████████▏| 242/265 [18:28<01:41,  4.40s/it] 92%|█████████▏| 243/265 [18:33<01:38,  4.47s/it]                                                 {'loss': 0.016, 'grad_norm': 0.39918262179436187, 'learning_rate': 4.394595430050613e-06, 'epoch': 4.59}
+ 92%|█████████▏| 243/265 [18:33<01:38,  4.47s/it] 92%|█████████▏| 244/265 [18:37<01:33,  4.46s/it]                                                 {'loss': 0.0156, 'grad_norm': 0.2659170226974332, 'learning_rate': 4.12801012564219e-06, 'epoch': 4.61}
+ 92%|█████████▏| 244/265 [18:37<01:33,  4.46s/it] 92%|█████████▏| 245/265 [18:42<01:31,  4.56s/it]                                                 {'loss': 0.0196, 'grad_norm': 0.2932721858307706, 'learning_rate': 3.8694174033158555e-06, 'epoch': 4.63}
+ 92%|█████████▏| 245/265 [18:42<01:31,  4.56s/it] 93%|█████████▎| 246/265 [18:46<01:25,  4.50s/it]                                                 {'loss': 0.0161, 'grad_norm': 0.19169323294355564, 'learning_rate': 3.6188623194026104e-06, 'epoch': 4.65}
+ 93%|█████████▎| 246/265 [18:46<01:25,  4.50s/it] 93%|█████████▎| 247/265 [18:51<01:22,  4.57s/it]                                                 {'loss': 0.0194, 'grad_norm': 0.28204212227943914, 'learning_rate': 3.376388529782215e-06, 'epoch': 4.67}
+ 93%|█████████▎| 247/265 [18:51<01:22,  4.57s/it] 94%|█████████▎| 248/265 [18:55<01:17,  4.55s/it]                                                 {'loss': 0.0126, 'grad_norm': 0.3618927805100045, 'learning_rate': 3.1420382822767323e-06, 'epoch': 4.69}
+ 94%|█████████▎| 248/265 [18:55<01:17,  4.55s/it] 94%|█████████▍| 249/265 [19:04<01:31,  5.69s/it]                                                 {'loss': 0.0177, 'grad_norm': 0.34377147133534297, 'learning_rate': 2.9158524092894214e-06, 'epoch': 4.71}
+ 94%|█████████▍| 249/265 [19:04<01:31,  5.69s/it] 94%|█████████▍| 250/265 [19:08<01:18,  5.24s/it]                                                 {'loss': 0.0217, 'grad_norm': 0.2817524657538579, 'learning_rate': 2.6978703206902657e-06, 'epoch': 4.73}
+ 94%|█████████▍| 250/265 [19:08<01:18,  5.24s/it] 95%|█████████▍| 251/265 [19:13<01:10,  5.06s/it]                                                 {'loss': 0.0162, 'grad_norm': 0.28582195746161276, 'learning_rate': 2.488129996949251e-06, 'epoch': 4.75}
+ 95%|█████████▍| 251/265 [19:13<01:10,  5.06s/it] 95%|█████████▌| 252/265 [19:17<01:03,  4.90s/it]                                                 {'loss': 0.0143, 'grad_norm': 0.2689805883681844, 'learning_rate': 2.286667982518853e-06, 'epoch': 4.77}
+ 95%|█████████▌| 252/265 [19:17<01:03,  4.90s/it] 95%|█████████▌| 253/265 [19:22<00:57,  4.83s/it]                                                 {'loss': 0.0176, 'grad_norm': 0.23625672225537275, 'learning_rate': 2.093519379466602e-06, 'epoch': 4.78}
+ 95%|█████████▌| 253/265 [19:22<00:57,  4.83s/it] 96%|█████████▌| 254/265 [19:27<00:54,  4.99s/it]                                                 {'loss': 0.0176, 'grad_norm': 0.2573090899586628, 'learning_rate': 1.908717841359048e-06, 'epoch': 4.8}
+ 96%|█████████▌| 254/265 [19:27<00:54,  4.99s/it] 96%|█████████▌| 255/265 [19:31<00:47,  4.79s/it]                                                 {'loss': 0.0176, 'grad_norm': 0.32364300403986884, 'learning_rate': 1.7322955673980678e-06, 'epoch': 4.82}
+ 96%|█████████▌| 255/265 [19:31<00:47,  4.79s/it] 97%|█████████▋| 256/265 [19:36<00:41,  4.65s/it]                                                 {'loss': 0.018, 'grad_norm': 0.2215265789657102, 'learning_rate': 1.5642832968105758e-06, 'epoch': 4.84}
+ 97%|█████████▋| 256/265 [19:36<00:41,  4.65s/it] 97%|█████████▋| 257/265 [19:40<00:37,  4.65s/it]                                                 {'loss': 0.0157, 'grad_norm': 0.31978382023233887, 'learning_rate': 1.404710303492618e-06, 'epoch': 4.86}
+ 97%|█████████▋| 257/265 [19:40<00:37,  4.65s/it] 97%|█████████▋| 258/265 [19:45<00:32,  4.69s/it]                                                 {'loss': 0.0158, 'grad_norm': 0.24633245760682276, 'learning_rate': 1.2536043909088191e-06, 'epoch': 4.88}
+ 97%|█████████▋| 258/265 [19:45<00:32,  4.69s/it] 98%|█████████▊| 259/265 [19:50<00:27,  4.62s/it]                                                 {'loss': 0.0168, 'grad_norm': 0.4757849867815103, 'learning_rate': 1.1109918872479642e-06, 'epoch': 4.9}
+ 98%|█████████▊| 259/265 [19:50<00:27,  4.62s/it] 98%|█████████▊| 260/265 [19:54<00:22,  4.54s/it]                                                 {'loss': 0.0166, 'grad_norm': 0.2130772706511962, 'learning_rate': 9.768976408356666e-07, 'epoch': 4.92}
+ 98%|█████████▊| 260/265 [19:54<00:22,  4.54s/it] 98%|█████████▊| 261/265 [19:59<00:18,  4.53s/it]                                                 {'loss': 0.0184, 'grad_norm': 0.2550878003712427, 'learning_rate': 8.513450158049108e-07, 'epoch': 4.94}
+ 98%|█████████▊| 261/265 [19:59<00:18,  4.53s/it] 99%|█████████▉| 262/265 [20:03<00:13,  4.50s/it]                                                 {'loss': 0.015, 'grad_norm': 0.31297951804466567, 'learning_rate': 7.343558880251289e-07, 'epoch': 4.96}
+ 99%|█████████▉| 262/265 [20:03<00:13,  4.50s/it] 99%|█████████▉| 263/265 [20:07<00:08,  4.43s/it]                                                 {'loss': 0.0171, 'grad_norm': 0.31217234539606475, 'learning_rate': 6.259506412906402e-07, 'epoch': 4.98}
+ 99%|█████████▉| 263/265 [20:07<00:08,  4.43s/it]100%|█████████▉| 264/265 [20:12<00:04,  4.44s/it]                                                 {'loss': 0.0185, 'grad_norm': 0.2881593740520991, 'learning_rate': 5.261481637690246e-07, 'epoch': 5.0}
+100%|█████████▉| 264/265 [20:12<00:04,  4.44s/it]100%|██████████| 265/265 [20:13<00:00,  3.41s/it]                                                 {'loss': 0.0173, 'grad_norm': 0.2881593740520991, 'learning_rate': 4.349658447101612e-07, 'epoch': 5.0}
+100%|██████████| 265/265 [20:13<00:00,  3.41s/it][INFO|trainer.py:4074] 2025-10-06 00:11:59,708 >> Saving model checkpoint to saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265
+[INFO|configuration_utils.py:478] 2025-10-06 00:11:59,722 >> Configuration saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265/config.json
+[INFO|configuration_utils.py:869] 2025-10-06 00:11:59,727 >> Configuration saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265/generation_config.json
+[INFO|modeling_utils.py:4180] 2025-10-06 00:12:20,403 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 4 checkpoint shards. You can find where each parameters has been saved in the index located at saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265/model.safetensors.index.json.
+[INFO|tokenization_utils_base.py:2393] 2025-10-06 00:12:20,408 >> chat template saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265/chat_template.jinja
+[INFO|tokenization_utils_base.py:2562] 2025-10-06 00:12:20,413 >> tokenizer config file saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2571] 2025-10-06 00:12:20,416 >> Special tokens file saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265/special_tokens_map.json
+[2025-10-06 00:12:20,953] [INFO] [logging.py:107:log_dist] [Rank 0] [Torch] Checkpoint global_step261 is about to be saved!
+[2025-10-06 00:12:21,083] [INFO] [logging.py:107:log_dist] [Rank 0] Saving model checkpoint: saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265/global_step261/zero_pp_rank_0_mp_rank_00_model_states.pt
+[2025-10-06 00:12:21,083] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265/global_step261/zero_pp_rank_0_mp_rank_00_model_states.pt...
+[2025-10-06 00:12:21,413] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265/global_step261/zero_pp_rank_0_mp_rank_00_model_states.pt.
+[2025-10-06 00:12:21,513] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265/global_step261/zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2025-10-06 00:12:40,142] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265/global_step261/zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-10-06 00:12:40,153] [INFO] [engine.py:3701:_save_zero_checkpoint] zero checkpoint saved saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265/global_step261/zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2025-10-06 00:12:40,207] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step261 is ready now!
+[INFO|image_processing_base.py:258] 2025-10-06 00:12:40,241 >> Image processor saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265/preprocessor_config.json
+[INFO|video_processing_utils.py:582] 2025-10-06 00:12:40,246 >> Video processor saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265/video_preprocessor_config.json
+[INFO|feature_extraction_utils.py:434] 2025-10-06 00:12:40,250 >> Feature extractor saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265/preprocessor_config.json
+[INFO|tokenization_utils_base.py:2393] 2025-10-06 00:12:40,254 >> chat template saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265/chat_template.jinja
+[INFO|tokenization_utils_base.py:2562] 2025-10-06 00:12:40,258 >> tokenizer config file saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2571] 2025-10-06 00:12:40,261 >> Special tokens file saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265/special_tokens_map.json
+[INFO|processing_utils.py:745] 2025-10-06 00:12:40,822 >> chat template saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/checkpoint-265/chat_template.jinja
+[INFO|trainer.py:2718] 2025-10-06 00:12:40,822 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+                                                 {'train_runtime': 1263.6797, 'train_samples_per_second': 79.134, 'train_steps_per_second': 0.21, 'train_loss': 1.1092300639856818, 'epoch': 5.0}
+100%|██████████| 265/265 [21:03<00:00,  3.41s/it]100%|██████████| 265/265 [21:03<00:00,  4.77s/it]
+[INFO|image_processing_base.py:258] 2025-10-06 00:12:40,837 >> Image processor saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/preprocessor_config.json
+[INFO|video_processing_utils.py:582] 2025-10-06 00:12:40,842 >> Video processor saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/video_preprocessor_config.json
+[INFO|feature_extraction_utils.py:434] 2025-10-06 00:12:40,845 >> Feature extractor saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/preprocessor_config.json
+[INFO|tokenization_utils_base.py:2393] 2025-10-06 00:12:40,850 >> chat template saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/chat_template.jinja
+[INFO|tokenization_utils_base.py:2562] 2025-10-06 00:12:40,855 >> tokenizer config file saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2571] 2025-10-06 00:12:40,860 >> Special tokens file saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/special_tokens_map.json
+[INFO|processing_utils.py:745] 2025-10-06 00:12:41,374 >> chat template saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/chat_template.jinja
+[INFO|trainer.py:4074] 2025-10-06 00:12:52,082 >> Saving model checkpoint to saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best
+[INFO|configuration_utils.py:478] 2025-10-06 00:12:52,097 >> Configuration saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/config.json
+[INFO|configuration_utils.py:869] 2025-10-06 00:12:52,102 >> Configuration saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/generation_config.json
+[INFO|modeling_utils.py:4180] 2025-10-06 00:13:12,910 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 4 checkpoint shards. You can find where each parameters has been saved in the index located at saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/model.safetensors.index.json.
+[INFO|tokenization_utils_base.py:2393] 2025-10-06 00:13:12,915 >> chat template saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/chat_template.jinja
+[INFO|tokenization_utils_base.py:2562] 2025-10-06 00:13:12,919 >> tokenizer config file saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2571] 2025-10-06 00:13:12,922 >> Special tokens file saved in saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/special_tokens_map.json
+***** train metrics *****
+  epoch                    =        5.0
+  total_flos               =   254392GF
+  train_loss               =     1.1092
+  train_runtime            = 0:21:03.67
+  train_samples_per_second =     79.134
+  train_steps_per_second   =       0.21
+Figure saved at: saves/qwen2_omni-7b/full/voxpopuli-rag-with-audio-sharegpt-parakeet-1best/training_loss.png
+[WARNING|2025-10-06 00:13:13] llamafactory.extras.ploting:148 >> No metric eval_loss to plot.
+[WARNING|2025-10-06 00:13:13] llamafactory.extras.ploting:148 >> No metric eval_accuracy to plot.
+[INFO|modelcard.py:456] 2025-10-06 00:13:13,481 >> Dropping the following result as it does not have all the necessary fields:
+{'task': {'name': 'Causal Language Modeling', 'type': 'text-generation'}}
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  4.04it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 14.20it/s]
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:01,  3.88it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 10.39it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00,  9.44it/s]
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+[2025-10-06 00:13:45,295] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Merged model and processor saved to ./target_dir/voxpopuli-rag-with-audio-sharegpt-ckpt-parakeet-1best.
+File 'spk_dict.pt' not found in Qwen/Qwen2.5-Omni-7B, skipping copy.
+Submitted batch job 1385
