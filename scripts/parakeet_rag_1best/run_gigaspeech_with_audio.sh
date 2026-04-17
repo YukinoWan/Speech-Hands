@@ -1,27 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=gigaspeech_1best
-#SBATCH --output=parakeet_log/gigaspeech_1best
-#SBATCH --error=parakeet_log/gigaspeech_1best
-#SBATCH --ntasks=1
-#SBATCH --time=08:00:00
-#SBATCH --mem=200G
-#SBATCH --nodes=1
-#SBATCH --partition=p2,p3
-#SBATCH --account=zhenwan.nlp
-#SBATCH --gres=gpu:4
-#SBATCH --cpus-per-task=8
-#SBATCH --overcommit
-
-source /mnt/home/zhenwan.nlp/miniconda3/etc/profile.d/conda.sh
-conda activate factory
-
-#default_model="/lustre/fsw/portfolios/nvr/users/hanrongy/checkpoints/xvila/xvila-nvila_8b-video_audBoostv2_s3_n8_bs2048_ga8_mstep-1_j20250414/model"
-#default_output_dir="./eval_output"
-#default_log_dir="./eval_log"
-cd ~/LLaMA-Factory-Nbest
-#llamafactory-cli train examples/train_lora/qwen2_5omni_lora_sft.yaml
 FORCE_TORCHRUN=1 llamafactory-cli train examples/parakeet_rag_1best/qwen2_5omni_full_sft_gigaspeech_with_audio_rag.yaml
 bash ./merge_full_rag.sh "gigaspeech" "parakeet-1best"
 
-sbatch ./scripts/parakeet_eval/eval_rag.sh "gigaspeech_test" "parakeet-1best"
+bash ./scripts/parakeet_eval/eval_rag.sh "gigaspeech_test" "parakeet-1best"
