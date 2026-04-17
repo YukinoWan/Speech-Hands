@@ -3,47 +3,47 @@
     "gold": "<rewrite> C. To demonstrate its material quality",
     "internal_pred": "a to emphasize the speaker s instructions",
     "external_pred": "A. To emphasize the speaker's instructions",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01455.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01455.wav"
 }{
     "pred": "<rewrite> B. Background noise",
     "gold": "<rewrite> B. Background noise",
     "internal_pred": "c music",
     "external_pred": "C. Music",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01046.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01046.wav"
 }{
     "pred": "<rewrite> D. The setting is informal and relaxed",
     "gold": "<rewrite> D. The setting is informal and relaxed",
     "internal_pred": "c she said something humorous in french",
     "external_pred": "C. She said something humorous in French",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00872.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00872.wav"
 }{
     "pred": "<rewrite> A. Classical",
     "gold": "<rewrite> A. Classical",
     "internal_pred": "d pop",
     "external_pred": "D. Pop",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001565.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001565.wav"
 }{
     "pred": "<rewrite> D. To create a futuristic ambiance",
     "gold": "<rewrite> D. To create a futuristic ambiance",
     "internal_pred": "b to emphasize the excitement of a new product launch",
     "external_pred": "B",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00392.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00392.wav"
 }{
     "pred": "<rewrite> D. Sadness",
     "gold": "<rewrite> D. Sadness",
     "internal_pred": "a neutrality",
     "external_pred": "A. Neutrality",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01379.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01379.wav"
 }{
     "pred": "<rewrite> C. Fear",
     "gold": "<rewrite> C. Fear",
     "internal_pred": "a confidence",
     "external_pred": "A. Confidence",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00467.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00467.wav"
 }{
     "pred": "<rewrite> D. The beeping indicates a malfunction",
     "gold": "<rewrite> D. The beeping indicates a malfunction",
     "internal_pred": "c the dripping water is distracting him",
     "external_pred": "C. The dripping water is distracting him",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00525.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00525.wav"
 }

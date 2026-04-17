@@ -3,2543 +3,2543 @@
     "gold": "<external> D. Sad and reflective",
     "internal_pred": "b angry and aggressive",
     "external_pred": "D. Sad and reflective",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00901.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00901.wav"
 }{
     "pred": "<external> C. An earthquake",
     "gold": "<external> C. An earthquake",
     "internal_pred": "b a windy day",
     "external_pred": "C. An earthquake",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00486.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00486.wav"
 }{
     "pred": "<external> C. Upbeat synthesized music",
     "gold": "<external> C. Upbeat synthesized music",
     "internal_pred": "b ocean waves",
     "external_pred": "C. Upbeat synthesized music",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01397.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01397.wav"
 }{
     "pred": "<external> B. Winter",
     "gold": "<external> B. Winter",
     "internal_pred": "a autumn",
     "external_pred": "B. Winter",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01481.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01481.wav"
 }{
     "pred": "<external> D. A defense attack scenario",
     "gold": "<external> D. A defense attack scenario",
     "internal_pred": "a a quiet library setting",
     "external_pred": "D. A defense attack scenario",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00773.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00773.wav"
 }{
     "pred": "<external> C. Lock-picking",
     "gold": "<external> C. Lock-picking",
     "internal_pred": "b woodworking",
     "external_pred": "C. Lock-picking",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01640.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01640.wav"
 }{
     "pred": "<external> D. Engine noise",
     "gold": "<external> D. Engine noise",
     "internal_pred": "c wind blowing",
     "external_pred": "D. Engine noise",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01413.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01413.wav"
 }{
     "pred": "<external> C. Synthesizer notes",
     "gold": "<external> C. Synthesizer notes",
     "internal_pred": "b acoustic guitar strumming",
     "external_pred": "C. Synthesizer notes",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00860.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00860.wav"
 }{
     "pred": "<external> C. A calm kitchen setting",
     "gold": "<external> C. A calm kitchen setting",
     "internal_pred": "d a busy street corner",
     "external_pred": "C. A calm kitchen setting",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00868.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00868.wav"
 }{
     "pred": "<external> C. Electric guitar melody",
     "gold": "<external> C. Electric guitar melody",
     "internal_pred": "b acoustic guitar strumming",
     "external_pred": "C. Electric guitar melody",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00464.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00464.wav"
 }{
     "pred": "<external> C. Sad",
     "gold": "<external> C. Sad",
     "internal_pred": "b joyful",
     "external_pred": "C. Sad",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01630.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01630.wav"
 }{
     "pred": "<external> D. A video game environment",
     "gold": "<external> D. A video game environment",
     "internal_pred": "c a bustling city street",
     "external_pred": "D. A video game environment",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00456.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00456.wav"
 }{
     "pred": "<external> D. A sports match or event",
     "gold": "<external> D. A sports match or event",
     "internal_pred": "a a musical concert",
     "external_pred": "D. A sports match or event",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00558.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00558.wav"
 }{
     "pred": "<external> D. Wind rustling fabric",
     "gold": "<external> D. Wind rustling fabric",
     "internal_pred": "c city traffic",
     "external_pred": "D. Wind rustling fabric",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01321.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01321.wav"
 }{
     "pred": "<external> D. Door slam",
     "gold": "<external> D. Door slam",
     "internal_pred": "b dog barking",
     "external_pred": "D. Door slam",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01222.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01222.wav"
 }{
     "pred": "<external> B. A technology exhibition",
     "gold": "<external> B. A technology exhibition",
     "internal_pred": "c a quiet countryside",
     "external_pred": "B. A technology exhibition",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00470.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00470.wav"
 }{
     "pred": "<external> C. Animal grunting",
     "gold": "<external> C. Animal grunting",
     "internal_pred": "a ocean waves",
     "external_pred": "C. Animal grunting",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01499.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01499.wav"
 }{
     "pred": "<external> C. A quiet kitchen",
     "gold": "<external> C. A quiet kitchen",
     "internal_pred": "b a noisy restaurant",
     "external_pred": "C. A quiet kitchen",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00419.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00419.wav"
 }{
     "pred": "<external> C. Dog barking",
     "gold": "<external> C. Dog barking",
     "internal_pred": "a wind",
     "external_pred": "C. Dog barking",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00658.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00658.wav"
 }{
     "pred": "<external> B. A discussion about a drink",
     "gold": "<external> B. A discussion about a drink",
     "internal_pred": "d playing a musical instrument",
     "external_pred": "B. A discussion about a drink",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00620.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00620.wav"
 }{
     "pred": "<external> D. A bustling crowd",
     "gold": "<external> D. A bustling crowd",
     "internal_pred": "b a quiet library",
     "external_pred": "D. A bustling crowd",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01233.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01233.wav"
 }{
     "pred": "<external> C. Rhythmic rain",
     "gold": "<external> C. Rhythmic rain",
     "internal_pred": "a strong winds",
     "external_pred": "C. Rhythmic rain",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00681.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00681.wav"
 }{
     "pred": "<external> B. Cooking",
     "gold": "<external> B. Cooking",
     "internal_pred": "a office work",
     "external_pred": "B. Cooking",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01338.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01338.wav"
 }{
     "pred": "<external> C. The task is repetitive and boring",
     "gold": "<external> C. The task is repetitive and boring",
     "internal_pred": "b the tool is not functioning properly",
     "external_pred": "C. The task is repetitive and boring",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01390.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01390.wav"
 }{
     "pred": "<external> B. The speaker is ending the recording",
     "gold": "<external> B. The speaker is ending the recording",
     "internal_pred": "d a transition to another scene",
     "external_pred": "B. The speaker is ending the recording",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01627.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01627.wav"
 }{
     "pred": "<external> C. A science fiction movie set",
     "gold": "<external> C. A science fiction movie set",
     "internal_pred": "d a nightclub",
     "external_pred": "C. A science fiction movie set",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01387.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01387.wav"
 }{
     "pred": "<external> C. Romantic",
     "gold": "<external> C. Romantic",
     "internal_pred": "b joyful",
     "external_pred": "C. Romantic",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01197.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01197.wav"
 }{
     "pred": "<external> B. Amusement park ride",
     "gold": "<external> B. Amusement park ride",
     "internal_pred": "a indoor swimming pool",
     "external_pred": "B. Amusement park ride",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01232.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01232.wav"
 }{
     "pred": "<external> D. A moving vehicle",
     "gold": "<external> D. A moving vehicle",
     "internal_pred": "b a quiet office",
     "external_pred": "D. A moving vehicle",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01661.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01661.wav"
 }{
     "pred": "<external> D. Video game sound",
     "gold": "<external> D. Video game sound",
     "internal_pred": "c explosions and whooshing sounds",
     "external_pred": "D. Video game sound",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01084.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01084.wav"
 }{
     "pred": "<external> B. Ticking sound",
     "gold": "<external> B. Ticking sound",
     "internal_pred": "d wind noise",
     "external_pred": "B. Ticking sound",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01126.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01126.wav"
 }{
     "pred": "<external> C. The middle",
     "gold": "<external> C. The middle",
     "internal_pred": "b the end",
     "external_pred": "C. The middle",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00937.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00937.wav"
 }{
     "pred": "<external> C. In the middle",
     "gold": "<external> C. In the middle",
     "internal_pred": "a towards the end",
     "external_pred": "C. In the middle",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00961.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00961.wav"
 }{
     "pred": "<external> D. Upbeat electronic music",
     "gold": "<external> D. Upbeat electronic music",
     "internal_pred": "c rustling leaves",
     "external_pred": "D. Upbeat electronic music",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01618.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01618.wav"
 }{
     "pred": "<external> C. Aircraft engine",
     "gold": "<external> C. Aircraft engine",
     "internal_pred": "d human voice",
     "external_pred": "C. Aircraft engine",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00991.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00991.wav"
 }{
     "pred": "<external> C. The middle",
     "gold": "<external> C. The middle",
     "internal_pred": "b the beginning",
     "external_pred": "C. The middle",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01130.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01130.wav"
 }{
     "pred": "<external> C. Background noise",
     "gold": "<external> C. Background noise",
     "internal_pred": "b male speech man speaking",
     "external_pred": "C. Background noise",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01141.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01141.wav"
 }{
     "pred": "<external> C. Male speech, man speaking",
     "gold": "<external> C. Male speech, man speaking",
     "internal_pred": "b music",
     "external_pred": "C. Male speech, man speaking",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01170.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01170.wav"
 }{
     "pred": "<external> D. Crowd noise",
     "gold": "<external> D. Crowd noise",
     "internal_pred": "b basketball bounce",
     "external_pred": "D. Crowd noise",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01012.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01012.wav"
 }{
     "pred": "<external> B. Generic impact sounds",
     "gold": "<external> B. Generic impact sounds",
     "internal_pred": "c bird vocalization",
     "external_pred": "B. Generic impact sounds",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01152.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01152.wav"
 }{
     "pred": "<external> D. Mechanisms",
     "gold": "<external> D. Mechanisms",
     "internal_pred": "c male speech",
     "external_pred": "D. Mechanisms",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01037.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01037.wav"
 }{
     "pred": "<external> C. The beginning",
     "gold": "<external> C. The beginning",
     "internal_pred": "a the middle",
     "external_pred": "C. The beginning",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01027.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01027.wav"
 }{
     "pred": "<external> C. Background noise",
     "gold": "<external> C. Background noise",
     "internal_pred": "a male speech",
     "external_pred": "C. Background noise",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01035.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01035.wav"
 }{
     "pred": "<external> B. Music",
     "gold": "<external> B. Music",
     "internal_pred": "d snoring",
     "external_pred": "B. Music",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01000.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01000.wav"
 }{
     "pred": "<external> B. Background noise",
     "gold": "<external> B. Background noise",
     "internal_pred": "c generic impact sounds",
     "external_pred": "B. Background noise",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01025.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01025.wav"
 }{
     "pred": "<external> B. Male singing",
     "gold": "<external> B. Male singing",
     "internal_pred": "d guitar and accordion",
     "external_pred": "B. Male singing",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01121.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01121.wav"
 }{
     "pred": "<external> C. Music",
     "gold": "<external> C. Music",
     "internal_pred": "a guitar playing",
     "external_pred": "C. Music",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00997.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00997.wav"
 }{
     "pred": "<external> B. Crowd",
     "gold": "<external> B. Crowd",
     "internal_pred": "c male speech",
     "external_pred": "B. Crowd",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01041.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01041.wav"
 }{
     "pred": "<external> B. Both appear simultaneously",
     "gold": "<external> B. Both appear simultaneously",
     "internal_pred": "c music",
     "external_pred": "B. Both appear simultaneously",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00958.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00958.wav"
 }{
     "pred": "<external> B. Sadness",
     "gold": "<external> B. Sadness",
     "internal_pred": "c excitement",
     "external_pred": "B. Sadness",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00846.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00846.wav"
 }{
     "pred": "<external> D. Mechanisms",
     "gold": "<external> D. Mechanisms",
     "internal_pred": "c bark",
     "external_pred": "D. Mechanisms",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00972.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00972.wav"
 }{
     "pred": "<external> C. Background noise",
     "gold": "<external> C. Background noise",
     "internal_pred": "b generic impact sounds",
     "external_pred": "C. Background noise",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00946.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00946.wav"
 }{
     "pred": "<external> D. Female speech",
     "gold": "<external> D. Female speech",
     "internal_pred": "c clapping",
     "external_pred": "D. Female speech",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01022.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01022.wav"
 }{
     "pred": "<external> C. Both sounds start at the same time",
     "gold": "<external> C. Both sounds start at the same time",
     "internal_pred": "b hiss",
     "external_pred": "C. Both sounds start at the same time",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01001.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01001.wav"
 }{
     "pred": "<external> C. Electronic synthesizer",
     "gold": "<external> C. Electronic synthesizer",
     "internal_pred": "d acoustic guitar",
     "external_pred": "C. Electronic synthesizer",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00738.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00738.wav"
 }{
     "pred": "<external> C. Background noise",
     "gold": "<external> C. Background noise",
     "internal_pred": "b male speech man speaking",
     "external_pred": "C. Background noise",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01182.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01182.wav"
 }{
     "pred": "<external> C. Background noise",
     "gold": "<external> C. Background noise",
     "internal_pred": "d male speech",
     "external_pred": "C. Background noise",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00939.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00939.wav"
 }{
     "pred": "<external> C. Animal sounds",
     "gold": "<external> C. Animal sounds",
     "internal_pred": "d breathing",
     "external_pred": "C. Animal sounds",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01112.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01112.wav"
 }{
     "pred": "<external> C. Male speech",
     "gold": "<external> C. Male speech",
     "internal_pred": "d wind noise",
     "external_pred": "C. Male speech",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01149.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01149.wav"
 }{
     "pred": "<external> D. Mechanisms",
     "gold": "<external> D. Mechanisms",
     "internal_pred": "c narration monologue",
     "external_pred": "D. Mechanisms",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00971.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00971.wav"
 }{
     "pred": "<external> C. Male speech",
     "gold": "<external> C. Male speech",
     "internal_pred": "d tick",
     "external_pred": "C. Male speech",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00978.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00978.wav"
 }{
     "pred": "<external> C. Video game sound",
     "gold": "<external> C. Video game sound",
     "internal_pred": "b laughter",
     "external_pred": "C. Video game sound",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01051.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01051.wav"
 }{
     "pred": "<external> C. The middle",
     "gold": "<external> C. The middle",
     "internal_pred": "a the end",
     "external_pred": "C. The middle",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01040.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01040.wav"
 }{
     "pred": "<external> B. Music",
     "gold": "<external> B. Music",
     "internal_pred": "a male speech",
     "external_pred": "B. Music",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01087.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01087.wav"
 }{
     "pred": "<external> C. Mechanisms",
     "gold": "<external> C. Mechanisms",
     "internal_pred": "d whistling",
     "external_pred": "C. Mechanisms",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01142.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01142.wav"
 }{
     "pred": "<external> A. The middle",
     "gold": "<external> A. The middle",
     "internal_pred": "b the end",
     "external_pred": "A. The middle",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01097.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01097.wav"
 }{
     "pred": "<external> D. Mechanisms",
     "gold": "<external> D. Mechanisms",
     "internal_pred": "c whispering",
     "external_pred": "D. Mechanisms",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00969.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00969.wav"
 }{
     "pred": "<external> B. Two",
     "gold": "<external> B. Two",
     "internal_pred": "a one",
     "external_pred": "B. Two",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01160.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01160.wav"
 }{
     "pred": "<external> A. Wind",
     "gold": "<external> A. Wind",
     "internal_pred": "d tick",
     "external_pred": "A. Wind",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01124.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01124.wav"
 }{
     "pred": "<external> B. Sound effect",
     "gold": "<external> C. Background noise",
     "internal_pred": "a car engine revving",
     "external_pred": "C. Background noise",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01135.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01135.wav"
 }{
     "pred": "<external> B. Powerful bass",
     "gold": "<external> B. Powerful bass",
     "internal_pred": "d energetic drums",
     "external_pred": "B. Powerful bass",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01462.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01462.wav"
 }{
     "pred": "<external> C. Mechanisms",
     "gold": "<external> B. Water",
     "internal_pred": "a cough",
     "external_pred": "B. Water",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01179.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01179.wav"
 }{
     "pred": "<external> C. Male singing",
     "gold": "<external> C. Male singing",
     "internal_pred": "b music",
     "external_pred": "C. Male singing",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01146.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01146.wav"
 }{
     "pred": "<external> C. Mechanisms",
     "gold": "<external> C. Mechanisms",
     "internal_pred": "b heartbeat",
     "external_pred": "C. Mechanisms",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00944.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00944.wav"
 }{
     "pred": "<external> C. Background noise",
     "gold": "<external> C. Background noise",
     "internal_pred": "b male speech",
     "external_pred": "C. Background noise",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00929.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00929.wav"
 }{
     "pred": "<external> A. Mechanisms",
     "gold": "<external> A. Mechanisms",
     "internal_pred": "b child speech",
     "external_pred": "A. Mechanisms",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01079.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01079.wav"
 }{
     "pred": "<external> B. Crowd noise",
     "gold": "<external> B. Crowd noise",
     "internal_pred": "a male speech",
     "external_pred": "B. Crowd noise",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00933.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00933.wav"
 }{
     "pred": "<external> C. Three",
     "gold": "<external> C. Three",
     "internal_pred": "d four",
     "external_pred": "C. Three",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01262.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01262.wav"
 }{
     "pred": "<external> B. Six",
     "gold": "<external> B. Six",
     "internal_pred": "c four",
     "external_pred": "B. Six",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01263.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01263.wav"
 }{
     "pred": "<external> C. Six",
     "gold": "<external> C. Six",
     "internal_pred": "d four",
     "external_pred": "C. Six",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01271.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01271.wav"
 }{
     "pred": "<external> D. 10",
     "gold": "<external> D. 10",
     "internal_pred": "c 6",
     "external_pred": "D. 10",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01275.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01275.wav"
 }{
     "pred": "<external> C. Three",
     "gold": "<external> C. Three",
     "internal_pred": "a four",
     "external_pred": "C. Three",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01276.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01276.wav"
 }{
     "pred": "<external> B. Mouse clicking",
     "gold": "<external> B. Mouse clicking",
     "internal_pred": "d keyboard typing",
     "external_pred": "B. Mouse clicking",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01276.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01276.wav"
 }{
     "pred": "<external> B. Printer printing",
     "gold": "<external> B. Printer printing",
     "internal_pred": "d car door closing",
     "external_pred": "B. Printer printing",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01283.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01283.wav"
 }{
     "pred": "<external> C. 3",
     "gold": "<external> C. 3",
     "internal_pred": "b 4",
     "external_pred": "C. 3",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01287.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01287.wav"
 }{
     "pred": "<external> A. Three",
     "gold": "<external> A. Three",
     "internal_pred": "d two",
     "external_pred": "A. Three",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01288.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01288.wav"
 }{
     "pred": "<external> B. Three",
     "gold": "<external> B. Three",
     "internal_pred": "d two",
     "external_pred": "B. Three",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01289.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01289.wav"
 }{
     "pred": "<external> C. 15",
     "gold": "<external> C. 15",
     "internal_pred": "d 5",
     "external_pred": "C. 15",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01290.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01290.wav"
 }{
     "pred": "<external> D. 15",
     "gold": "<external> D. 15",
     "internal_pred": "a 5",
     "external_pred": "D. 15",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01290.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01290.wav"
 }{
     "pred": "<external> B. Two",
     "gold": "<external> B. Two",
     "internal_pred": "d four",
     "external_pred": "B. Two",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01293.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01293.wav"
 }{
     "pred": "<external> C. Six",
     "gold": "<external> C. Six",
     "internal_pred": "b three",
     "external_pred": "C. Six",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01295.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01295.wav"
 }{
     "pred": "<external> C. Six",
     "gold": "<external> C. Six",
     "internal_pred": "b three",
     "external_pred": "C. Six",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01295.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01295.wav"
 }{
     "pred": "<external> C. Two",
     "gold": "<external> C. Two",
     "internal_pred": "d three",
     "external_pred": "C. Two",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01298.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01298.wav"
 }{
     "pred": "<external> C. Six",
     "gold": "<external> C. Six",
     "internal_pred": "d three",
     "external_pred": "C. Six",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01301.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01301.wav"
 }{
     "pred": "<external> D. Six",
     "gold": "<external> D. Six",
     "internal_pred": "c four",
     "external_pred": "D. Six",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01301.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01301.wav"
 }{
     "pred": "<external> C. Three",
     "gold": "<external> C. Three",
     "internal_pred": "d two",
     "external_pred": "C. Three",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01302.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01302.wav"
 }{
     "pred": "<external> B. Three",
     "gold": "<external> B. Three",
     "internal_pred": "a four",
     "external_pred": "B. Three",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01304.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01304.wav"
 }{
     "pred": "<external> C. Three",
     "gold": "<external> C. Three",
     "internal_pred": "b four",
     "external_pred": "C. Three",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01306.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01306.wav"
 }{
     "pred": "<external> C. Three",
     "gold": "<external> C. Three",
     "internal_pred": "d four",
     "external_pred": "C. Three",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01308.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01308.wav"
 }{
     "pred": "<external> C. Ocean waves crashing",
     "gold": "<external> C. Ocean waves crashing",
     "internal_pred": "b typing on a keyboard",
     "external_pred": "C. Ocean waves crashing",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01311.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01311.wav"
 }{
     "pred": "<external> B. Pet contributing to the atmosphere",
     "gold": "<external> B. Pet contributing to the atmosphere",
     "internal_pred": "a background noise",
     "external_pred": "B. Pet contributing to the atmosphere",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001385.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001385.wav"
 }{
     "pred": "<external> A. Standard",
     "gold": "<external> A. Standard",
     "internal_pred": "c cruiser",
     "external_pred": "A. Standard",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001393.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001393.wav"
 }{
     "pred": "<external> A. Keynote speaker",
     "gold": "<external> A. Keynote speaker",
     "internal_pred": "b audience member",
     "external_pred": "A. Keynote speaker",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001399.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001399.wav"
 }{
     "pred": "<external> A. A watch",
     "gold": "<external> A. A watch",
     "internal_pred": "d a dripping faucet",
     "external_pred": "A. A watch",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001401.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001401.wav"
 }{
     "pred": "<external> A. Late night",
     "gold": "<external> A. Late night",
     "internal_pred": "b early morning",
     "external_pred": "A. Late night",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001404.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001404.wav"
 }{
     "pred": "<external> A. Eating or drinking",
     "gold": "<external> A. Eating or drinking",
     "internal_pred": "b laughing",
     "external_pred": "A. Eating or drinking",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001421.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001421.wav"
 }{
     "pred": "<external> B. Formal and emotionally charged",
     "gold": "<external> B. Formal and emotionally charged",
     "internal_pred": "d quiet and somber",
     "external_pred": "B. Formal and emotionally charged",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001423.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001423.wav"
 }{
     "pred": "<external> A. Assembly line",
     "gold": "<external> A. Assembly line",
     "internal_pred": "b construction site",
     "external_pred": "A. Assembly line",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001434.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001434.wav"
 }{
     "pred": "<external> B. Achievement in a game",
     "gold": "<external> B. Achievement in a game",
     "internal_pred": "d notification",
     "external_pred": "B. Achievement in a game",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001444.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001444.wav"
 }{
     "pred": "<external> A. Tech gadget malfunction",
     "gold": "<external> A. Tech gadget malfunction",
     "internal_pred": "b car accident",
     "external_pred": "A. Tech gadget malfunction",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001451.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001451.wav"
 }{
     "pred": "<external> A. Bank robbery",
     "gold": "<external> A. Bank robbery",
     "internal_pred": "c construction site",
     "external_pred": "A. Bank robbery",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001452.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001452.wav"
 }{
     "pred": "<external> A. Water drop game",
     "gold": "<external> A. Water drop game",
     "internal_pred": "d puzzle game",
     "external_pred": "A. Water drop game",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001455.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001455.wav"
 }{
     "pred": "<external> A. Mobile phone",
     "gold": "<external> A. Mobile phone",
     "internal_pred": "d alarm clock",
     "external_pred": "A. Mobile phone",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001468.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001468.wav"
 }{
     "pred": "<external> A. Motorcycle repair",
     "gold": "<external> A. Motorcycle repair",
     "internal_pred": "d construction work",
     "external_pred": "A. Motorcycle repair",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001473.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001473.wav"
 }{
     "pred": "<external> A. Motivational speaker",
     "gold": "<external> A. Motivational speaker",
     "internal_pred": "c teacher",
     "external_pred": "A. Motivational speaker",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001481.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001481.wav"
 }{
     "pred": "<external> A. Music-based talk show",
     "gold": "<external> A. Music-based talk show",
     "internal_pred": "c news broadcast",
     "external_pred": "A. Music-based talk show",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001496.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001496.wav"
 }{
     "pred": "<external> A. Playing with a toy",
     "gold": "<external> A. Playing with a toy",
     "internal_pred": "c scared by noise",
     "external_pred": "A. Playing with a toy",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001497.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001497.wav"
 }{
     "pred": "<external> B. Flamenco",
     "gold": "<external> B. Flamenco",
     "internal_pred": "c classical",
     "external_pred": "B. Flamenco",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001523.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001523.wav"
 }{
     "pred": "<external> A. Creates a dynamic atmosphere",
     "gold": "<external> A. Creates a dynamic atmosphere",
     "internal_pred": "b distracts from the main speech",
     "external_pred": "A. Creates a dynamic atmosphere",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001525.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001525.wav"
 }{
     "pred": "<external> D. Aftermath of gunshots",
     "gold": "<external> D. Aftermath of gunshots",
     "internal_pred": "a gunshots",
     "external_pred": "D. Aftermath of gunshots",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001530.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001530.wav"
 }{
     "pred": "<external> C. The urgent topic of the conversation",
     "gold": "<external> C. The urgent topic of the conversation",
     "internal_pred": "a her attempt to be heard over the noise",
     "external_pred": "C. The urgent topic of the conversation",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01456.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01456.wav"
 }{
     "pred": "<external> A. Speeding up and slowing down",
     "gold": "<external> A. Speeding up and slowing down",
     "internal_pred": "d idling",
     "external_pred": "A. Speeding up and slowing down",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001540.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001540.wav"
 }{
     "pred": "<external> A. Kayaking",
     "gold": "<external> A. Kayaking",
     "internal_pred": "b fishing",
     "external_pred": "A. Kayaking",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001541.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001541.wav"
 }{
     "pred": "<external> A. Tour guide",
     "gold": "<external> A. Tour guide",
     "internal_pred": "b boat driver",
     "external_pred": "A. Tour guide",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001549.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001549.wav"
 }{
     "pred": "<external> C. Garden waterfall",
     "gold": "<external> C. Garden waterfall",
     "internal_pred": "a fountain",
     "external_pred": "C. Garden waterfall",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001553.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001553.wav"
 }{
     "pred": "<external> C. Evening with light rain",
     "gold": "<external> B. Daytime with fog",
     "internal_pred": "a nighttime with clear skies",
     "external_pred": "B. Daytime with fog",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001559.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001559.wav"
 }{
     "pred": "<external> A. Yoga studio",
     "gold": "<external> A. Yoga studio",
     "internal_pred": "c private study",
     "external_pred": "A. Yoga studio",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001564.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001564.wav"
 }{
     "pred": "<external> C. Big lake",
     "gold": "<external> C. Big lake",
     "internal_pred": "b river",
     "external_pred": "C. Big lake",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001586.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001586.wav"
 }{
     "pred": "<external> B. The audience is actively engaged and responsive",
     "gold": "<external> B. The audience is actively engaged and responsive",
     "internal_pred": "a the audience is silent and attentive",
     "external_pred": "B. The audience is actively engaged and responsive",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001593.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001593.wav"
 }{
     "pred": "<external> A. Car repair shop",
     "gold": "<external> A. Car repair shop",
     "internal_pred": "b residential garage",
     "external_pred": "A. Car repair shop",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001596.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001596.wav"
 }{
     "pred": "<external> B. Driving aggressively",
     "gold": "<external> B. Driving aggressively",
     "internal_pred": "d driving distractedly",
     "external_pred": "B. Driving aggressively",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001598.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001598.wav"
 }{
     "pred": "<external> A. Urban outdoor area",
     "gold": "<external> A. Urban outdoor area",
     "internal_pred": "c indoor office",
     "external_pred": "A. Urban outdoor area",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001604.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001604.wav"
 }{
     "pred": "<external> B. Laid-back and carefree",
     "gold": "<external> B. Laid-back and carefree",
     "internal_pred": "d joyful and festive",
     "external_pred": "B. Laid-back and carefree",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001625.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001625.wav"
 }{
     "pred": "<external> C. Rural daytime",
     "gold": "<external> C. Rural daytime",
     "internal_pred": "b indoor workshop",
     "external_pred": "C. Rural daytime",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001626.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001626.wav"
 }{
     "pred": "<external> A. Science fiction movie",
     "gold": "<external> A. Science fiction movie",
     "internal_pred": "c action movie",
     "external_pred": "A. Science fiction movie",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001628.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001628.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00137.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00137.wav"
 }{
     "pred": "<external> C. The baby is reacting to the female's angry speech",
     "gold": "<external> C. The baby is reacting to the female's angry speech",
     "internal_pred": "a the baby is reacting to the male s speech towards the end",
     "external_pred": "C. The baby is reacting to the female's angry speech",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00018.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00018.wav"
 }{
     "pred": "<external> C. Disgust",
     "gold": "<external> C. Disgust",
     "internal_pred": "b happiness",
     "external_pred": "C. Disgust",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01209.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01209.wav"
 }{
     "pred": "<external> B. Disgusted",
     "gold": "<external> B. Disgusted",
     "internal_pred": "a joyful",
     "external_pred": "B. Disgusted",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00916.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00916.wav"
 }{
     "pred": "<external> B. Disgusted",
     "gold": "<external> B. Disgusted",
     "internal_pred": "c indifferent",
     "external_pred": "B. Disgusted",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01414.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01414.wav"
 }{
     "pred": "<external> B. Anxious and excited",
     "gold": "<external> B. Anxious and excited",
     "internal_pred": "a calm and relaxed",
     "external_pred": "B. Anxious and excited",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01448.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01448.wav"
 }{
     "pred": "<external> B. Disgust",
     "gold": "<external> B. Disgust",
     "internal_pred": "d excitement",
     "external_pred": "B. Disgust",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01239.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01239.wav"
 }{
     "pred": "<external> D. Disgust",
     "gold": "<external> D. Disgust",
     "internal_pred": "b happiness",
     "external_pred": "D. Disgust",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01250.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01250.wav"
 }{
     "pred": "<external> B. Sad",
     "gold": "<external> B. Sad",
     "internal_pred": "a angry",
     "external_pred": "B. Sad",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00008.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00008.wav"
 }{
     "pred": "<external> C. Disgusted",
     "gold": "<external> C. Disgusted",
     "internal_pred": "d bored",
     "external_pred": "C. Disgusted",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00537.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00537.wav"
 }{
     "pred": "<external> C. Disgust",
     "gold": "<external> C. Disgust",
     "internal_pred": "d happiness",
     "external_pred": "C. Disgust",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01544.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01544.wav"
 }{
     "pred": "<external> D. Disgusted",
     "gold": "<external> D. Disgusted",
     "internal_pred": "a calm",
     "external_pred": "D. Disgusted",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01599.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01599.wav"
 }{
     "pred": "<external> C. Sadness",
     "gold": "<external> C. Sadness",
     "internal_pred": "d happiness",
     "external_pred": "C. Sadness",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00390.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00390.wav"
 }{
     "pred": "<external> D. Turning a ball",
     "gold": "<external> D. Turning a ball",
     "internal_pred": "a stirring a pot",
     "external_pred": "D. Turning a ball",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00873.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00873.wav"
 }{
     "pred": "<external> C. Fearful",
     "gold": "<external> C. Fearful",
     "internal_pred": "a confident",
     "external_pred": "C. Fearful",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00436.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00436.wav"
 }{
     "pred": "<external> C. Fearful distress",
     "gold": "<external> C. Fearful distress",
     "internal_pred": "a angry frustration",
     "external_pred": "C. Fearful distress",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00896.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00896.wav"
 }{
     "pred": "<external> D. Fearful urging",
     "gold": "<external> D. Fearful urging",
     "internal_pred": "b joyful celebration",
     "external_pred": "D. Fearful urging",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01518.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01518.wav"
 }{
     "pred": "<external> C. Limited knowledge on a topic",
     "gold": "<external> C. Limited knowledge on a topic",
     "internal_pred": "d vocal expressions",
     "external_pred": "C. Limited knowledge on a topic",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01202.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01202.wav"
 }{
     "pred": "<external> C. Neutral and clear",
     "gold": "<external> C. Neutral and clear",
     "internal_pred": "d excited and rapid",
     "external_pred": "C. Neutral and clear",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00722.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00722.wav"
 }{
     "pred": "<external> C. Disgust",
     "gold": "<external> C. Disgust",
     "internal_pred": "a delight",
     "external_pred": "C. Disgust",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00800.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00800.wav"
 }{
     "pred": "<external> C. Disgust with the topic",
     "gold": "<external> C. Disgust with the topic",
     "internal_pred": "b lack of interest",
     "external_pred": "C. Disgust with the topic",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01631.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01631.wav"
 }{
     "pred": "<external> D. Excessive salt usage",
     "gold": "<external> D. Excessive salt usage",
     "internal_pred": "c chopping sounds",
     "external_pred": "D. Excessive salt usage",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01228.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01228.wav"
 }{
     "pred": "<external> B. The high-pitched note on the synth",
     "gold": "<external> B. The high-pitched note on the synth",
     "internal_pred": "d the repeating bass line on the bass guitar",
     "external_pred": "B. The high-pitched note on the synth",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00055.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00055.wav"
 }{
     "pred": "<external> D. Improper vent placement",
     "gold": "<external> D. Improper vent placement",
     "internal_pred": "c a melodic tune",
     "external_pred": "D. Improper vent placement",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00524.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00524.wav"
 }{
     "pred": "<external> C. Displeasure with the technique",
     "gold": "<external> C. Displeasure with the technique",
     "internal_pred": "a background music",
     "external_pred": "C. Displeasure with the technique",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00610.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00610.wav"
 }{
     "pred": "<external> C. Disgust",
     "gold": "<external> C. Disgust",
     "internal_pred": "d satisfaction",
     "external_pred": "C. Disgust",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00881.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00881.wav"
 }{
     "pred": "<external> B. They are reacting to a different event happening simultaneously",
     "gold": "<external> B. They are reacting to a different event happening simultaneously",
     "internal_pred": "c the crowd enjoys the speaker s passion",
     "external_pred": "B. They are reacting to a different event happening simultaneously",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01339.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01339.wav"
 }{
     "pred": "<external> C. She is crafting something with tools",
     "gold": "<external> C. She is crafting something with tools",
     "internal_pred": "d she is typing on a keyboard",
     "external_pred": "C. She is crafting something with tools",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00839.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00839.wav"
 }{
     "pred": "<external> C. The slamming car door",
     "gold": "<external> C. The slamming car door",
     "internal_pred": "a the fast speaking rate",
     "external_pred": "C. The slamming car door",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00614.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00614.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00240.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00240.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "b cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00154.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00154.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "b cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00310.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00310.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00019.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00019.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00333.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00333.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00313.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00313.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> A. False",
     "internal_pred": "b cannot be determined",
     "external_pred": "A. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00235.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00235.wav"
 }{
     "pred": "<external> B. False",
     "gold": "<external> B. False",
     "internal_pred": "c cannot be determined",
     "external_pred": "B. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00192.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00192.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00186.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00186.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00311.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00311.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00302.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00302.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00337.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00337.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00346.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00346.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00069.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00069.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00325.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00325.wav"
 }{
     "pred": "<external> B. False",
     "gold": "<external> B. False",
     "internal_pred": "c cannot be determined",
     "external_pred": "B. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00224.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00224.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00113.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00113.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00047.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00047.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00161.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00161.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00152.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00152.wav"
 }{
     "pred": "<external> B. [0, 15]",
     "gold": "<external> C. [15, 29]",
     "internal_pred": "d ",
     "external_pred": "C. [15, 29]",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00285.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00285.wav"
 }{
     "pred": "<external> B. False",
     "gold": "<external> B. False",
     "internal_pred": "a true",
     "external_pred": "B. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00134.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00134.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00293.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00293.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00252.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00252.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a false",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00249.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00249.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00326.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00326.wav"
 }{
     "pred": "<external> B. False",
     "gold": "<external> B. False",
     "internal_pred": "c cannot be determined",
     "external_pred": "B. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00015.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00015.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "b cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00236.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00236.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00279.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00279.wav"
 }{
     "pred": "<external> A. True",
     "gold": "<external> A. True",
     "internal_pred": "b false",
     "external_pred": "A. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00239.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00239.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a false",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00017.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00017.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00060.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00060.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00124.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00124.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00168.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00168.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00263.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00263.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00181.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00181.wav"
 }{
     "pred": "<external> D. [0, 9]",
     "gold": "<external> D. [0, 9]",
     "internal_pred": "c ",
     "external_pred": "D. [0, 9]",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00126.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00126.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a false",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00184.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00184.wav"
 }{
     "pred": "<external> B. False",
     "gold": "<external> B. False",
     "internal_pred": "a true",
     "external_pred": "B. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00358.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00358.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a false",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00350.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00350.wav"
 }{
     "pred": "<external> B. False",
     "gold": "<external> B. False",
     "internal_pred": "c cannot be determined",
     "external_pred": "B. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00098.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00098.wav"
 }{
     "pred": "<external> D. [0, 19]",
     "gold": "<external> D. [0, 19]",
     "internal_pred": "a ",
     "external_pred": "D. [0, 19]",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00327.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00327.wav"
 }{
     "pred": "<external> D. [17, 19]",
     "gold": "<external> D. [17, 19]",
     "internal_pred": "c ",
     "external_pred": "D. [17, 19]",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00317.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00317.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00331.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00331.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00230.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00230.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00320.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00320.wav"
 }{
     "pred": "<external> A. False",
     "gold": "<external> A. False",
     "internal_pred": "b true",
     "external_pred": "A. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00349.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00349.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00101.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00101.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00180.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00180.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00213.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00213.wav"
 }{
     "pred": "<external> B. [2, 23]",
     "gold": "<external> B. [2, 23]",
     "internal_pred": "c ",
     "external_pred": "B. [2, 23]",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00318.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00318.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "b cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00041.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00041.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00202.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00202.wav"
 }{
     "pred": "<external> A. True",
     "gold": "<external> A. True",
     "internal_pred": "b false",
     "external_pred": "A. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00169.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00169.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00171.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00171.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "b cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00296.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00296.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a false",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00264.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00264.wav"
 }{
     "pred": "<external> B. False",
     "gold": "<external> B. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "B. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00330.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00330.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00108.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00108.wav"
 }{
     "pred": "<external> A. True",
     "gold": "<external> A. True",
     "internal_pred": "b false",
     "external_pred": "A. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00268.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00268.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00324.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00324.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00353.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00353.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> A. False",
     "internal_pred": "b cannot be determined",
     "external_pred": "A. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00341.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00341.wav"
 }{
     "pred": "<external> C. [8, 13]",
     "gold": "<external> B. [0, 8]",
     "internal_pred": "a ",
     "external_pred": "B. [0, 8]",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00058.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00058.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00292.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00292.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00255.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00255.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00170.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00170.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "b cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00351.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00351.wav"
 }{
     "pred": "<external> A. True",
     "gold": "<external> A. True",
     "internal_pred": "c cannot be determined",
     "external_pred": "A. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00172.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00172.wav"
 }{
     "pred": "<external> A. True",
     "gold": "<external> A. True",
     "internal_pred": "c cannot be determined",
     "external_pred": "A. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00037.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00037.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00175.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00175.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00194.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00194.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00339.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00339.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "c false",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00158.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00158.wav"
 }{
     "pred": "<external> B. False",
     "gold": "<external> B. False",
     "internal_pred": "c cannot be determined",
     "external_pred": "B. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00314.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00314.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "b cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00307.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00307.wav"
 }{
     "pred": "<external> B. False",
     "gold": "<external> B. False",
     "internal_pred": "a true",
     "external_pred": "B. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00347.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00347.wav"
 }{
     "pred": "<external> B. [4, 27]",
     "gold": "<external> B. [4, 27]",
     "internal_pred": "d ",
     "external_pred": "B. [4, 27]",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00282.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00282.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00259.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00259.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00095.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00095.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "b cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00244.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00244.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00178.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00178.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00043.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00043.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00323.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00323.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00247.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00247.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00013.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00013.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00176.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00176.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "b cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00029.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00029.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00345.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00345.wav"
 }{
     "pred": "<external> B. False",
     "gold": "<external> B. False",
     "internal_pred": "c cannot be determined",
     "external_pred": "B. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00322.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00322.wav"
 }{
     "pred": "<external> D. [1, 22]",
     "gold": "<external> D. [1, 22]",
     "internal_pred": "c ",
     "external_pred": "D. [1, 22]",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00312.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00312.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00262.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00262.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a false",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00205.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00205.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00227.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00227.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00299.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00299.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00203.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00203.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00187.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00187.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00143.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00143.wav"
 }{
     "pred": "<external> B. False",
     "gold": "<external> B. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "B. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00149.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00149.wav"
 }{
     "pred": "<external> A. True",
     "gold": "<external> A. True",
     "internal_pred": "b false",
     "external_pred": "A. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00232.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00232.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00207.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00207.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "b cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00099.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00099.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00061.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00061.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00286.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00286.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00225.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00225.wav"
 }{
     "pred": "<external> B. False",
     "gold": "<external> B. False",
     "internal_pred": "c cannot be determined",
     "external_pred": "B. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00057.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00057.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00021.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00021.wav"
 }{
     "pred": "<external> A. True",
     "gold": "<external> A. True",
     "internal_pred": "b false",
     "external_pred": "A. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00238.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00238.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00265.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00265.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00343.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00343.wav"
 }{
     "pred": "<external> B. False",
     "gold": "<external> B. False",
     "internal_pred": "a true",
     "external_pred": "B. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00195.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00195.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00251.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00251.wav"
 }{
     "pred": "<external> D. [2, 27]",
     "gold": "<external> D. [2, 27]",
     "internal_pred": "a ",
     "external_pred": "D. [2, 27]",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00269.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00269.wav"
 }{
     "pred": "<external> C. [6, 22]",
     "gold": "<external> C. [6, 22]",
     "internal_pred": "a ",
     "external_pred": "C. [6, 22]",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00352.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00352.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a false",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00281.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00281.wav"
 }{
     "pred": "<external> C. [10, 19]",
     "gold": "<external> C. [10, 19]",
     "internal_pred": "b ",
     "external_pred": "C. [10, 19]",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00217.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00217.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00300.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00300.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "b false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00291.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00291.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00301.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00301.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00233.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00233.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a false",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00048.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00048.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00132.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00132.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00200.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00200.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00068.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00068.wav"
 }{
     "pred": "<external> D. [1, 18]",
     "gold": "<external> D. [1, 18]",
     "internal_pred": "b ",
     "external_pred": "D. [1, 18]",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00223.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00223.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00248.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00248.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00295.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00295.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00360.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00360.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00260.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00260.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00306.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00306.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00253.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00253.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00123.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00123.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "b cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00110.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00110.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00070.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00070.wav"
 }{
     "pred": "<external> B. False",
     "gold": "<external> B. False",
     "internal_pred": "a true",
     "external_pred": "B. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00183.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00183.wav"
 }{
     "pred": "<external> A. True",
     "gold": "<external> A. True",
     "internal_pred": "b false",
     "external_pred": "A. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00221.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00221.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> A. False",
     "internal_pred": "b cannot be determined",
     "external_pred": "A. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00174.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00174.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00340.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00340.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a false",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00356.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00356.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00355.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00355.wav"
 }{
     "pred": "<external> A. True",
     "gold": "<external> A. True",
     "internal_pred": "c cannot be determined",
     "external_pred": "A. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00348.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00348.wav"
 }{
     "pred": "<external> A. True",
     "gold": "<external> A. True",
     "internal_pred": "b false",
     "external_pred": "A. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00115.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00115.wav"
 }{
     "pred": "<external> B. False",
     "gold": "<external> B. False",
     "internal_pred": "c cannot be determined",
     "external_pred": "B. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00245.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00245.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a false",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00185.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00185.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00164.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00164.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00246.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00246.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00046.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00046.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00083.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00083.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00243.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00243.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "b cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00344.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00344.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00197.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00197.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a false",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00208.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00208.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00287.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00287.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "b false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00177.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00177.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00155.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00155.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a false",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00111.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00111.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00033.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00033.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00131.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00131.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00267.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00267.wav"
 }{
     "pred": "<external> B. Sad",
     "gold": "<external> B. Sad",
     "internal_pred": "a angry",
     "external_pred": "B. Sad",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00550.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00550.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> A. False",
     "internal_pred": "b cannot be determined",
     "external_pred": "A. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00276.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00276.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00218.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00218.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00319.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00319.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a false",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00173.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00173.wav"
 }{
     "pred": "<external> B. False",
     "gold": "<external> B. False",
     "internal_pred": "a true",
     "external_pred": "B. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00338.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00338.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00122.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00122.wav"
 }{
     "pred": "<external> B. False",
     "gold": "<external> B. False",
     "internal_pred": "a true",
     "external_pred": "B. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00357.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00357.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00250.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00250.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00114.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00114.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a false",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00316.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00316.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "b cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00109.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00109.wav"
 }{
     "pred": "<external> C. False",
     "gold": "<external> C. False",
     "internal_pred": "b true",
     "external_pred": "C. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00242.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00242.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00354.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00354.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a false",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00284.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00284.wav"
 }{
     "pred": "<external> B. True",
     "gold": "<external> B. True",
     "internal_pred": "a false",
     "external_pred": "B. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00148.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00148.wav"
 }{
     "pred": "<external> C. True",
     "gold": "<external> C. True",
     "internal_pred": "a cannot be determined",
     "external_pred": "C. True",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00052.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00052.wav"
 }{
     "pred": "<external> C. Water flowing",
     "gold": "<external> C. Water flowing",
     "internal_pred": "d heavy rainfall",
     "external_pred": "C. Water flowing",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00361.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00361.wav"
 }{
     "pred": "<external> D. To signify multiple locations and scenarios",
     "gold": "<external> D. To signify multiple locations and scenarios",
     "internal_pred": "c to depict a day at a park with various activities",
     "external_pred": "D. To signify multiple locations and scenarios",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00297.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00297.wav"
 }{
     "pred": "<external> C. Cymbal strikes",
     "gold": "<external> C. Cymbal strikes",
     "internal_pred": "d guitar strumming",
     "external_pred": "C. Cymbal strikes",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00494.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00494.wav"
 }{
     "pred": "<external> B. The bird is part of the zoo enclosure environment",
     "gold": "<external> B. The bird is part of the zoo enclosure environment",
     "internal_pred": "a the bird is part of a sound effect added to the audio",
     "external_pred": "B. The bird is part of the zoo enclosure environment",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00278.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00278.wav"
 }{
     "pred": "<external> D. Experimental piano music",
     "gold": "<external> D. Experimental piano music",
     "internal_pred": "b jazz saxophone music",
     "external_pred": "D. Experimental piano music",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01342.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01342.wav"
 }{
     "pred": "<external> B. It's part of the experimental nature of the music.",
     "gold": "<external> B. It's part of the experimental nature of the music.",
     "internal_pred": "a it signifies an interruption during the live performance ",
     "external_pred": "B. It's part of the experimental nature of the music.",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00032.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00032.wav"
 }{
     "pred": "<external> B. Hairbrush strokes",
     "gold": "<external> B. Hairbrush strokes",
     "internal_pred": "c running water",
     "external_pred": "B. Hairbrush strokes",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00830.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00830.wav"
 }{
     "pred": "<external> D. A running engine",
     "gold": "<external> D. A running engine",
     "internal_pred": "c birds chirping",
     "external_pred": "D. A running engine",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00527.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00527.wav"
 }{
     "pred": "<external> D. Experimental guitar melodies",
     "gold": "<external> D. Experimental guitar melodies",
     "internal_pred": "c traffic noise",
     "external_pred": "D. Experimental guitar melodies",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01567.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01567.wav"
 }{
     "pred": "<external> B. Experimental music",
     "gold": "<external> B. Experimental music",
     "internal_pred": "d classical music",
     "external_pred": "B. Experimental music",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00623.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00623.wav"
 }{
     "pred": "<external> C. The hum of bees",
     "gold": "<external> C. The hum of bees",
     "internal_pred": "b the chirping of birds",
     "external_pred": "C. The hum of bees",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01646.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01646.wav"
 }{
     "pred": "<external> C. Laughter from a child",
     "gold": "<external> C. Laughter from a child",
     "internal_pred": "b background music",
     "external_pred": "C. Laughter from a child",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00508.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00508.wav"
 }{
     "pred": "<external> C. Wind rustling leaves",
     "gold": "<external> C. Wind rustling leaves",
     "internal_pred": "a birds chirping",
     "external_pred": "C. Wind rustling leaves",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00797.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00797.wav"
 }{
     "pred": "<external> C. Lively music",
     "gold": "<external> C. Lively music",
     "internal_pred": "b applause",
     "external_pred": "C. Lively music",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01375.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01375.wav"
 }{
     "pred": "<external> B. Dog barking",
     "gold": "<external> B. Dog barking",
     "internal_pred": "a bird chirping",
     "external_pred": "B. Dog barking",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00671.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00671.wav"
 }{
     "pred": "<external> C. Cymbal strikes",
     "gold": "<external> C. Cymbal strikes",
     "internal_pred": "d drumming",
     "external_pred": "C. Cymbal strikes",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00491.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00491.wav"
 }{
     "pred": "<external> C. Soothing piano notes",
     "gold": "<external> C. Soothing piano notes",
     "internal_pred": "a drumming rhythm",
     "external_pred": "C. Soothing piano notes",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01470.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01470.wav"
 }{
     "pred": "<external> C. Camera taps",
     "gold": "<external> C. Camera taps",
     "internal_pred": "d keyboard typing",
     "external_pred": "C. Camera taps",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01673.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01673.wav"
 }{
     "pred": "<external> C. Flowing water",
     "gold": "<external> C. Flowing water",
     "internal_pred": "a crackling fire",
     "external_pred": "C. Flowing water",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00522.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00522.wav"
 }{
     "pred": "<external> D. Faint hissing from water or wind",
     "gold": "<external> D. Faint hissing from water or wind",
     "internal_pred": "b soft piano music",
     "external_pred": "D. Faint hissing from water or wind",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00858.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00858.wav"
 }{
     "pred": "<external> A. An engaging and electronic atmosphere",
     "gold": "<external> A. An engaging and electronic atmosphere",
     "internal_pred": "b a calm and soothing atmosphere",
     "external_pred": "A. An engaging and electronic atmosphere",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00633.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00633.wav"
 }{
     "pred": "<external> C. Cheering crowd",
     "gold": "<external> B. Horse galloping",
     "internal_pred": "a car engine",
     "external_pred": "B. Horse galloping",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00489.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00489.wav"
 }{
     "pred": "<external> D. Upbeat synthesizer melodies",
     "gold": "<external> D. Upbeat synthesizer melodies",
     "internal_pred": "b acoustic guitar strumming",
     "external_pred": "D. Upbeat synthesizer melodies",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01227.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01227.wav"
 }{
     "pred": "<external> B. Blade sharpening",
     "gold": "<external> B. Blade sharpening",
     "internal_pred": "c cooking",
     "external_pred": "B. Blade sharpening",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00787.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00787.wav"
 }{
     "pred": "<external> B. Water splashing",
     "gold": "<external> B. Water splashing",
     "internal_pred": "c traffic noise",
     "external_pred": "B. Water splashing",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01206.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01206.wav"
 }{
     "pred": "<external> D. To attract a tech-savvy audience",
     "gold": "<external> D. To attract a tech-savvy audience",
     "internal_pred": "b to enhance focus on the instructions",
     "external_pred": "D. To attract a tech-savvy audience",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01560.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01560.wav"
 }{
     "pred": "<external> C. Tapping on a touchscreen",
     "gold": "<external> C. Tapping on a touchscreen",
     "internal_pred": "a typing on a keyboard",
     "external_pred": "C. Tapping on a touchscreen",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00903.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00903.wav"
 }{
     "pred": "<external> D. A car passing",
     "gold": "<external> D. A car passing",
     "internal_pred": "c a crowd cheering",
     "external_pred": "D. A car passing",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01200.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01200.wav"
 }{
     "pred": "<external> C. Disgust",
     "gold": "<external> C. Disgust",
     "internal_pred": "d joy",
     "external_pred": "C. Disgust",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00515.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00515.wav"
 }{
     "pred": "<external> D. Anger",
     "gold": "<external> C. Joy",
     "internal_pred": "a fear",
     "external_pred": "C. Joy",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00509.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00509.wav"
 }{
     "pred": "<external> C. Fearful",
     "gold": "<external> C. Fearful",
     "internal_pred": "d calm",
     "external_pred": "C. Fearful",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00389.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00389.wav"
 }{
     "pred": "<external> B. Disgusted",
     "gold": "<external> B. Disgusted",
     "internal_pred": "c calm",
     "external_pred": "B. Disgusted",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00713.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00713.wav"
 }{
     "pred": "<external> D. Moving horse",
     "gold": "<external> D. Moving horse",
     "internal_pred": "c flowing water",
     "external_pred": "D. Moving horse",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01199.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01199.wav"
 }{
     "pred": "<external> D. Sadness",
     "gold": "<external> D. Sadness",
     "internal_pred": "b anger",
     "external_pred": "D. Sadness",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00554.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00554.wav"
 }{
     "pred": "<external> C. Sizzling food",
     "gold": "<external> C. Sizzling food",
     "internal_pred": "d blending ingredients",
     "external_pred": "C. Sizzling food",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00406.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00406.wav"
 }{
     "pred": "<external> C. Bird chirping",
     "gold": "<external> C. Bird chirping",
     "internal_pred": "d city traffic noise",
     "external_pred": "C. Bird chirping",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01597.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01597.wav"
 }{
     "pred": "<external> C. Typing on a keyboard",
     "gold": "<external> C. Typing on a keyboard",
     "internal_pred": "d cooking a meal",
     "external_pred": "C. Typing on a keyboard",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00606.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00606.wav"
 }{
     "pred": "<external> D. Electronic synthesizer music",
     "gold": "<external> D. Electronic synthesizer music",
     "internal_pred": "b traffic noise",
     "external_pred": "D. Electronic synthesizer music",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00683.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00683.wav"
 }{
     "pred": "<external> D. A fearful exclamation",
     "gold": "<external> D. A fearful exclamation",
     "internal_pred": "c a loud crash",
     "external_pred": "D. A fearful exclamation",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00770.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00770.wav"
 }{
     "pred": "<external> A. Experimental music",
     "gold": "<external> A. Experimental music",
     "internal_pred": "c ocean waves",
     "external_pred": "A. Experimental music",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01258.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01258.wav"
 }{
     "pred": "<external> D. Disgust",
     "gold": "<external> D. Disgust",
     "internal_pred": "b joy",
     "external_pred": "D. Disgust",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00396.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00396.wav"
 }{
     "pred": "<external> D. Tapping on a hard surface",
     "gold": "<external> D. Tapping on a hard surface",
     "internal_pred": "b clicking of a pen",
     "external_pred": "D. Tapping on a hard surface",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01447.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01447.wav"
 }{
     "pred": "<external> C. Heavy breathing",
     "gold": "<external> C. Heavy breathing",
     "internal_pred": "d laughing",
     "external_pred": "C. Heavy breathing",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00769.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00769.wav"
 }{
     "pred": "<external> D. Dog barking",
     "gold": "<external> D. Dog barking",
     "internal_pred": "a music playing",
     "external_pred": "D. Dog barking",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01436.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01436.wav"
 }{
     "pred": "<external> C. Experimental music",
     "gold": "<external> C. Experimental music",
     "internal_pred": "b classical music",
     "external_pred": "C. Experimental music",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01674.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01674.wav"
 }{
     "pred": "<external> C. Electronic synthesizer tones",
     "gold": "<external> C. Electronic synthesizer tones",
     "internal_pred": "a ambient nature sounds",
     "external_pred": "C. Electronic synthesizer tones",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00618.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00618.wav"
 }{
     "pred": "<external> C. Violin",
     "gold": "<external> C. Violin",
     "internal_pred": "b guitar",
     "external_pred": "C. Violin",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00826.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00826.wav"
 }{
     "pred": "<external> C. A baby crying",
     "gold": "<external> C. A baby crying",
     "internal_pred": "b a doorbell ringing",
     "external_pred": "C. A baby crying",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00642.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00642.wav"
 }{
     "pred": "<external> C. Disgust",
     "gold": "<external> C. Disgust",
     "internal_pred": "a sadness",
     "external_pred": "C. Disgust",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00835.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00835.wav"
 }{
     "pred": "<external> C. Sad and uncertain",
     "gold": "<external> C. Sad and uncertain",
     "internal_pred": "d calm and soothing",
     "external_pred": "C. Sad and uncertain",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01477.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01477.wav"
 }{
     "pred": "<external> D. Sad and reflective",
     "gold": "<external> D. Sad and reflective",
     "internal_pred": "a chaotic and tense",
     "external_pred": "D. Sad and reflective",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01433.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01433.wav"
 }{
     "pred": "<external> D. Swirling winds",
     "gold": "<external> D. Swirling winds",
     "internal_pred": "b ocean waves crashing",
     "external_pred": "D. Swirling winds",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01371.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01371.wav"
 }{
     "pred": "<external> D. Disgust",
     "gold": "<external> D. Disgust",
     "internal_pred": "c curiosity",
     "external_pred": "D. Disgust",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00428.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00428.wav"
 }{
     "pred": "<external> C. A door closing",
     "gold": "<external> C. A door closing",
     "internal_pred": "d a shift in music tempo",
     "external_pred": "C. A door closing",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00850.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00850.wav"
 }{
     "pred": "<external> B. Vehicle engines",
     "gold": "<external> B. Vehicle engines",
     "internal_pred": "d applause",
     "external_pred": "B. Vehicle engines",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01211.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01211.wav"
 }{
     "pred": "<external> B. Wind and water sounds",
     "gold": "<external> B. Wind and water sounds",
     "internal_pred": "d footsteps on gravel",
     "external_pred": "B. Wind and water sounds",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01511.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01511.wav"
 }{
     "pred": "<external> D. Fearful and intense",
     "gold": "<external> D. Fearful and intense",
     "internal_pred": "b joyful and light",
     "external_pred": "D. Fearful and intense",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00447.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00447.wav"
 }{
     "pred": "<external> A. Steady drum beats",
     "gold": "<external> A. Steady drum beats",
     "internal_pred": "d electronic synth waves",
     "external_pred": "A. Steady drum beats",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01554.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01554.wav"
 }{
     "pred": "<external> C. A reflection on a bittersweet memory",
     "gold": "<external> C. A reflection on a bittersweet memory",
     "internal_pred": "a a celebration of overcoming hardship",
     "external_pred": "C. A reflection on a bittersweet memory",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01696.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01696.wav"
 }{
     "pred": "<external> C. High-pitched synth sound",
     "gold": "<external> C. High-pitched synth sound",
     "internal_pred": "a drum beats with bass",
     "external_pred": "C. High-pitched synth sound",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01463.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01463.wav"
 }{
     "pred": "<external> C. Running car engine",
     "gold": "<external> C. Running car engine",
     "internal_pred": "a chirping birds",
     "external_pred": "C. Running car engine",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00708.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00708.wav"
 }{
     "pred": "<external> B. Distinct piano notes",
     "gold": "<external> B. Distinct piano notes",
     "internal_pred": "a sound of a basketball bouncing",
     "external_pred": "B. Distinct piano notes",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01213.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01213.wav"
 }{
     "pred": "<external> C. Vehicles passing",
     "gold": "<external> C. Vehicles passing",
     "internal_pred": "d birds chirping",
     "external_pred": "C. Vehicles passing",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01496.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01496.wav"
 }{
     "pred": "<external> D. Violin and piano",
     "gold": "<external> D. Violin and piano",
     "internal_pred": "a drumming",
     "external_pred": "D. Violin and piano",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01253.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01253.wav"
 }{
     "pred": "<external> C. Positive ambient sounds",
     "gold": "<external> C. Positive ambient sounds",
     "internal_pred": "d loud machinery",
     "external_pred": "C. Positive ambient sounds",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00907.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00907.wav"
 }{
     "pred": "<external> C. Introspection",
     "gold": "<external> C. Introspection",
     "internal_pred": "d anticipation",
     "external_pred": "C. Introspection",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00672.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00672.wav"
 }{
     "pred": "<external> C. Realization at the quarter pipe",
     "gold": "<external> C. Realization at the quarter pipe",
     "internal_pred": "a listening to music",
     "external_pred": "C. Realization at the quarter pipe",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00766.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00766.wav"
 }{
     "pred": "<external> B. Cooking",
     "gold": "<external> B. Cooking",
     "internal_pred": "a gardening",
     "external_pred": "B. Cooking",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01604.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01604.wav"
 }{
     "pred": "<external> C. Scheduled ignition issues",
     "gold": "<external> C. Scheduled ignition issues",
     "internal_pred": "b helicopter engine failure",
     "external_pred": "C. Scheduled ignition issues",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00526.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00526.wav"
 }{
     "pred": "<external> C. A solemn task description",
     "gold": "<external> C. A solemn task description",
     "internal_pred": "a a joyful song",
     "external_pred": "C. A solemn task description",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01471.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01471.wav"
 }{
     "pred": "<external> D. Sadness with energy",
     "gold": "<external> D. Sadness with energy",
     "internal_pred": "c frustration and anger",
     "external_pred": "D. Sadness with energy",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00562.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00562.wav"
 }{
     "pred": "<external> C. Sad",
     "gold": "<external> C. Sad",
     "internal_pred": "a excited",
     "external_pred": "C. Sad",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01539.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01539.wav"
 }{
     "pred": "<external> C. A bustling bar",
     "gold": "<external> C. A bustling bar",
     "internal_pred": "d a busy street",
     "external_pred": "C. A bustling bar",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00540.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00540.wav"
 }{
     "pred": "<external> C. Atmospheric electronic music",
     "gold": "<external> C. Atmospheric electronic music",
     "internal_pred": "d silence",
     "external_pred": "C. Atmospheric electronic music",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00651.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00651.wav"
 }{
     "pred": "<external> B. A quiet, tranquil setting",
     "gold": "<external> B. A quiet, tranquil setting",
     "internal_pred": "d a noisy marketplace",
     "external_pred": "B. A quiet, tranquil setting",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01398.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01398.wav"
 }{
     "pred": "<external> C. Quiet forest",
     "gold": "<external> C. Quiet forest",
     "internal_pred": "b indoor room",
     "external_pred": "C. Quiet forest",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00815.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00815.wav"
 }{
     "pred": "<external> C. Serene and calming",
     "gold": "<external> C. Serene and calming",
     "internal_pred": "b tense and suspenseful",
     "external_pred": "C. Serene and calming",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00592.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00592.wav"
 }{
     "pred": "<external> D. Experimental piano music",
     "gold": "<external> D. Experimental piano music",
     "internal_pred": "b ambient nature sounds",
     "external_pred": "D. Experimental piano music",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01638.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01638.wav"
 }{
     "pred": "<external> C. Clock ticking",
     "gold": "<external> C. Clock ticking",
     "internal_pred": "b church bells ringing",
     "external_pred": "C. Clock ticking",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00564.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00564.wav"
 }{
     "pred": "<external> D. Camera shutter clicks",
     "gold": "<external> D. Camera shutter clicks",
     "internal_pred": "a applause",
     "external_pred": "D. Camera shutter clicks",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00503.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00503.wav"
 }{
     "pred": "<external> C. Running water",
     "gold": "<external> C. Running water",
     "internal_pred": "b crackling fire",
     "external_pred": "C. Running water",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00632.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00632.wav"
 }{
     "pred": "<external> A. Melancholic and haunting",
     "gold": "<external> A. Melancholic and haunting",
     "internal_pred": "b cheerful and lively",
     "external_pred": "A. Melancholic and haunting",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01489.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01489.wav"
 }{
     "pred": "<external> C. A tennis match",
     "gold": "<external> C. A tennis match",
     "internal_pred": "b a music concert",
     "external_pred": "C. A tennis match",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00586.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00586.wav"
 }{
     "pred": "<external> B. Cooking or baking",
     "gold": "<external> B. Cooking or baking",
     "internal_pred": "c vacuuming",
     "external_pred": "B. Cooking or baking",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01261.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01261.wav"
 }

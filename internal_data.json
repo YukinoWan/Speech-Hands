@@ -3,251 +3,251 @@
     "gold": "<internal> D. A busy city street",
     "internal_pred": "d a busy city street",
     "external_pred": "- D. A busy city street",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01578.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01578.wav"
 }{
     "pred": "<internal> D. Virtual reality simulation",
     "gold": "<internal> D. Virtual reality simulation",
     "internal_pred": "d virtual reality simulation",
     "external_pred": "C. Outdoor kayaking",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00878.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00878.wav"
 }{
     "pred": "<internal> B. To signal the attention of someone nearby",
     "gold": "<internal> B. To signal the attention of someone nearby",
     "internal_pred": "b to signal the attention of someone nearby",
     "external_pred": "B",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01419.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01419.wav"
 }{
     "pred": "<internal> B. In the middle",
     "gold": "<internal> B. In the middle",
     "internal_pred": "b in the middle",
     "external_pred": "C. At the beginning",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01021.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01021.wav"
 }{
     "pred": "<internal> B. To create a futuristic atmosphere",
     "gold": "<internal> B. To create a futuristic atmosphere",
     "internal_pred": "b to create a futuristic atmosphere",
     "external_pred": "A. To make the conversation more engaging",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01485.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01485.wav"
 }{
     "pred": "<internal> B. Chirp, tweet",
     "gold": "<internal> B. Chirp, tweet",
     "internal_pred": "b chirp tweet",
     "external_pred": "D. Video game sound",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00989.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00989.wav"
 }{
     "pred": "<internal> D. Child speech",
     "gold": "<internal> D. Child speech",
     "internal_pred": "d child speech",
     "external_pred": "B. Female speech",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01018.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01018.wav"
 }{
     "pred": "<internal> C. Generic impact sounds",
     "gold": "<internal> C. Generic impact sounds",
     "internal_pred": "c generic impact sounds",
     "external_pred": "D. Breathing",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01161.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01161.wav"
 }{
     "pred": "<internal> B. Music",
     "gold": "<internal> B. Music",
     "internal_pred": "b music",
     "external_pred": "B",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01016.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01016.wav"
 }{
     "pred": "<internal> B. Both A and B",
     "gold": "<internal> B. Both A and B",
     "internal_pred": "b both a and b",
     "external_pred": "B",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00967.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00967.wav"
 }{
     "pred": "<internal> D. Duck gobble",
     "gold": "<internal> D. Duck gobble",
     "internal_pred": "d duck gobble",
     "external_pred": "C. Tap",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01088.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01088.wav"
 }{
     "pred": "<internal> A. Relaxed and intimate",
     "gold": "<internal> A. Relaxed and intimate",
     "internal_pred": "a relaxed and intimate",
     "external_pred": "A",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001441.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001441.wav"
 }{
     "pred": "<internal> A. A man talking to his dog at home",
     "gold": "<internal> A. A man talking to his dog at home",
     "internal_pred": "a a man talking to his dog at home",
     "external_pred": "A",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001448.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001448.wav"
 }{
     "pred": "<internal> A. Breezy or windy",
     "gold": "<internal> A. Breezy or windy",
     "internal_pred": "a breezy or windy",
     "external_pred": "A",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001461.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001461.wav"
 }{
     "pred": "<internal> A. Friendly and casual",
     "gold": "<internal> A. Friendly and casual",
     "internal_pred": "a friendly and casual",
     "external_pred": "A",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001462.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001462.wav"
 }{
     "pred": "<internal> A. They create anticipation",
     "gold": "<internal> A. They create anticipation",
     "internal_pred": "a they create anticipation",
     "external_pred": "A",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001467.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001467.wav"
 }{
     "pred": "<internal> A. Driver",
     "gold": "<internal> A. Driver",
     "internal_pred": "a driver",
     "external_pred": "B. Mechanic",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001471.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001471.wav"
 }{
     "pred": "<internal> B. Cause discomfort",
     "gold": "<internal> B. Cause discomfort",
     "internal_pred": "b cause discomfort",
     "external_pred": "B",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001474.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001474.wav"
 }{
     "pred": "<internal> B. Tranquil and leisurely",
     "gold": "<internal> B. Tranquil and leisurely",
     "internal_pred": "b tranquil and leisurely",
     "external_pred": "B",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001492.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001492.wav"
 }{
     "pred": "<internal> A. Sewing a garment",
     "gold": "<internal> A. Sewing a garment",
     "internal_pred": "a sewing a garment",
     "external_pred": "A",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001505.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001505.wav"
 }{
     "pred": "<internal> B. She is conversing while focusing on a task",
     "gold": "<internal> B. She is conversing while focusing on a task",
     "internal_pred": "b she is conversing while focusing on a task",
     "external_pred": "B",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001508.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001508.wav"
 }{
     "pred": "<internal> A. Advocating for a cause",
     "gold": "<internal> A. Advocating for a cause",
     "internal_pred": "a advocating for a cause",
     "external_pred": "A",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001557.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001557.wav"
 }{
     "pred": "<internal> B. High congestion",
     "gold": "<internal> B. High congestion",
     "internal_pred": "b high congestion",
     "external_pred": "B",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001585.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001585.wav"
 }{
     "pred": "<internal> A. The truck starting up",
     "gold": "<internal> A. The truck starting up",
     "internal_pred": "a the truck starting up",
     "external_pred": "A",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001591.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001591.wav"
 }{
     "pred": "<internal> B. A fireworks display",
     "gold": "<internal> B. A fireworks display",
     "internal_pred": "b a fireworks display",
     "external_pred": "B",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001594.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001594.wav"
 }{
     "pred": "<internal> A. High excitement",
     "gold": "<internal> A. High excitement",
     "internal_pred": "a high excitement",
     "external_pred": "A",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_0001614.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_0001614.wav"
 }{
     "pred": "<internal> B. He is trying to maintain clarity over the music",
     "gold": "<internal> B. He is trying to maintain clarity over the music",
     "internal_pred": "b he is trying to maintain clarity over the music",
     "external_pred": "B",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01240.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01240.wav"
 }{
     "pred": "<internal> B. She is masking her true emotions for professionalism",
     "gold": "<internal> B. She is masking her true emotions for professionalism",
     "internal_pred": "b she is masking her true emotions for professionalism",
     "external_pred": "A. The transcription missed emotive cues",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01431.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01431.wav"
 }{
     "pred": "<internal> D. He is overwhelmed by the danger",
     "gold": "<internal> D. He is overwhelmed by the danger",
     "internal_pred": "d he is overwhelmed by the danger",
     "external_pred": "A",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00023.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00023.wav"
 }{
     "pred": "<internal> D. Using a command block",
     "gold": "<internal> D. Using a command block",
     "internal_pred": "d using a command block",
     "external_pred": "A. Brewing a potion",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00710.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00710.wav"
 }{
     "pred": "<internal> D. To create an upbeat atmosphere",
     "gold": "<internal> D. To create an upbeat atmosphere",
     "internal_pred": "d to create an upbeat atmosphere",
     "external_pred": "A. To enhance the peaceful ambiance",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00530.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00530.wav"
 }{
     "pred": "<internal> B. The clarity of the dialogue",
     "gold": "<internal> B. The clarity of the dialogue",
     "internal_pred": "b the clarity of the dialogue",
     "external_pred": "B",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00793.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00793.wav"
 }{
     "pred": "<internal> B. True",
     "gold": "<internal> B. True",
     "internal_pred": "b true",
     "external_pred": "A. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00304.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00304.wav"
 }{
     "pred": "<internal> B. True",
     "gold": "<internal> B. True",
     "internal_pred": "b true",
     "external_pred": "A. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00022.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00022.wav"
 }{
     "pred": "<internal> D. To provide a contrast to the serious topic",
     "gold": "<internal> D. To provide a contrast to the serious topic",
     "internal_pred": "d to provide a contrast to the serious topic",
     "external_pred": "A. To make the message more impactful",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00196.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00196.wav"
 }{
     "pred": "<internal> B. True",
     "gold": "<internal> B. True",
     "internal_pred": "b true",
     "external_pred": "A. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00028.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00028.wav"
 }{
     "pred": "<internal> B. True",
     "gold": "<internal> B. True",
     "internal_pred": "b true",
     "external_pred": "A. False",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00214.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00214.wav"
 }{
     "pred": "<internal> B. The presence of clock ticking and scraping noises",
     "gold": "<internal> B. The presence of clock ticking and scraping noises",
     "internal_pred": "b the presence of clock ticking and scraping noises",
     "external_pred": "B",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00237.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00237.wav"
 }{
     "pred": "<internal> D. The setting is a busy workshop with people around",
     "gold": "<internal> D. The setting is a busy workshop with people around",
     "internal_pred": "d the setting is a busy workshop with people around",
     "external_pred": "B. The speaker is at a party with mixed emotions",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00210.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00210.wav"
 }{
     "pred": "<internal> B. Electric guitar riffs",
     "gold": "<internal> B. Electric guitar riffs",
     "internal_pred": "b electric guitar riffs",
     "external_pred": "B",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_00782.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_00782.wav"
 }{
     "pred": "<internal> C. Enthusiastic cheering",
     "gold": "<internal> C. Enthusiastic cheering",
     "internal_pred": "c enthusiastic cheering",
     "external_pred": "C",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01695.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01695.wav"
 }{
     "pred": "<internal> C. Community support",
     "gold": "<internal> C. Community support",
     "internal_pred": "c community support",
     "external_pred": "A. A powerful storm",
-    "audio": "/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/local_audio_path/dev/audio_01210.wav"
+    "audio": "data/dcase_audioqa/audio/dev/audio_01210.wav"
 }
