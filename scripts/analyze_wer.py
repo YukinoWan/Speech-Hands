@@ -28,7 +28,7 @@ with open(f"{SPEECH_HANDS_DATA}/asr_nbest/{asr_model}/{task}_{asr_model}_5_best.
     nbest_data = [json.loads(line) for line in f]
 with open(f"{SPEECH_HANDS_DATA}/asr_nbest/{asr_model}/{task}_{asr_model}_5_best.jsonl", "r") as f:
     w1_best_data = [json.loads(line) for line in f]
-with open(f"data/sharegpt_data_v6/{task}_whisper_5_best_with_audio.json", "r") as f:
+with open(f"{SPEECH_HANDS_DATA}/sharegpt/whisper_5_best/{task}_whisper_5_best_with_audio.json", "r") as f:
     gold_data = json.load(f)
 with open(f"output/{task}_baseline_with_audio/output.json", "r") as f:
     baseline_data = json.load(f)

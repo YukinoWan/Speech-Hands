@@ -12,6 +12,7 @@ import sys
 import os
 import torch
 
+SPEECH_HANDS_DATA = os.environ.get("SPEECH_HANDS_DATA", "./data")
 
 from vllm import LLM, SamplingParams
 from transformers import Qwen3OmniMoeProcessor, Qwen3OmniMoeForConditionalGeneration
@@ -132,7 +133,7 @@ if __name__ == '__main__':
 
     # print(no_audio)
 
-    with open(f"data/sharegpt_data_v6/{task}_whisper_5_best_with_audio.json", "r") as f:
+    with open(f"{SPEECH_HANDS_DATA}/sharegpt/whisper_5_best/{task}_whisper_5_best_with_audio.json", "r") as f:
         data = json.load(f)
     # data = data[:100]
 

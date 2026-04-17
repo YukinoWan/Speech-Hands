@@ -10,6 +10,8 @@ from jiwer import wer
 from transformers.models.whisper.english_normalizer import BasicTextNormalizer
 import sys
 
+SPEECH_HANDS_DATA = os.environ.get("SPEECH_HANDS_DATA", "./data")
+
 normalizer = BasicTextNormalizer()
 
 task = sys.argv[1]
@@ -23,10 +25,10 @@ processor = Qwen2_5OmniProcessor.from_pretrained(model_path)
 from qwen_omni_utils import process_mm_info
 
 if no_audio:
-    with open(f"data/sharegpt_data_v6/{task}_test_whisper_5_best_no_audio.json", "r") as f:
+    with open(f"{SPEECH_HANDS_DATA}/sharegpt/whisper_5_best/{task}_test_whisper_5_best_no_audio.json", "r") as f:
         data = json.load(f)
 else:
-    with open(f"data/sharegpt_data_v6/{task}_test_whisper_5_best_with_audio.json", "r") as f:
+    with open(f"{SPEECH_HANDS_DATA}/sharegpt/whisper_5_best/{task}_test_whisper_5_best_with_audio.json", "r") as f:
         data = json.load(f)
 
 #output_dir = f"output/{task}_test_with_audio_whisper_5_best" if not no_audio else f"output/{task}_test_no_audio_whisper_5_best"

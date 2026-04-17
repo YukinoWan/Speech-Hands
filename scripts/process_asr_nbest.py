@@ -95,7 +95,7 @@ for d in dataset:
             nbest_data = [json.loads(line) for line in f]
         with open(f"{SPEECH_HANDS_DATA}/asr_nbest/parakeet/{d}_{t}_parakeet_5_best.jsonl", "r") as f:
             w1_best_data = [json.loads(line) for line in f]
-        with open(f"data/sharegpt_data_v6/{d}_{t}_whisper_5_best_with_audio.json", "r") as f:
+        with open(f"{SPEECH_HANDS_DATA}/sharegpt/whisper_5_best/{d}_{t}_whisper_5_best_with_audio.json", "r") as f:
             gold_data = json.load(f)
         with open(f"output/{d}_{t}_baseline_with_audio/output.json", "r") as f:
             baseline_data = json.load(f)
