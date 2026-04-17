@@ -175,6 +175,10 @@ saves/
 target_dir/
 log/
 eval_log/
+# Training stdout logs captured by run_*.sh wrappers
+scripts/**/parakeet_log/
+scripts/**/2025_log/
+scripts/**/*_log/
 data/
 data/sharegpt_data/*.json
 data/sharegpt_data_v1/
