@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
+SPEECH_HANDS_DATA = os.environ.get("SPEECH_HANDS_DATA", "./data")
 
 normalizer = BasicTextNormalizer()
 
@@ -23,9 +24,9 @@ asr_model = ckpt.split("-")[0]
 
 with open(f"parakeet-ger_rag_output/{task}_with_audio_rag_ckpt-{ckpt}/output.json", "r") as f:
     data = json.load(f)
-with open(f"/mnt/home/zhenwan.nlp/zhen-openasr-n-best/parakeet_data/{task}_{asr_model}_5_best.jsonl", "r") as f:
+with open(f"{SPEECH_HANDS_DATA}/asr_nbest/{asr_model}/{task}_{asr_model}_5_best.jsonl", "r") as f:
     nbest_data = [json.loads(line) for line in f]
-with open(f"/mnt/home/zhenwan.nlp/zhen-openasr-n-best/parakeet_data/{task}_{asr_model}_5_best.jsonl", "r") as f:
+with open(f"{SPEECH_HANDS_DATA}/asr_nbest/{asr_model}/{task}_{asr_model}_5_best.jsonl", "r") as f:
     w1_best_data = [json.loads(line) for line in f]
 with open(f"data/sharegpt_data_v6/{task}_whisper_5_best_with_audio.json", "r") as f:
     gold_data = json.load(f)

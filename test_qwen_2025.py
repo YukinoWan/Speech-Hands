@@ -10,6 +10,9 @@ from jiwer import wer
 from transformers.models.whisper.english_normalizer import BasicTextNormalizer
 import sys
 
+SPEECH_HANDS_DATA = os.environ.get("SPEECH_HANDS_DATA", "./data")
+SPEECH_HANDS_CKPT = os.environ.get("SPEECH_HANDS_CKPT", "./target_dir")
+
 normalizer = BasicTextNormalizer()
 
 ckpt = sys.argv[1]
@@ -20,7 +23,7 @@ ckpt = sys.argv[1]
 if "baseline" in ckpt:
     model_path = "Qwen/Qwen2.5-Omni-7B"
 else:
-    model_path = f"/mnt/home/zhenwan.nlp/LLaMA-Factory-Nbest/target_dir/2025_train_sharegpt-with-audio-rag-{ckpt}"
+    model_path = f"{SPEECH_HANDS_CKPT}/2025_train_sharegpt-with-audio-rag-{ckpt}"
 no_audio = False
 
 print(no_audio)
@@ -29,10 +32,10 @@ processor = Qwen2_5OmniProcessor.from_pretrained(model_path)
 from qwen_omni_utils import process_mm_info
 
 if no_audio:
-    with open(f"/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/2025_dev_sharegpt_rag_{ckpt.split('-')[0]}_{ckpt.split('-')[1]}.json", "r") as f:
+    with open(f"{SPEECH_HANDS_DATA}/dcase_audioqa/2025_dev_sharegpt_rag_{ckpt.split('-')[0]}_{ckpt.split('-')[1]}.json", "r") as f:
         data = json.load(f)
 else:
-    with open(f"/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/2025_dev_sharegpt_rag_{ckpt.split('-')[0]}_{ckpt.split('-')[1]}.json", "r") as f:
+    with open(f"{SPEECH_HANDS_DATA}/dcase_audioqa/2025_dev_sharegpt_rag_{ckpt.split('-')[0]}_{ckpt.split('-')[1]}.json", "r") as f:
         data = json.load(f)
 
 output_dir = f"2025_output/with_audio_rag_ckpt-{ckpt}" if not no_audio else f"2025_output/no_audio_rag_ckpt-{ckpt}"

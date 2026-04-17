@@ -10,6 +10,8 @@ from jiwer import wer
 from transformers.models.whisper.english_normalizer import BasicTextNormalizer
 import sys
 
+SPEECH_HANDS_DATA = os.environ.get("SPEECH_HANDS_DATA", "./data")
+
 normalizer = BasicTextNormalizer()
 
 task = sys.argv[1]
@@ -38,7 +40,7 @@ if no_audio:
         data = json.load(f)
 else:
     if "baseline" in ckpt:
-        with open(f"/mnt/home/zhenwan.nlp/zhen-openasr-n-best/sharegpt_{asr}_data_prompt_v2/{task}_{asr}_5_best_with_audio.json", "r") as f:
+        with open(f"{SPEECH_HANDS_DATA}/sharegpt/{asr}_prompt_v2/{task}_{asr}_5_best_with_audio.json", "r") as f:
             data = json.load(f)
     else:
         with open(f"data/sharegpt_data_{ckpt.split('-')[0]}_{ckpt.split('-')[1]}/{task}_{ckpt.split('-')[0]}_5_best_with_audio.json", "r") as f:

@@ -1,7 +1,10 @@
 import json
+import os
 import jiwer
 from transformers.models.whisper.english_normalizer import BasicTextNormalizer
 import sys
+
+SPEECH_HANDS_DATA = os.environ.get("SPEECH_HANDS_DATA", "./data")
 
 normalizer = BasicTextNormalizer()
 
@@ -17,12 +20,12 @@ with open(data_path, "r") as f:
 with open(qwen_data_path, "r") as f:
     qwen_data = json.load(f)
 
-canary_data_path = f"/mnt/home/zhenwan.nlp/zhen-openasr-n-best/parakeet_data/{task}_parakeet_5_best.jsonl"
+canary_data_path = f"{SPEECH_HANDS_DATA}/asr_nbest/parakeet/{task}_parakeet_5_best.jsonl"
 
 with open(canary_data_path, "r") as f:
     canary_data = [json.loads(line) for line in f]
 
-parakeet_data_path = f"/mnt/home/zhenwan.nlp/zhen-openasr-n-best/parakeet_data/{task}_parakeet_5_best.jsonl"
+parakeet_data_path = f"{SPEECH_HANDS_DATA}/asr_nbest/parakeet/{task}_parakeet_5_best.jsonl"
 
 with open(parakeet_data_path, "r") as f:
     parakeet_data = [json.loads(line) for line in f]

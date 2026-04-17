@@ -18,6 +18,8 @@ import os
 
 import torch
 from datasets import load_dataset
+
+SPEECH_HANDS_DATA = os.environ.get("SPEECH_HANDS_DATA", "./data")
 from tqdm import tqdm
 
 import llava
@@ -78,10 +80,10 @@ print(generation_config)
 # assert False
 
 if no_audio:
-    with open(f"/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/2025_train_sharegpt.json", "r") as f:
+    with open(f"{SPEECH_HANDS_DATA}/dcase_audioqa/2025_train_sharegpt.json", "r") as f:
         data = json.load(f)
 else:
-    with open(f"/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/2025_train_sharegpt.json", "r") as f:
+    with open(f"{SPEECH_HANDS_DATA}/dcase_audioqa/2025_train_sharegpt.json", "r") as f:
         data = json.load(f)
 
 output_dir = f"2025_output/with_audio_ckpt-{ckpt}" if not no_audio else f"2025_output/no_audio_ckpt-{ckpt}"

@@ -1,8 +1,12 @@
 import json
+import os
 from transformers.models.whisper.english_normalizer import BasicTextNormalizer
 normalizer = BasicTextNormalizer()
 import sys
 import random
+
+SPEECH_HANDS_DATA = os.environ.get("SPEECH_HANDS_DATA", "./data")
+SPEECH_HANDS_OUTPUT = os.environ.get("SPEECH_HANDS_OUTPUT", "./output")
 
 
 
@@ -153,16 +157,16 @@ def acc(pred, gold):
 subset = sys.argv[1]
 ckpt = sys.argv[2]
 
-with open(f"/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/2025_{subset}_sharegpt.json", "r") as f:
+with open(f"{SPEECH_HANDS_DATA}/dcase_audioqa/2025_{subset}_sharegpt.json", "r") as f:
     question_data = json.load(f)
 
-with open(f"/mnt/home/zhenwan.nlp/LLaMA-Factory-Nbest/2025_output/with_audio_ckpt-baseline_{subset}/output.json", "r") as f:
+with open(f"{SPEECH_HANDS_OUTPUT}/2025/with_audio_ckpt-baseline_{subset}/output.json", "r") as f:
     qwen_data = json.load(f)
 
-with open(f"/mnt/home/zhenwan.nlp/LLaMA-Factory-Nbest/2025_output/with_audio_ckpt-flamingo_{subset}/output.json", "r") as f:
+with open(f"{SPEECH_HANDS_OUTPUT}/2025/with_audio_ckpt-flamingo_{subset}/output.json", "r") as f:
     nbest_data = json.load(f)
 
-with open(f"/mnt/home/zhenwan.nlp/LLaMA-Factory-Nbest/2025_output/with_audio_ckpt-flamingo-5best_{subset}/output.json", "r") as f:
+with open(f"{SPEECH_HANDS_OUTPUT}/2025/with_audio_ckpt-flamingo-5best_{subset}/output.json", "r") as f:
     top_5_data = json.load(f)
 
 qwen_correct_1best_wrong = 0
@@ -254,7 +258,7 @@ for i in range(len(question_data)):
     # print(question_data[i])
     # assert False
 
-with open(f"/mnt/home/zhenwan.nlp/2025_DCASE_AudioQA_Official/2025_{subset}_sharegpt_rag_{ckpt}.json", "w") as f:
+with open(f"{SPEECH_HANDS_DATA}/dcase_audioqa/2025_{subset}_sharegpt_rag_{ckpt}.json", "w") as f:
     json.dump(output_data, f, indent=1)
 
 print("num_internal", num_internal)

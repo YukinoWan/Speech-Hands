@@ -1,10 +1,13 @@
 import json
+import os
 from transformers.models.whisper.english_normalizer import BasicTextNormalizer
 import jiwer
 from tqdm import tqdm
 import ast
 import re
 import numpy as np
+
+SPEECH_HANDS_DATA = os.environ.get("SPEECH_HANDS_DATA", "./data")
 
 
 
@@ -102,9 +105,9 @@ def normalize_text(text):
 for d in dataset:
     for t in type:
         output_data = []
-        with open(f"/mnt/home/zhenwan.nlp/zhen-openasr-n-best/{asr_model}_5_best_data/{d}_{t}_{asr_model}_5_best.jsonl", "r") as f:
+        with open(f"{SPEECH_HANDS_DATA}/asr_nbest/{asr_model}_5_best/{d}_{t}_{asr_model}_5_best.jsonl", "r") as f:
             nbest_data = [json.loads(line) for line in f]
-        with open(f"/mnt/home/zhenwan.nlp/zhen-openasr-n-best/{asr_model}_data/{d}_{t}_{asr_model}_5_best.jsonl", "r") as f:
+        with open(f"{SPEECH_HANDS_DATA}/asr_nbest/{asr_model}/{d}_{t}_{asr_model}_5_best.jsonl", "r") as f:
             w1_best_data = [json.loads(line) for line in f]
         with open(f"data/sharegpt_data_v6/{d}_{t}_whisper_5_best_with_audio.json", "r") as f:
             gold_data = json.load(f)

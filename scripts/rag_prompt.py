@@ -1,9 +1,12 @@
 import json
+import os
 from transformers.models.whisper.english_normalizer import BasicTextNormalizer
 import jiwer
 from tqdm import tqdm
 import ast
 import re
+
+SPEECH_HANDS_DATA = os.environ.get("SPEECH_HANDS_DATA", "./data")
 
 dataset = ["ami", "voxpopuli", "tedlium", "spgispeech", "gigaspeech"]
 # dataset = ["librispeech"]
@@ -45,7 +48,7 @@ def normalize_text(text):
 
 for d in dataset:
     for t in type:
-        with open(f"/mnt/home/zhenwan.nlp/zhen-openasr-n-best/parakeet_5_best_data/{d}_{t}_parakeet_5_best.jsonl", "r") as f:
+        with open(f"{SPEECH_HANDS_DATA}/asr_nbest/parakeet_5_best/{d}_{t}_parakeet_5_best.jsonl", "r") as f:
             data = [json.loads(line) for line in f]
         with open(f"output/{d}_{t}_baseline_with_audio/output.json", "r") as f:
             baseline_data = json.load(f)

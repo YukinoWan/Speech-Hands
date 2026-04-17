@@ -8,6 +8,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
+SPEECH_HANDS_OUTPUT = os.environ.get("SPEECH_HANDS_OUTPUT", "./output")
+
 def plot_confusion_matrix(y_true, y_pred, labels, title, outpath,
                           normalize=True, cmap=None, fontsize=10):
     """
@@ -69,12 +71,12 @@ def plot_confusion_matrix(y_true, y_pred, labels, title, outpath,
 
 ckpt = sys.argv[1]
 
-with open(f"/mnt/home/zhenwan.nlp/LLaMA-Factory-Nbest/2025_output/with_audio_{ckpt}/output.json", "r") as f:
+with open(f"{SPEECH_HANDS_OUTPUT}/2025/with_audio_{ckpt}/output.json", "r") as f:
     data = json.load(f)
 
-with open(f"/mnt/home/zhenwan.nlp/LLaMA-Factory-Nbest/2025_output/with_audio_ckpt-baseline_dev/output.json", "r") as f:
+with open(f"{SPEECH_HANDS_OUTPUT}/2025/with_audio_ckpt-baseline_dev/output.json", "r") as f:
     internal_data = json.load(f)
-with open(f"/mnt/home/zhenwan.nlp/LLaMA-Factory-Nbest/2025_output/with_audio_ckpt-flamingo_dev/output.json", "r") as f:
+with open(f"{SPEECH_HANDS_OUTPUT}/2025/with_audio_ckpt-flamingo_dev/output.json", "r") as f:
     external_data = json.load(f)
 
 
