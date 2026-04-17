@@ -135,7 +135,7 @@ def calculate_mfu(
         "bf16": True,
     }
     if deepspeed_stage in [2, 3]:
-        args["deepspeed"] = f"examples/deepspeed/ds_z{deepspeed_stage}_config.json"
+        args["deepspeed"] = f"configs/deepspeed/ds_z{deepspeed_stage}_config.json"
 
     run_exp(args)
     if dist.is_initialized():
