@@ -1,0 +1,87 @@
+Speech-Hands
+Copyright 2026 The Speech-Hands Authors.
+
+This product includes software developed as part of the paper
+"Speech-Hands: A Self-Reflection Voice Agentic Approach to Speech
+Recognition and Audio Reasoning with Omni Perception" (ACL 2026).
+
+Licensed under the Apache License, Version 2.0 (the "License"); you
+may not use this file except in compliance with the License. You may
+obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+Third-party components
+================================================================================
+
+This repository bundles code adapted from the following open-source projects.
+Each is governed by its original license; the notices below preserve the
+required attributions.
+
+--------------------------------------------------------------------------------
+LLaMA Factory  (src/llamafactory/, pyproject.toml, setup.py, requirements.txt,
+                examples of DeepSpeed/Accelerate configs, eval harness wiring)
+--------------------------------------------------------------------------------
+Source:   https://github.com/hiyouga/LLaMA-Factory
+License:  Apache License 2.0
+Notice:
+    LLaMA Factory
+    Copyright 2024- LlamaFactory Authors.
+
+The training framework under src/llamafactory/ is vendored from LLaMA Factory
+with minor modifications to support the Speech-Hands self-reflection tokens
+and the Qwen2.5-Omni training recipes in configs/. See the upstream project
+for the full list of contributors.
+
+--------------------------------------------------------------------------------
+NVIDIA VILA  (llava/)
+--------------------------------------------------------------------------------
+Source:   https://github.com/NVlabs/VILA
+License:  Apache License 2.0
+Notice:
+    VILA
+    Copyright (c) 2024-2025 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+The multimodal encoder stack under llava/ (language model wrappers, visual /
+audio encoders, training utilities) is adapted from NVIDIA VILA. File-level
+attribution headers are preserved in each source file.
+
+--------------------------------------------------------------------------------
+LLaVA                                                       (llava/conversation.py)
+--------------------------------------------------------------------------------
+Source:   https://github.com/haotian-liu/LLaVA
+License:  Apache License 2.0
+The conversation template logic derives from the original LLaVA project; see
+the per-file header in llava/conversation.py.
+
+================================================================================
+Backbone models and external perception models
+================================================================================
+
+Speech-Hands fine-tunes and evaluates against the following pretrained
+artifacts. They are NOT redistributed in this repository; users are expected
+to download them from their official hosts under each model's respective
+license.
+
+  * Qwen2.5-Omni-7B           — https://huggingface.co/Qwen/Qwen2.5-Omni-7B
+  * Parakeet-TDT-0.6B-v3      — https://huggingface.co/nvidia/parakeet-tdt-0.6b-v2
+  * Whisper-v2-large          — https://huggingface.co/openai/whisper-large-v2
+  * Canary-1B-v2              — https://huggingface.co/nvidia/canary-1b
+  * Audio Flamingo 3          — https://huggingface.co/nvidia/audio-flamingo-3
+
+================================================================================
+Datasets
+================================================================================
+
+The paper evaluates on benchmarks whose audio and transcripts are governed by
+their original licenses and distribution terms. Users are responsible for
+obtaining them directly from the upstream sources:
+
+  * AMI Meeting Corpus
+  * TEDLIUM
+  * GigaSpeech
+  * SPGISpeech
+  * VoxPopuli
+  * LibriSpeech  (clean / other)
+  * DCASE 2025 AudioQA Challenge
