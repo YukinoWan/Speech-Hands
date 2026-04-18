@@ -8,6 +8,10 @@
 
 Zhen Wan, Chao-Han Huck Yang, Jinchuan Tian, Hanrong Ye, Ankita Pasad, Szu-wei Fu, Arushi Goel, Ryo Hachiuma, Shizhe Diao, Kunal Dhawan, Sreyan Ghosh, Yusuke Hirota, Zhehuai Chen, Rafael Valle, Ehsan Hosseini Asl, Chenhui Chu, Shinji Watanabe, Yu-Chiang Frank Wang, Boris Ginsburg
 
+<p align="center"><img src="docs/figures/teaser.png" alt="Speech-Hands overview" width="780"></p>
+
+> Speech-Hands acts as a dynamic orchestrator that predicts a special *action token* to govern its cognitive strategy for ASR and multi-domain audio reasoning.
+
 **Demo**: an anonymous static project page lives under [`docs/`](docs/) and is also shipped as a standalone Jupyter notebook at [`demo/demo.ipynb`](demo/demo.ipynb). Both walk through seven representative DCASE 2025 AudioQA dev cases with real audio, the internal vs external predictions, and the self-reflection routing decision. See the [Demo](#demo) section below for how to view them.
 
 > **Checkpoints are not included in this release.** The demo showcases the learned self-reflection behavior on recorded predictions from the paper's runs, so no fine-tuned weights are required to inspect the method. Users who want to reproduce full numbers can re-run the training pipeline from the provided code + configs.
@@ -25,6 +29,36 @@ Jointly fine-tuning a voice-LLM on speech recognition and audio reasoning often 
 | `<rewrite>`  | Neither is right; re-derive the answer from audio + candidates |
 
 On 7 OpenASR benchmarks we obtain **12.1% WER relative improvement** over baselines, and **77.37%** on DCASE 2025 AudioQA.
+
+<p align="center"><img src="docs/figures/method.png" alt="Speech-Hands framework" width="860"></p>
+
+> *Framework overview — a special action token is generated at the beginning to decide whether to use audio perception (transcription hypotheses / caption) or not.*
+
+---
+
+## Headline Results
+
+**ASR** — WER (%) across 7 OpenASR benchmarks (Speech-Hands ⇌ *Parakeet-TDT-0.6B-v3* vs. strongest baselines):
+
+| Model | AMI | Tedlium | GigaSpeech | SPGISpeech | VoxPopuli | Libri-clean | Libri-other | **avg.** |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Whisper-v2-large | 16.88 | 4.32 | 11.45 | 3.94 | 7.57 | 2.91 | 5.15 | 7.17 |
+| Parakeet-TDT-0.6B-v3 | 12.69 | 4.90 | 12.24 | 3.16 | 6.48 | 1.89 | 3.37 | 6.68 |
+| Qwen2.5-Omni (base) | 19.77 | 5.17 | 11.26 | 4.58 | 6.59 | 2.09 | 3.85 | 7.33 |
+| GER ⇒ Parakeet (cascaded) | 22.91 | 6.09 | 12.10 | 3.98 | 7.49 | 2.92 | 4.84 | 8.33 |
+| **Speech-Hands ⇌ Parakeet** | **11.20** | **4.37** | **11.10** | **2.26** | **6.02** | **1.67** | **3.18** | **5.69** |
+
+**AudioQA** — Accuracy (%) on DCASE 2025 (Speech-Hands ⇌ *Audio Flamingo 3* vs. strongest baselines):
+
+| Model / Setting | Bio-acoustic | Soundscape | Complex QA | **avg.** |
+|---|---:|---:|---:|---:|
+| Qwen2.5-Omni (base) | 47.32 | 56.32 | 59.89 | 57.87 |
+| Audio Flamingo 3 | 71.88 | 57.31 | 81.26 | 74.49 |
+| GER ⇒ AF3 (cascaded) | 76.29 | 52.02 | 77.48 | 68.93 |
+| Speech-Hands — SFT | 67.86 | 58.29 | 83.34 | 75.75 |
+| **Speech-Hands — SFT + majority sampling** | **81.25** | **59.40** | **85.70** | **77.37** |
+
+Full per-benchmark tables, cascaded baselines (GER ⇒ Whisper / Canary), ablations, and action-token F1 analysis live in the paper and on the project page ([docs/index.html](docs/index.html)).
 
 ---
 
