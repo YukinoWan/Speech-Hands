@@ -179,7 +179,7 @@ eval_log/
 scripts/**/parakeet_log/
 scripts/**/2025_log/
 scripts/**/*_log/
-data/
+data/*
 data/sharegpt_data/*.json
 data/sharegpt_data_v1/
 data/sharegpt_data_v2/
@@ -190,6 +190,10 @@ wandb/
 swanlog/
 generated_predictions.jsonl
 predictions_score.json
+
+# Allow the dataset registry through even though data/ is otherwise ignored
+!data/dataset_info.json
+!data/README.md
 
 # Paper source — NEVER commit. Drop the LaTeX zip / extracted tree in
 # paper_source/ so it's always ignored locally regardless of name.

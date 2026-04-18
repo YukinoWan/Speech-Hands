@@ -1,0 +1,590 @@
+{
+  "2025_train_sharegpt": {
+    "file_name": "dcase_audioqa/2025_train_sharegpt.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "2025_train_sharegpt_rag": {
+    "file_name": "dcase_audioqa/2025_train_sharegpt_rag.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "2025_train_sharegpt_rag_v2": {
+    "file_name": "dcase_audioqa/2025_train_sharegpt_rag_v2.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "2025_train_sharegpt_rag_v3": {
+    "file_name": "dcase_audioqa/2025_train_sharegpt_rag_v3.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "2025_train_sharegpt_rag_v4": {
+    "file_name": "dcase_audioqa/2025_train_sharegpt_rag_v4.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "2025_train_sharegpt_rag_v5": {
+    "file_name": "dcase_audioqa/2025_train_sharegpt_rag_v5.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "2025_train_sharegpt_rag_1best_v6": {
+    "file_name": "dcase_audioqa/2025_train_sharegpt_rag_1best_v6.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "2025_train_sharegpt_rag_1best_part1": {
+    "file_name": "dcase_audioqa/2025_train_sharegpt_rag_1best_part1.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "2025_train_sharegpt_rag_1best_part2": {
+    "file_name": "dcase_audioqa/2025_train_sharegpt_rag_1best_part2.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "2025_train_sharegpt_rag_1best_part3": {
+    "file_name": "dcase_audioqa/2025_train_sharegpt_rag_1best_part3.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "ami-parakeet-5-best-train-with-audio-v3": {
+    "file_name": "sharegpt_data_parakeet_5_best/ami_train_parakeet_5_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "gigaspeech-parakeet-5-best-train-with-audio-v3": {
+    "file_name": "sharegpt_data_parakeet_5_best/gigaspeech_train_parakeet_5_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "spgispeech-parakeet-5-best-train-with-audio-v3": {
+    "file_name": "sharegpt_data_parakeet_5_best/spgispeech_train_parakeet_5_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "tedlium-parakeet-5-best-train-with-audio-v3": {
+    "file_name": "sharegpt_data_parakeet_5_best/tedlium_train_parakeet_5_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "voxpopuli-parakeet-5-best-train-with-audio-v3": {
+    "file_name": "sharegpt_data_parakeet_5_best/voxpopuli_train_parakeet_5_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "librispeech-parakeet-5-best-train-with-audio-v3": {
+    "file_name": "sharegpt_data_parakeet_5_best/librispeech_train_parakeet_5_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "ami-parakeet-5-best-train-with-audio-ger-rag": {
+    "file_name": "sharegpt_data_parakeet_ger_rag/ami_train_parakeet_5_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "gigaspeech-parakeet-5-best-train-with-audio-ger-rag": {
+    "file_name": "sharegpt_data_parakeet_ger_rag/gigaspeech_train_parakeet_5_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "spgispeech-parakeet-5-best-train-with-audio-ger-rag": {
+    "file_name": "sharegpt_data_parakeet_ger_rag/spgispeech_train_parakeet_5_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "tedlium-parakeet-5-best-train-with-audio-ger-rag": {
+    "file_name": "sharegpt_data_parakeet_ger_rag/tedlium_train_parakeet_5_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "voxpopuli-parakeet-5-best-train-with-audio-ger-rag": {
+    "file_name": "sharegpt_data_parakeet_ger_rag/voxpopuli_train_parakeet_5_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "librispeech-parakeet-5-best-train-with-audio-ger-rag": {
+    "file_name": "sharegpt_data_parakeet_ger_rag/librispeech_train_parakeet_5_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "ami-parakeet-1-best-train-with-audio-rag": {
+    "file_name": "sharegpt_data_parakeet_1best/ami_train_parakeet_1_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "gigaspeech-parakeet-1-best-train-with-audio-rag": {
+    "file_name": "sharegpt_data_parakeet_1best/gigaspeech_train_parakeet_1_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "spgispeech-parakeet-1-best-train-with-audio-rag": {
+    "file_name": "sharegpt_data_parakeet_1best/spgispeech_train_parakeet_1_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "tedlium-parakeet-1-best-train-with-audio-rag": {
+    "file_name": "sharegpt_data_parakeet_1best/tedlium_train_parakeet_1_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "voxpopuli-parakeet-1-best-train-with-audio-rag": {
+    "file_name": "sharegpt_data_parakeet_1best/voxpopuli_train_parakeet_1_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "librispeech-parakeet-1-best-train-with-audio-rag": {
+    "file_name": "sharegpt_data_parakeet_1best/librispeech_train_parakeet_1_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "ami-whisper-5-best-train-with-audio": {
+    "file_name": "sharegpt/whisper_5_best/ami_train_whisper_5_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "ami-whisper-5-best-train-no-audio": {
+    "file_name": "sharegpt/whisper_5_best/ami_train_whisper_5_best_no_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "gigaspeech-whisper-5-best-train-with-audio": {
+    "file_name": "sharegpt/whisper_5_best/gigaspeech_train_whisper_5_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "gigaspeech-whisper-5-best-train-no-audio": {
+    "file_name": "sharegpt/whisper_5_best/gigaspeech_train_whisper_5_best_no_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "spgispeech-whisper-5-best-train-with-audio": {
+    "file_name": "sharegpt/whisper_5_best/spgispeech_train_whisper_5_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "spgispeech-whisper-5-best-train-no-audio": {
+    "file_name": "sharegpt/whisper_5_best/spgispeech_train_whisper_5_best_no_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "tedlium-whisper-5-best-train-with-audio": {
+    "file_name": "sharegpt/whisper_5_best/tedlium_train_whisper_5_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "tedlium-whisper-5-best-train-no-audio": {
+    "file_name": "sharegpt/whisper_5_best/tedlium_train_whisper_5_best_no_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "voxpopuli-whisper-5-best-train-with-audio": {
+    "file_name": "sharegpt/whisper_5_best/voxpopuli_train_whisper_5_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "voxpopuli-whisper-5-best-train-no-audio": {
+    "file_name": "sharegpt/whisper_5_best/voxpopuli_train_whisper_5_best_no_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "librispeech-whisper-5-best-train-with-audio": {
+    "file_name": "sharegpt/whisper_5_best/librispeech_train_whisper_5_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "librispeech-whisper-5-best-train-no-audio": {
+    "file_name": "sharegpt/whisper_5_best/librispeech_train_whisper_5_best_no_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "ami-canary-5-best-train": {
+    "file_name": "sharegpt_data_canary_5_best/ami_train_canary_5_best_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "librispeech-whisper-5-best-train-sub-with-audio": {
+    "file_name": "sharegpt/whisper_5_best/librispeech_train_whisper_5_best_sub_with_audio.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "audios": "audios"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  }
+}
