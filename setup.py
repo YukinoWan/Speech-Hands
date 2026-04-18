@@ -90,7 +90,8 @@ def main():
         long_description_content_type="text/markdown",
         keywords=["ASR", "Speech Recognition", "Audio QA", "Omni", "Self-Reflection", "LLM", "Agent", "ACL 2026"],
         license="Apache 2.0 License",
-        url="https://github.com/YukinoWan/Speech-Hands",
+        # TODO: set to the public GitHub URL once the repo is published.
+        url="",
         package_dir={"": "src"},
         packages=find_packages("src"),
         python_requires=">=3.9.0",
