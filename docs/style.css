@@ -94,6 +94,27 @@ pre code { background: none; padding: 0; }
 .decision-pill.internal { background: var(--internal); }
 .decision-pill.external { background: var(--external); }
 .decision-pill.rewrite  { background: var(--rewrite); }
+.decision-pill.asr      { background: #555; }
+
+/* ASR case cards — text-only, no audio player */
+.case-card.asr { border-left-color: #555; }
+.asr-preds .nbest-cell { padding: 4px 10px 4px 0; }
+.nbest-line { display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px; }
+.nbest-line:last-child { margin-bottom: 0; }
+.nbest-rank {
+  display: inline-block; min-width: 18px; text-align: center;
+  font-family: var(--mono); font-size: 0.75rem; color: var(--muted);
+  background: var(--bg-alt); border-radius: 3px; padding: 0 4px;
+}
+.nbest-line code { font-size: 0.86em; }
+
+/* Demo subsection headers (Audio QA / Speech Recognition) */
+#demo > h3 { margin-top: 40px; font-size: 1.35rem; color: var(--accent); }
+#demo > h3:first-of-type { margin-top: 20px; }
+.case-group h4 { margin-bottom: 4px; font-size: 1.1rem; }
+.case-group.internal h4 { color: var(--internal); }
+.case-group.external h4 { color: var(--external); }
+.case-group.rewrite  h4 { color: var(--rewrite); }
 
 .case-question { margin: 8px 0; font-size: 1rem; }
 .case-choices { font-family: var(--mono); font-size: 0.88rem; white-space: pre-wrap; margin: 8px 0 12px; padding: 10px 14px; }

@@ -156,8 +156,14 @@
 
   <section id="demo">
     <h2>Interactive Demo</h2>
-    <p>Seven representative samples drawn from the DCASE 2025 AudioQA dev split, grouped by action-token decision. For each example you can play the original audio, compare what the internal model (<em>Qwen2.5-Omni-7B</em>) and the external model (<em>Audio Flamingo 3</em>) predict on their own, and see which action token Speech-Hands emits together with its final answer.</p>
-    <div id="cases-root">Loading demo cases…</div>
+
+    <h3>Audio QA</h3>
+    <p>Seven DCASE 2025 AudioQA dev samples grouped by action-token decision. For each example you can play the original audio, compare what the internal model (<em>Qwen2.5-Omni-7B</em>) and the external model (<em>Audio Flamingo 3</em>) predict on their own, and see which action token Speech-Hands emits together with its final answer.</p>
+    <div id="audio-qa-root">Loading Audio QA cases…</div>
+
+    <h3>Speech Recognition</h3>
+    <p>Three OpenASR cases (text-only — audio clips from AMI / LibriSpeech / SPGISpeech / VoxPopuli are available from each dataset's publisher). Each panel shows the reference transcript, the internal model's first-pass transcription, the external ASR 5-best pool, and Speech-Hands' final answer.</p>
+    <div id="asr-root">Loading ASR cases…</div>
   </section>
 
   <section id="bibtex">
@@ -178,51 +184,79 @@
 </main>
 
 <script>
-(async () => {
-  const cases = await fetch('cases.json').then(r => r.json());
-  const root = document.getElementById('cases-root');
-  root.innerHTML = '';
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
 
+async function renderAudioQA(cases, root) {
+  root.innerHTML = '';
   const groups = {
     '<internal>': { label: 'Trust self — <code>&lt;internal&gt;</code>',
-                    desc: 'Cases where the internal model is already correct.' },
+                    desc: 'Cases where the internal model is already correct but the external model would disagree.' },
     '<external>': { label: 'Defer — <code>&lt;external&gt;</code>',
                     desc: 'Cases where the internal model is wrong but the external model is right.' },
     '<rewrite>':  { label: 'Re-derive — <code>&lt;rewrite&gt;</code>',
                     desc: 'Cases where both candidates are wrong; the model re-derives the answer.' },
   };
-
   for (const [tok, meta] of Object.entries(groups)) {
     const rows = cases.filter(c => c.speech_hands_decision === tok);
     if (rows.length === 0) continue;
-
     const section = document.createElement('section');
     section.className = 'case-group ' + tok.replace(/[<>]/g, '');
-    section.innerHTML = `<h3>${meta.label}</h3><p class="group-desc">${meta.desc}</p>`;
-
+    section.innerHTML = `<h4>${meta.label}</h4><p class="group-desc">${meta.desc}</p>`;
     rows.forEach(c => {
       const correct = c.gold.trim() === c.speech_hands_final.trim();
       const card = document.createElement('article');
       card.className = 'case-card ' + tok.replace(/[<>]/g, '');
       card.innerHTML = `
         <div class="case-head">
-          <span class="case-id">${c.id}</span>
+          <span class="case-id">${esc(c.id)}</span>
           <span class="decision-pill ${tok.replace(/[<>]/g, '')}">${tok}</span>
         </div>
-        <div class="case-question"><strong>Q:</strong> ${c.question}</div>
-        <pre class="case-choices">${c.choices}</pre>
-        <audio controls preload="none" src="${c.audio}"></audio>
+        <div class="case-question"><strong>Q:</strong> ${esc(c.question)}</div>
+        <pre class="case-choices">${esc(c.choices)}</pre>
+        <audio controls preload="none" src="${esc(c.audio)}"></audio>
         <table class="preds">
-          <tr><td>Qwen2.5-Omni (internal)</td><td><code>${c.qwen_baseline_pred}</code></td></tr>
-          <tr><td>Audio Flamingo (external)</td><td><code>${c.flamingo_external_pred}</code></td></tr>
-          <tr class="final"><td>Speech-Hands final</td><td><code>${c.speech_hands_final}</code></td></tr>
-          <tr><td>Gold</td><td><code>${c.gold}</code> ${correct ? '✓' : '✗'}</td></tr>
+          <tr><td>Qwen2.5-Omni (internal)</td><td><code>${esc(c.qwen_baseline_pred)}</code></td></tr>
+          <tr><td>Audio Flamingo (external)</td><td><code>${esc(c.flamingo_external_pred)}</code></td></tr>
+          <tr class="final"><td>Speech-Hands final</td><td><code>${esc(c.speech_hands_final)}</code></td></tr>
+          <tr><td>Gold</td><td><code>${esc(c.gold)}</code> ${correct ? '✓' : '✗'}</td></tr>
         </table>
       `;
       section.appendChild(card);
     });
     root.appendChild(section);
   }
+}
+
+async function renderASR(cases, root) {
+  root.innerHTML = '';
+  cases.forEach(c => {
+    const card = document.createElement('article');
+    card.className = 'case-card asr';
+    const nbest = c.external_nbest.map((h, i) =>
+      `<div class="nbest-line"><span class="nbest-rank">${i+1}</span><code>${esc(h)}</code></div>`
+    ).join('');
+    card.innerHTML = `
+      <div class="case-head">
+        <span class="case-id">${esc(c.benchmark)}</span>
+        <span class="decision-pill asr">ASR</span>
+      </div>
+      <table class="preds asr-preds">
+        <tr><td>Gold reference</td><td><code>${esc(c.gold)}</code></td></tr>
+        <tr><td>Qwen2.5-Omni (internal)</td><td><code>${esc(c.qwen_internal)}</code></td></tr>
+        <tr><td>External ASR 5-best</td><td class="nbest-cell">${nbest}</td></tr>
+        <tr class="final"><td>Speech-Hands final</td><td><code>${esc(c.speech_hands)}</code></td></tr>
+      </table>
+    `;
+    root.appendChild(card);
+  });
+}
+
+(async () => {
+  const data = await fetch('cases.json').then(r => r.json());
+  await renderAudioQA(data.audio_qa || [], document.getElementById('audio-qa-root'));
+  await renderASR(data.asr || [], document.getElementById('asr-root'));
 })();
 </script>
 </body>
