@@ -190,3 +190,15 @@ wandb/
 swanlog/
 generated_predictions.jsonl
 predictions_score.json
+
+# Paper source — NEVER commit. Drop the LaTeX zip / extracted tree in
+# paper_source/ so it's always ignored locally regardless of name.
+paper_source/
+*.tex
+*.bbl
+*.bib
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.pdf.zip
