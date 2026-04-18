@@ -11,6 +11,10 @@ finetuning_type: full
 deepspeed: configs/deepspeed/ds_z3_config.json
 
 ### dataset
+# External ASR for the RAG pool — paper uses Parakeet-TDT-0.6B-v3 (best avg WER).
+# To try other external ASRs, swap the dataset name in dataset_info.json and here:
+#   tedlium-whisper-5-best-train-with-audio
+#   tedlium-canary-5-best-train
 dataset: tedlium-parakeet-5-best-train-with-audio-v3
 template: qwen2_omni
 cutoff_len: 3072

@@ -11,6 +11,11 @@ finetuning_type: full
 deepspeed: configs/deepspeed/ds_z3_config.json
 
 ### dataset
+# Joint training across all 7 OpenASR benchmarks using Parakeet-TDT-0.6B-v3
+# as the external ASR (best avg WER in the paper). To run the same joint
+# setup with a different external ASR, swap "-parakeet-" for "-whisper-"
+# or "-canary-" in every dataset name below (and register those dataset
+# entries in dataset_info.json).
 dataset: ami-parakeet-5-best-train-with-audio-v3, gigaspeech-parakeet-5-best-train-with-audio-v3, spgispeech-parakeet-5-best-train-with-audio-v3, tedlium-parakeet-5-best-train-with-audio-v3, voxpopuli-parakeet-5-best-train-with-audio-v3, librispeech-parakeet-5-best-train-with-audio-v3
 template: qwen2_omni
 cutoff_len: 3072

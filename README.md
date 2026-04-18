@@ -233,14 +233,18 @@ bash scripts/train/asr_main/run_voxpopuli_with_audio.sh
 bash scripts/train/asr_main/run_all_with_audio.sh
 ```
 
-To swap external ASR models, edit the `dataset:` field in the corresponding YAML:
+Every `configs/asr_main/*_with_audio_rag.yaml` ships with comments showing the three external-ASR dataset names registered in `dataset_info.json`. To swap the pairing, uncomment the line you want:
 
 ```yaml
 # configs/asr_main/qwen2_5omni_full_sft_ami_with_audio_rag.yaml
-dataset: ami-parakeet-5-best-train-with-audio-v3    # Parakeet (paper main)
-# dataset: ami-whisper-5-best-train-with-audio      # Whisper variant
-# dataset: ami-canary-5-best-train                  # Canary variant
+# External ASR for the RAG pool — paper uses Parakeet-TDT-0.6B-v3 (best avg WER).
+# To try other external ASRs, swap the dataset name in dataset_info.json and here:
+#   ami-whisper-5-best-train-with-audio
+#   ami-canary-5-best-train
+dataset: ami-parakeet-5-best-train-with-audio-v3
 ```
+
+Each pairing reproduces one row of the ASR main-results table.
 
 ### AudioQA — DCASE 2025 (1-best external)
 
