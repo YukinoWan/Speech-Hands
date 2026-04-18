@@ -38,15 +38,20 @@ On 7 OpenASR benchmarks we obtain **12.1% WER relative improvement** over baseli
 
 ## Headline Results
 
-**ASR** — WER (%) across 7 OpenASR benchmarks (Speech-Hands ⇌ *Parakeet-TDT-0.6B-v3* vs. strongest baselines):
+**ASR** — WER (%) across 7 OpenASR benchmarks. Speech-Hands pairs with each of the three external ASR models we study (Whisper-v2-large, Canary-1b-v2, Parakeet-TDT-0.6B-v3); every pairing beats the corresponding single ASR baseline *and* the cascaded GER variant.
 
 | Model | AMI | Tedlium | GigaSpeech | SPGISpeech | VoxPopuli | Libri-clean | Libri-other | **avg.** |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | Whisper-v2-large | 16.88 | 4.32 | 11.45 | 3.94 | 7.57 | 2.91 | 5.15 | 7.17 |
+| Canary-1b-v2 | 19.80 | 4.78 | 11.66 | 3.08 | 6.35 | 1.73 | 3.17 | 7.22 |
 | Parakeet-TDT-0.6B-v3 | 12.69 | 4.90 | 12.24 | 3.16 | 6.48 | 1.89 | 3.37 | 6.68 |
 | Qwen2.5-Omni (base) | 19.77 | 5.17 | 11.26 | 4.58 | 6.59 | 2.09 | 3.85 | 7.33 |
+| GER ⇒ Whisper-v2 (cascaded) | 23.44 | 6.15 | 12.15 | 3.94 | 7.53 | 2.97 | 4.89 | 8.44 |
+| GER ⇒ Canary (cascaded) | 24.58 | 6.38 | 12.43 | 4.02 | 7.72 | 3.05 | 5.01 | 8.74 |
 | GER ⇒ Parakeet (cascaded) | 22.91 | 6.09 | 12.10 | 3.98 | 7.49 | 2.92 | 4.84 | 8.33 |
-| **Speech-Hands ⇌ Parakeet** | **11.20** | **4.37** | **11.10** | **2.26** | **6.02** | **1.67** | **3.18** | **5.69** |
+| Speech-Hands ⇌ Whisper-v2 | 15.03 | 4.45 | 12.37 | 3.01 | 6.49 | 1.86 | 3.46 | 6.67 |
+| Speech-Hands ⇌ Canary | 15.29 | 4.21 | 10.87 | **2.17** | 5.96 | **1.61** | **3.07** | 6.17 |
+| **Speech-Hands ⇌ Parakeet** | **11.20** | 4.37 | 11.10 | 2.26 | **6.02** | 1.67 | 3.18 | **5.69** |
 
 **AudioQA** — Accuracy (%) on DCASE 2025 (Speech-Hands ⇌ *Audio Flamingo 3* vs. strongest baselines):
 
