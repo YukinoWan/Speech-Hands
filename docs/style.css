@@ -107,10 +107,39 @@ pre code { background: none; padding: 0; }
 .preds tr.final td { font-weight: 600; background: #fafcff; }
 .preds tr:last-child td { border-bottom: none; }
 
-/* Results */
-.results-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
-.results-table th, .results-table td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); }
-.results-table th { background: var(--bg-alt); font-weight: 600; }
+/* Method figures */
+.method-figure { margin: 24px 0 32px; padding: 0; text-align: center; }
+.method-figure img { max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: 8px; background: #fff; }
+.method-figure figcaption {
+  color: var(--muted); font-size: 0.9rem; margin-top: 10px; text-align: left;
+  line-height: 1.5;
+}
+
+/* Result tables */
+.table-lede { color: var(--muted); font-size: 0.94rem; margin: 4px 0 12px; }
+.table-wrap { overflow-x: auto; margin: 12px 0 28px; border: 1px solid var(--border); border-radius: 8px; }
+.results-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; background: var(--bg); }
+.results-table th, .results-table td {
+  text-align: right; padding: 8px 12px; border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.results-table th:first-child, .results-table td:first-child { text-align: left; }
+.results-table th { background: var(--bg-alt); font-weight: 600; font-size: 0.88rem; color: var(--fg); }
+.results-table th.final-col, .results-table td.final-col { background: #fafcff; border-left: 1px solid var(--border); }
+.results-table .section-row td {
+  text-align: left; font-weight: 600; font-size: 0.85rem;
+  background: #eef1f6; color: var(--fg); padding: 6px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.results-table .section-row.cascaded td { background: #fff4e6; }
+.results-table .section-row.speech-hands td { background: #e6f4ea; color: var(--internal); }
+.results-table .section-row.f1 td { background: #eaf0fd; }
+.results-table tr.best { background: #f0f7ff; }
+.results-table tr.best td { font-weight: 600; }
+.results-table tr:last-child td { border-bottom: none; }
+.results-table b { color: var(--accent); }
+.token-table td { font-variant-numeric: tabular-nums; }
+
 .note { color: var(--muted); font-size: 0.9rem; margin-top: 8px; }
 
 /* BibTeX */
