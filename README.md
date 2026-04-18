@@ -8,7 +8,9 @@
 
 Zhen Wan, Chao-Han Huck Yang, Jinchuan Tian, Hanrong Ye, Ankita Pasad, Szu-wei Fu, Arushi Goel, Ryo Hachiuma, Shizhe Diao, Kunal Dhawan, Sreyan Ghosh, Yusuke Hirota, Zhehuai Chen, Rafael Valle, Ehsan Hosseini Asl, Chenhui Chu, Shinji Watanabe, Yu-Chiang Frank Wang, Boris Ginsburg
 
-> Demo page and results: **[Coming soon]**
+**Demo**: an anonymous static project page lives under [`docs/`](docs/) and is also shipped as a standalone Jupyter notebook at [`demo/demo.ipynb`](demo/demo.ipynb). Both walk through seven representative DCASE 2025 AudioQA dev cases with real audio, the internal vs external predictions, and the self-reflection routing decision. See the [Demo](#demo) section below for how to view them.
+
+> **Checkpoints are not included in this release.** The demo showcases the learned self-reflection behavior on recorded predictions from the paper's runs, so no fine-tuned weights are required to inspect the method. Users who want to reproduce full numbers can re-run the training pipeline from the provided code + configs.
 
 ---
 
@@ -54,6 +56,38 @@ Speech-Hands/
 ```
 
 Each training config has a matching shell wrapper under `scripts/train/` that calls `llamafactory-cli train <yaml>` plus a merge + eval chain.
+
+---
+
+## Demo
+
+Two ways to explore Speech-Hands' self-reflection behavior without any training or inference compute:
+
+### 1. Project web page (static, no setup)
+
+The [`docs/`](docs/) directory is a self-contained HTML site that renders seven DCASE 2025 AudioQA cases (3 `<internal>`, 3 `<external>`, 1 `<rewrite>`) with inline audio players and a side-by-side comparison table. Open it locally:
+
+```bash
+# quick open
+open docs/index.html                          # macOS
+xdg-open docs/index.html                      # Linux
+
+# or serve on localhost (audio seeks more smoothly this way):
+python3 -m http.server 8765 --directory docs
+# then browse http://localhost:8765/
+```
+
+The same site is meant to be deployed as an anonymous GitHub Pages project page: Settings → Pages → source = *main / `/docs`*.
+
+### 2. Jupyter notebook
+
+`demo/demo.ipynb` is a standalone notebook version of the same cases. Useful if you prefer cell-based exploration or want to extend the case list.
+
+```bash
+jupyter notebook demo/demo.ipynb
+```
+
+Both views read from `demo/demo_cases.json` / `docs/cases.json`, which bundle the 9-row supervision labels + question text so that no checkpoint / external output files are needed at runtime.
 
 ---
 
