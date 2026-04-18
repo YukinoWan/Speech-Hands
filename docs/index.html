@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speech-Hands — Self-Reflection Voice Agentic Framework</title>
+<meta name="description" content="A self-reflection voice agentic approach to speech recognition and audio reasoning with omni perception.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header class="hero">
+    <h1>Speech-Hands</h1>
+    <p class="subtitle">A Self-Reflection Voice Agentic Approach to Speech Recognition<br>and Audio Reasoning with Omni Perception</p>
+    <p class="authors">Anonymous Authors</p>
+    <p class="venue">Paper under review</p>
+    <nav class="links">
+      <a href="#method" class="btn">Method</a>
+      <a href="#demo" class="btn">Demo</a>
+      <a href="#results" class="btn">Results</a>
+      <a href="#bibtex" class="btn">BibTeX</a>
+    </nav>
+  </header>
+
+  <section id="abstract">
+    <h2>Abstract</h2>
+    <p>We present a voice-agentic framework that learns one critical omni-understanding skill: knowing <em>when to trust itself versus when to consult external audio perception</em>. Naive joint fine-tuning on automatic speech recognition and audio reasoning often degrades performance, because the model is misled by noisy hypotheses from external perception models. We re-cast the problem as an explicit <strong>self-reflection decision</strong>: the model learns to emit a discrete routing token that decides, per example, whether to answer directly from audio, defer to an external candidate, or re-derive the answer from both. The resulting framework yields <strong>12.1% relative WER improvement</strong> across seven OpenASR benchmarks and <strong>77.37% accuracy</strong> on DCASE 2025 AudioQA.</p>
+  </section>
+
+  <section id="method">
+    <h2>Self-Reflection Primitive</h2>
+    <p>For every input, Speech-Hands emits one of three learnable routing tokens before producing its final answer. The token makes the perception-vs-reasoning trade-off explicit and trainable:</p>
+    <div class="tokens">
+      <div class="token-card" data-tok="internal">
+        <code>&lt;internal&gt;</code>
+        <h3>Trust self</h3>
+        <p>The internal prediction is reliable; ignore the external candidate and answer directly from audio.</p>
+      </div>
+      <div class="token-card" data-tok="external">
+        <code>&lt;external&gt;</code>
+        <h3>Defer</h3>
+        <p>The external ASR / audio-reasoning model's top candidate is better; adopt it.</p>
+      </div>
+      <div class="token-card" data-tok="rewrite">
+        <code>&lt;rewrite&gt;</code>
+        <h3>Re-derive</h3>
+        <p>Neither the internal nor the external prediction is correct; re-derive the answer using audio and the external candidate list as grounding context.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo">
+    <h2>Interactive Demo</h2>
+    <p>Seven representative samples drawn from the DCASE 2025 AudioQA dev split, grouped by routing decision. For each example you can play the original audio, see what the internal model (<em>Qwen2.5-Omni-7B</em>) and the external model (<em>Audio Flamingo 3</em>) would answer on their own, and see which routing token Speech-Hands emits.</p>
+    <div id="cases-root">Loading demo cases…</div>
+  </section>
+
+  <section id="results">
+    <h2>Headline Results</h2>
+    <table class="results-table">
+      <thead>
+        <tr><th>Benchmark</th><th>Metric</th><th>Result</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>7 OpenASR benchmarks (avg.)</td><td>WER ↓</td><td>−12.1% relative to baselines</td></tr>
+        <tr><td>DCASE 2025 AudioQA</td><td>Accuracy ↑</td><td>77.37%</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Per-benchmark numbers, ablation tables, and hallucination/annotation-error studies are reported in the paper.</p>
+  </section>
+
+  <section id="bibtex">
+    <h2>BibTeX</h2>
+    <pre><code>@inproceedings{anonymous2026speechhands,
+  title     = {Speech-Hands: A Self-Reflection Voice Agentic Approach to Speech
+               Recognition and Audio Reasoning with Omni Perception},
+  author    = {Anonymous Authors},
+  booktitle = {Proceedings of the Annual Meeting of the Association for
+               Computational Linguistics (ACL)},
+  year      = {2026}
+}</code></pre>
+  </section>
+
+  <footer>
+    <p>Demo audio is drawn from the <a href="https://dcase.community/" target="_blank" rel="noopener">DCASE 2025 Challenge</a> dev split and is used here for non-commercial scientific demonstration in accordance with the challenge data license.</p>
+  </footer>
+</main>
+
+<script>
+(async () => {
+  const cases = await fetch('cases.json').then(r => r.json());
+  const root = document.getElementById('cases-root');
+  root.innerHTML = '';
+
+  const groups = {
+    '<internal>': { label: 'Trust self — <code>&lt;internal&gt;</code>',
+                    desc: 'Cases where the internal model is already correct.' },
+    '<external>': { label: 'Defer — <code>&lt;external&gt;</code>',
+                    desc: 'Cases where the internal model is wrong but the external model is right.' },
+    '<rewrite>':  { label: 'Re-derive — <code>&lt;rewrite&gt;</code>',
+                    desc: 'Cases where both candidates are wrong; the model re-derives the answer.' },
+  };
+
+  for (const [tok, meta] of Object.entries(groups)) {
+    const rows = cases.filter(c => c.speech_hands_decision === tok);
+    if (rows.length === 0) continue;
+
+    const section = document.createElement('section');
+    section.className = 'case-group ' + tok.replace(/[<>]/g, '');
+    section.innerHTML = `<h3>${meta.label}</h3><p class="group-desc">${meta.desc}</p>`;
+
+    rows.forEach(c => {
+      const correct = c.gold.trim() === c.speech_hands_final.trim();
+      const card = document.createElement('article');
+      card.className = 'case-card ' + tok.replace(/[<>]/g, '');
+      card.innerHTML = `
+        <div class="case-head">
+          <span class="case-id">${c.id}</span>
+          <span class="decision-pill ${tok.replace(/[<>]/g, '')}">${tok}</span>
+        </div>
+        <div class="case-question"><strong>Q:</strong> ${c.question}</div>
+        <pre class="case-choices">${c.choices}</pre>
+        <audio controls preload="none" src="${c.audio}"></audio>
+        <table class="preds">
+          <tr><td>Qwen2.5-Omni (internal)</td><td><code>${c.qwen_baseline_pred}</code></td></tr>
+          <tr><td>Audio Flamingo (external)</td><td><code>${c.flamingo_external_pred}</code></td></tr>
+          <tr class="final"><td>Speech-Hands final</td><td><code>${c.speech_hands_final}</code></td></tr>
+          <tr><td>Gold</td><td><code>${c.gold}</code> ${correct ? '✓' : '✗'}</td></tr>
+        </table>
+      `;
+      section.appendChild(card);
+    });
+    root.appendChild(section);
+  }
+})();
+</script>
+</body>
+</html>
