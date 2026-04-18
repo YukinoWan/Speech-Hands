@@ -1,0 +1,101 @@
+[
+  {
+    "id": "dev_audio_01578",
+    "question": "Based on the audio description, what type of environment is suggested by the background sounds?",
+    "choices": "- A. A serene forest\n- B. A quiet library\n- C. A beach with waves\n- D. A busy city street",
+    "audio": "data/dcase_audioqa/audio/dev/audio_01578.wav",
+    "qwen_baseline_pred": "d a busy city street",
+    "flamingo_external_pred": "- D. A busy city street",
+    "speech_hands_decision": "<internal>",
+    "speech_hands_final": "<internal> D. A busy city street",
+    "gold": "<internal> D. A busy city street"
+  },
+  {
+    "id": "dev_audio_00878",
+    "question": "Based on the audio, what type of environment is likely being simulated?",
+    "choices": "- A. Indoor swimming pool\n- B. Desert landscape\n- C. Outdoor kayaking\n- D. Virtual reality simulation",
+    "audio": "data/dcase_audioqa/audio/dev/audio_00878.wav",
+    "qwen_baseline_pred": "d virtual reality simulation",
+    "flamingo_external_pred": "C. Outdoor kayaking",
+    "speech_hands_decision": "<internal>",
+    "speech_hands_final": "<internal> D. Virtual reality simulation",
+    "gold": "<internal> D. Virtual reality simulation"
+  },
+  {
+    "id": "dev_audio_01419",
+    "question": "What might the purpose of the whistle and crinkling leaves in the background be?",
+    "choices": "- A. To create a suspenseful atmosphere\n- B. To signal the attention of someone nearby\n- C. To mimic a bustling city environment\n- D. To indicate the presence of wildlife",
+    "audio": "data/dcase_audioqa/audio/dev/audio_01419.wav",
+    "qwen_baseline_pred": "b to signal the attention of someone nearby",
+    "flamingo_external_pred": "B",
+    "speech_hands_decision": "<internal>",
+    "speech_hands_final": "<internal> B. To signal the attention of someone nearby",
+    "gold": "<internal> B. To signal the attention of someone nearby"
+  },
+  {
+    "id": "dev_audio_00901",
+    "question": "What type of mood is conveyed through the musical elements in this audio?",
+    "choices": "- A. Calm and soothing\n- B. Angry and aggressive\n- C. Joyful and uplifting\n- D. Sad and reflective",
+    "audio": "data/dcase_audioqa/audio/dev/audio_00901.wav",
+    "qwen_baseline_pred": "b angry and aggressive",
+    "flamingo_external_pred": "D. Sad and reflective",
+    "speech_hands_decision": "<external>",
+    "speech_hands_final": "<external> D. Sad and reflective",
+    "gold": "<external> D. Sad and reflective"
+  },
+  {
+    "id": "dev_audio_00486",
+    "question": "Based on the audio description, what is likely happening in the background?",
+    "choices": "- A. A calm evening\n- B. A windy day\n- C. An earthquake\n- D. A quiet morning",
+    "audio": "data/dcase_audioqa/audio/dev/audio_00486.wav",
+    "qwen_baseline_pred": "b a windy day",
+    "flamingo_external_pred": "C. An earthquake",
+    "speech_hands_decision": "<external>",
+    "speech_hands_final": "<external> C. An earthquake",
+    "gold": "<external> C. An earthquake"
+  },
+  {
+    "id": "dev_audio_01397",
+    "question": "What type of sound is present in the background of the audio clip?",
+    "choices": "- A. Car engine\n- B. Ocean waves\n- C. Upbeat synthesized music\n- D. Bird chirping",
+    "audio": "data/dcase_audioqa/audio/dev/audio_01397.wav",
+    "qwen_baseline_pred": "b ocean waves",
+    "flamingo_external_pred": "C. Upbeat synthesized music",
+    "speech_hands_decision": "<external>",
+    "speech_hands_final": "<external> C. Upbeat synthesized music",
+    "gold": "<external> C. Upbeat synthesized music"
+  },
+  {
+    "id": "dev_audio_01455",
+    "question": "What might the purpose of tapping the metal object in the background be?",
+    "choices": "- A. To emphasize the speaker's instructions\n- B. To distract from the speaker's sad tone\n- C. To demonstrate its material quality\n- D. To create a rhythmic background",
+    "audio": "data/dcase_audioqa/audio/dev/audio_01455.wav",
+    "qwen_baseline_pred": "a to emphasize the speaker s instructions",
+    "flamingo_external_pred": "A. To emphasize the speaker's instructions",
+    "speech_hands_decision": "<rewrite>",
+    "speech_hands_final": "<rewrite> C. To demonstrate its material quality",
+    "gold": "<rewrite> C. To demonstrate its material quality"
+  },
+  {
+    "id": "dev_audio_01046",
+    "question": "What sound appears earliest in the audio?",
+    "choices": "- A. Caw\n- B. Background noise\n- C. Music\n- D. Human voice",
+    "audio": "data/dcase_audioqa/audio/dev/audio_01046.wav",
+    "qwen_baseline_pred": "c music",
+    "flamingo_external_pred": "C. Music",
+    "speech_hands_decision": "<rewrite>",
+    "speech_hands_final": "<rewrite> B. Background noise",
+    "gold": "<rewrite> B. Background noise"
+  },
+  {
+    "id": "dev_audio_00872",
+    "question": "What could be the reason for the male laughter before the female starts speaking?",
+    "choices": "- A. The male is reacting to an earlier conversation\n- B. The ambient sounds triggered the laughter\n- C. She said something humorous in French\n- D. The setting is informal and relaxed",
+    "audio": "data/dcase_audioqa/audio/dev/audio_00872.wav",
+    "qwen_baseline_pred": "c she said something humorous in french",
+    "flamingo_external_pred": "C. She said something humorous in French",
+    "speech_hands_decision": "<rewrite>",
+    "speech_hands_final": "<rewrite> D. The setting is informal and relaxed",
+    "gold": "<rewrite> D. The setting is informal and relaxed"
+  }
+]
