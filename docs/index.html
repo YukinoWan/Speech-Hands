@@ -162,7 +162,7 @@
     <div id="audio-qa-root">Loading Audio QA cases…</div>
 
     <h3>Speech Recognition</h3>
-    <p>Three OpenASR cases (text-only — audio clips from AMI / LibriSpeech / SPGISpeech / VoxPopuli are available from each dataset's publisher). Each panel shows the reference transcript, the internal model's first-pass transcription, the external ASR 5-best pool, and Speech-Hands' final answer.</p>
+    <p>Three OpenASR cases where Speech-Hands substantively corrects the internal model's transcription (text-only — audio clips come from each dataset's own distribution). WER numbers are computed after Whisper-style text normalization, so stylistic differences like "tomorrow" vs "to morrow" or missing apostrophes don't contribute. Each panel shows the reference transcript, the internal first-pass transcription, the external ASR 5-best pool, and Speech-Hands' final answer.</p>
     <div id="asr-root">Loading ASR cases…</div>
   </section>
 
@@ -237,11 +237,17 @@ async function renderASR(cases, root) {
     const nbest = c.external_nbest.map((h, i) =>
       `<div class="nbest-line"><span class="nbest-rank">${i+1}</span><code>${esc(h)}</code></div>`
     ).join('');
+    const wer = (c.qwen_wer_pct !== undefined && c.sh_wer_pct !== undefined)
+      ? `<span class="wer-badge"><span class="wer-qwen">Qwen WER ${c.qwen_wer_pct}%</span>
+         <span class="wer-arrow">→</span>
+         <span class="wer-sh">SH WER ${c.sh_wer_pct}%</span></span>`
+      : '';
     card.innerHTML = `
       <div class="case-head">
         <span class="case-id">${esc(c.benchmark)}</span>
         <span class="decision-pill asr">ASR</span>
       </div>
+      ${wer}
       <table class="preds asr-preds">
         <tr><td>Gold reference</td><td><code>${esc(c.gold)}</code></td></tr>
         <tr><td>Qwen2.5-Omni (internal)</td><td><code>${esc(c.qwen_internal)}</code></td></tr>

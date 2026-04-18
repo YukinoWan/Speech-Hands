@@ -108,6 +108,15 @@ pre code { background: none; padding: 0; }
 }
 .nbest-line code { font-size: 0.86em; }
 
+/* WER badge for ASR cases */
+.wer-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin: 4px 0 10px; font-size: 0.85rem; font-family: var(--mono);
+}
+.wer-qwen { color: var(--rewrite); }
+.wer-sh   { color: var(--internal); font-weight: 600; }
+.wer-arrow { color: var(--muted); }
+
 /* Demo subsection headers (Audio QA / Speech Recognition) */
 #demo > h3 { margin-top: 40px; font-size: 1.35rem; color: var(--accent); }
 #demo > h3:first-of-type { margin-top: 20px; }

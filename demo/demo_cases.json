@@ -80,14 +80,28 @@
   ],
   "asr": [
     {
-      "benchmark": "LibriSpeech-clean",
-      "gold": "to morrow is the examination",
-      "qwen_internal": "tomorrow is the examination",
+      "benchmark": "AMI",
+      "gold": "but well whatever it was last week then",
+      "qwen_internal": "but i mean this week is only two days old well whatever it was last week then",
       "external_nbest": [
-        "To morrow is the examination.",
-        "Tomorrow is the examination."
+        "But well, whatever it was last week then.",
+        "But you mean this week's only two days old? Well, whatever it was last week then."
       ],
-      "speech_hands": "to morrow is the examination"
+      "speech_hands": "but well whatever it was last week then",
+      "qwen_wer_pct": 112.5,
+      "sh_wer_pct": 0.0
+    },
+    {
+      "benchmark": "LibriSpeech-other",
+      "gold": "now don t burst into a tempest at that",
+      "qwen_internal": "now don t force him to attempt the theft",
+      "external_nbest": [
+        "Now, don't burst into a tempest at that.",
+        "Now, don't force into a tempest at Ted."
+      ],
+      "speech_hands": "now don t burst into a tempest at that",
+      "qwen_wer_pct": 66.7,
+      "sh_wer_pct": 0.0
     },
     {
       "benchmark": "VoxPopuli",
@@ -97,17 +111,9 @@
         "I think it's really problematic.",
         "I think it's really problematic."
       ],
-      "speech_hands": "i think it s really problematic"
-    },
-    {
-      "benchmark": "SPGISpeech",
-      "gold": "are which smooths the performance making that in the end",
-      "qwen_internal": "are which smooth the performance making",
-      "external_nbest": [
-        "are which smooth the performance, making that in the end",
-        "are which smooths the performance, making that in the end"
-      ],
-      "speech_hands": "are which smooths the performance making that in the end"
+      "speech_hands": "i think it s really problematic",
+      "qwen_wer_pct": 50.0,
+      "sh_wer_pct": 0.0
     }
   ]
 }
