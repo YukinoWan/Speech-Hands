@@ -81,18 +81,21 @@
   "asr": [
     {
       "benchmark": "AMI",
-      "gold": "but well whatever it was last week then",
-      "qwen_internal": "but i mean this week is only two days old well whatever it was last week then",
+      "routing": "<internal>",
+      "gold": "you have should have a section probably",
+      "qwen_internal": "you have should have a section probably",
       "external_nbest": [
-        "But well, whatever it was last week then.",
-        "But you mean this week's only two days old? Well, whatever it was last week then."
+        "They have shadow section for me.",
+        "should have a section for me."
       ],
-      "speech_hands": "but well whatever it was last week then",
-      "qwen_wer_pct": 112.5,
-      "sh_wer_pct": 0.0
+      "speech_hands": "you have should have a section probably",
+      "qwen_wer_pct": 0.0,
+      "sh_wer_pct": 0.0,
+      "ext_wer_pct": 85.7
     },
     {
       "benchmark": "LibriSpeech-other",
+      "routing": "<external>",
       "gold": "now don t burst into a tempest at that",
       "qwen_internal": "now don t force him to attempt the theft",
       "external_nbest": [
@@ -101,19 +104,22 @@
       ],
       "speech_hands": "now don t burst into a tempest at that",
       "qwen_wer_pct": 66.7,
-      "sh_wer_pct": 0.0
+      "sh_wer_pct": 0.0,
+      "ext_wer_pct": 0.0
     },
     {
       "benchmark": "VoxPopuli",
-      "gold": "i think it s really problematic",
-      "qwen_internal": "it is really problematic",
+      "routing": "<rewrite>",
+      "gold": "thank you very much for your support",
+      "qwen_internal": "very much for your support",
       "external_nbest": [
-        "I think it's really problematic.",
-        "I think it's really problematic."
+        "Thanks very much for your support.",
+        "Thanks very much for your support."
       ],
-      "speech_hands": "i think it s really problematic",
-      "qwen_wer_pct": 50.0,
-      "sh_wer_pct": 0.0
+      "speech_hands": "thank you very much for your support",
+      "qwen_wer_pct": 28.6,
+      "sh_wer_pct": 0.0,
+      "ext_wer_pct": 28.6
     }
   ]
 }

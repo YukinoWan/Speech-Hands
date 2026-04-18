@@ -162,7 +162,7 @@
     <div id="audio-qa-root">Loading Audio QA cases…</div>
 
     <h3>Speech Recognition</h3>
-    <p>Three OpenASR cases where Speech-Hands substantively corrects the internal model's transcription (text-only — audio clips come from each dataset's own distribution). WER numbers are computed after Whisper-style text normalization, so stylistic differences like "tomorrow" vs "to morrow" or missing apostrophes don't contribute. Each panel shows the reference transcript, the internal first-pass transcription, the external ASR 5-best pool, and Speech-Hands' final answer.</p>
+    <p>Three OpenASR cases — one for each action token. WER numbers are computed after Whisper-style text normalization, so stylistic differences like "tomorrow" vs "to morrow" or missing apostrophes don't contribute. Each panel shows the reference transcript, the internal first-pass transcription, the external ASR 5-best pool, and Speech-Hands' final answer, together with the routing decision and the WER of each pathway.</p>
     <div id="asr-root">Loading ASR cases…</div>
   </section>
 
@@ -231,32 +231,50 @@ async function renderAudioQA(cases, root) {
 
 async function renderASR(cases, root) {
   root.innerHTML = '';
-  cases.forEach(c => {
-    const card = document.createElement('article');
-    card.className = 'case-card asr';
-    const nbest = c.external_nbest.map((h, i) =>
-      `<div class="nbest-line"><span class="nbest-rank">${i+1}</span><code>${esc(h)}</code></div>`
-    ).join('');
-    const wer = (c.qwen_wer_pct !== undefined && c.sh_wer_pct !== undefined)
-      ? `<span class="wer-badge"><span class="wer-qwen">Qwen WER ${c.qwen_wer_pct}%</span>
-         <span class="wer-arrow">→</span>
-         <span class="wer-sh">SH WER ${c.sh_wer_pct}%</span></span>`
-      : '';
-    card.innerHTML = `
-      <div class="case-head">
-        <span class="case-id">${esc(c.benchmark)}</span>
-        <span class="decision-pill asr">ASR</span>
-      </div>
-      ${wer}
-      <table class="preds asr-preds">
-        <tr><td>Gold reference</td><td><code>${esc(c.gold)}</code></td></tr>
-        <tr><td>Qwen2.5-Omni (internal)</td><td><code>${esc(c.qwen_internal)}</code></td></tr>
-        <tr><td>External ASR 5-best</td><td class="nbest-cell">${nbest}</td></tr>
-        <tr class="final"><td>Speech-Hands final</td><td><code>${esc(c.speech_hands)}</code></td></tr>
-      </table>
-    `;
-    root.appendChild(card);
-  });
+  const groups = {
+    '<internal>': { label: 'Trust self — <code>&lt;internal&gt;</code>',
+                    desc: 'Qwen2.5-Omni already transcribes correctly; the external ASR candidate is the one that\'s wrong.' },
+    '<external>': { label: 'Defer — <code>&lt;external&gt;</code>',
+                    desc: 'Qwen2.5-Omni mishears the utterance; the external ASR top candidate is right.' },
+    '<rewrite>':  { label: 'Re-derive — <code>&lt;rewrite&gt;</code>',
+                    desc: 'Both Qwen2.5-Omni and the external ASR candidates are wrong in different ways; Speech-Hands re-derives the correct transcript from audio + both evidence streams.' },
+  };
+  for (const [tok, meta] of Object.entries(groups)) {
+    const rows = cases.filter(c => c.routing === tok);
+    if (rows.length === 0) continue;
+    const section = document.createElement('section');
+    section.className = 'case-group ' + tok.replace(/[<>]/g, '');
+    section.innerHTML = `<h4>${meta.label}</h4><p class="group-desc">${meta.desc}</p>`;
+    rows.forEach(c => {
+      const nbest = c.external_nbest.map((h, i) =>
+        `<div class="nbest-line"><span class="nbest-rank">${i+1}</span><code>${esc(h)}</code></div>`
+      ).join('');
+      const badge = `<span class="wer-badge">
+          <span class="wer-qwen">Qwen ${c.qwen_wer_pct}%</span>
+          <span class="wer-ext">ext ${c.ext_wer_pct}%</span>
+          <span class="wer-arrow">→</span>
+          <span class="wer-sh">SH ${c.sh_wer_pct}%</span>
+          <span class="wer-label">(WER, Whisper-normalized)</span>
+        </span>`;
+      const card = document.createElement('article');
+      card.className = 'case-card ' + tok.replace(/[<>]/g, '');
+      card.innerHTML = `
+        <div class="case-head">
+          <span class="case-id">${esc(c.benchmark)}</span>
+          <span class="decision-pill ${tok.replace(/[<>]/g, '')}">${tok}</span>
+        </div>
+        ${badge}
+        <table class="preds asr-preds">
+          <tr><td>Gold reference</td><td><code>${esc(c.gold)}</code></td></tr>
+          <tr><td>Qwen2.5-Omni (internal)</td><td><code>${esc(c.qwen_internal)}</code></td></tr>
+          <tr><td>External ASR 5-best</td><td class="nbest-cell">${nbest}</td></tr>
+          <tr class="final"><td>Speech-Hands final</td><td><code>${esc(c.speech_hands)}</code></td></tr>
+        </table>
+      `;
+      section.appendChild(card);
+    });
+    root.appendChild(section);
+  }
 }
 
 (async () => {

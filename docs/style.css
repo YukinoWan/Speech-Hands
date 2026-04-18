@@ -114,8 +114,10 @@ pre code { background: none; padding: 0; }
   margin: 4px 0 10px; font-size: 0.85rem; font-family: var(--mono);
 }
 .wer-qwen { color: var(--rewrite); }
+.wer-ext  { color: var(--external); }
 .wer-sh   { color: var(--internal); font-weight: 600; }
 .wer-arrow { color: var(--muted); }
+.wer-label { color: var(--muted); font-size: 0.78rem; font-family: var(--sans); }
 
 /* Demo subsection headers (Audio QA / Speech Recognition) */
 #demo > h3 { margin-top: 40px; font-size: 1.35rem; color: var(--accent); }
