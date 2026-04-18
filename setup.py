@@ -76,16 +76,21 @@ extra_require = {
 
 def main():
     setup(
-        name="llamafactory",
+        name="speech-hands",
         version=get_version(),
-        author="hiyouga",
-        author_email="hiyouga@buaa.edu.cn",
-        description="Unified Efficient Fine-Tuning of 100+ LLMs",
+        author="Speech-Hands Authors",
+        author_email="speech-hands@example.com",
+        description=(
+            "Speech-Hands — self-reflection voice agentic framework for speech "
+            "recognition and audio reasoning (ACL 2026). Training infrastructure "
+            "adapted from LLaMA Factory (https://github.com/hiyouga/LLaMA-Factory), "
+            "with multimodal encoders adapted from NVIDIA VILA."
+        ),
         long_description=open("README.md", encoding="utf-8").read(),
         long_description_content_type="text/markdown",
-        keywords=["AI", "LLM", "GPT", "ChatGPT", "Llama", "Transformer", "DeepSeek", "Pytorch"],
+        keywords=["ASR", "Speech Recognition", "Audio QA", "Omni", "Self-Reflection", "LLM", "Agent", "ACL 2026"],
         license="Apache 2.0 License",
-        url="https://github.com/hiyouga/LLaMA-Factory",
+        url="https://github.com/YukinoWan/Speech-Hands",
         package_dir={"": "src"},
         packages=find_packages("src"),
         python_requires=">=3.9.0",

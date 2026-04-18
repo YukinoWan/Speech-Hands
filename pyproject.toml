@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "llamafactory"
+name = "speech-hands"
 requires-python = ">=3.9.0"
 dynamic = [
     "version",
@@ -17,6 +17,11 @@ dynamic = [
     "keywords",
     "classifiers"
 ]
+# Speech-Hands is the ACL 2026 paper repository accompanying
+# arXiv:2601.09413. The training infrastructure is vendored and adapted
+# from LLaMA Factory (https://github.com/hiyouga/LLaMA-Factory). See
+# NOTICE for third-party attribution. Console script "llamafactory-cli"
+# is preserved for backward compatibility with all training wrappers.
 
 [tool.ruff]
 target-version = "py39"
