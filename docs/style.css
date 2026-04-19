@@ -394,16 +394,19 @@ pre code { background: none; padding: 0; }
 }
 
 .lane-tok {
-  padding: 10px 16px; border-radius: 999px;
-  background: rgba(255,255,255,0.06);
-  border: 2px solid rgba(255,255,255,0.22);
-  font-family: var(--mono); font-size: 0.85rem;
+  padding: 12px 18px; border-radius: 999px;
+  background: rgba(255,255,255,0.10);
+  border: 2px solid rgba(255,255,255,0.32);
+  font-family: var(--mono); font-size: 1.05rem; font-weight: 700;
+  color: #fff; letter-spacing: 0.02em;
   display: inline-block;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   transition: all 0.35s;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
 }
+.lane-tok code { color: inherit; background: none; }
 .lane-desc {
-  font-size: 0.78rem; color: #8e9cbe;
+  font-size: 0.82rem; color: #c6d0e8;
   letter-spacing: 0.02em;
 }
 .lane.considering {
@@ -411,13 +414,14 @@ pre code { background: none; padding: 0; }
 }
 .lane.considering .lane-tok {
   animation: lane-pulse 0.8s ease-out;
-  background: rgba(125,180,255,0.25);
-  border-color: rgba(125,180,255,0.7);
+  background: rgba(125,180,255,0.35);
+  border-color: rgba(180,210,255,0.9);
+  color: #fff;
 }
 @keyframes lane-pulse {
-  0%   { transform: scale(1); box-shadow: 0 0 0 0 rgba(125,180,255,0.5); }
-  60%  { transform: scale(1.12); box-shadow: 0 0 30px 4px rgba(125,180,255,0.45); }
-  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(125,180,255,0); }
+  0%   { transform: scale(1);    box-shadow: 0 0 0 0 rgba(125,180,255,0.55); }
+  60%  { transform: scale(1.08); box-shadow: 0 0 36px 6px rgba(180,210,255,0.55); }
+  100% { transform: scale(1.02); box-shadow: 0 0 0 0 rgba(125,180,255,0); }
 }
 .lane.rejected {
   opacity: 0.25; transform: scale(0.85);
