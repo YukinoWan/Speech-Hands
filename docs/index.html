@@ -767,25 +767,26 @@ async function integPlayAll() {
   await renderAudioQA(data.audio_qa || [], document.getElementById('audio-qa-root'));
   await renderASR(data.asr || [], document.getElementById('asr-root'));
 
-  // Wire up integration demo
+  // Wire up cinematic integration demo
   integState.cases = data.integration || [];
   preloadCaseAudio(integState.cases);
   integSetTabs(integState.cases.length, 0);
-  // Initialize view with case 0 meta (without playing)
+
+  // Show a placeholder "Press ▶" frame on Act I so the stage isn't blank
+  // before the user clicks.
   if (integState.cases.length) {
     const c = integState.cases[0];
-    const meta = document.getElementById('case-meta');
-    meta.innerHTML = `
-      <span class="benchmark">${esc(c.benchmark)}</span>
-      <span class="routing-pill" style="${routingPillStyle(c.routing)}">${esc(c.routing)}</span>
-      <span>Press ▶ to run the animation through all 4 cases.</span>
-    `;
+    setTaskBadge(c.type, true);
+    showAct('act-1');
+    const uc = document.getElementById('user-context');
+    uc.innerHTML = c.type === 'audio_qa'
+      ? `<strong>Q:</strong> ${esc(c.question)}`
+      : `<strong>Task:</strong> transcribe this spoken utterance`;
+    uc.classList.add('show');
   }
+
   document.getElementById('integ-play').addEventListener('click', async () => {
     if (integState.playing) return;
-    // Unlock audio synchronously inside the click handler's user-gesture tick,
-    // then kick off the full demo. The unlock call needs to touch .play() before
-    // any awaits that aren't audio-related.
     await unlockAudioOnce();
     integPlayAll();
   });
