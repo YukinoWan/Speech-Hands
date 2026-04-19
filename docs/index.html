@@ -619,13 +619,29 @@ async function integPlayOne(idx, opts={}) {
   resetStage();
   setTaskBadge(c.type, true);
 
-  // === Act I: user speaks to OpenClaw ===
+  // === Act I: user speaks to OpenClaw (task-specific layout) ===
   setActCaption('intro');
   showAct('act-1');
   const uc = document.getElementById('user-context');
-  uc.innerHTML = c.type === 'audio_qa'
-    ? `<strong>Q:</strong> ${esc(c.question)}`
-    : `<strong>Task:</strong> transcribe this spoken utterance`;
+  if (c.type === 'audio_qa') {
+    const choicesHtml = (c.choices || []).map(ch => {
+      const letter = ch.match(/^([A-D])\./);
+      const text = ch.replace(/^[A-D]\.\s*/, '');
+      return `<div class="mcq-option"><span class="mcq-letter">${esc(letter ? letter[1] : '?')}</span><span>${esc(text)}</span></div>`;
+    }).join('');
+    uc.innerHTML = `
+      <div class="task-panel audio_qa">
+        <div class="task-panel-head">🧠 Audio-grounded multiple choice</div>
+        <div class="task-question">${esc(c.question)}</div>
+        <div class="mcq-grid">${choicesHtml}</div>
+      </div>`;
+  } else {
+    uc.innerHTML = `
+      <div class="task-panel asr">
+        <div class="task-panel-head">📝 Transcribe this spoken utterance</div>
+        <div class="task-asr-note">Goal: produce the exact text the speaker said.</div>
+      </div>`;
+  }
   uc.classList.add('show');
 
   const audio = document.getElementById('integ-audio');
@@ -708,7 +724,17 @@ async function integPlayOne(idx, opts={}) {
   ft.classList.add(winTok);
   ft.textContent = c.routing;
   const fa = document.getElementById('final-answer');
-  await typeInto(fa, c.final, 55);
+  if (c.type === 'audio_qa' && c.final_letter) {
+    fa.innerHTML = `
+      <div class="qa-answer">
+        <span class="qa-letter">${esc(c.final_letter)}</span>
+        <span class="qa-text"></span>
+      </div>`;
+    await typeInto(fa.querySelector('.qa-text'), c.final_text, 55);
+  } else {
+    fa.innerHTML = `<div class="asr-transcript">&ldquo;<span class="asr-text"></span>&rdquo;</div>`;
+    await typeInto(fa.querySelector('.asr-text'), c.final, 55);
+  }
   await SLEEP(500);
   const reply = document.getElementById('reply');
   await typeInto(reply, c.openclaw_reply, 50);

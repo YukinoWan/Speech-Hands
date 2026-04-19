@@ -237,7 +237,71 @@ pre code { background: none; padding: 0; }
 .act-1 .user-context {
   background: rgba(255,255,255,0.06); color: #eef1f8;
   border-left-color: #ff6b3d;
+  padding: 0; border-left: none;
 }
+
+/* Task-specific user-context panels */
+.task-panel {
+  padding: 10px 12px; border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.task-panel.audio_qa { border-left: 4px solid #ff8a8a; }
+.task-panel.asr      { border-left: 4px solid #5cc24e; }
+.task-panel-head {
+  font-size: 0.82rem; font-weight: 700;
+  color: #fff; margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+.task-question {
+  font-size: 1.02rem; font-weight: 500;
+  color: #fff; margin-bottom: 10px; line-height: 1.35;
+}
+.mcq-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+}
+.mcq-option {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 8px; background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px; font-size: 0.86rem;
+  color: #d6deef;
+}
+.mcq-letter {
+  display: inline-flex; width: 22px; height: 22px;
+  align-items: center; justify-content: center;
+  background: rgba(255,138,138,0.22);
+  color: #ffb7b7; font-weight: 700;
+  border-radius: 50%; font-size: 0.78rem;
+  font-family: var(--mono);
+  flex-shrink: 0;
+}
+.task-asr-note {
+  font-size: 0.88rem; color: #d6deef; font-style: italic;
+}
+
+/* Task-specific final answer in Act III */
+.qa-answer {
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 6px 0;
+}
+.qa-letter {
+  display: inline-flex; width: 58px; height: 58px;
+  align-items: center; justify-content: center;
+  border: 3px solid currentColor; border-radius: 12px;
+  font-family: var(--mono); font-size: 2.2rem; font-weight: 800;
+  box-shadow: 0 0 24px rgba(125,236,122,0.35);
+  color: #7dec7a;
+}
+.qa-text {
+  font-size: 1.2rem; color: #fff; text-align: left;
+  font-weight: 500;
+}
+.asr-transcript {
+  font-size: 1.15rem; color: #fff; font-style: italic;
+  line-height: 1.4; padding: 4px 0;
+}
+.asr-transcript .asr-text { font-style: normal; }
 
 /* Act core: central orb + lanes */
 .act-core { display: flex; align-items: center; justify-content: center; }

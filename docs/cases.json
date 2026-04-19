@@ -146,7 +146,15 @@
       "routing": "<rewrite>",
       "final": "C. To demonstrate its material quality",
       "gold": "C. To demonstrate its material quality",
-      "openclaw_reply": "The speaker is tapping the surface to demonstrate the product's material quality."
+      "openclaw_reply": "The speaker is tapping the surface to demonstrate the product's material quality.",
+      "choices": [
+        "A. To emphasize the speaker's instructions",
+        "B. To distract from the speaker's sad tone",
+        "C. To demonstrate its material quality",
+        "D. To create a rhythmic background"
+      ],
+      "final_letter": "C",
+      "final_text": "To demonstrate its material quality"
     },
     {
       "type": "audio_qa",
@@ -171,7 +179,15 @@
       "routing": "<external>",
       "final": "D. Sad and reflective",
       "gold": "D. Sad and reflective",
-      "openclaw_reply": "The music conveys a sad and reflective atmosphere."
+      "openclaw_reply": "The music conveys a sad and reflective atmosphere.",
+      "choices": [
+        "A. Calm and soothing",
+        "B. Angry and aggressive",
+        "C. Joyful and uplifting",
+        "D. Sad and reflective"
+      ],
+      "final_letter": "D",
+      "final_text": "Sad and reflective"
     },
     {
       "type": "asr",
