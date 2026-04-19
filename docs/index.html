@@ -216,16 +216,19 @@
               <div class="lane-line"></div>
               <div class="lane-tok"><code>&lt;internal&gt;</code></div>
               <div class="lane-desc">Trust self</div>
+              <div class="selected-ribbon">✓ SELECTED</div>
             </div>
             <div class="lane lane-external" data-tok="external" id="lane-external">
               <div class="lane-line"></div>
               <div class="lane-tok"><code>&lt;external&gt;</code></div>
               <div class="lane-desc">Defer to external</div>
+              <div class="selected-ribbon">✓ SELECTED</div>
             </div>
             <div class="lane lane-rewrite" data-tok="rewrite" id="lane-rewrite">
               <div class="lane-line"></div>
               <div class="lane-tok"><code>&lt;rewrite&gt;</code></div>
               <div class="lane-desc">Re-derive from both</div>
+              <div class="selected-ribbon">✓ SELECTED</div>
             </div>
 
             <!-- Particle layer during deliberation -->
@@ -706,10 +709,20 @@ async function integPlayOne(idx, opts={}) {
   }
   await SLEEP(300);
 
-  // Decision flash + lock winning lane
-  document.getElementById('decision-bolt').classList.add('flash');
-  await SLEEP(100);
+  // Decision flash originates AT the winning lane (not at center), so the
+  // viewer's eye is drawn to the right place.
   const winTok = c.routing.replace(/[<>]/g,'');
+  const winningLaneId = 'lane-' + winTok;
+  const winLane = document.getElementById(winningLaneId);
+  const scene = document.getElementById('cine-stage').getBoundingClientRect();
+  const laneRect = winLane.getBoundingClientRect();
+  const bolt = document.getElementById('decision-bolt');
+  const boltX = ((laneRect.left + laneRect.width/2) - scene.left) / scene.width * 100;
+  const boltY = ((laneRect.top + laneRect.height/2) - scene.top)  / scene.height * 100;
+  bolt.style.left = boltX + '%';
+  bolt.style.top  = boltY + '%';
+  bolt.classList.add('flash');
+  await SLEEP(250);
   laneOrder.forEach(laneId => {
     const lane = document.getElementById(laneId);
     if (lane.dataset.tok === winTok) lane.classList.add('selected');
@@ -717,7 +730,7 @@ async function integPlayOne(idx, opts={}) {
   });
   core.classList.remove('deliberating');
   core.classList.add('locked');
-  await SLEEP(1400);
+  await SLEEP(1600);
 
   // === Act III: final answer + OpenClaw reply ===
   setActCaption('decide');
