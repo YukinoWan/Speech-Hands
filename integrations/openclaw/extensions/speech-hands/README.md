@@ -1,125 +1,86 @@
-# @openclaw/speech-hands
+# @openclaw/speech-hands-provider
 
-Voice-input pipeline for OpenClaw. Symmetric with
-[`speech-core`](../speech-core) (which handles TTS output); Speech-Hands
-handles **audio input** with a self-reflection agent at the core.
+Media-understanding provider for OpenClaw that plugs **Speech-Hands**
+(ACL 2026) in as a self-reflection ASR back-end. Registers against the
+existing `MediaUnderstandingProvider` contract so openclaw's agent
+runtime can route audio transcription requests through it — no new
+contracts, no user-facing tool calls.
 
-## What it does
+## What Speech-Hands gives you
 
-For every voice-input event, Speech-Hands runs two perception paths
-in parallel:
+For every audio transcription, a user-hosted inference server runs two
+perception paths in parallel and then reflects:
 
-- **Internal** — a fine-tuned Qwen2.5-Omni-7B that makes its own
-  prediction directly from the audio.
-- **External** — an existing OpenClaw skill (default:
-  [`openai-whisper`](../../skills/openai-whisper)) for ASR, or a
-  configured HTTP endpoint (e.g. Audio Flamingo 3) for audio QA.
+- **Internal** — a fine-tuned Qwen2.5-Omni-7B predicts directly from
+  the audio.
+- **External** — an existing ASR (e.g. Whisper) loaded inside the same
+  server process.
 
-It then emits one of three action tokens (`<internal>`, `<external>`,
-`<rewrite>`) and returns a final answer. The paper reports that this
-self-reflection layer gives a 12.1% relative WER reduction on seven
-OpenASR benchmarks and 77.37% accuracy on DCASE 2025 AudioQA.
+The server emits one of three action tokens (`<internal>`,
+`<external>`, `<rewrite>`) and returns a final transcript. The openclaw
+extension is a thin HTTP client — all arbitration happens server-side.
 
-## Quick start
+Reported gains: **12.1% relative WER reduction on seven OpenASR
+benchmarks** (AMI, TEDLIUM, GigaSpeech, SPGISpeech, VoxPopuli,
+LibriSpeech-clean, LibriSpeech-other).
 
-```ts
-import { processAudio } from "@openclaw/speech-hands";
-import { invokeSkill } from "openclaw/plugin-sdk/skills";
+## Install
 
-// ASR example
-const asr = await processAudio(
-  { audio: "/tmp/utterance.wav", task: "transcribe" },
-  {
-    config: {
-      inferenceServerUrl: "http://localhost:8080",
-      externalAsrSkill: "openai-whisper",
-    },
-    invokeSkill,
-  },
-);
-console.log(asr.actionToken, asr.final);
-// → <external> "now don't burst into a tempest at that"
+The extension is auto-discovered by openclaw's pnpm workspace once the
+directory lands under `extensions/speech-hands/`. No extra step is
+needed during `pnpm install`.
 
-// Audio-QA example
-const qa = await processAudio(
-  {
-    audio: audioBuffer,
-    task: "qa",
-    question: "What emotional atmosphere does the music convey?",
-  },
-  {
-    config: {
-      inferenceServerUrl: "http://localhost:8080",
-      externalAudioQaUrl: "https://your-af3.example.com/v1/qa",
-      majoritySampling: true,
-    },
-    invokeSkill,
-  },
-);
-// qa.actionToken → <external>; qa.final → "D. Sad and reflective"
-```
+Users must then deploy the Speech-Hands inference server themselves
+(reference FastAPI server + Dockerfile ship in the project repo at
+[`integrations/openclaw/server/`](https://github.com/Anonymous-paper-page/Speech-Hands/tree/main/integrations/openclaw/server)).
 
-## Configuration
+## Config
+
+Set via openclaw's standard media-understanding provider config:
 
 ```jsonc
-// openclaw.json (workspace-level)
 {
-  "extensions": {
-    "@openclaw/speech-hands": {
-      "inferenceServerUrl": "http://localhost:8080",
-      "externalAsrSkill": "openai-whisper",
-      "externalAudioQaUrl": null,        // optional
-      "majoritySampling": true,
-      "timeoutMs": 30000
+  "mediaUnderstanding": {
+    "audio": {
+      "provider": "speech-hands",
+      "baseUrl": "http://localhost:8080",
+      "model": "speech-hands-qwen2.5-omni-7b"
     }
   }
 }
 ```
 
-## Inference server
+Environment auth (optional — only needed if the user-hosted server
+enforces it):
 
-The internal Qwen2.5-Omni-7B fine-tuned with Speech-Hands supervision
-runs in a Python process, not in-process with OpenClaw. Users deploy
-it themselves. A reference FastAPI server (Dockerfile +
-`requirements.txt`) lives at
-[`integrations/openclaw/server/`](../../server).
-
-API contract (`POST /v1/process`):
-
-```jsonc
-// request
-{
-  "audio": "<base64>",
-  "task": "transcribe" | "qa",
-  "question": "optional — required if task=qa",
-  "external_pred": "optional top-1 from the external tool",
-  "external_nbest": ["optional", "5-best", "list"]
-}
-
-// response
-{
-  "action_token": "<internal> | <external> | <rewrite>",
-  "final": "the final answer",
-  "internal_pred": "what Qwen-Omni alone produced",
-  "routing_confidence": 0.87
-}
+```bash
+export SPEECH_HANDS_API_KEY=...
 ```
 
-## Composability
+## Wire diagram
 
-Speech-Hands deliberately reuses existing OpenClaw skills for the
-external path. For ASR it calls the `openai-whisper` skill through the
-plugin-SDK's `invokeSkill(...)` helper; it does not shell out to
-`whisper` directly. This keeps installation requirements unchanged
-and ensures Speech-Hands benefits from any future improvements to the
-Whisper skill.
+```
+┌────────────────────┐       POST /v1/transcribe
+│  OpenClaw agent    │   (buffer, fileName, mime, ...)
+│  ↓ audio attached  ├──────────────────────────────┐
+│  runtime selects   │                              │
+│  speech-hands      │      ┌───────────────────────▼──────────┐
+│  provider          │      │  Speech-Hands inference server    │
+│  ↓                 │      │  (user-hosted, Python + GPU)      │
+│  transcribeAudio() │      │                                    │
+│                    │      │  Qwen2.5-Omni-7B  ⟂  Whisper CLI   │
+│                    │      │           ↓                         │
+│                    │      │   self-reflection → action token   │
+│                    │      │           ↓                         │
+│  ← {text, model} ──┼──────┤  final transcript                  │
+└────────────────────┘      └────────────────────────────────────┘
+```
 
-## Provenance
+## Paper
 
-- Paper: *Speech-Hands: A Self-Reflection Voice Agentic Approach to
-  Speech Recognition and Audio Reasoning with Omni Perception*, ACL
-  2026.
-- Project page and live demo:
-  https://anonymous-paper-page.github.io/Speech-Hands/
-- Reference implementation (including the inference server used here):
-  https://github.com/Anonymous-paper-page/Speech-Hands
+*Speech-Hands: A Self-Reflection Voice Agentic Approach to Speech
+Recognition and Audio Reasoning with Omni Perception*, ACL 2026.
+
+Project page: https://anonymous-paper-page.github.io/Speech-Hands/
+
+Reference implementation: https://github.com/Anonymous-paper-page/Speech-Hands

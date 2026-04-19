@@ -1,14 +1,18 @@
 # Speech-Hands inference server (reference)
 
 Thin FastAPI wrapper that exposes the research-code Speech-Hands
-pipeline over HTTP so the OpenClaw extension (`@openclaw/speech-hands`)
-can call it. Users are expected to run this themselves — it is **not**
-bundled into OpenClaw.
+pipeline over HTTP so the OpenClaw extension
+(`@openclaw/speech-hands-provider`) can call it. Users are expected to
+run this themselves — it is **not** bundled into OpenClaw.
+
+The self-reflection logic (internal omni-LLM + external ASR + action-
+token arbitration) happens entirely inside this process; the openclaw
+extension is just an HTTP client.
 
 ## Prerequisites
 
 - A GPU with enough memory to load the fine-tuned Qwen2.5-Omni-7B
-  checkpoint (≈18 GB fp16).
+  checkpoint (≈18 GB fp16) plus a Whisper model for the external path.
 - The Speech-Hands research package (`pip install -e .` from the repo
   root) so that `speech_hands.inference.SpeechHandsPipeline` is
   importable.
@@ -39,16 +43,35 @@ docker run --gpus all \
   speech-hands-server
 ```
 
-(The Dockerfile does not bake in the research package because checkpoint
-location and commit pinning are deployment-specific. Mount both at run
-time.)
-
 ## API
 
 `GET /healthz` — liveness probe. Returns the checkpoint path and device.
 
-`POST /v1/process` — main entry point. See the JSON contract in the
-extension's [README](../extensions/speech-hands/README.md#inference-server).
+`POST /v1/transcribe` — main entry point.
+
+```jsonc
+// request
+{
+  "audio": "<base64>",
+  "file_name": "utterance.wav",
+  "mime": "audio/wav",
+  "model": "speech-hands-qwen2.5-omni-7b",
+  "language": "en"
+}
+
+// response
+{
+  "text": "final transcript after self-reflection",
+  "model": "speech-hands-qwen2.5-omni-7b",
+  "action_token": "<internal> | <external> | <rewrite>",
+  "internal_pred": "what Qwen-Omni alone produced",
+  "external_pred": "what the external ASR produced",
+  "routing_confidence": 0.87
+}
+```
+
+The openclaw extension uses only `text` and `model`; the rest is
+optional telemetry useful for debugging and ablation.
 
 ## Environment variables
 

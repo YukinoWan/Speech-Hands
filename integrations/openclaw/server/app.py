@@ -1,14 +1,32 @@
 """Reference FastAPI server for the Speech-Hands OpenClaw integration.
 
-Implements the `POST /v1/process` contract that `@openclaw/speech-hands`
-speaks to. This is a thin wrapper around the Speech-Hands inference code
-in the top-level repository — users are expected to bring their own
-fine-tuned Qwen2.5-Omni-7B checkpoint (see the repo README for training
-recipes and the DCASE / OpenASR data layout).
+Implements the `POST /v1/transcribe` contract that
+`@openclaw/speech-hands-provider` speaks to. This is a thin HTTP wrapper
+around the Speech-Hands research pipeline — users bring their own
+fine-tuned Qwen2.5-Omni-7B checkpoint and (optionally) a local Whisper
+install for the external path; both live inside the server process so
+the openclaw extension stays a pure HTTP client.
 
-The internal model, external-evidence fusion, and action-token emission
-all live in `speech_hands.inference` (the vendored research code); this
-file only exposes them over HTTP.
+Request shape mirrors openclaw's AudioTranscriptionRequest (just in
+JSON form with the buffer base64-encoded, since the openclaw runtime
+already handles buffer/mime/language):
+
+  POST /v1/transcribe
+  { "audio": "<base64>",
+    "file_name": "utterance.wav",
+    "mime": "audio/wav",
+    "model": "speech-hands-qwen2.5-omni-7b",
+    "language": "en" }
+
+Response (extra fields beyond openclaw's `{text, model}` are for debug /
+telemetry; the extension discards them):
+
+  { "text": "final transcript",
+    "model": "speech-hands-qwen2.5-omni-7b",
+    "action_token": "<internal>" | "<external>" | "<rewrite>",
+    "internal_pred": "...",
+    "external_pred": "...",
+    "routing_confidence": 0.87 }
 """
 from __future__ import annotations
 
@@ -40,18 +58,20 @@ app = FastAPI(title="Speech-Hands Inference Server", version="0.1.0")
 pipeline: Optional[SpeechHandsPipeline] = None
 
 
-class ProcessRequest(BaseModel):
-    audio: str = Field(..., description="Base64-encoded audio (wav/mp3/m4a).")
-    task: str = Field(..., description='"transcribe" or "qa".')
-    question: Optional[str] = None
+class TranscribeRequest(BaseModel):
+    audio: str = Field(..., description="Base64-encoded audio bytes.")
+    file_name: Optional[str] = Field(None, description='e.g. "utterance.wav"')
+    mime: Optional[str] = Field(None, description='e.g. "audio/wav"')
+    model: Optional[str] = None
+    language: Optional[str] = None
+
+
+class TranscribeResponse(BaseModel):
+    text: str
+    model: str
+    action_token: Optional[str] = None
+    internal_pred: Optional[str] = None
     external_pred: Optional[str] = None
-    external_nbest: Optional[list[str]] = None
-
-
-class ProcessResponse(BaseModel):
-    action_token: str
-    final: str
-    internal_pred: str
     routing_confidence: Optional[float] = None
 
 
@@ -66,34 +86,40 @@ def healthz() -> dict:
     return {"status": "ok", "checkpoint": CHECKPOINT_PATH, "device": DEVICE}
 
 
-@app.post("/v1/process", response_model=ProcessResponse)
-def process(req: ProcessRequest) -> ProcessResponse:
+@app.post("/v1/transcribe", response_model=TranscribeResponse)
+def transcribe(req: TranscribeRequest) -> TranscribeResponse:
     if pipeline is None:
         raise HTTPException(503, "pipeline not loaded")
-    if req.task not in ("transcribe", "qa"):
-        raise HTTPException(400, f"unsupported task: {req.task}")
-    if req.task == "qa" and not req.question:
-        raise HTTPException(400, "task=qa requires a question")
 
     try:
         audio_bytes = base64.b64decode(req.audio)
     except Exception as exc:
         raise HTTPException(400, f"invalid base64 audio: {exc}") from exc
 
-    with tempfile.NamedTemporaryFile(suffix=".wav", delete=True) as fh:
+    suffix = _suffix_from(req.file_name, req.mime)
+    with tempfile.NamedTemporaryFile(suffix=suffix, delete=True) as fh:
         fh.write(audio_bytes)
         fh.flush()
-        out = pipeline.process(
+        out = pipeline.transcribe(
             audio_path=fh.name,
-            task=req.task,
-            question=req.question,
-            external_pred=req.external_pred,
-            external_nbest=req.external_nbest,
+            language=req.language,
         )
 
-    return ProcessResponse(
-        action_token=out["action_token"],
-        final=out["final"],
-        internal_pred=out["internal_pred"],
+    return TranscribeResponse(
+        text=out["final"],
+        model=req.model or CHECKPOINT_PATH,
+        action_token=out.get("action_token"),
+        internal_pred=out.get("internal_pred"),
+        external_pred=out.get("external_pred"),
         routing_confidence=out.get("routing_confidence"),
     )
+
+
+def _suffix_from(file_name: Optional[str], mime: Optional[str]) -> str:
+    if file_name and "." in file_name:
+        return "." + file_name.rsplit(".", 1)[-1]
+    if mime:
+        trailing = mime.split("/")[-1]
+        if trailing in ("wav", "mpeg", "mp3", "m4a", "flac", "ogg"):
+            return "." + ("mp3" if trailing == "mpeg" else trailing)
+    return ".wav"
