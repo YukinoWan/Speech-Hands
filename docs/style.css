@@ -59,6 +59,10 @@ main { max-width: 880px; margin: 0 auto; padding: 48px 24px 80px; }
   background: var(--bg); transition: all 0.15s;
 }
 .btn:hover { background: var(--bg-alt); border-color: var(--accent); color: var(--accent); }
+.btn-primary {
+  background: var(--fg); color: #fff; border-color: var(--fg);
+}
+.btn-primary:hover { background: #000; border-color: #000; color: #fff; }
 
 h2 {
   font-size: 1.6rem; letter-spacing: -0.01em; margin: 48px 0 16px;
