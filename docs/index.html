@@ -370,7 +370,60 @@ async function renderASR(cases, root) {
 
 /* --- Agent integration animation --- */
 const SLEEP = (ms) => new Promise(r => setTimeout(r, ms));
-let integState = { playing: false, current: 0, cases: [] };
+let integState = { playing: false, current: 0, cases: [], unlocked: false };
+
+// Preload audio elements once, outside the user-gesture loss window.
+const audioCache = {};
+function preloadCaseAudio(cases) {
+  for (const c of cases) {
+    if (audioCache[c.audio]) continue;
+    const a = new Audio();
+    a.preload = 'auto';
+    a.src = c.audio;
+    audioCache[c.audio] = a;
+  }
+}
+
+// Unlock the visible <audio id="integ-audio"> element inside the click
+// handler's user-gesture tick, so later programmatic .play() calls don't
+// get blocked by autoplay policy (Safari/Chrome both require this).
+async function unlockAudioOnce() {
+  if (integState.unlocked) return;
+  const audio = document.getElementById('integ-audio');
+  const prevSrc = audio.src;
+  audio.muted = true;
+  // Use the first case's audio as the priming source
+  if (integState.cases[0]) audio.src = integState.cases[0].audio;
+  try {
+    await audio.play();
+    audio.pause();
+    audio.currentTime = 0;
+  } catch(e) {
+    console.warn('audio unlock failed:', e);
+  }
+  audio.muted = false;
+  integState.unlocked = true;
+}
+
+// Load a fresh src into the visible audio element and start playback,
+// waiting for canplay before calling play() so Safari doesn't silently
+// abort.
+async function playCaseAudio(audio, url) {
+  await new Promise(res => {
+    const onCan = () => { audio.removeEventListener('canplaythrough', onCan); res(); };
+    audio.addEventListener('canplaythrough', onCan, { once: true });
+    audio.src = url;
+    audio.currentTime = 0;
+    audio.load();
+    // Hard cap the wait at 2.5s in case canplaythrough never fires.
+    setTimeout(() => { audio.removeEventListener('canplaythrough', onCan); res(); }, 2500);
+  });
+  try {
+    await audio.play();
+  } catch(e) {
+    console.warn('audio.play rejected:', e);
+  }
+}
 
 function integSetTabs(n, current) {
   const tabs = document.getElementById('integ-tabs');
@@ -379,7 +432,11 @@ function integSetTabs(n, current) {
     const b = document.createElement('button');
     b.textContent = `Case ${i+1}`;
     if (i === current) b.classList.add('active');
-    b.onclick = () => { if (!integState.playing) integPlayOne(i); };
+    b.onclick = async () => {
+      if (integState.playing) return;
+      await unlockAudioOnce();
+      integPlayOne(i);
+    };
     tabs.appendChild(b);
   }
 }
@@ -447,14 +504,11 @@ async function integPlayOne(idx) {
   uc.classList.add('show');
 
   const audio = document.getElementById('integ-audio');
-  audio.src = c.audio;
-  audio.currentTime = 0;
   const timer = document.getElementById('audio-timer');
-  let timerInt = null;
   const updateTimer = () => { timer.textContent = fmtTime(audio.currentTime); };
   timer.textContent = "0:00";
-  try { await audio.play(); } catch(e) {}
-  timerInt = setInterval(updateTimer, 100);
+  await playCaseAudio(audio, c.audio);
+  const timerInt = setInterval(updateTimer, 100);
 
   await new Promise(res => {
     const to = setTimeout(res, 14000);
@@ -534,6 +588,7 @@ async function integPlayAll() {
   const btn = document.getElementById('integ-play');
   btn.disabled = true;
   btn.textContent = '⏵ Playing…';
+  await unlockAudioOnce();    // MUST happen within the click tick
   for (let i = 0; i < integState.cases.length; i++) {
     await integPlayOne(i);
     await SLEEP(600);
@@ -549,6 +604,7 @@ async function integPlayAll() {
 
   // Wire up integration demo
   integState.cases = data.integration || [];
+  preloadCaseAudio(integState.cases);
   integSetTabs(integState.cases.length, 0);
   // Initialize view with case 0 meta (without playing)
   if (integState.cases.length) {
@@ -560,7 +616,14 @@ async function integPlayAll() {
       <span>Press ▶ to run the animation through all 4 cases.</span>
     `;
   }
-  document.getElementById('integ-play').onclick = () => { if (!integState.playing) integPlayAll(); };
+  document.getElementById('integ-play').addEventListener('click', async () => {
+    if (integState.playing) return;
+    // Unlock audio synchronously inside the click handler's user-gesture tick,
+    // then kick off the full demo. The unlock call needs to touch .play() before
+    // any awaits that aren't audio-related.
+    await unlockAudioOnce();
+    integPlayAll();
+  });
 })();
 </script>
 </body>
