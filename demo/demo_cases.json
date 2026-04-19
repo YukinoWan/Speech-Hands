@@ -133,12 +133,14 @@
         {
           "source": "Qwen2.5-Omni",
           "label": "internal",
-          "pred": "A. To emphasize the speaker's instructions"
+          "pred": "A. To emphasize the speaker's instructions",
+          "verdict": "bad"
         },
         {
           "source": "Audio Flamingo 3",
           "label": "external",
-          "pred": "A. To emphasize the speaker's instructions"
+          "pred": "A. To emphasize the speaker's instructions",
+          "verdict": "bad"
         }
       ],
       "routing": "<rewrite>",
@@ -156,12 +158,14 @@
         {
           "source": "Qwen2.5-Omni",
           "label": "internal",
-          "pred": "B. Angry and aggressive"
+          "pred": "B. Angry and aggressive",
+          "verdict": "bad"
         },
         {
           "source": "Audio Flamingo 3",
           "label": "external",
-          "pred": "D. Sad and reflective"
+          "pred": "D. Sad and reflective",
+          "verdict": "ok"
         }
       ],
       "routing": "<external>",
@@ -179,12 +183,14 @@
         {
           "source": "Qwen2.5-Omni",
           "label": "internal",
-          "pred": "To put it very bluntly, the people of this planet must destroy capitalism before capitalism destroys our planet."
+          "pred": "To put it very bluntly, the people of this planet must destroy capitalism before capitalism destroys our planet.",
+          "verdict": "ok"
         },
         {
           "source": "External ASR (top-1)",
           "label": "external",
-          "pred": "But very bluntly put the people of this planet must destroy capitalism before capitalism destroys our planet."
+          "pred": "But very bluntly put the people of this planet must destroy capitalism before capitalism destroys our planet.",
+          "verdict": "bad"
         }
       ],
       "routing": "<internal>",
@@ -202,12 +208,14 @@
         {
           "source": "Qwen2.5-Omni",
           "label": "internal",
-          "pred": "Now, don't force him to attempt the theft."
+          "pred": "Now, don't force him to attempt the theft.",
+          "verdict": "bad"
         },
         {
           "source": "External ASR (top-1)",
           "label": "external",
-          "pred": "Now, don't burst into a tempest at that."
+          "pred": "Now, don't burst into a tempest at that.",
+          "verdict": "ok"
         }
       ],
       "routing": "<external>",

@@ -168,36 +168,84 @@
       </div>
 
       <div class="integ-stage" id="integ-stage">
-        <div class="pane openclaw-input" id="pane-input">
-          <div class="pane-header"><span class="brand-dot"></span>OpenClaw</div>
-          <div class="mic-icon">🎙</div>
-          <div class="waveform"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-          <div class="user-context"></div>
+
+        <!-- Top: OpenClaw chat header with brand + case meta -->
+        <div class="chat-header">
+          <span class="brand-dot"></span><strong>OpenClaw</strong> · agent session
+          <span class="header-meta" id="case-meta"></span>
+        </div>
+
+        <!-- User bubble: incoming voice -->
+        <div class="chat-bubble user" id="bubble-user">
+          <div class="bubble-label">User</div>
+          <div class="mic-row">
+            <span class="mic-icon">🎙</span>
+            <div class="waveform"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <span class="audio-timer" id="audio-timer">0:00</span>
+          </div>
+          <div class="user-context" id="user-context"></div>
           <audio id="integ-audio" preload="auto"></audio>
         </div>
 
-        <div class="flow-arrow flow-right" id="flow-in"></div>
+        <!-- Tool-call indicator -->
+        <div class="tool-call-label" id="tool-call-label">
+          <span class="dotline"></span>
+          <span class="tool-name">OpenClaw → <code>speech-hands</code> skill</span>
+          <span class="dotline"></span>
+        </div>
 
-        <div class="pane sh-pipeline" id="pane-pipeline">
-          <div class="pane-header">Speech-Hands skill</div>
-          <div class="candidates" id="candidates"></div>
-          <div class="action-tokens" id="action-tokens">
-            <div data-tok="internal"><code>&lt;internal&gt;</code></div>
-            <div data-tok="external"><code>&lt;external&gt;</code></div>
-            <div data-tok="rewrite"><code>&lt;rewrite&gt;</code></div>
+        <!-- Speech-Hands inspection panel (the main show) -->
+        <div class="sh-panel" id="sh-panel">
+          <div class="sh-panel-header">
+            <span class="sh-badge">Speech-Hands</span>
+            <span class="sh-panel-subtitle">self-reflection inspection</span>
           </div>
+
+          <!-- Stage A: two candidates side by side -->
+          <div class="cand-row" id="cand-row">
+            <!-- filled by JS -->
+          </div>
+
+          <!-- Stage B: action-token decision -->
+          <div class="decision-row">
+            <div class="decision-label">Action token</div>
+            <div class="tok-row" id="action-tokens">
+              <div class="tok-card" data-tok="internal">
+                <code>&lt;internal&gt;</code>
+                <span class="tok-desc">Trust the internal model</span>
+                <span class="tok-verdict"></span>
+              </div>
+              <div class="tok-card" data-tok="external">
+                <code>&lt;external&gt;</code>
+                <span class="tok-desc">Defer to external candidate</span>
+                <span class="tok-verdict"></span>
+              </div>
+              <div class="tok-card" data-tok="rewrite">
+                <code>&lt;rewrite&gt;</code>
+                <span class="tok-desc">Re-derive from audio + both</span>
+                <span class="tok-verdict"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage C: final answer -->
           <div class="sh-final" id="sh-final"></div>
         </div>
 
-        <div class="flow-arrow flow-right" id="flow-out"></div>
+        <!-- Skill returns to OpenClaw -->
+        <div class="tool-call-label return" id="return-label">
+          <span class="dotline"></span>
+          <span class="tool-name"><code>speech-hands</code> skill → OpenClaw</span>
+          <span class="dotline"></span>
+        </div>
 
-        <div class="pane openclaw-output" id="pane-output">
-          <div class="pane-header"><span class="brand-dot"></span>OpenClaw</div>
+        <!-- Assistant bubble: OpenClaw final reply -->
+        <div class="chat-bubble assistant" id="bubble-assistant">
+          <div class="bubble-label"><span class="brand-dot"></span>OpenClaw</div>
           <div class="reply" id="reply"></div>
         </div>
-      </div>
 
-      <div class="case-meta" id="case-meta"></div>
+      </div>
     </div>
 
     <h3>Audio QA</h3>
@@ -322,7 +370,7 @@ async function renderASR(cases, root) {
 
 /* --- Agent integration animation --- */
 const SLEEP = (ms) => new Promise(r => setTimeout(r, ms));
-let integState = { playing: false, abort: null, current: 0, cases: [] };
+let integState = { playing: false, current: 0, cases: [] };
 
 function integSetTabs(n, current) {
   const tabs = document.getElementById('integ-tabs');
@@ -336,28 +384,46 @@ function integSetTabs(n, current) {
   }
 }
 
+function routingPillStyle(tok) {
+  const cls = tok.replace(/[<>]/g, '');
+  const color = { internal: 'var(--internal)', external: 'var(--external)', rewrite: 'var(--rewrite)' }[cls];
+  return `background:${color}`;
+}
+
+function fmtTime(sec) {
+  const m = Math.floor(sec/60), s = Math.floor(sec%60);
+  return `${m}:${String(s).padStart(2,'0')}`;
+}
+
 function integReset() {
-  document.querySelectorAll('.pane').forEach(p => p.classList.remove('active', 'speaking'));
-  document.querySelectorAll('.flow-arrow').forEach(a => a.classList.remove('active'));
-  document.getElementById('candidates').innerHTML = '';
-  document.querySelectorAll('.action-tokens > div').forEach(t => t.classList.remove('active'));
+  ['bubble-user', 'bubble-assistant'].forEach(id => {
+    const el = document.getElementById(id);
+    el.classList.remove('active', 'speaking');
+  });
+  document.getElementById('sh-panel').classList.remove('active');
+  document.getElementById('tool-call-label').classList.remove('active');
+  document.getElementById('return-label').classList.remove('active');
+  document.getElementById('user-context').classList.remove('show');
+  document.getElementById('user-context').innerHTML = '';
+  document.getElementById('cand-row').innerHTML = '';
+  document.querySelectorAll('.tok-card').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tok-card .tok-verdict').forEach(v => v.textContent = '');
   const shFinal = document.getElementById('sh-final');
   shFinal.classList.remove('show');
   shFinal.innerHTML = '';
   const reply = document.getElementById('reply');
   reply.classList.remove('show');
   reply.textContent = '';
-  const uc = document.querySelector('.user-context');
-  uc.classList.remove('show');
-  uc.innerHTML = '';
-  const meta = document.getElementById('case-meta');
-  meta.innerHTML = '';
 }
 
-function routingPillStyle(tok) {
-  const cls = tok.replace(/[<>]/g, '');
-  const color = { internal: 'var(--internal)', external: 'var(--external)', rewrite: 'var(--rewrite)' }[cls];
-  return `background:${color}`;
+function integSetMeta(c, hint) {
+  const meta = document.getElementById('case-meta');
+  const parts = [
+    `<span class="benchmark">${esc(c.benchmark)}</span>`,
+    `<span class="routing-pill" style="${routingPillStyle(c.routing)}">${esc(c.routing)}</span>`,
+  ];
+  if (hint) parts.push(`<span style="color:var(--muted)">${esc(hint)}</span>`);
+  meta.innerHTML = parts.join(' ');
 }
 
 async function integPlayOne(idx) {
@@ -368,83 +434,99 @@ async function integPlayOne(idx) {
 
   const c = integState.cases[idx];
   integReset();
+  integSetMeta(c, '');
 
-  // Meta badge
-  const meta = document.getElementById('case-meta');
-  meta.innerHTML = `
-    <span class="benchmark">${esc(c.benchmark)}</span>
-    <span class="routing-pill" style="${routingPillStyle(c.routing)}">${esc(c.routing)}</span>
-    <span>Gold: <code>${esc(c.gold)}</code></span>
-  `;
+  // Stage 1: User bubble activates, audio plays
+  const bubbleUser = document.getElementById('bubble-user');
+  bubbleUser.classList.add('active', 'speaking');
 
-  // Stage 1: show user context (question) + play audio + pane-input highlights
-  const paneIn = document.getElementById('pane-input');
-  paneIn.classList.add('active', 'speaking');
-  const uc = document.querySelector('.user-context');
-  const contextText = c.type === 'audio_qa'
-    ? `<strong>User question (to OpenClaw):</strong><br>${esc(c.question)}`
-    : `<strong>User utterance (to OpenClaw):</strong><br>Transcribe this speech.`;
-  uc.innerHTML = contextText;
+  const uc = document.getElementById('user-context');
+  uc.innerHTML = c.type === 'audio_qa'
+    ? `<strong>Q:</strong> ${esc(c.question)}`
+    : `<strong>Task:</strong> transcribe this spoken utterance`;
   uc.classList.add('show');
 
   const audio = document.getElementById('integ-audio');
   audio.src = c.audio;
   audio.currentTime = 0;
-  try { await audio.play(); } catch(e) { /* autoplay blocked, continue */ }
+  const timer = document.getElementById('audio-timer');
+  let timerInt = null;
+  const updateTimer = () => { timer.textContent = fmtTime(audio.currentTime); };
+  timer.textContent = "0:00";
+  try { await audio.play(); } catch(e) {}
+  timerInt = setInterval(updateTimer, 100);
 
-  // Wait for audio end or ~10s max
-  await new Promise(resolve => {
-    const timeout = setTimeout(resolve, 12000);
-    audio.onended = () => { clearTimeout(timeout); resolve(); };
+  await new Promise(res => {
+    const to = setTimeout(res, 14000);
+    audio.onended = () => { clearTimeout(to); res(); };
   });
-
-  paneIn.classList.remove('speaking');
-  await SLEEP(300);
-
-  // Stage 2: flow arrow to pipeline
-  document.getElementById('flow-in').classList.add('active');
-  await SLEEP(500);
-  paneIn.classList.remove('active');
-  document.getElementById('pane-pipeline').classList.add('active');
+  clearInterval(timerInt);
+  bubbleUser.classList.remove('speaking');
   await SLEEP(400);
 
-  // Stage 3: candidates fade in one by one
-  const candRoot = document.getElementById('candidates');
-  for (const cand of c.candidates) {
-    const div = document.createElement('div');
-    div.className = 'candidate ' + cand.label;
-    div.innerHTML = `<span class="cand-src">${esc(cand.source)}</span><code>${esc(cand.pred)}</code>`;
-    candRoot.appendChild(div);
-    await SLEEP(50);
-    div.classList.add('show');
-    await SLEEP(800);
-  }
-  await SLEEP(300);
+  // Stage 2: Tool-call indicator activates
+  document.getElementById('tool-call-label').classList.add('active');
+  await SLEEP(500);
+  bubbleUser.classList.remove('active');
 
-  // Stage 4: action-token selection
+  // Stage 3: SH panel activates
+  const shPanel = document.getElementById('sh-panel');
+  shPanel.classList.add('active');
+  await SLEEP(400);
+
+  // Stage 4: candidates appear one by one
+  const candRow = document.getElementById('cand-row');
+  for (const cand of c.candidates) {
+    const card = document.createElement('div');
+    card.className = 'cand-card ' + cand.label;
+    card.innerHTML = `
+      <div class="cand-head">
+        <span>${cand.label}</span>
+        <span class="src-pill">${esc(cand.source)}</span>
+      </div>
+      <div class="cand-pred">${esc(cand.pred)}</div>
+      <div class="cand-verdict ${cand.verdict === 'ok' ? 'ok' : 'bad'}">
+        <span class="mark">${cand.verdict === 'ok' ? '✓' : '✗'}</span>
+        <span>${cand.verdict === 'ok' ? 'matches audio' : 'disagrees with audio'}</span>
+      </div>
+    `;
+    candRow.appendChild(card);
+    await SLEEP(60);
+    card.classList.add('show');
+    await SLEEP(700);
+    // Verdict appears shortly after the candidate
+    card.querySelector('.cand-verdict').classList.add('show');
+    await SLEEP(500);
+  }
+  await SLEEP(500);
+
+  // Stage 5: action-token selection
   const tokCls = c.routing.replace(/[<>]/g, '');
-  document.querySelector(`.action-tokens > div[data-tok="${tokCls}"]`).classList.add('active');
+  const activeCard = document.querySelector(`.tok-card[data-tok="${tokCls}"]`);
+  activeCard.classList.add('active');
+  activeCard.querySelector('.tok-verdict').textContent = 'SELECTED';
+  await SLEEP(1400);
+
+  // Stage 6: final answer
+  const shFinal = document.getElementById('sh-final');
+  shFinal.innerHTML = `<span class="fin-label">Speech-Hands final</span><code>${esc(c.final)}</code>`;
+  shFinal.classList.add('show');
   await SLEEP(1200);
 
-  // Stage 5: final answer
-  const shFinal = document.getElementById('sh-final');
-  shFinal.innerHTML = `<strong>Final:</strong> <code>${esc(c.final)}</code>`;
-  shFinal.classList.add('show');
-  await SLEEP(1000);
+  // Stage 7: return label activates
+  document.getElementById('return-label').classList.add('active');
+  await SLEEP(500);
+  shPanel.classList.remove('active');
 
-  // Stage 6: flow arrow back to OpenClaw reply
-  document.getElementById('flow-out').classList.add('active');
-  await SLEEP(400);
-  document.getElementById('pane-pipeline').classList.remove('active');
-  document.getElementById('pane-output').classList.add('active');
-
-  // Stage 7: OpenClaw reply
+  // Stage 8: assistant bubble activates, reply appears
+  const bubbleAsst = document.getElementById('bubble-assistant');
+  bubbleAsst.classList.add('active');
+  await SLEEP(300);
   const reply = document.getElementById('reply');
   reply.textContent = c.openclaw_reply;
   reply.classList.add('show');
-  await SLEEP(1800);
+  await SLEEP(2000);
 
-  document.getElementById('pane-output').classList.remove('active');
   integState.playing = false;
 }
 
