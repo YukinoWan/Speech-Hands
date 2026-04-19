@@ -15,144 +15,13 @@
     <p class="authors">Anonymous Authors</p>
     <p class="venue">Paper under review</p>
     <nav class="links">
+      <a href="#demo" class="btn">Demo</a>
       <a href="#abstract" class="btn">Abstract</a>
       <a href="#method" class="btn">Method</a>
       <a href="#results" class="btn">Results</a>
-      <a href="#demo" class="btn">Demo</a>
       <a href="#bibtex" class="btn">BibTeX</a>
     </nav>
   </header>
-
-  <section id="abstract">
-    <h2>Abstract</h2>
-    <p>We introduce a voice-agentic framework that learns one critical omni-understanding skill: <em>knowing when to trust itself versus when to consult external audio perception</em>. Our work is motivated by a crucial yet counterintuitive finding: naively fine-tuning an omni-model on both speech recognition and external sound understanding tasks often degrades performance, as the model can be easily misled by noisy hypotheses. To address this, our framework, <strong>Speech-Hands</strong>, recasts the problem as an explicit <strong>self-reflection decision</strong>. This learnable reflection primitive proves effective in preventing the model from being derailed by flawed external candidates. We show that this agentic action mechanism generalizes naturally from speech recognition to complex, multiple-choice audio reasoning. Across the OpenASR leaderboard, Speech-Hands consistently outperforms strong baselines by <strong>12.1% WER on seven benchmarks</strong>. The model also achieves <strong>77.37% accuracy</strong> and high F1 on audio QA decisions, showing robust generalization and reliability across diverse audio question answering datasets.</p>
-  </section>
-
-  <section id="method">
-    <h2>Method</h2>
-    <figure class="method-figure">
-      <img src="figures/teaser.png" alt="Speech-Hands overview">
-      <figcaption><strong>Figure 1.</strong> Speech-Hands acts as a dynamic orchestrator that predicts a special <em>action token</em> to govern its cognitive strategy for ASR and multi-domain audio reasoning.</figcaption>
-    </figure>
-
-    <h3>Self-reflection primitive</h3>
-    <p>For every input, Speech-Hands emits one of three learnable routing tokens before producing its final answer. The token makes the perception-vs-reasoning trade-off explicit and trainable:</p>
-    <div class="tokens">
-      <div class="token-card" data-tok="internal">
-        <code>&lt;internal&gt;</code>
-        <h3>Trust self</h3>
-        <p>The internal prediction is reliable; ignore the external candidate and answer directly from audio.</p>
-      </div>
-      <div class="token-card" data-tok="external">
-        <code>&lt;external&gt;</code>
-        <h3>Defer</h3>
-        <p>The external ASR / audio-reasoning model's top candidate is better; adopt it.</p>
-      </div>
-      <div class="token-card" data-tok="rewrite">
-        <code>&lt;rewrite&gt;</code>
-        <h3>Re-derive</h3>
-        <p>Neither the internal nor the external prediction is correct; re-derive the answer using audio and the external candidate list as grounding context.</p>
-      </div>
-    </div>
-
-    <figure class="method-figure">
-      <img src="figures/method.png" alt="Speech-Hands framework architecture">
-      <figcaption><strong>Figure 2.</strong> Overview of the Self-Reflection Multimodal GER framework. A special token is generated at the beginning to decide whether to use audio perception (i.e., transcription hypotheses or caption) or not.</figcaption>
-    </figure>
-  </section>
-
-  <section id="results">
-    <h2>Results</h2>
-
-    <h3>ASR — WER (%) across 7 OpenASR benchmarks</h3>
-    <p class="table-lede">Speech-Hands training significantly outperforms both baseline systems (ASR / Omni-LMs) and prior cascaded GER setups. Pairing with Parakeet as the external ASR gives the lowest average WER.</p>
-    <div class="table-wrap">
-      <table class="results-table wer-table">
-        <thead>
-          <tr>
-            <th>Model</th>
-            <th>AMI</th><th>Tedlium</th><th>GigaSpeech</th><th>SPGISpeech</th>
-            <th>VoxPopuli</th><th>Libri-clean</th><th>Libri-other</th>
-            <th class="final-col">avg. WER ↓</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="section-row"><td colspan="9">ASR model or Omni-LLM</td></tr>
-          <tr><td>Whisper-v2-large</td><td>16.88</td><td>4.32</td><td>11.45</td><td>3.94</td><td>7.57</td><td>2.91</td><td>5.15</td><td>7.17</td></tr>
-          <tr><td>Canary-1b-v2</td><td>19.80</td><td>4.78</td><td>11.66</td><td>3.08</td><td>6.35</td><td>1.73</td><td>3.17</td><td>7.22</td></tr>
-          <tr><td>Parakeet-tdt-0.6b-v3</td><td>12.69</td><td>4.90</td><td>12.24</td><td>3.16</td><td>6.48</td><td>1.89</td><td>3.37</td><td>6.68</td></tr>
-          <tr><td>Qwen2.5-Omni</td><td>19.77</td><td>5.17</td><td>11.26</td><td>4.58</td><td>6.59</td><td>2.09</td><td>3.85</td><td>7.33</td></tr>
-          <tr><td>Phi-4-MM</td><td>11.69</td><td><b>2.90</b></td><td><b>9.78</b></td><td>3.13</td><td><b>5.93</b></td><td>1.68</td><td>3.83</td><td>6.14</td></tr>
-          <tr><td>Gemini-2-Flash</td><td>21.58</td><td>3.01</td><td>10.71</td><td>3.82</td><td>7.89</td><td>2.49</td><td>5.84</td><td>8.56</td></tr>
-          <tr><td>GPT-4o-voice</td><td>57.76</td><td>5.79</td><td>13.64</td><td>5.66</td><td>10.83</td><td>3.48</td><td>7.97</td><td>15.76</td></tr>
-          <tr class="section-row cascaded"><td colspan="9">Qwen2.5-Omni: Cascaded (GER)</td></tr>
-          <tr><td>GER ⇒ Whisper-v2-large</td><td>23.44</td><td>6.15</td><td>12.15</td><td>3.94</td><td>7.53</td><td>2.97</td><td>4.89</td><td>8.44</td></tr>
-          <tr><td>GER ⇒ Canary</td><td>24.58</td><td>6.38</td><td>12.43</td><td>4.02</td><td>7.72</td><td>3.05</td><td>5.01</td><td>8.74</td></tr>
-          <tr><td>GER ⇒ Parakeet</td><td>22.91</td><td>6.09</td><td>12.10</td><td>3.98</td><td>7.49</td><td>2.92</td><td>4.84</td><td>8.33</td></tr>
-          <tr class="section-row speech-hands"><td colspan="9">Qwen2.5-Omni: Speech-Hands (parallel agentic)</td></tr>
-          <tr><td>Speech-Hands ⇌ Whisper-v2</td><td>15.03</td><td>4.45</td><td>12.37</td><td>3.01</td><td>6.49</td><td>1.86</td><td>3.46</td><td>6.67</td></tr>
-          <tr><td>Speech-Hands ⇌ Canary</td><td>15.29</td><td>4.21</td><td>10.87</td><td><b>2.17</b></td><td>5.96</td><td><b>1.61</b></td><td><b>3.07</b></td><td>6.17</td></tr>
-          <tr class="best"><td>Speech-Hands ⇌ Parakeet</td><td><b>11.20</b></td><td>4.37</td><td>11.10</td><td>2.26</td><td>6.02</td><td>1.67</td><td>3.18</td><td><b>5.69</b></td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3>AudioQA — Accuracy (%) on DCASE 2025</h3>
-    <p class="table-lede">Evaluated on knowledge-intensive bioacoustic QA, multi-sound-object soundscapes, and MMAU-style complex audio QA. Majority-sampled Speech-Hands yields the highest average accuracy.</p>
-    <div class="table-wrap">
-      <table class="results-table">
-        <thead>
-          <tr>
-            <th>Model / Setting</th>
-            <th>Bio-acoustic</th><th>Soundscape</th><th>Complex QA</th>
-            <th class="final-col">avg. Acc. ↑</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="section-row"><td colspan="5">Audio LM or Omni Model</td></tr>
-          <tr><td>Gemini-2-Flash</td><td>42.03</td><td>46.34</td><td>59.89</td><td>56.61</td></tr>
-          <tr><td>Qwen2.5-Omni</td><td>47.32</td><td>56.32</td><td>59.89</td><td>57.87</td></tr>
-          <tr><td>Audio Flamingo 3</td><td>71.88</td><td>57.31</td><td>81.26</td><td>74.49</td></tr>
-          <tr class="section-row cascaded"><td colspan="5">Qwen2.5-Omni Baselines</td></tr>
-          <tr><td>+ SFT with official training data</td><td>78.13</td><td>34.65</td><td>76.61</td><td>63.13</td></tr>
-          <tr><td>+ GRPO with official training data</td><td>78.09</td><td>39.43</td><td>79.12</td><td>65.54</td></tr>
-          <tr><td>+ GRPO with external audio data</td><td>62.32</td><td><b>72.10</b></td><td>82.15</td><td>75.10</td></tr>
-          <tr><td>GER ⇒ Audio Flamingo 3 (cascaded)</td><td>76.29</td><td>52.02</td><td>77.48</td><td>68.93</td></tr>
-          <tr class="section-row speech-hands"><td colspan="5">Qwen2.5-Omni: Speech-Hands (parallel agentic)</td></tr>
-          <tr><td>Speech-Hands ⇌ AF3 — SFT</td><td>67.86</td><td>58.29</td><td>83.34</td><td>75.75</td></tr>
-          <tr class="best"><td>Speech-Hands ⇌ AF3 — SFT + majority sampling</td><td><b>81.25</b></td><td>59.40</td><td><b>85.70</b></td><td><b>77.37</b></td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3>Action-token routing quality</h3>
-    <p class="table-lede">Distribution of the three action tokens in training vs. test, and per-token test-time F1 on each OpenASR benchmark. <code>&lt;rewrite&gt;</code> is rare by design: it fires only when both internal and external candidates are wrong.</p>
-    <div class="table-wrap">
-      <table class="results-table token-table">
-        <thead>
-          <tr>
-            <th></th>
-            <th>AMI</th><th>Tedlium</th><th>GigaSpeech</th><th>SPGISpeech</th>
-            <th>VoxPopuli</th><th>Libri-clean</th><th>Libri-other</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="section-row"><td colspan="8">Training distribution</td></tr>
-          <tr><td><code>&lt;internal&gt;</code></td><td>67.95%</td><td>86.48%</td><td>87.76%</td><td>96.25%</td><td>93.73%</td><td>98.96%</td><td>98.96%</td></tr>
-          <tr><td><code>&lt;external&gt;</code></td><td>31.01%</td><td>11.18%</td><td>11.80%</td><td>3.64%</td><td>6.09%</td><td>0.96%</td><td>0.96%</td></tr>
-          <tr><td><code>&lt;rewrite&gt;</code></td><td>1.04%</td><td>2.34%</td><td>0.44%</td><td>1.21%</td><td>0.18%</td><td>0.10%</td><td>0.10%</td></tr>
-          <tr class="section-row"><td colspan="8">Test distribution</td></tr>
-          <tr><td><code>&lt;internal&gt;</code></td><td>70.28%</td><td>83.57%</td><td>85.94%</td><td>95.42%</td><td>92.68%</td><td>98.92%</td><td>98.75%</td></tr>
-          <tr><td><code>&lt;external&gt;</code></td><td>26.91%</td><td>15.12%</td><td>12.41%</td><td>3.81%</td><td>6.47%</td><td>0.98%</td><td>1.08%</td></tr>
-          <tr><td><code>&lt;rewrite&gt;</code></td><td>2.27%</td><td>1.31%</td><td>1.65%</td><td>0.77%</td><td>0.85%</td><td>0.10%</td><td>0.17%</td></tr>
-          <tr class="section-row f1"><td colspan="8">F1 on test</td></tr>
-          <tr><td><code>&lt;internal&gt;</code> F1</td><td>0.81</td><td>0.67</td><td>0.83</td><td>0.91</td><td>0.87</td><td>0.94</td><td>0.90</td></tr>
-          <tr><td><code>&lt;external&gt;</code> F1</td><td>0.89</td><td>0.88</td><td>0.80</td><td>0.79</td><td>0.65</td><td>0.77</td><td>0.74</td></tr>
-          <tr><td><code>&lt;rewrite&gt;</code> F1</td><td>0.39</td><td>0.28</td><td>0.08</td><td>0.43</td><td>0.33</td><td>0.00</td><td>0.00</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
 
   <section id="demo">
     <h2>Interactive Demo</h2>
@@ -309,6 +178,138 @@
     <p>Three OpenASR cases — one for each action token. WER numbers are computed after Whisper-style text normalization, so stylistic differences like "tomorrow" vs "to morrow" or missing apostrophes don't contribute. Each panel shows the reference transcript, the internal first-pass transcription, the external ASR 5-best pool, and Speech-Hands' final answer, together with the routing decision and the WER of each pathway.</p>
     <div id="asr-root">Loading ASR cases…</div>
   </section>
+
+  <section id="abstract">
+    <h2>Abstract</h2>
+    <p>We introduce a voice-agentic framework that learns one critical omni-understanding skill: <em>knowing when to trust itself versus when to consult external audio perception</em>. Our work is motivated by a crucial yet counterintuitive finding: naively fine-tuning an omni-model on both speech recognition and external sound understanding tasks often degrades performance, as the model can be easily misled by noisy hypotheses. To address this, our framework, <strong>Speech-Hands</strong>, recasts the problem as an explicit <strong>self-reflection decision</strong>. This learnable reflection primitive proves effective in preventing the model from being derailed by flawed external candidates. We show that this agentic action mechanism generalizes naturally from speech recognition to complex, multiple-choice audio reasoning. Across the OpenASR leaderboard, Speech-Hands consistently outperforms strong baselines by <strong>12.1% WER on seven benchmarks</strong>. The model also achieves <strong>77.37% accuracy</strong> and high F1 on audio QA decisions, showing robust generalization and reliability across diverse audio question answering datasets.</p>
+  </section>
+
+  <section id="method">
+    <h2>Method</h2>
+    <figure class="method-figure">
+      <img src="figures/teaser.png" alt="Speech-Hands overview">
+      <figcaption><strong>Figure 1.</strong> Speech-Hands acts as a dynamic orchestrator that predicts a special <em>action token</em> to govern its cognitive strategy for ASR and multi-domain audio reasoning.</figcaption>
+    </figure>
+
+    <h3>Self-reflection primitive</h3>
+    <p>For every input, Speech-Hands emits one of three learnable routing tokens before producing its final answer. The token makes the perception-vs-reasoning trade-off explicit and trainable:</p>
+    <div class="tokens">
+      <div class="token-card" data-tok="internal">
+        <code>&lt;internal&gt;</code>
+        <h3>Trust self</h3>
+        <p>The internal prediction is reliable; ignore the external candidate and answer directly from audio.</p>
+      </div>
+      <div class="token-card" data-tok="external">
+        <code>&lt;external&gt;</code>
+        <h3>Defer</h3>
+        <p>The external ASR / audio-reasoning model's top candidate is better; adopt it.</p>
+      </div>
+      <div class="token-card" data-tok="rewrite">
+        <code>&lt;rewrite&gt;</code>
+        <h3>Re-derive</h3>
+        <p>Neither the internal nor the external prediction is correct; re-derive the answer using audio and the external candidate list as grounding context.</p>
+      </div>
+    </div>
+
+    <figure class="method-figure">
+      <img src="figures/method.png" alt="Speech-Hands framework architecture">
+      <figcaption><strong>Figure 2.</strong> Overview of the Self-Reflection Multimodal GER framework. A special token is generated at the beginning to decide whether to use audio perception (i.e., transcription hypotheses or caption) or not.</figcaption>
+    </figure>
+  </section>
+
+  <section id="results">
+    <h2>Results</h2>
+
+    <h3>ASR — WER (%) across 7 OpenASR benchmarks</h3>
+    <p class="table-lede">Speech-Hands training significantly outperforms both baseline systems (ASR / Omni-LMs) and prior cascaded GER setups. Pairing with Parakeet as the external ASR gives the lowest average WER.</p>
+    <div class="table-wrap">
+      <table class="results-table wer-table">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>AMI</th><th>Tedlium</th><th>GigaSpeech</th><th>SPGISpeech</th>
+            <th>VoxPopuli</th><th>Libri-clean</th><th>Libri-other</th>
+            <th class="final-col">avg. WER ↓</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="section-row"><td colspan="9">ASR model or Omni-LLM</td></tr>
+          <tr><td>Whisper-v2-large</td><td>16.88</td><td>4.32</td><td>11.45</td><td>3.94</td><td>7.57</td><td>2.91</td><td>5.15</td><td>7.17</td></tr>
+          <tr><td>Canary-1b-v2</td><td>19.80</td><td>4.78</td><td>11.66</td><td>3.08</td><td>6.35</td><td>1.73</td><td>3.17</td><td>7.22</td></tr>
+          <tr><td>Parakeet-tdt-0.6b-v3</td><td>12.69</td><td>4.90</td><td>12.24</td><td>3.16</td><td>6.48</td><td>1.89</td><td>3.37</td><td>6.68</td></tr>
+          <tr><td>Qwen2.5-Omni</td><td>19.77</td><td>5.17</td><td>11.26</td><td>4.58</td><td>6.59</td><td>2.09</td><td>3.85</td><td>7.33</td></tr>
+          <tr><td>Phi-4-MM</td><td>11.69</td><td><b>2.90</b></td><td><b>9.78</b></td><td>3.13</td><td><b>5.93</b></td><td>1.68</td><td>3.83</td><td>6.14</td></tr>
+          <tr><td>Gemini-2-Flash</td><td>21.58</td><td>3.01</td><td>10.71</td><td>3.82</td><td>7.89</td><td>2.49</td><td>5.84</td><td>8.56</td></tr>
+          <tr><td>GPT-4o-voice</td><td>57.76</td><td>5.79</td><td>13.64</td><td>5.66</td><td>10.83</td><td>3.48</td><td>7.97</td><td>15.76</td></tr>
+          <tr class="section-row cascaded"><td colspan="9">Qwen2.5-Omni: Cascaded (GER)</td></tr>
+          <tr><td>GER ⇒ Whisper-v2-large</td><td>23.44</td><td>6.15</td><td>12.15</td><td>3.94</td><td>7.53</td><td>2.97</td><td>4.89</td><td>8.44</td></tr>
+          <tr><td>GER ⇒ Canary</td><td>24.58</td><td>6.38</td><td>12.43</td><td>4.02</td><td>7.72</td><td>3.05</td><td>5.01</td><td>8.74</td></tr>
+          <tr><td>GER ⇒ Parakeet</td><td>22.91</td><td>6.09</td><td>12.10</td><td>3.98</td><td>7.49</td><td>2.92</td><td>4.84</td><td>8.33</td></tr>
+          <tr class="section-row speech-hands"><td colspan="9">Qwen2.5-Omni: Speech-Hands (parallel agentic)</td></tr>
+          <tr><td>Speech-Hands ⇌ Whisper-v2</td><td>15.03</td><td>4.45</td><td>12.37</td><td>3.01</td><td>6.49</td><td>1.86</td><td>3.46</td><td>6.67</td></tr>
+          <tr><td>Speech-Hands ⇌ Canary</td><td>15.29</td><td>4.21</td><td>10.87</td><td><b>2.17</b></td><td>5.96</td><td><b>1.61</b></td><td><b>3.07</b></td><td>6.17</td></tr>
+          <tr class="best"><td>Speech-Hands ⇌ Parakeet</td><td><b>11.20</b></td><td>4.37</td><td>11.10</td><td>2.26</td><td>6.02</td><td>1.67</td><td>3.18</td><td><b>5.69</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>AudioQA — Accuracy (%) on DCASE 2025</h3>
+    <p class="table-lede">Evaluated on knowledge-intensive bioacoustic QA, multi-sound-object soundscapes, and MMAU-style complex audio QA. Majority-sampled Speech-Hands yields the highest average accuracy.</p>
+    <div class="table-wrap">
+      <table class="results-table">
+        <thead>
+          <tr>
+            <th>Model / Setting</th>
+            <th>Bio-acoustic</th><th>Soundscape</th><th>Complex QA</th>
+            <th class="final-col">avg. Acc. ↑</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="section-row"><td colspan="5">Audio LM or Omni Model</td></tr>
+          <tr><td>Gemini-2-Flash</td><td>42.03</td><td>46.34</td><td>59.89</td><td>56.61</td></tr>
+          <tr><td>Qwen2.5-Omni</td><td>47.32</td><td>56.32</td><td>59.89</td><td>57.87</td></tr>
+          <tr><td>Audio Flamingo 3</td><td>71.88</td><td>57.31</td><td>81.26</td><td>74.49</td></tr>
+          <tr class="section-row cascaded"><td colspan="5">Qwen2.5-Omni Baselines</td></tr>
+          <tr><td>+ SFT with official training data</td><td>78.13</td><td>34.65</td><td>76.61</td><td>63.13</td></tr>
+          <tr><td>+ GRPO with official training data</td><td>78.09</td><td>39.43</td><td>79.12</td><td>65.54</td></tr>
+          <tr><td>+ GRPO with external audio data</td><td>62.32</td><td><b>72.10</b></td><td>82.15</td><td>75.10</td></tr>
+          <tr><td>GER ⇒ Audio Flamingo 3 (cascaded)</td><td>76.29</td><td>52.02</td><td>77.48</td><td>68.93</td></tr>
+          <tr class="section-row speech-hands"><td colspan="5">Qwen2.5-Omni: Speech-Hands (parallel agentic)</td></tr>
+          <tr><td>Speech-Hands ⇌ AF3 — SFT</td><td>67.86</td><td>58.29</td><td>83.34</td><td>75.75</td></tr>
+          <tr class="best"><td>Speech-Hands ⇌ AF3 — SFT + majority sampling</td><td><b>81.25</b></td><td>59.40</td><td><b>85.70</b></td><td><b>77.37</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Action-token routing quality</h3>
+    <p class="table-lede">Distribution of the three action tokens in training vs. test, and per-token test-time F1 on each OpenASR benchmark. <code>&lt;rewrite&gt;</code> is rare by design: it fires only when both internal and external candidates are wrong.</p>
+    <div class="table-wrap">
+      <table class="results-table token-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>AMI</th><th>Tedlium</th><th>GigaSpeech</th><th>SPGISpeech</th>
+            <th>VoxPopuli</th><th>Libri-clean</th><th>Libri-other</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="section-row"><td colspan="8">Training distribution</td></tr>
+          <tr><td><code>&lt;internal&gt;</code></td><td>67.95%</td><td>86.48%</td><td>87.76%</td><td>96.25%</td><td>93.73%</td><td>98.96%</td><td>98.96%</td></tr>
+          <tr><td><code>&lt;external&gt;</code></td><td>31.01%</td><td>11.18%</td><td>11.80%</td><td>3.64%</td><td>6.09%</td><td>0.96%</td><td>0.96%</td></tr>
+          <tr><td><code>&lt;rewrite&gt;</code></td><td>1.04%</td><td>2.34%</td><td>0.44%</td><td>1.21%</td><td>0.18%</td><td>0.10%</td><td>0.10%</td></tr>
+          <tr class="section-row"><td colspan="8">Test distribution</td></tr>
+          <tr><td><code>&lt;internal&gt;</code></td><td>70.28%</td><td>83.57%</td><td>85.94%</td><td>95.42%</td><td>92.68%</td><td>98.92%</td><td>98.75%</td></tr>
+          <tr><td><code>&lt;external&gt;</code></td><td>26.91%</td><td>15.12%</td><td>12.41%</td><td>3.81%</td><td>6.47%</td><td>0.98%</td><td>1.08%</td></tr>
+          <tr><td><code>&lt;rewrite&gt;</code></td><td>2.27%</td><td>1.31%</td><td>1.65%</td><td>0.77%</td><td>0.85%</td><td>0.10%</td><td>0.17%</td></tr>
+          <tr class="section-row f1"><td colspan="8">F1 on test</td></tr>
+          <tr><td><code>&lt;internal&gt;</code> F1</td><td>0.81</td><td>0.67</td><td>0.83</td><td>0.91</td><td>0.87</td><td>0.94</td><td>0.90</td></tr>
+          <tr><td><code>&lt;external&gt;</code> F1</td><td>0.89</td><td>0.88</td><td>0.80</td><td>0.79</td><td>0.65</td><td>0.77</td><td>0.74</td></tr>
+          <tr><td><code>&lt;rewrite&gt;</code> F1</td><td>0.39</td><td>0.28</td><td>0.08</td><td>0.43</td><td>0.33</td><td>0.00</td><td>0.00</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
 
   <section id="bibtex">
     <h2>BibTeX</h2>
