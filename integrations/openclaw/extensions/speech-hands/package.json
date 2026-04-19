@@ -1,0 +1,33 @@
+{
+  "name": "@openclaw/speech-hands",
+  "version": "0.1.0",
+  "description": "Voice-input pipeline for OpenClaw — runs an internal omni-LLM and an external perception tool in parallel, emits a self-reflection action token, and returns the final transcript / answer. Symmetric with speech-core (TTS).",
+  "type": "module",
+  "main": "./runtime-api.ts",
+  "module": "./runtime-api.ts",
+  "exports": {
+    ".": "./runtime-api.ts",
+    "./api": "./api.ts"
+  },
+  "files": ["src", "api.ts", "runtime-api.ts", "README.md"],
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest"
+  },
+  "keywords": [
+    "openclaw",
+    "openclaw-extension",
+    "speech",
+    "asr",
+    "audio-qa",
+    "agent",
+    "self-reflection"
+  ],
+  "peerDependencies": {
+    "openclaw": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}
