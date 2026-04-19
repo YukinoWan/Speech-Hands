@@ -157,6 +157,49 @@
   <section id="demo">
     <h2>Interactive Demo</h2>
 
+    <h3>Agent integration with <a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">OpenClaw</a></h3>
+    <p>Speech-Hands installs as an <a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">OpenClaw</a> skill — it sits between the agent's voice input and its reasoning loop. When a user speaks to the assistant, OpenClaw routes the audio to the skill; the skill consults its internal Omni model and an external audio-perception model in parallel, emits one of three <em>action tokens</em>, and returns the final answer for OpenClaw to act on. The animation below plays four real Speech-Hands samples — two AudioQA, two ASR — step by step through the full pipeline, and highlights the action-token routing decision for each one.</p>
+    <p class="note">OpenClaw is an MIT-licensed personal-assistant framework (360k+ stars). The panels below are a conceptual mock of the integration; the companion adapter lives at <code>integrations/openclaw/</code> and can be dropped into any OpenClaw workspace.</p>
+
+    <div class="integration-demo">
+      <div class="integ-controls">
+        <button id="integ-play" type="button">▶ Play agent demo</button>
+        <div class="integ-tabs" id="integ-tabs"></div>
+      </div>
+
+      <div class="integ-stage" id="integ-stage">
+        <div class="pane openclaw-input" id="pane-input">
+          <div class="pane-header"><span class="brand-dot"></span>OpenClaw</div>
+          <div class="mic-icon">🎙</div>
+          <div class="waveform"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="user-context"></div>
+          <audio id="integ-audio" preload="auto"></audio>
+        </div>
+
+        <div class="flow-arrow flow-right" id="flow-in"></div>
+
+        <div class="pane sh-pipeline" id="pane-pipeline">
+          <div class="pane-header">Speech-Hands skill</div>
+          <div class="candidates" id="candidates"></div>
+          <div class="action-tokens" id="action-tokens">
+            <div data-tok="internal"><code>&lt;internal&gt;</code></div>
+            <div data-tok="external"><code>&lt;external&gt;</code></div>
+            <div data-tok="rewrite"><code>&lt;rewrite&gt;</code></div>
+          </div>
+          <div class="sh-final" id="sh-final"></div>
+        </div>
+
+        <div class="flow-arrow flow-right" id="flow-out"></div>
+
+        <div class="pane openclaw-output" id="pane-output">
+          <div class="pane-header"><span class="brand-dot"></span>OpenClaw</div>
+          <div class="reply" id="reply"></div>
+        </div>
+      </div>
+
+      <div class="case-meta" id="case-meta"></div>
+    </div>
+
     <h3>Audio QA</h3>
     <p>Seven DCASE 2025 AudioQA dev samples grouped by action-token decision. For each example you can play the original audio, compare what the internal model (<em>Qwen2.5-Omni-7B</em>) and the external model (<em>Audio Flamingo 3</em>) predict on their own, and see which action token Speech-Hands emits together with its final answer.</p>
     <div id="audio-qa-root">Loading Audio QA cases…</div>
@@ -277,10 +320,165 @@ async function renderASR(cases, root) {
   }
 }
 
+/* --- Agent integration animation --- */
+const SLEEP = (ms) => new Promise(r => setTimeout(r, ms));
+let integState = { playing: false, abort: null, current: 0, cases: [] };
+
+function integSetTabs(n, current) {
+  const tabs = document.getElementById('integ-tabs');
+  tabs.innerHTML = '';
+  for (let i = 0; i < n; i++) {
+    const b = document.createElement('button');
+    b.textContent = `Case ${i+1}`;
+    if (i === current) b.classList.add('active');
+    b.onclick = () => { if (!integState.playing) integPlayOne(i); };
+    tabs.appendChild(b);
+  }
+}
+
+function integReset() {
+  document.querySelectorAll('.pane').forEach(p => p.classList.remove('active', 'speaking'));
+  document.querySelectorAll('.flow-arrow').forEach(a => a.classList.remove('active'));
+  document.getElementById('candidates').innerHTML = '';
+  document.querySelectorAll('.action-tokens > div').forEach(t => t.classList.remove('active'));
+  const shFinal = document.getElementById('sh-final');
+  shFinal.classList.remove('show');
+  shFinal.innerHTML = '';
+  const reply = document.getElementById('reply');
+  reply.classList.remove('show');
+  reply.textContent = '';
+  const uc = document.querySelector('.user-context');
+  uc.classList.remove('show');
+  uc.innerHTML = '';
+  const meta = document.getElementById('case-meta');
+  meta.innerHTML = '';
+}
+
+function routingPillStyle(tok) {
+  const cls = tok.replace(/[<>]/g, '');
+  const color = { internal: 'var(--internal)', external: 'var(--external)', rewrite: 'var(--rewrite)' }[cls];
+  return `background:${color}`;
+}
+
+async function integPlayOne(idx) {
+  if (integState.playing) return;
+  integState.playing = true;
+  integState.current = idx;
+  integSetTabs(integState.cases.length, idx);
+
+  const c = integState.cases[idx];
+  integReset();
+
+  // Meta badge
+  const meta = document.getElementById('case-meta');
+  meta.innerHTML = `
+    <span class="benchmark">${esc(c.benchmark)}</span>
+    <span class="routing-pill" style="${routingPillStyle(c.routing)}">${esc(c.routing)}</span>
+    <span>Gold: <code>${esc(c.gold)}</code></span>
+  `;
+
+  // Stage 1: show user context (question) + play audio + pane-input highlights
+  const paneIn = document.getElementById('pane-input');
+  paneIn.classList.add('active', 'speaking');
+  const uc = document.querySelector('.user-context');
+  const contextText = c.type === 'audio_qa'
+    ? `<strong>User question (to OpenClaw):</strong><br>${esc(c.question)}`
+    : `<strong>User utterance (to OpenClaw):</strong><br>Transcribe this speech.`;
+  uc.innerHTML = contextText;
+  uc.classList.add('show');
+
+  const audio = document.getElementById('integ-audio');
+  audio.src = c.audio;
+  audio.currentTime = 0;
+  try { await audio.play(); } catch(e) { /* autoplay blocked, continue */ }
+
+  // Wait for audio end or ~10s max
+  await new Promise(resolve => {
+    const timeout = setTimeout(resolve, 12000);
+    audio.onended = () => { clearTimeout(timeout); resolve(); };
+  });
+
+  paneIn.classList.remove('speaking');
+  await SLEEP(300);
+
+  // Stage 2: flow arrow to pipeline
+  document.getElementById('flow-in').classList.add('active');
+  await SLEEP(500);
+  paneIn.classList.remove('active');
+  document.getElementById('pane-pipeline').classList.add('active');
+  await SLEEP(400);
+
+  // Stage 3: candidates fade in one by one
+  const candRoot = document.getElementById('candidates');
+  for (const cand of c.candidates) {
+    const div = document.createElement('div');
+    div.className = 'candidate ' + cand.label;
+    div.innerHTML = `<span class="cand-src">${esc(cand.source)}</span><code>${esc(cand.pred)}</code>`;
+    candRoot.appendChild(div);
+    await SLEEP(50);
+    div.classList.add('show');
+    await SLEEP(800);
+  }
+  await SLEEP(300);
+
+  // Stage 4: action-token selection
+  const tokCls = c.routing.replace(/[<>]/g, '');
+  document.querySelector(`.action-tokens > div[data-tok="${tokCls}"]`).classList.add('active');
+  await SLEEP(1200);
+
+  // Stage 5: final answer
+  const shFinal = document.getElementById('sh-final');
+  shFinal.innerHTML = `<strong>Final:</strong> <code>${esc(c.final)}</code>`;
+  shFinal.classList.add('show');
+  await SLEEP(1000);
+
+  // Stage 6: flow arrow back to OpenClaw reply
+  document.getElementById('flow-out').classList.add('active');
+  await SLEEP(400);
+  document.getElementById('pane-pipeline').classList.remove('active');
+  document.getElementById('pane-output').classList.add('active');
+
+  // Stage 7: OpenClaw reply
+  const reply = document.getElementById('reply');
+  reply.textContent = c.openclaw_reply;
+  reply.classList.add('show');
+  await SLEEP(1800);
+
+  document.getElementById('pane-output').classList.remove('active');
+  integState.playing = false;
+}
+
+async function integPlayAll() {
+  const btn = document.getElementById('integ-play');
+  btn.disabled = true;
+  btn.textContent = '⏵ Playing…';
+  for (let i = 0; i < integState.cases.length; i++) {
+    await integPlayOne(i);
+    await SLEEP(600);
+  }
+  btn.disabled = false;
+  btn.textContent = '▶ Play agent demo';
+}
+
 (async () => {
   const data = await fetch('cases.json').then(r => r.json());
   await renderAudioQA(data.audio_qa || [], document.getElementById('audio-qa-root'));
   await renderASR(data.asr || [], document.getElementById('asr-root'));
+
+  // Wire up integration demo
+  integState.cases = data.integration || [];
+  integSetTabs(integState.cases.length, 0);
+  // Initialize view with case 0 meta (without playing)
+  if (integState.cases.length) {
+    const c = integState.cases[0];
+    const meta = document.getElementById('case-meta');
+    meta.innerHTML = `
+      <span class="benchmark">${esc(c.benchmark)}</span>
+      <span class="routing-pill" style="${routingPillStyle(c.routing)}">${esc(c.routing)}</span>
+      <span>Press ▶ to run the animation through all 4 cases.</span>
+    `;
+  }
+  document.getElementById('integ-play').onclick = () => { if (!integState.playing) integPlayAll(); };
 })();
 </script>
 </body>

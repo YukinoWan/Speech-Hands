@@ -121,5 +121,99 @@
       "sh_wer_pct": 0.0,
       "ext_wer_pct": 28.6
     }
+  ],
+  "integration": [
+    {
+      "type": "audio_qa",
+      "benchmark": "DCASE 2025 AudioQA",
+      "id": "dev_audio_01455",
+      "audio": "audio/audio_01455.wav",
+      "question": "What might the purpose of tapping the metal object in the background be?",
+      "candidates": [
+        {
+          "source": "Qwen2.5-Omni",
+          "label": "internal",
+          "pred": "A. To emphasize the speaker's instructions"
+        },
+        {
+          "source": "Audio Flamingo 3",
+          "label": "external",
+          "pred": "A. To emphasize the speaker's instructions"
+        }
+      ],
+      "routing": "<rewrite>",
+      "final": "C. To demonstrate its material quality",
+      "gold": "C. To demonstrate its material quality",
+      "openclaw_reply": "The speaker is tapping the surface to demonstrate the product's material quality."
+    },
+    {
+      "type": "audio_qa",
+      "benchmark": "DCASE 2025 AudioQA",
+      "id": "dev_audio_00901",
+      "audio": "audio/audio_00901.wav",
+      "question": "What type of mood is conveyed through the musical elements in this audio?",
+      "candidates": [
+        {
+          "source": "Qwen2.5-Omni",
+          "label": "internal",
+          "pred": "B. Angry and aggressive"
+        },
+        {
+          "source": "Audio Flamingo 3",
+          "label": "external",
+          "pred": "D. Sad and reflective"
+        }
+      ],
+      "routing": "<external>",
+      "final": "D. Sad and reflective",
+      "gold": "D. Sad and reflective",
+      "openclaw_reply": "The music conveys a sad and reflective atmosphere."
+    },
+    {
+      "type": "asr",
+      "benchmark": "VoxPopuli",
+      "id": "voxpopuli_20131024_PLENARY",
+      "audio": "audio/asr/voxpopuli_20131024-PLENARY.wav",
+      "question": "Transcribe the spoken utterance.",
+      "candidates": [
+        {
+          "source": "Qwen2.5-Omni",
+          "label": "internal",
+          "pred": "To put it very bluntly, the people of this planet must destroy capitalism before capitalism destroys our planet."
+        },
+        {
+          "source": "External ASR (top-1)",
+          "label": "external",
+          "pred": "But very bluntly put the people of this planet must destroy capitalism before capitalism destroys our planet."
+        }
+      ],
+      "routing": "<internal>",
+      "final": "To put it very bluntly, the people of this planet must destroy capitalism before capitalism destroys our planet.",
+      "gold": "To put it very bluntly, the people of this planet must destroy capitalism before capitalism destroys our planet.",
+      "openclaw_reply": "Got it — I'll transcribe that statement verbatim."
+    },
+    {
+      "type": "asr",
+      "benchmark": "LibriSpeech-other",
+      "id": "librispeech_other_533-131564-0011",
+      "audio": "audio/asr/librispeech_other_533-131564-0011.wav",
+      "question": "Transcribe the spoken utterance.",
+      "candidates": [
+        {
+          "source": "Qwen2.5-Omni",
+          "label": "internal",
+          "pred": "Now, don't force him to attempt the theft."
+        },
+        {
+          "source": "External ASR (top-1)",
+          "label": "external",
+          "pred": "Now, don't burst into a tempest at that."
+        }
+      ],
+      "routing": "<external>",
+      "final": "Now, don't burst into a tempest at that.",
+      "gold": "Now, don't burst into a tempest at that.",
+      "openclaw_reply": "Transcript: Now, don't burst into a tempest at that."
+    }
   ]
 }
