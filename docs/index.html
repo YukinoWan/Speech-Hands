@@ -384,44 +384,42 @@ function preloadCaseAudio(cases) {
   }
 }
 
-// Unlock the visible <audio id="integ-audio"> element inside the click
-// handler's user-gesture tick, so later programmatic .play() calls don't
-// get blocked by autoplay policy (Safari/Chrome both require this).
+// Silent 1-sample WAV (base64) for priming the audio element's
+// user-gesture activation without depending on any external file.
+const SILENT_WAV = 'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA';
+
+// Unlock the visible <audio> element on the very first click. Must be
+// called synchronously inside the user-gesture handler, before any
+// non-audio awaits.
 async function unlockAudioOnce() {
   if (integState.unlocked) return;
   const audio = document.getElementById('integ-audio');
   const prevSrc = audio.src;
   audio.muted = true;
-  // Use the first case's audio as the priming source
-  if (integState.cases[0]) audio.src = integState.cases[0].audio;
+  audio.src = SILENT_WAV;
   try {
     await audio.play();
     audio.pause();
-    audio.currentTime = 0;
   } catch(e) {
-    console.warn('audio unlock failed:', e);
+    console.warn('audio unlock failed (likely autoplay policy):', e);
   }
   audio.muted = false;
+  audio.currentTime = 0;
+  // Leave src pointing at the silent WAV; playCaseAudio will overwrite
+  // it per case. This is important on Safari where swapping to a real
+  // url after an unmuted play-then-pause cycle sometimes stalls.
   integState.unlocked = true;
 }
 
-// Load a fresh src into the visible audio element and start playback,
-// waiting for canplay before calling play() so Safari doesn't silently
-// abort.
+// Swap in a case's audio and start playing. Keeps the call chain short
+// so user-gesture activation (unlocked above) carries through.
 async function playCaseAudio(audio, url) {
-  await new Promise(res => {
-    const onCan = () => { audio.removeEventListener('canplaythrough', onCan); res(); };
-    audio.addEventListener('canplaythrough', onCan, { once: true });
-    audio.src = url;
-    audio.currentTime = 0;
-    audio.load();
-    // Hard cap the wait at 2.5s in case canplaythrough never fires.
-    setTimeout(() => { audio.removeEventListener('canplaythrough', onCan); res(); }, 2500);
-  });
+  audio.src = url;
+  audio.currentTime = 0;
   try {
     await audio.play();
   } catch(e) {
-    console.warn('audio.play rejected:', e);
+    console.warn('audio.play rejected, continuing silently:', e);
   }
 }
 
