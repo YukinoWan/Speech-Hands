@@ -231,11 +231,14 @@
             <!-- Particle layer during deliberation -->
             <div class="particle-layer" id="particle-layer"></div>
 
-            <!-- Candidate cards (fade in during deliberation) -->
+            <!-- Candidate cards — big, prominent, left + right of core -->
             <div class="cand-card-abs internal" id="cand-abs-internal">
-              <div class="cand-head">
-                <span>Internal</span>
-                <span class="src-pill">Qwen2.5-Omni</span>
+              <div class="cand-role">
+                <span class="role-icon">🧠</span>
+                <div class="role-text">
+                  <div class="role-title">Internal thought</div>
+                  <div class="role-sub">Speech-Hands (Qwen2.5-Omni) predicts directly</div>
+                </div>
               </div>
               <div class="cand-pred"></div>
               <div class="cand-verdict">
@@ -243,9 +246,12 @@
               </div>
             </div>
             <div class="cand-card-abs external" id="cand-abs-external">
-              <div class="cand-head">
-                <span>External</span>
-                <span class="src-pill" id="cand-ext-src">Audio Flamingo 3</span>
+              <div class="cand-role">
+                <span class="role-icon">🔧</span>
+                <div class="role-text">
+                  <div class="role-title">External tool call</div>
+                  <div class="role-sub" id="cand-ext-sub">to <span id="cand-ext-name">Audio Flamingo 3</span></div>
+                </div>
               </div>
               <div class="cand-pred"></div>
               <div class="cand-verdict">
@@ -668,18 +674,18 @@ async function integPlayOne(idx, opts={}) {
   const core = document.getElementById('sh-core');
   core.classList.add('deliberating');
 
-  // Slide in candidates
+  // Slide in internal thought first, then external tool call
   const candInt = document.getElementById('cand-abs-internal');
   const candExt = document.getElementById('cand-abs-external');
   candInt.querySelector('.cand-pred').textContent = c.candidates[0].pred;
   candExt.querySelector('.cand-pred').textContent = c.candidates[1].pred;
-  // Update src pill for ASR (external is different ASR, not Flamingo)
-  const extPill = candExt.querySelector('.src-pill');
-  if (extPill) extPill.textContent = c.candidates[1].source;
+  // External tool-call name — e.g. Audio Flamingo 3 or "external ASR top-1"
+  const extName = document.getElementById('cand-ext-name');
+  if (extName) extName.textContent = c.candidates[1].source;
   candInt.classList.add('show');
-  await SLEEP(400);
+  await SLEEP(900);
   candExt.classList.add('show');
-  await SLEEP(700);
+  await SLEEP(1100);
 
   // Flash big ✓/✗ on each candidate (dramatic verdict)
   const v0 = c.candidates[0].verdict; // internal verdict

@@ -313,8 +313,8 @@ pre code { background: none; padding: 0; }
 
 /* Central Speech-Hands orb */
 .sh-core {
-  position: absolute; left: 50%; top: 50%;
-  width: 140px; height: 140px; transform: translate(-50%, -50%);
+  position: absolute; left: 50%; top: 22%;
+  width: 120px; height: 120px; transform: translate(-50%, 0);
   z-index: 8;
 }
 .core-inner {
@@ -361,17 +361,14 @@ pre code { background: none; padding: 0; }
   color: #eef1f8; opacity: 0.55; transition: opacity 0.4s, transform 0.4s;
   z-index: 6;
 }
-.lane-internal { left: calc(50% - 320px); top: calc(50% - 100px); }
-.lane-external { left: calc(50% + 140px); top: calc(50% - 100px); }
-.lane-rewrite  { left: 50%; bottom: 22%; transform: translateX(-50%); }
+.lane-internal { left: 10%;  top: 62%; width: 22%; min-width: 140px; }
+.lane-external { left: 39%;  top: 62%; width: 22%; min-width: 140px; }
+.lane-rewrite  { left: 68%;  top: 62%; width: 22%; min-width: 140px; }
 
 .lane-line {
-  position: absolute; background: linear-gradient(to right, transparent, rgba(125,180,255,0.3) 30%, rgba(125,180,255,0.3) 70%, transparent);
-  height: 2px; top: 62px; width: 140px; z-index: -1;
+  position: absolute; background: linear-gradient(to bottom, rgba(125,180,255,0.3) 0%, rgba(125,180,255,0) 100%);
+  width: 2px; height: 60px; top: -60px; left: 50%; transform: translateX(-50%); z-index: -1;
 }
-.lane-internal .lane-line { right: -120px; }
-.lane-external .lane-line { left: -120px; }
-.lane-rewrite .lane-line { left: 50%; transform: translateX(-50%) rotate(90deg); transform-origin: 0 0; top: -90px; width: 90px; }
 
 .lane-tok {
   padding: 10px 16px; border-radius: 999px;
@@ -401,7 +398,6 @@ pre code { background: none; padding: 0; }
 }
 .lane.rejected { opacity: 0.18; }
 .lane.selected { opacity: 1; transform: scale(1.1); }
-.lane.lane-rewrite.selected  { transform: translateX(-50%) scale(1.1); }
 .lane.selected .lane-tok {
   background: var(--accent); border-color: #fff;
   color: #fff; font-weight: 700;
@@ -417,32 +413,49 @@ pre code { background: none; padding: 0; }
   100% { transform: scale(1); }
 }
 
-/* Candidate cards (float near core during deliberation) */
+/* Candidate cards — prominent, left + right of core */
 .cand-card-abs {
-  position: absolute; width: 250px; padding: 12px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.22);
-  border-radius: 10px;
+  position: absolute; width: 30%; min-width: 230px; max-width: 290px;
+  padding: 14px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 12px;
   color: #eef1f8;
-  opacity: 0; transition: opacity 0.4s, transform 0.4s;
+  opacity: 0; transform: translateY(12px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
   z-index: 7;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
 }
-.cand-card-abs.internal { left: calc(50% - 380px); bottom: 18%; border-top: 3px solid #5cc24e; }
-.cand-card-abs.external { left: calc(50% + 130px); bottom: 18%; border-top: 3px solid #5c8cff; }
-.cand-card-abs.show { opacity: 1; }
-.cand-card-abs .cand-head {
-  font-size: 0.72rem; color: #a0adc6; text-transform: uppercase;
-  letter-spacing: 0.06em; font-weight: 600;
-  display: flex; gap: 8px; align-items: center; margin-bottom: 6px;
+.cand-card-abs.show { opacity: 1; transform: translateY(0); }
+.cand-card-abs.internal { left: 2%;  top: 8%;  border-top: 4px solid #7dec7a; }
+.cand-card-abs.external { right: 2%; top: 8%;  border-top: 4px solid #8eb0ff; }
+
+/* role header: icon + title + subtitle explaining what this candidate IS */
+.cand-card-abs .cand-role {
+  display: flex; gap: 10px; align-items: flex-start;
+  padding-bottom: 10px; border-bottom: 1px dashed rgba(255,255,255,0.2);
+  margin-bottom: 10px;
 }
-.cand-card-abs .src-pill {
-  background: rgba(255,255,255,0.08); padding: 1px 8px; border-radius: 999px;
-  font-family: var(--mono); font-size: 0.72rem; text-transform: none;
+.cand-card-abs .role-icon {
+  font-size: 1.8rem; line-height: 1;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.4));
+}
+.cand-card-abs .role-title {
+  font-size: 0.88rem; font-weight: 700; color: #fff;
+  letter-spacing: 0.02em;
+}
+.cand-card-abs .role-sub {
+  font-size: 0.74rem; color: #a0adc6; margin-top: 2px;
+  font-family: var(--sans);
+}
+.cand-card-abs .role-sub span {
+  font-family: var(--mono); color: #d2deff;
 }
 .cand-card-abs .cand-pred {
-  font-size: 0.85rem; padding: 6px 8px;
-  background: rgba(0,0,0,0.25); border-radius: 6px; line-height: 1.4;
+  font-size: 0.9rem; padding: 8px 10px;
+  background: rgba(0,0,0,0.32); border-radius: 6px; line-height: 1.45;
+  color: #fff;
+  min-height: 34px;
 }
 .cand-card-abs .cand-verdict {
   margin-top: 8px; font-size: 0.82rem; opacity: 0;
@@ -572,14 +585,14 @@ pre code { background: none; padding: 0; }
 
 @media (max-width: 720px) {
   .cine-stage { aspect-ratio: 4 / 5; max-height: none; }
-  .sh-core { width: 110px; height: 110px; }
-  .lane { width: 130px; }
-  .lane-internal { left: 5%; top: 18%; }
-  .lane-external { right: 5%; left: auto; top: 18%; }
-  .lane-rewrite  { bottom: 10%; }
-  .cand-card-abs { width: 180px; }
-  .cand-card-abs.internal { left: 4%; bottom: 4%; }
-  .cand-card-abs.external { right: 4%; left: auto; bottom: 4%; }
+  .sh-core { width: 90px; height: 90px; top: 28%; }
+  .lane { width: 28% !important; min-width: 0 !important; }
+  .lane-internal { left: 4%;  top: 64%; }
+  .lane-external { left: 36%; top: 64%; }
+  .lane-rewrite  { left: 68%; top: 64%; }
+  .cand-card-abs { width: 46%; min-width: 0; }
+  .cand-card-abs.internal { left: 2%;  top: 6%; }
+  .cand-card-abs.external { right: 2%; left: auto; top: 6%; }
   .stat-value { font-size: 2.4rem; }
   .act-title { font-size: 1.2rem; }
 }
