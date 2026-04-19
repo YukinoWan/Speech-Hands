@@ -64,6 +64,11 @@ h2 {
   font-size: 1.6rem; letter-spacing: -0.01em; margin: 48px 0 16px;
   padding-bottom: 8px; border-bottom: 2px solid var(--bg-alt);
 }
+h2 .emoji {
+  font-size: 1.4rem; display: inline-block;
+  letter-spacing: 0; font-weight: 400;
+  margin: 0 2px; vertical-align: baseline;
+}
 h3 { font-size: 1.15rem; margin: 24px 0 12px; }
 p { margin: 0 0 16px; }
 em { font-style: italic; }
