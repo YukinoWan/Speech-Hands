@@ -30,6 +30,12 @@ main { max-width: 880px; margin: 0 auto; padding: 48px 24px 80px; }
   letter-spacing: -0.02em;
   margin: 0 0 12px;
   font-weight: 700;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.hero h1 .emoji {
+  font-size: 2.2rem; display: inline-block;
+  /* keep emojis full-color, don't inherit letter-spacing */
+  letter-spacing: 0; font-weight: 400;
 }
 .hero .subtitle { font-size: 1.2rem; color: var(--fg); margin: 0 auto 24px; max-width: 680px; font-weight: 500; }
 .hero .authors { color: var(--muted); font-style: italic; margin: 0 0 4px; }
