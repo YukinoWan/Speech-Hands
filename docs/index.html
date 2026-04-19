@@ -161,91 +161,135 @@
     <p>Speech-Hands installs as an <a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">OpenClaw</a> skill — it sits between the agent's voice input and its reasoning loop. When a user speaks to the assistant, OpenClaw routes the audio to the skill; the skill consults its internal Omni model and an external audio-perception model in parallel, emits one of three <em>action tokens</em>, and returns the final answer for OpenClaw to act on. The animation below plays four real Speech-Hands samples — two AudioQA, two ASR — step by step through the full pipeline, and highlights the action-token routing decision for each one.</p>
     <p class="note">OpenClaw is an MIT-licensed personal-assistant framework (360k+ stars). The panels below are a conceptual mock of the integration; the companion adapter lives at <code>integrations/openclaw/</code> and can be dropped into any OpenClaw workspace.</p>
 
-    <div class="integration-demo">
+    <div class="integration-demo cinematic" id="cinematic-demo">
       <div class="integ-controls">
         <button id="integ-play" type="button">▶ Play agent demo</button>
-        <div class="integ-tabs" id="integ-tabs"></div>
+        <span class="ctrl-hint">60-second narrated walkthrough — use <kbd>⏯</kbd> to pause/resume</span>
       </div>
 
-      <div class="integ-stage" id="integ-stage">
+      <!-- Cinematic stage with letterbox bars -->
+      <div class="cine-stage" id="cine-stage">
+        <div class="letterbox top"></div>
+        <div class="letterbox bottom"></div>
 
-        <!-- Top: OpenClaw chat header with brand + case meta -->
-        <div class="chat-header">
-          <span class="brand-dot"></span><strong>OpenClaw</strong> · agent session
-          <span class="header-meta" id="case-meta"></span>
+        <!-- Act caption (shown between acts) -->
+        <div class="act-caption" id="act-caption">
+          <span class="act-label" id="act-label"></span>
+          <span class="act-title" id="act-title"></span>
         </div>
 
-        <!-- User bubble: incoming voice -->
-        <div class="chat-bubble user" id="bubble-user">
-          <div class="bubble-label">User</div>
-          <div class="mic-row">
-            <span class="mic-icon">🎙</span>
-            <div class="waveform"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-            <span class="audio-timer" id="audio-timer">0:00</span>
-          </div>
-          <div class="user-context" id="user-context"></div>
-          <audio id="integ-audio" preload="auto"></audio>
+        <!-- Task badge in corner (AudioQA / Speech Recognition) -->
+        <div class="task-badge" id="task-badge">
+          <span class="task-icon"></span><span class="task-name"></span>
         </div>
 
-        <!-- Tool-call indicator -->
-        <div class="tool-call-label" id="tool-call-label">
-          <span class="dotline"></span>
-          <span class="tool-name">OpenClaw → <code>speech-hands</code> skill</span>
-          <span class="dotline"></span>
+        <!-- Act 1: user speaks to OpenClaw (bubble form) -->
+        <div class="act act-1" id="act-1">
+          <div class="chat-bubble user">
+            <div class="bubble-label">
+              <span class="brand-dot"></span>User → OpenClaw
+            </div>
+            <div class="mic-row">
+              <span class="mic-icon">🎙</span>
+              <div class="waveform"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              <span class="audio-timer" id="audio-timer">0:00</span>
+            </div>
+            <div class="user-context" id="user-context"></div>
+            <audio id="integ-audio" preload="auto"></audio>
+          </div>
         </div>
 
-        <!-- Speech-Hands inspection panel (the main show) -->
-        <div class="sh-panel" id="sh-panel">
-          <div class="sh-panel-header">
-            <span class="sh-badge">Speech-Hands</span>
-            <span class="sh-panel-subtitle">self-reflection inspection</span>
-          </div>
-
-          <!-- Stage A: two candidates side by side -->
-          <div class="cand-row" id="cand-row">
-            <!-- filled by JS -->
-          </div>
-
-          <!-- Stage B: action-token decision -->
-          <div class="decision-row">
-            <div class="decision-label">Action token</div>
-            <div class="tok-row" id="action-tokens">
-              <div class="tok-card" data-tok="internal">
-                <code>&lt;internal&gt;</code>
-                <span class="tok-desc">Trust the internal model</span>
-                <span class="tok-verdict"></span>
+        <!-- Act 2: Speech-Hands core + 3 token paths -->
+        <div class="act act-core" id="act-core">
+          <div class="core-scene">
+            <!-- Central Speech-Hands orb -->
+            <div class="sh-core" id="sh-core">
+              <div class="core-inner">
+                <div class="core-label">Speech-<br>Hands</div>
               </div>
-              <div class="tok-card" data-tok="external">
-                <code>&lt;external&gt;</code>
-                <span class="tok-desc">Defer to external candidate</span>
-                <span class="tok-verdict"></span>
+              <div class="core-ring"></div>
+              <div class="core-ring slow"></div>
+            </div>
+
+            <!-- 3 radial token lanes -->
+            <div class="lane lane-internal" data-tok="internal" id="lane-internal">
+              <div class="lane-line"></div>
+              <div class="lane-tok"><code>&lt;internal&gt;</code></div>
+              <div class="lane-desc">Trust self</div>
+            </div>
+            <div class="lane lane-external" data-tok="external" id="lane-external">
+              <div class="lane-line"></div>
+              <div class="lane-tok"><code>&lt;external&gt;</code></div>
+              <div class="lane-desc">Defer to external</div>
+            </div>
+            <div class="lane lane-rewrite" data-tok="rewrite" id="lane-rewrite">
+              <div class="lane-line"></div>
+              <div class="lane-tok"><code>&lt;rewrite&gt;</code></div>
+              <div class="lane-desc">Re-derive from both</div>
+            </div>
+
+            <!-- Particle layer during deliberation -->
+            <div class="particle-layer" id="particle-layer"></div>
+
+            <!-- Candidate cards (fade in during deliberation) -->
+            <div class="cand-card-abs internal" id="cand-abs-internal">
+              <div class="cand-head">
+                <span>Internal</span>
+                <span class="src-pill">Qwen2.5-Omni</span>
               </div>
-              <div class="tok-card" data-tok="rewrite">
-                <code>&lt;rewrite&gt;</code>
-                <span class="tok-desc">Re-derive from audio + both</span>
-                <span class="tok-verdict"></span>
+              <div class="cand-pred"></div>
+              <div class="cand-verdict">
+                <span class="mark"></span><span class="verdict-text"></span>
               </div>
             </div>
+            <div class="cand-card-abs external" id="cand-abs-external">
+              <div class="cand-head">
+                <span>External</span>
+                <span class="src-pill" id="cand-ext-src">Audio Flamingo 3</span>
+              </div>
+              <div class="cand-pred"></div>
+              <div class="cand-verdict">
+                <span class="mark"></span><span class="verdict-text"></span>
+              </div>
+            </div>
+
+            <!-- The "decision" moment overlay -->
+            <div class="decision-bolt" id="decision-bolt"></div>
           </div>
-
-          <!-- Stage C: final answer -->
-          <div class="sh-final" id="sh-final"></div>
         </div>
 
-        <!-- Skill returns to OpenClaw -->
-        <div class="tool-call-label return" id="return-label">
-          <span class="dotline"></span>
-          <span class="tool-name"><code>speech-hands</code> skill → OpenClaw</span>
-          <span class="dotline"></span>
+        <!-- Act 3: final answer + OpenClaw reply -->
+        <div class="act act-reply" id="act-reply">
+          <div class="final-card">
+            <div class="final-label">Speech-Hands emits</div>
+            <div class="final-token" id="final-token"></div>
+            <div class="final-answer" id="final-answer"></div>
+          </div>
+          <div class="chat-bubble assistant">
+            <div class="bubble-label"><span class="brand-dot"></span>OpenClaw → User</div>
+            <div class="reply" id="reply"></div>
+          </div>
         </div>
 
-        <!-- Assistant bubble: OpenClaw final reply -->
-        <div class="chat-bubble assistant" id="bubble-assistant">
-          <div class="bubble-label"><span class="brand-dot"></span>OpenClaw</div>
-          <div class="reply" id="reply"></div>
+        <!-- Act 4: payoff stats -->
+        <div class="act act-stats" id="act-stats">
+          <div class="stats-big">
+            <div class="stat-item">
+              <div class="stat-value" data-target="77.37">77.37<span class="stat-unit">%</span></div>
+              <div class="stat-label">AudioQA accuracy</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value down">−<span data-target="12.1">12.1</span><span class="stat-unit">%</span></div>
+              <div class="stat-label">relative WER on 7 benchmarks</div>
+            </div>
+          </div>
+          <div class="stats-subtitle">Speech-Hands · self-reflection voice agent · drop-in OpenClaw skill</div>
         </div>
 
       </div>
+
+      <!-- Tab controls (still available, compact) -->
+      <div class="integ-tabs" id="integ-tabs"></div>
     </div>
 
     <h3>Audio QA</h3>
@@ -368,9 +412,19 @@ async function renderASR(cases, root) {
   }
 }
 
-/* --- Agent integration animation --- */
+/* --- Cinematic agent integration animation --- */
 const SLEEP = (ms) => new Promise(r => setTimeout(r, ms));
-let integState = { playing: false, current: 0, cases: [], unlocked: false };
+let integState = { playing: false, cases: [], unlocked: false };
+const TASK_META = {
+  audio_qa: { icon: '🧠', name: 'Audio Question Answering', badgeClass: 'audio' },
+  asr:      { icon: '📝', name: 'Speech Recognition',        badgeClass: 'asr'   },
+};
+const ACT_TITLES = {
+  intro:  { label: 'Act I',   title: 'A user speaks to the OpenClaw agent.' },
+  reflect:{ label: 'Act II',  title: 'Speech-Hands deliberates over three action tokens.' },
+  decide: { label: 'Act III', title: 'The agent commits to a decision.' },
+  outro:  { label: 'Act IV',  title: 'Scaled across seven OpenASR benchmarks and DCASE 2025 AudioQA.' },
+};
 
 // Preload audio elements once, outside the user-gesture loss window.
 const audioCache = {};
@@ -450,51 +504,124 @@ function fmtTime(sec) {
   return `${m}:${String(s).padStart(2,'0')}`;
 }
 
-function integReset() {
-  ['bubble-user', 'bubble-assistant'].forEach(id => {
-    const el = document.getElementById(id);
-    el.classList.remove('active', 'speaking');
+function showAct(id) {
+  ['act-1','act-core','act-reply','act-stats'].forEach(a => {
+    const el = document.getElementById(a);
+    if (el) el.classList.toggle('show', a === id);
   });
-  document.getElementById('sh-panel').classList.remove('active');
-  document.getElementById('tool-call-label').classList.remove('active');
-  document.getElementById('return-label').classList.remove('active');
-  document.getElementById('user-context').classList.remove('show');
-  document.getElementById('user-context').innerHTML = '';
-  document.getElementById('cand-row').innerHTML = '';
-  document.querySelectorAll('.tok-card').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.tok-card .tok-verdict').forEach(v => v.textContent = '');
-  const shFinal = document.getElementById('sh-final');
-  shFinal.classList.remove('show');
-  shFinal.innerHTML = '';
-  const reply = document.getElementById('reply');
-  reply.classList.remove('show');
-  reply.textContent = '';
 }
 
-function integSetMeta(c, hint) {
-  const meta = document.getElementById('case-meta');
-  const parts = [
-    `<span class="benchmark">${esc(c.benchmark)}</span>`,
-    `<span class="routing-pill" style="${routingPillStyle(c.routing)}">${esc(c.routing)}</span>`,
-  ];
-  if (hint) parts.push(`<span style="color:var(--muted)">${esc(hint)}</span>`);
-  meta.innerHTML = parts.join(' ');
+function setActCaption(key, show=true) {
+  const cap = document.getElementById('act-caption');
+  if (!show) { cap.classList.remove('show'); return; }
+  const m = ACT_TITLES[key] || {};
+  document.getElementById('act-label').textContent = m.label || '';
+  document.getElementById('act-title').textContent = m.title || '';
+  cap.classList.add('show');
 }
 
-async function integPlayOne(idx) {
-  if (integState.playing) return;
+function setTaskBadge(caseType, show=true) {
+  const badge = document.getElementById('task-badge');
+  if (!show) { badge.classList.remove('show','asr','audio'); return; }
+  const meta = TASK_META[caseType] || TASK_META.audio_qa;
+  badge.querySelector('.task-icon').textContent = meta.icon;
+  badge.querySelector('.task-name').textContent = meta.name;
+  badge.classList.remove('asr','audio');
+  badge.classList.add(meta.badgeClass);
+  badge.classList.add('show');
+}
+
+function resetStage() {
+  showAct(null);
+  setActCaption(null, false);
+  setTaskBadge(null, false);
+  document.querySelectorAll('.lane').forEach(l => l.classList.remove('considering','selected','rejected'));
+  document.getElementById('sh-core').classList.remove('deliberating','locked');
+  document.querySelectorAll('.cand-card-abs').forEach(c => {
+    c.classList.remove('show','ok','bad','flash');
+    c.querySelector('.cand-pred').textContent = '';
+    c.querySelector('.cand-verdict').classList.remove('show');
+    c.querySelector('.cand-verdict .verdict-text').textContent = '';
+    c.querySelector('.cand-verdict .mark').textContent = '';
+    const big = c.querySelector('.big-mark');
+    if (big) big.remove();
+  });
+  const uc = document.getElementById('user-context');
+  uc.classList.remove('show'); uc.innerHTML = '';
+  document.getElementById('audio-timer').textContent = '0:00';
+  const ft = document.getElementById('final-token');
+  ft.textContent=''; ft.classList.remove('internal','external','rewrite');
+  document.getElementById('final-answer').textContent = '';
+  document.getElementById('reply').textContent = '';
+  document.getElementById('particle-layer').innerHTML = '';
+  document.getElementById('decision-bolt').classList.remove('flash');
+}
+
+function spawnParticles(targetLaneId, count, duration) {
+  const layer = document.getElementById('particle-layer');
+  const core = document.getElementById('sh-core').getBoundingClientRect();
+  const lane = document.getElementById(targetLaneId).getBoundingClientRect();
+  const scene = document.getElementById('cine-stage').getBoundingClientRect();
+  const cx = core.left + core.width/2 - scene.left;
+  const cy = core.top + core.height/2 - scene.top;
+  const tx = lane.left + lane.width/2 - scene.left;
+  const ty = lane.top + lane.height/2 - scene.top;
+  for (let i = 0; i < count; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = cx + 'px';
+    p.style.top  = cy + 'px';
+    layer.appendChild(p);
+    const delay = Math.random() * duration * 0.4;
+    p.animate(
+      [
+        { left: cx+'px', top: cy+'px', opacity: 0, offset: 0 },
+        { opacity: 1, offset: 0.2 },
+        { left: tx+'px', top: ty+'px', opacity: 0, offset: 1 }
+      ],
+      { duration, delay, fill: 'forwards', easing: 'ease-in-out' }
+    ).onfinish = () => p.remove();
+  }
+}
+
+async function typeInto(el, text, cps=40) {
+  el.textContent = '';
+  const delay = 1000 / cps;
+  for (let i = 0; i < text.length; i++) {
+    el.textContent += text[i];
+    await SLEEP(delay);
+  }
+}
+
+function flashCandVerdict(candEl, verdict, text) {
+  candEl.classList.add(verdict);  // ok or bad
+  const mark = candEl.querySelector('.cand-verdict .mark');
+  const vtext = candEl.querySelector('.cand-verdict .verdict-text');
+  mark.textContent = verdict === 'ok' ? '✓' : '✗';
+  vtext.textContent = text;
+  candEl.querySelector('.cand-verdict').classList.add('show');
+  // Big ✓/✗ overlay flash
+  if (!candEl.querySelector('.big-mark')) {
+    const big = document.createElement('div');
+    big.className = 'big-mark';
+    big.textContent = verdict === 'ok' ? '✓' : '✗';
+    candEl.appendChild(big);
+  }
+  candEl.classList.add('flash');
+}
+
+async function integPlayOne(idx, opts={}) {
+  if (integState.playing && !opts.force) return;
   integState.playing = true;
-  integState.current = idx;
   integSetTabs(integState.cases.length, idx);
 
   const c = integState.cases[idx];
-  integReset();
-  integSetMeta(c, '');
+  resetStage();
+  setTaskBadge(c.type, true);
 
-  // Stage 1: User bubble activates, audio plays
-  const bubbleUser = document.getElementById('bubble-user');
-  bubbleUser.classList.add('active', 'speaking');
-
+  // === Act I: user speaks to OpenClaw ===
+  setActCaption('intro');
+  showAct('act-1');
   const uc = document.getElementById('user-context');
   uc.innerHTML = c.type === 'audio_qa'
     ? `<strong>Q:</strong> ${esc(c.question)}`
@@ -504,7 +631,7 @@ async function integPlayOne(idx) {
   const audio = document.getElementById('integ-audio');
   const timer = document.getElementById('audio-timer');
   const updateTimer = () => { timer.textContent = fmtTime(audio.currentTime); };
-  timer.textContent = "0:00";
+  await SLEEP(800);
   await playCaseAudio(audio, c.audio);
   const timerInt = setInterval(updateTimer, 100);
 
@@ -513,84 +640,124 @@ async function integPlayOne(idx) {
     audio.onended = () => { clearTimeout(to); res(); };
   });
   clearInterval(timerInt);
-  bubbleUser.classList.remove('speaking');
-  await SLEEP(400);
+  await SLEEP(600);
 
-  // Stage 2: Tool-call indicator activates
-  document.getElementById('tool-call-label').classList.add('active');
+  // === Act II: deliberation in core scene ===
+  setActCaption('reflect');
+  await SLEEP(400);
+  showAct('act-core');
   await SLEEP(500);
-  bubbleUser.classList.remove('active');
+  setActCaption(null, false);
 
-  // Stage 3: SH panel activates
-  const shPanel = document.getElementById('sh-panel');
-  shPanel.classList.add('active');
+  const core = document.getElementById('sh-core');
+  core.classList.add('deliberating');
+
+  // Slide in candidates
+  const candInt = document.getElementById('cand-abs-internal');
+  const candExt = document.getElementById('cand-abs-external');
+  candInt.querySelector('.cand-pred').textContent = c.candidates[0].pred;
+  candExt.querySelector('.cand-pred').textContent = c.candidates[1].pred;
+  // Update src pill for ASR (external is different ASR, not Flamingo)
+  const extPill = candExt.querySelector('.src-pill');
+  if (extPill) extPill.textContent = c.candidates[1].source;
+  candInt.classList.add('show');
   await SLEEP(400);
+  candExt.classList.add('show');
+  await SLEEP(700);
 
-  // Stage 4: candidates appear one by one
-  const candRow = document.getElementById('cand-row');
-  for (const cand of c.candidates) {
-    const card = document.createElement('div');
-    card.className = 'cand-card ' + cand.label;
-    card.innerHTML = `
-      <div class="cand-head">
-        <span>${cand.label}</span>
-        <span class="src-pill">${esc(cand.source)}</span>
-      </div>
-      <div class="cand-pred">${esc(cand.pred)}</div>
-      <div class="cand-verdict ${cand.verdict === 'ok' ? 'ok' : 'bad'}">
-        <span class="mark">${cand.verdict === 'ok' ? '✓' : '✗'}</span>
-        <span>${cand.verdict === 'ok' ? 'matches audio' : 'disagrees with audio'}</span>
-      </div>
-    `;
-    candRow.appendChild(card);
-    await SLEEP(60);
-    card.classList.add('show');
+  // Flash big ✓/✗ on each candidate (dramatic verdict)
+  const v0 = c.candidates[0].verdict; // internal verdict
+  const v1 = c.candidates[1].verdict; // external verdict
+  flashCandVerdict(candInt, v0, v0 === 'ok' ? 'matches audio' : 'disagrees with audio');
+  await SLEEP(700);
+  flashCandVerdict(candExt, v1, v1 === 'ok' ? 'matches audio' : 'disagrees with audio');
+  await SLEEP(900);
+
+  // Particle consideration: spiral particles toward each lane in sequence
+  const laneOrder = ['lane-internal', 'lane-external', 'lane-rewrite'];
+  for (const laneId of laneOrder) {
+    const lane = document.getElementById(laneId);
+    lane.classList.add('considering');
+    spawnParticles(laneId, 22, 700);
     await SLEEP(700);
-    // Verdict appears shortly after the candidate
-    card.querySelector('.cand-verdict').classList.add('show');
-    await SLEEP(500);
+    lane.classList.remove('considering');
   }
-  await SLEEP(500);
+  await SLEEP(300);
 
-  // Stage 5: action-token selection
-  const tokCls = c.routing.replace(/[<>]/g, '');
-  const activeCard = document.querySelector(`.tok-card[data-tok="${tokCls}"]`);
-  activeCard.classList.add('active');
-  activeCard.querySelector('.tok-verdict').textContent = 'SELECTED';
+  // Decision flash + lock winning lane
+  document.getElementById('decision-bolt').classList.add('flash');
+  await SLEEP(100);
+  const winTok = c.routing.replace(/[<>]/g,'');
+  laneOrder.forEach(laneId => {
+    const lane = document.getElementById(laneId);
+    if (lane.dataset.tok === winTok) lane.classList.add('selected');
+    else lane.classList.add('rejected');
+  });
+  core.classList.remove('deliberating');
+  core.classList.add('locked');
   await SLEEP(1400);
 
-  // Stage 6: final answer
-  const shFinal = document.getElementById('sh-final');
-  shFinal.innerHTML = `<span class="fin-label">Speech-Hands final</span><code>${esc(c.final)}</code>`;
-  shFinal.classList.add('show');
-  await SLEEP(1200);
-
-  // Stage 7: return label activates
-  document.getElementById('return-label').classList.add('active');
-  await SLEEP(500);
-  shPanel.classList.remove('active');
-
-  // Stage 8: assistant bubble activates, reply appears
-  const bubbleAsst = document.getElementById('bubble-assistant');
-  bubbleAsst.classList.add('active');
+  // === Act III: final answer + OpenClaw reply ===
+  setActCaption('decide');
   await SLEEP(300);
+  showAct('act-reply');
+  await SLEEP(300);
+  setActCaption(null, false);
+
+  const ft = document.getElementById('final-token');
+  ft.classList.add(winTok);
+  ft.textContent = c.routing;
+  const fa = document.getElementById('final-answer');
+  await typeInto(fa, c.final, 55);
+  await SLEEP(500);
   const reply = document.getElementById('reply');
-  reply.textContent = c.openclaw_reply;
-  reply.classList.add('show');
-  await SLEEP(2000);
+  await typeInto(reply, c.openclaw_reply, 50);
+  await SLEEP(1400);
 
   integState.playing = false;
+}
+
+async function integPlayFinale() {
+  // Act IV: stats payoff
+  setActCaption('outro');
+  await SLEEP(300);
+  showAct('act-stats');
+  await SLEEP(300);
+  setActCaption(null, false);
+  // Animate stat values counting up
+  document.querySelectorAll('.stat-value [data-target], .stat-value[data-target]').forEach(el => {
+    const target = parseFloat(el.dataset.target);
+    const outEl = el.tagName === 'SPAN' ? el : el;
+    const dur = 1200;
+    const start = performance.now();
+    function step(t){
+      const k = Math.min(1, (t - start) / dur);
+      const v = target * (0.5 - Math.cos(Math.PI * k) / 2);
+      outEl.textContent = v.toFixed(2);
+      if (k < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+  await SLEEP(3000);
 }
 
 async function integPlayAll() {
   const btn = document.getElementById('integ-play');
   btn.disabled = true;
   btn.textContent = '⏵ Playing…';
-  await unlockAudioOnce();    // MUST happen within the click tick
-  for (let i = 0; i < integState.cases.length; i++) {
-    await integPlayOne(i);
-    await SLEEP(600);
+  // Featured cases for the <60s cinematic playthrough: rewrite + external
+  // (one per most-dramatic routing decision).
+  const featured = integState.cases
+    .map((c, i) => ({ c, i }))
+    .filter(x => x.c.routing === '<rewrite>' || x.c.routing === '<external>')
+    .slice(0, 2)
+    .map(x => x.i);
+  const order = featured.length ? featured : [0, 1];
+  for (const i of order) {
+    await integPlayOne(i, { force: true });
+    await SLEEP(500);
   }
+  await integPlayFinale();
   btn.disabled = false;
   btn.textContent = '▶ Play agent demo';
 }
