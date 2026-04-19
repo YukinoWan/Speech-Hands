@@ -361,13 +361,36 @@ pre code { background: none; padding: 0; }
   color: #eef1f8; opacity: 0.55; transition: opacity 0.4s, transform 0.4s;
   z-index: 6;
 }
-.lane-internal { left: 10%;  top: 62%; width: 22%; min-width: 140px; }
-.lane-external { left: 39%;  top: 62%; width: 22%; min-width: 140px; }
-.lane-rewrite  { left: 68%;  top: 62%; width: 22%; min-width: 140px; }
+/* Lanes form a 3-prong fork below the core:
+ *   lane-internal (left)   — directly under internal thought card
+ *   lane-external (right)  — directly under external tool-call card
+ *   lane-rewrite (center)  — below core, representing the synthesis
+ *                            of both candidate streams. */
+.lane-internal { left: 4%;   top: 62%; width: 22%; min-width: 140px; }
+.lane-rewrite  { left: 39%;  top: 62%; width: 22%; min-width: 140px; }
+.lane-external { left: 74%;  top: 62%; width: 22%; min-width: 140px; }
 
+/* Default vertical line from core down to the rewrite lane */
 .lane-line {
-  position: absolute; background: linear-gradient(to bottom, rgba(125,180,255,0.3) 0%, rgba(125,180,255,0) 100%);
-  width: 2px; height: 60px; top: -60px; left: 50%; transform: translateX(-50%); z-index: -1;
+  position: absolute; background: linear-gradient(to bottom, rgba(125,180,255,0.4) 0%, rgba(125,180,255,0) 100%);
+  width: 2px; height: 80px; top: -80px; left: 50%; transform: translateX(-50%); z-index: -1;
+}
+/* Diagonal lines for internal (from upper-right toward core) and
+ * external (from upper-left toward core) */
+.lane-internal .lane-line {
+  left: 85%; top: -70px;
+  width: 2px; height: 100px;
+  transform: rotate(20deg); transform-origin: 50% 100%;
+  background: linear-gradient(to bottom, rgba(125,236,122,0.4) 0%, rgba(125,236,122,0) 100%);
+}
+.lane-external .lane-line {
+  left: 15%; top: -70px;
+  width: 2px; height: 100px;
+  transform: rotate(-20deg); transform-origin: 50% 100%;
+  background: linear-gradient(to bottom, rgba(142,176,255,0.4) 0%, rgba(142,176,255,0) 100%);
+}
+.lane-rewrite .lane-line {
+  background: linear-gradient(to bottom, rgba(255,138,138,0.4) 0%, rgba(255,138,138,0) 100%);
 }
 
 .lane-tok {
@@ -623,10 +646,10 @@ pre code { background: none; padding: 0; }
 @media (max-width: 720px) {
   .cine-stage { aspect-ratio: 4 / 5; max-height: none; }
   .sh-core { width: 90px; height: 90px; top: 28%; }
-  .lane { width: 28% !important; min-width: 0 !important; }
-  .lane-internal { left: 4%;  top: 64%; }
-  .lane-external { left: 36%; top: 64%; }
-  .lane-rewrite  { left: 68%; top: 64%; }
+  .lane { width: 30% !important; min-width: 0 !important; }
+  .lane-internal { left: 2%;  top: 64%; }
+  .lane-rewrite  { left: 35%; top: 64%; }
+  .lane-external { left: 68%; top: 64%; }
   .cand-card-abs { width: 46%; min-width: 0; }
   .cand-card-abs.internal { left: 2%;  top: 6%; }
   .cand-card-abs.external { right: 2%; left: auto; top: 6%; }
