@@ -12,6 +12,7 @@
 <main>
   <header class="hero">
     <h1><span class="emoji">🤝</span><span class="emoji">🗣️</span> Speech-Hands</h1>
+    <div class="tagline-badge">🤝 Speech Hands Agent with OpenClaw 🦞 since 2026</div>
     <p class="subtitle">A Self-Reflection Voice Agentic Approach to Speech Recognition<br>and Audio Reasoning with Omni Perception</p>
     <p class="authors">Anonymous Authors</p>
     <p class="venue">Paper under review</p>
@@ -27,8 +28,8 @@
 
   <section id="demo">
     <h2>Agent integration with <a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">OpenClaw</a></h2>
-    <p>Speech-Hands installs as an <a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">OpenClaw</a> skill — it sits between the agent's voice input and its reasoning loop. When a user speaks to the assistant, OpenClaw routes the audio to the skill; the skill consults its internal Omni model and an external audio-perception model in parallel, emits one of three <em>action tokens</em>, and returns the final answer for OpenClaw to act on. The animation below plays four real Speech-Hands samples — two AudioQA, two ASR — step by step through the full pipeline, and highlights the action-token routing decision for each one.</p>
-    <p class="note">OpenClaw is an MIT-licensed personal-assistant framework (360k+ stars). The panels below are a conceptual mock of the integration; the companion adapter lives at <code>integrations/openclaw/</code> and can be dropped into any OpenClaw workspace.</p>
+    <p>Speech-Hands is a skill you drop into <a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">OpenClaw</a>. The user speaks, OpenClaw hands the audio to the skill, and the skill picks one of three action tokens: trust itself, defer to a perception tool, or re-derive the answer from scratch. Four real samples below — two AudioQA and two ASR.</p>
+    <p class="note">OpenClaw is an open-source personal assistant (MIT, 360k+ stars). The panels are a conceptual mock; the adapter code lives under <code>integrations/openclaw/</code>.</p>
 
     <div class="integration-demo cinematic" id="cinematic-demo">
       <div class="integ-controls">
@@ -185,7 +186,7 @@
     </figure>
 
     <h3>Self-reflection primitive</h3>
-    <p>For every input, Speech-Hands emits one of three learnable routing tokens before producing its final answer. The token makes the perception-vs-reasoning trade-off explicit and trainable:</p>
+    <p>For every input, the model first picks one of three learnable tokens, then writes the answer. Each token is a different stance on the same trade-off:</p>
     <div class="tokens">
       <div class="token-card" data-tok="internal">
         <code>&lt;internal&gt;</code>
@@ -214,7 +215,7 @@
     <h2>Results</h2>
 
     <h3>ASR — WER (%) across 7 OpenASR benchmarks</h3>
-    <p class="table-lede">Speech-Hands training significantly outperforms both baseline systems (ASR / Omni-LMs) and prior cascaded GER setups. Pairing with Parakeet as the external ASR gives the lowest average WER.</p>
+    <p class="table-lede">Speech-Hands beats both single-system baselines (ASR / Omni-LMs) and cascaded GER. Paired with Parakeet, it gets the lowest average WER.</p>
     <div class="table-wrap">
       <table class="results-table wer-table">
         <thead>
@@ -247,7 +248,7 @@
     </div>
 
     <h3>AudioQA — Accuracy (%) on DCASE 2025</h3>
-    <p class="table-lede">Evaluated on knowledge-intensive bioacoustic QA, multi-sound-object soundscapes, and MMAU-style complex audio QA. Majority-sampled Speech-Hands yields the highest average accuracy.</p>
+    <p class="table-lede">Evaluated on bioacoustic QA, multi-sound-object soundscapes, and MMAU-style complex audio reasoning. Majority-sampled Speech-Hands gets the highest average accuracy.</p>
     <div class="table-wrap">
       <table class="results-table">
         <thead>
@@ -275,7 +276,7 @@
     </div>
 
     <h3>Action-token routing quality</h3>
-    <p class="table-lede">Distribution of the three action tokens in training vs. test, and per-token test-time F1 on each OpenASR benchmark. <code>&lt;rewrite&gt;</code> is rare by design: it fires only when both internal and external candidates are wrong.</p>
+    <p class="table-lede">How often each action token appears in training vs test, plus per-token test F1 on each OpenASR benchmark. <code>&lt;rewrite&gt;</code> is rare by design — it fires only when both internal and external are wrong.</p>
     <div class="table-wrap">
       <table class="results-table token-table">
         <thead>
@@ -308,11 +309,11 @@
     <h2>Case Gallery</h2>
 
     <h3>Audio QA</h3>
-    <p>Seven DCASE 2025 AudioQA dev samples grouped by action-token decision. For each example you can play the original audio, compare what the internal model (<em>Qwen2.5-Omni-7B</em>) and the external model (<em>Audio Flamingo 3</em>) predict on their own, and see which action token Speech-Hands emits together with its final answer.</p>
+    <p>Seven DCASE 2025 AudioQA dev samples, grouped by the action token Speech-Hands picked. Play the audio; compare what Qwen2.5-Omni alone and Audio Flamingo 3 alone would say; see Speech-Hands' final answer.</p>
     <div id="audio-qa-root">Loading Audio QA cases…</div>
 
     <h3>Speech Recognition</h3>
-    <p>Three OpenASR cases — one for each action token. WER numbers are computed after Whisper-style text normalization, so stylistic differences like "tomorrow" vs "to morrow" or missing apostrophes don't contribute. Each panel shows the reference transcript, the internal first-pass transcription, the external ASR 5-best pool, and Speech-Hands' final answer, together with the routing decision and the WER of each pathway.</p>
+    <p>Three OpenASR cases, one per action token. WER is normalized (Whisper-style), so "tomorrow" vs "to morrow" or missing apostrophes don't count. Each panel shows the reference, Qwen's first pass, the external ASR 5-best, and Speech-Hands' final.</p>
     <div id="asr-root">Loading ASR cases…</div>
   </section>
 
@@ -329,7 +330,7 @@
   </section>
 
   <footer>
-    <p>Demo audio is drawn from the <a href="https://dcase.community/" target="_blank" rel="noopener">DCASE 2025 Challenge</a> dev split and is used here for non-commercial scientific demonstration in accordance with the challenge data license.</p>
+    <p>Audio clips come from the <a href="https://dcase.community/" target="_blank" rel="noopener">DCASE 2025 Challenge</a> dev split, used here for non-commercial scientific demonstration under the challenge license.</p>
   </footer>
 </main>
 
@@ -435,10 +436,10 @@ const TASK_META = {
   asr:      { icon: '📝', name: 'Speech Recognition',        badgeClass: 'asr'   },
 };
 const ACT_TITLES = {
-  intro:  { label: 'Act I',   title: 'A user speaks to the OpenClaw agent.' },
-  reflect:{ label: 'Act II',  title: 'Speech-Hands deliberates over three action tokens.' },
-  decide: { label: 'Act III', title: 'The agent commits to a decision.' },
-  outro:  { label: 'Act IV',  title: 'Scaled across seven OpenASR benchmarks and DCASE 2025 AudioQA.' },
+  intro:  { label: 'Act I',   title: 'User speaks to OpenClaw.' },
+  reflect:{ label: 'Act II',  title: 'Speech-Hands weighs three action tokens.' },
+  decide: { label: 'Act III', title: 'The agent picks one.' },
+  outro:  { label: 'Act IV',  title: 'Across 7 OpenASR benchmarks and DCASE 2025 AudioQA.' },
 };
 
 // Preload audio elements once, outside the user-gesture loss window.
