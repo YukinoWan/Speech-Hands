@@ -771,15 +771,27 @@ async function integPlayAll() {
   const btn = document.getElementById('integ-play');
   btn.disabled = true;
   btn.textContent = '⏵ Playing…';
-  // Featured cases for the <60s cinematic playthrough: rewrite + external
-  // (one per most-dramatic routing decision).
-  const featured = integState.cases
-    .map((c, i) => ({ c, i }))
-    .filter(x => x.c.routing === '<rewrite>' || x.c.routing === '<external>')
-    .slice(0, 2)
-    .map(x => x.i);
-  const order = featured.length ? featured : [0, 1];
-  for (const i of order) {
+
+  // Narrative arc over all 4 cases:
+  //   1. ASR <external>  — Qwen mishears, external ASR saves it (intro to mechanism)
+  //   2. ASR <internal>  — Qwen is right, external ASR is wrong (method pushes back)
+  //   3. AQA <external>  — same token, different task — shows generalisation
+  //   4. AQA <rewrite>   — climax: both wrong, agent re-derives
+  // After all 4 cases, Act IV stats payoff.
+  const idx = (pred) => integState.cases.findIndex(pred);
+  const order = [
+    idx(c => c.type === 'asr'      && c.routing === '<external>'),
+    idx(c => c.type === 'asr'      && c.routing === '<internal>'),
+    idx(c => c.type === 'audio_qa' && c.routing === '<external>'),
+    idx(c => c.type === 'audio_qa' && c.routing === '<rewrite>'),
+  ].filter(i => i >= 0);
+
+  // Fall back to all cases in natural order if the arc mapping comes up short.
+  const cases = order.length === integState.cases.length
+    ? order
+    : integState.cases.map((_, i) => i);
+
+  for (const i of cases) {
     await integPlayOne(i, { force: true });
     await SLEEP(500);
   }
