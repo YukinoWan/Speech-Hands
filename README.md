@@ -5,6 +5,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2601.09413-b31b1b.svg)](https://arxiv.org/abs/2601.09413)
 [![ACL 2026](https://img.shields.io/badge/ACL-2026%20Main-4b44ce.svg)](#)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
+[![demo](https://img.shields.io/badge/demo-blue)](https://yukinowan.github.io/Speech-Hands/)
 
 Zhen Wan, Chao-Han Huck Yang, Jinchuan Tian, Hanrong Ye, Ankita Pasad, Szu-wei Fu, Arushi Goel, Ryo Hachiuma, Shizhe Diao, Kunal Dhawan, Sreyan Ghosh, Yusuke Hirota, Zhehuai Chen, Rafael Valle, Ehsan Hosseini Asl, Chenhui Chu, Shinji Watanabe, Yu-Chiang Frank Wang, Boris Ginsburg
 
